@@ -49,7 +49,27 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
 .thumb{padding:0;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;cursor:pointer;aspect-ratio:1/1}
 .thumb img{width:100%;height:100%;object-fit:contain;padding:6px}
 .thumb.active{border-color:var(--dark);box-shadow:0 0 0 2px rgba(15,34,39,.08) inset}
-.footer{margin-top:34px;padding:24px 0 0;color:#6e8186;font-size:14px}
+.footer-wrap{margin-top:42px;border:1px solid var(--line);border-radius:30px;background:#f3f6f6;overflow:hidden}
+.footer-main{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;padding:42px 34px}
+.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:28px}
+.footer-col h3{margin:0 0 14px;font-size:18px;color:#10272d}
+.footer-col ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.footer-col a{color:#4a6168;font-weight:500}
+.footer-col a:hover{color:#0f2227}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.footer-connect h3{margin:0 0 14px;font-size:18px;color:#10272d}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.social{display:inline-flex;align-items:center;justify-content:center;min-width:92px;padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#364d53;font-weight:600;font-size:14px}
+.subscribe-copy{margin:0 0 14px;color:#5e747b;line-height:1.6}
+.subscribe-form{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.subscribe-form input{flex:1 1 280px;height:46px;border:1px solid var(--line);border-radius:12px;padding:0 14px;background:#fff;font-size:15px;color:#173036}
+.subscribe-form button{height:46px;padding:0 18px;border:1px solid var(--dark);background:var(--dark);color:#fff;border-radius:12px;font-weight:700;cursor:pointer}
+.consent{display:flex;align-items:flex-start;gap:10px;color:#60767d;font-size:13px;line-height:1.5}
+.consent input{margin-top:3px}
+.bottom-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:14px 34px;border-top:1px solid #d8e1e3;background:#eef3f2;color:#60737a;font-size:13px}
+.bottom-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+@media(max-width:1100px){.footer-main{grid-template-columns:1fr;gap:32px}.footer-nav{grid-template-columns:repeat(2,minmax(180px,1fr))}}
+@media(max-width:760px){.footer-main{padding:34px 22px}.footer-nav{grid-template-columns:1fr}.bottom-bar{padding:14px 22px}}
 </style>
 </head>
 <body>
@@ -70,7 +90,7 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
         <div class="stat"><strong>7 / 30 / 3 Days</strong><span>Sample / bulk / stock lead time</span></div>
       </div>
     </div>
-    <div class="panel hero-image"><img src="assets/pedestal_fans_1.jpg" alt="RichLand featured fan"></div>
+    <div class="panel hero-image"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A27_BlackPearl.jpg" alt="RichLand featured fan"></div>
   </section>
 
   <section class="section-title" id="products">
@@ -85,14 +105,14 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
       <h2>Pedestal Fans</h2>
       <p>Quiet, household-friendly pedestal fans with classic, remote, inverter, and decorative styles.</p>
     </div>
-    <img class="cover" src="assets/pedestal_fans_1.jpg" alt="Pedestal Fans cover">
+    <img class="cover" src="assets/01_Pedestal Fans/Pedestal_16 inch_A27_BlackPearl.jpg" alt="Pedestal Fans cover">
   </div>
   <div class="slider" data-slider="0">
     <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/pedestal_fans_1.jpg" alt="A27 Mechanical"></div><div class="slide" data-index="1"><img src="assets/pedestal_fans_2.jpg" alt="A47 Remote"></div><div class="slide" data-index="2"><img src="assets/pedestal_fans_3.jpg" alt="A52 Inverter Remote"></div><div class="slide" data-index="3"><img src="assets/pedestal_fans_4.jpg" alt="A53 Mechanical"></div><div class="slide" data-index="4"><img src="assets/pedestal_fans_5.jpg" alt="A55 Remote"></div><div class="slide" data-index="5"><img src="assets/pedestal_fans_6.jpg" alt="A57 Mechanical"></div><div class="slide" data-index="6"><img src="assets/pedestal_fans_7.jpg" alt="A57 Remote"></div><div class="slide" data-index="7"><img src="assets/pedestal_fans_8.jpg" alt="A58 Mechanical"></div><div class="slide" data-index="8"><img src="assets/pedestal_fans_9.jpg" alt="A58 Remote"></div><div class="slide" data-index="9"><img src="assets/pedestal_fans_10.jpg" alt="A59 Standing Fan"></div><div class="slide" data-index="10"><img src="assets/pedestal_fans_11.jpg" alt="A60 Mechanical"></div><div class="slide" data-index="11"><img src="assets/pedestal_fans_12.jpg" alt="A60 Remote"></div><div class="slide" data-index="12"><img src="assets/pedestal_fans_13.jpg" alt="A73 Industrial Stand Fan"></div><div class="slide" data-index="13"><img src="assets/pedestal_fans_14.jpg" alt="A83 Industrial Stand Fan"></div><div class="slide" data-index="14"><img src="assets/pedestal_fans_15.jpg" alt="H8 Mechanical"></div></div>
+    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A27_BlackPearl.jpg" alt="A27 Mechanical"></div><div class="slide" data-index="1"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A47_Red_Remote.jpg" alt="A47 Remote"></div><div class="slide" data-index="2"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A52_PearlWhite_Remote.jpg" alt="A52 Inverter Remote"></div><div class="slide" data-index="3"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A53_Grey.jpg" alt="A53 Mechanical"></div><div class="slide" data-index="4"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A55_Grey_Remote.jpg" alt="A55 Remote"></div><div class="slide" data-index="5"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_Grey.jpg" alt="A57 Mechanical"></div><div class="slide" data-index="6"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_BlackPearl_Remote.jpg" alt="A57 Remote"></div><div class="slide" data-index="7"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A58_BlackGold.jpg" alt="A58 Mechanical"></div><div class="slide" data-index="8"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A58_BlackGold_Remote.jpg" alt="A58 Remote"></div><div class="slide" data-index="9"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A59_BlackPearl.jpg" alt="A59 Standing Fan"></div><div class="slide" data-index="10"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze.jpg" alt="A60 Mechanical"></div><div class="slide" data-index="11"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze_Remote.jpg" alt="A60 Remote"></div><div class="slide" data-index="12"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A73_BlackPearl.jpg" alt="A73 Industrial Stand Fan"></div><div class="slide" data-index="13"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A83_BlackPearl.jpg" alt="A83 Industrial Stand Fan"></div><div class="slide" data-index="14"><img src="assets/01_Pedestal Fans/Pedestal_14 inch_H8_PearlWhite.jpg" alt="H8 Mechanical"></div></div>
     <button class="arrow next" aria-label="Next">&#10095;</button>
     <div class="chips"><button class="chip active" data-index="0">A27 Mechanical</button><button class="chip" data-index="1">A47 Remote</button><button class="chip" data-index="2">A52 Inverter Remote</button><button class="chip" data-index="3">A53 Mechanical</button><button class="chip" data-index="4">A55 Remote</button><button class="chip" data-index="5">A57 Mechanical</button><button class="chip" data-index="6">A57 Remote</button><button class="chip" data-index="7">A58 Mechanical</button><button class="chip" data-index="8">A58 Remote</button><button class="chip" data-index="9">A59 Standing Fan</button><button class="chip" data-index="10">A60 Mechanical</button><button class="chip" data-index="11">A60 Remote</button><button class="chip" data-index="12">A73 Industrial Stand Fan</button><button class="chip" data-index="13">A83 Industrial Stand Fan</button><button class="chip" data-index="14">H8 Mechanical</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/pedestal_fans_1.jpg" alt="A27 Mechanical"></button><button class="thumb" data-index="1"><img src="assets/pedestal_fans_2.jpg" alt="A47 Remote"></button><button class="thumb" data-index="2"><img src="assets/pedestal_fans_3.jpg" alt="A52 Inverter Remote"></button><button class="thumb" data-index="3"><img src="assets/pedestal_fans_4.jpg" alt="A53 Mechanical"></button><button class="thumb" data-index="4"><img src="assets/pedestal_fans_5.jpg" alt="A55 Remote"></button><button class="thumb" data-index="5"><img src="assets/pedestal_fans_6.jpg" alt="A57 Mechanical"></button><button class="thumb" data-index="6"><img src="assets/pedestal_fans_7.jpg" alt="A57 Remote"></button><button class="thumb" data-index="7"><img src="assets/pedestal_fans_8.jpg" alt="A58 Mechanical"></button><button class="thumb" data-index="8"><img src="assets/pedestal_fans_9.jpg" alt="A58 Remote"></button><button class="thumb" data-index="9"><img src="assets/pedestal_fans_10.jpg" alt="A59 Standing Fan"></button><button class="thumb" data-index="10"><img src="assets/pedestal_fans_11.jpg" alt="A60 Mechanical"></button><button class="thumb" data-index="11"><img src="assets/pedestal_fans_12.jpg" alt="A60 Remote"></button><button class="thumb" data-index="12"><img src="assets/pedestal_fans_13.jpg" alt="A73 Industrial Stand Fan"></button><button class="thumb" data-index="13"><img src="assets/pedestal_fans_14.jpg" alt="A83 Industrial Stand Fan"></button><button class="thumb" data-index="14"><img src="assets/pedestal_fans_15.jpg" alt="H8 Mechanical"></button></div>
+    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A27_BlackPearl.jpg" alt="A27 Mechanical"></button><button class="thumb" data-index="1"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A47_Red_Remote.jpg" alt="A47 Remote"></button><button class="thumb" data-index="2"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A52_PearlWhite_Remote.jpg" alt="A52 Inverter Remote"></button><button class="thumb" data-index="3"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A53_Grey.jpg" alt="A53 Mechanical"></button><button class="thumb" data-index="4"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A55_Grey_Remote.jpg" alt="A55 Remote"></button><button class="thumb" data-index="5"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_Grey.jpg" alt="A57 Mechanical"></button><button class="thumb" data-index="6"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_BlackPearl_Remote.jpg" alt="A57 Remote"></button><button class="thumb" data-index="7"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A58_BlackGold.jpg" alt="A58 Mechanical"></button><button class="thumb" data-index="8"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A58_BlackGold_Remote.jpg" alt="A58 Remote"></button><button class="thumb" data-index="9"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A59_BlackPearl.jpg" alt="A59 Standing Fan"></button><button class="thumb" data-index="10"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze.jpg" alt="A60 Mechanical"></button><button class="thumb" data-index="11"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze_Remote.jpg" alt="A60 Remote"></button><button class="thumb" data-index="12"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A73_BlackPearl.jpg" alt="A73 Industrial Stand Fan"></button><button class="thumb" data-index="13"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A83_BlackPearl.jpg" alt="A83 Industrial Stand Fan"></button><button class="thumb" data-index="14"><img src="assets/01_Pedestal Fans/Pedestal_14 inch_H8_PearlWhite.jpg" alt="H8 Mechanical"></button></div>
   </div>
 </section>
 
@@ -103,14 +123,14 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
       <h2>Table Fans</h2>
       <p>Compact desktop and storage table fans for bedrooms, dormitories, counters, and personal cooling.</p>
     </div>
-    <img class="cover" src="assets/table_fans_1.jpg" alt="Table Fans cover">
+    <img class="cover" src="assets/02_Table Fans/Table_12 inch_K6_White.jpg" alt="Table Fans cover">
   </div>
   <div class="slider" data-slider="1">
     <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/table_fans_1.jpg" alt="K6 Table Fan"></div><div class="slide" data-index="1"><img src="assets/table_fans_2.jpg" alt="K11 Table Fan"></div><div class="slide" data-index="2"><img src="assets/table_fans_3.jpg" alt="K12 Storage Table Fan"></div><div class="slide" data-index="3"><img src="assets/table_fans_4.jpg" alt="K13 Storage Table Fan Blue"></div><div class="slide" data-index="4"><img src="assets/table_fans_5.jpg" alt="K13 Storage Table Fan Black"></div><div class="slide" data-index="5"><img src="assets/table_fans_6.jpg" alt="Square Reversible Fan Pink"></div></div>
+    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/02_Table Fans/Table_12 inch_K6_White.jpg" alt="K6 Table Fan"></div><div class="slide" data-index="1"><img src="assets/02_Table Fans/Table_K11_BlackPearl.jpg" alt="K11 Table Fan"></div><div class="slide" data-index="2"><img src="assets/02_Table Fans/Table_16 inch_K12Green.jpg" alt="K12 Storage Table Fan"></div><div class="slide" data-index="3"><img src="assets/02_Table Fans/Table_12 inch_K13_Blue.jpg" alt="K13 Storage Table Fan Blue"></div><div class="slide" data-index="4"><img src="assets/02_Table Fans/Table_12 inch_K13_BlackPearl.jpg" alt="K13 Storage Table Fan Black"></div><div class="slide" data-index="5"><img src="assets/02_Table Fans/Table_12 inch_Pink.jpg" alt="Square Reversible Fan Pink"></div></div>
     <button class="arrow next" aria-label="Next">&#10095;</button>
     <div class="chips"><button class="chip active" data-index="0">K6 Table Fan</button><button class="chip" data-index="1">K11 Table Fan</button><button class="chip" data-index="2">K12 Storage Table Fan</button><button class="chip" data-index="3">K13 Storage Table Fan Blue</button><button class="chip" data-index="4">K13 Storage Table Fan Black</button><button class="chip" data-index="5">Square Reversible Fan Pink</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/table_fans_1.jpg" alt="K6 Table Fan"></button><button class="thumb" data-index="1"><img src="assets/table_fans_2.jpg" alt="K11 Table Fan"></button><button class="thumb" data-index="2"><img src="assets/table_fans_3.jpg" alt="K12 Storage Table Fan"></button><button class="thumb" data-index="3"><img src="assets/table_fans_4.jpg" alt="K13 Storage Table Fan Blue"></button><button class="thumb" data-index="4"><img src="assets/table_fans_5.jpg" alt="K13 Storage Table Fan Black"></button><button class="thumb" data-index="5"><img src="assets/table_fans_6.jpg" alt="Square Reversible Fan Pink"></button></div>
+    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/02_Table Fans/Table_12 inch_K6_White.jpg" alt="K6 Table Fan"></button><button class="thumb" data-index="1"><img src="assets/02_Table Fans/Table_K11_BlackPearl.jpg" alt="K11 Table Fan"></button><button class="thumb" data-index="2"><img src="assets/02_Table Fans/Table_16 inch_K12Green.jpg" alt="K12 Storage Table Fan"></button><button class="thumb" data-index="3"><img src="assets/02_Table Fans/Table_12 inch_K13_Blue.jpg" alt="K13 Storage Table Fan Blue"></button><button class="thumb" data-index="4"><img src="assets/02_Table Fans/Table_12 inch_K13_BlackPearl.jpg" alt="K13 Storage Table Fan Black"></button><button class="thumb" data-index="5"><img src="assets/02_Table Fans/Table_12 inch_Pink.jpg" alt="Square Reversible Fan Pink"></button></div>
   </div>
 </section>
 
@@ -121,14 +141,14 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
       <h2>Wall Fans</h2>
       <p>Wall-mounted options for homes, shops, and utility spaces, including decorative and mosquito-repellent styles.</p>
     </div>
-    <img class="cover" src="assets/wall_fans_1.jpg" alt="Wall Fans cover">
+    <img class="cover" src="assets/03_Wall Fans/Wall Fans_16 inch_B4_Grey.jpg" alt="Wall Fans cover">
   </div>
   <div class="slider" data-slider="2">
     <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/wall_fans_1.jpg" alt="B4 Wall Fan"></div><div class="slide" data-index="1"><img src="assets/wall_fans_2.jpg" alt="B10 Wall Fan"></div><div class="slide" data-index="2"><img src="assets/wall_fans_3.jpg" alt="B15 Wall Fan"></div><div class="slide" data-index="3"><img src="assets/wall_fans_4.jpg" alt="B18 Remote Wall Fan"></div><div class="slide" data-index="4"><img src="assets/wall_fans_5.jpg" alt="B19 Mechanical Wall Fan"></div><div class="slide" data-index="5"><img src="assets/wall_fans_6.jpg" alt="Mosquito-Repellent Wall Fan"></div></div>
+    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/03_Wall Fans/Wall Fans_16 inch_B4_Grey.jpg" alt="B4 Wall Fan"></div><div class="slide" data-index="1"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B10_BlackPearl_2.jpg" alt="B10 Wall Fan"></div><div class="slide" data-index="2"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B15_BlackPearl.jpg" alt="B15 Wall Fan"></div><div class="slide" data-index="3"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B18_BlackPeal__Remote.jpg" alt="B18 Remote Wall Fan"></div><div class="slide" data-index="4"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B26_BlackPearl.jpg" alt="B19 Mechanical Wall Fan"></div><div class="slide" data-index="5"><img src="assets/03_Wall Fans/Wall Fans_16 inch_White_Exterminate mosquitoes.jpg" alt="Mosquito-Repellent Wall Fan"></div></div>
     <button class="arrow next" aria-label="Next">&#10095;</button>
     <div class="chips"><button class="chip active" data-index="0">B4 Wall Fan</button><button class="chip" data-index="1">B10 Wall Fan</button><button class="chip" data-index="2">B15 Wall Fan</button><button class="chip" data-index="3">B18 Remote Wall Fan</button><button class="chip" data-index="4">B19 Mechanical Wall Fan</button><button class="chip" data-index="5">Mosquito-Repellent Wall Fan</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/wall_fans_1.jpg" alt="B4 Wall Fan"></button><button class="thumb" data-index="1"><img src="assets/wall_fans_2.jpg" alt="B10 Wall Fan"></button><button class="thumb" data-index="2"><img src="assets/wall_fans_3.jpg" alt="B15 Wall Fan"></button><button class="thumb" data-index="3"><img src="assets/wall_fans_4.jpg" alt="B18 Remote Wall Fan"></button><button class="thumb" data-index="4"><img src="assets/wall_fans_5.jpg" alt="B19 Mechanical Wall Fan"></button><button class="thumb" data-index="5"><img src="assets/wall_fans_6.jpg" alt="Mosquito-Repellent Wall Fan"></button></div>
+    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/03_Wall Fans/Wall Fans_16 inch_B4_Grey.jpg" alt="B4 Wall Fan"></button><button class="thumb" data-index="1"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B10_BlackPearl_2.jpg" alt="B10 Wall Fan"></button><button class="thumb" data-index="2"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B15_BlackPearl.jpg" alt="B15 Wall Fan"></button><button class="thumb" data-index="3"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B18_BlackPeal__Remote.jpg" alt="B18 Remote Wall Fan"></button><button class="thumb" data-index="4"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B26_BlackPearl.jpg" alt="B19 Mechanical Wall Fan"></button><button class="thumb" data-index="5"><img src="assets/03_Wall Fans/Wall Fans_16 inch_White_Exterminate mosquitoes.jpg" alt="Mosquito-Repellent Wall Fan"></button></div>
   </div>
 </section>
 
@@ -139,14 +159,14 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
       <h2>Air Circulator & Floor Fans</h2>
       <p>Floor, box, and heavy-duty air movement options for broader airflow and practical cooling.</p>
     </div>
-    <img class="cover" src="assets/air_circulator_and_floor_fans_1.jpg" alt="Air Circulator & Floor Fans cover">
+    <img class="cover" src="assets/04_Air Circulators/Air Circulators_S1_Green.jpg" alt="Air Circulator & Floor Fans cover">
   </div>
   <div class="slider" data-slider="3">
     <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/air_circulator_and_floor_fans_1.jpg" alt="Box Fan"></div><div class="slide" data-index="1"><img src="assets/air_circulator_and_floor_fans_2.jpg" alt="Box Fan Remote"></div><div class="slide" data-index="2"><img src="assets/air_circulator_and_floor_fans_3.jpg" alt="Floor Fan A8"></div><div class="slide" data-index="3"><img src="assets/air_circulator_and_floor_fans_4.jpg" alt="Floor Fan A9"></div><div class="slide" data-index="4"><img src="assets/air_circulator_and_floor_fans_5.jpg" alt="Floor Fan A11"></div><div class="slide" data-index="5"><img src="assets/air_circulator_and_floor_fans_6.jpg" alt="Industrial Floor Fan A43"></div></div>
+    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/04_Air Circulators/Air Circulators_S1_Green.jpg" alt="Box Fan"></div><div class="slide" data-index="1"><img src="assets/04_Air Circulators/Air Circulators_S1_Green-Remote.jpg" alt="Box Fan Remote"></div><div class="slide" data-index="2"><img src="assets/04_Air Circulators/Air Circulators_S2_BlackPearl.jpg" alt="Floor Fan A8"></div><div class="slide" data-index="3"><img src="assets/04_Air Circulators/Air Circulators_S9_DarkGreen.jpg" alt="Floor Fan A9"></div><div class="slide" data-index="4"><img src="assets/04_Air Circulators/Air Circulators_S10_Grey_2.jpg" alt="Floor Fan A11"></div><div class="slide" data-index="5"><img src="assets/04_Air Circulators/Air Circulators_S11_Grey_2_Remote.jpg" alt="Industrial Floor Fan A43"></div></div>
     <button class="arrow next" aria-label="Next">&#10095;</button>
     <div class="chips"><button class="chip active" data-index="0">Box Fan</button><button class="chip" data-index="1">Box Fan Remote</button><button class="chip" data-index="2">Floor Fan A8</button><button class="chip" data-index="3">Floor Fan A9</button><button class="chip" data-index="4">Floor Fan A11</button><button class="chip" data-index="5">Industrial Floor Fan A43</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/air_circulator_and_floor_fans_1.jpg" alt="Box Fan"></button><button class="thumb" data-index="1"><img src="assets/air_circulator_and_floor_fans_2.jpg" alt="Box Fan Remote"></button><button class="thumb" data-index="2"><img src="assets/air_circulator_and_floor_fans_3.jpg" alt="Floor Fan A8"></button><button class="thumb" data-index="3"><img src="assets/air_circulator_and_floor_fans_4.jpg" alt="Floor Fan A9"></button><button class="thumb" data-index="4"><img src="assets/air_circulator_and_floor_fans_5.jpg" alt="Floor Fan A11"></button><button class="thumb" data-index="5"><img src="assets/air_circulator_and_floor_fans_6.jpg" alt="Industrial Floor Fan A43"></button></div>
+    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/04_Air Circulators/Air Circulators_S1_Green.jpg" alt="Box Fan"></button><button class="thumb" data-index="1"><img src="assets/04_Air Circulators/Air Circulators_S1_Green-Remote.jpg" alt="Box Fan Remote"></button><button class="thumb" data-index="2"><img src="assets/04_Air Circulators/Air Circulators_S2_BlackPearl.jpg" alt="Floor Fan A8"></button><button class="thumb" data-index="3"><img src="assets/04_Air Circulators/Air Circulators_S9_DarkGreen.jpg" alt="Floor Fan A9"></button><button class="thumb" data-index="4"><img src="assets/04_Air Circulators/Air Circulators_S10_Grey_2.jpg" alt="Floor Fan A11"></button><button class="thumb" data-index="5"><img src="assets/04_Air Circulators/Air Circulators_S11_Grey_2_Remote.jpg" alt="Industrial Floor Fan A43"></button></div>
   </div>
 </section>
 </div>
@@ -155,7 +175,61 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
     <h2>Contact for Inquiry</h2>
     <p>Contact Person: Bosco Leung · Email: ht-888@163.com · WhatsApp: +1 914 658 9879 · CCC / NORDOM available for selected markets and models.</p>
   </section>
-  <div class="footer">This version keeps the earlier B12-style business content while expanding the product side with your uploaded images. Air circulator-specific single-product images can be added next when you upload them.</div>
+  <footer class="footer-wrap">
+    <div class="footer-main">
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Inquiry Support</a></li>
+            <li><a href="#">Product Catalog</a></li>
+            <li><a href="#">OEM / ODM Service</a></li>
+            <li><a href="#">Shipping &amp; Lead Time</a></li>
+            <li><a href="#">MOQ Information</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#">About RichLand</a></li>
+            <li><a href="#">Factory Strength</a></li>
+            <li><a href="#products">Product Categories</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-connect">
+        <h3>Connect with Us</h3>
+        <div class="socials">
+          <a class="social" href="#" aria-label="Instagram">Instagram</a>
+          <a class="social" href="#" aria-label="X">X</a>
+          <a class="social" href="#" aria-label="Facebook">Facebook</a>
+          <a class="social" href="#" aria-label="YouTube">YouTube</a>
+        </div>
+        <p class="subscribe-copy">Leave your email to receive product updates, new fan series releases, and the latest cooperation news from RichLand.</p>
+        <form class="subscribe-form" action="#" method="post">
+          <label class="sr-only" for="email-subscribe">Business Email</label>
+          <input id="email-subscribe" type="email" name="email" placeholder="Enter your business email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <label class="consent">
+          <input type="checkbox" name="consent">
+          <span>I agree to receive product and cooperation updates and understand this form is for newsletter subscription only.</span>
+        </label>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <div>Copyright RichLand Ltd. All rights reserved.</div>
+      <div class="bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Consent</a>
+        <span>Country / Region: Global</span>
+      </div>
+    </div>
+  </footer>
 </div>
 <script>
 document.querySelectorAll('.slider').forEach(slider=>{
