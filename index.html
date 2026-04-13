@@ -6,20 +6,20 @@
 <title>RichLand Ltd. | Premium B2B Fan Solutions</title>
 <style>
 :root{
-  --bg:#050708;
-  --bg-soft:#0b0f10;
-  --bg-panel:#101617;
-  --bg-panel-2:#151c1d;
-  --bg-panel-3:#1a2224;
-  --line:#273235;
-  --line-soft:#20292b;
-  --text:#f3f6f5;
-  --muted:#9ba8aa;
-  --muted-2:#7f8d90;
-  --accent:#b8efe1;
-  --accent-strong:#4fc4a5;
-  --accent-glow:rgba(86,214,178,.18);
-  --shadow:0 24px 60px rgba(0,0,0,.35);
+  --bg:#eef4f4;
+  --bg-soft:#f7fbfb;
+  --bg-panel:#ffffff;
+  --bg-panel-2:#f4f8f8;
+  --bg-panel-3:#edf3f3;
+  --line:#d9e3e3;
+  --line-soft:#e7eeee;
+  --text:#182527;
+  --muted:#617173;
+  --muted-2:#768688;
+  --accent:#2a8f7b;
+  --accent-strong:#167f69;
+  --accent-glow:rgba(77,196,167,.12);
+  --shadow:0 24px 60px rgba(56,88,90,.10);
   --radius-xl:34px;
   --radius-lg:24px;
   --radius-md:18px;
@@ -33,9 +33,9 @@ body{
   font-family:"Avenir Next","Segoe UI",Inter,Arial,sans-serif;
   color:var(--text);
   background:
-    radial-gradient(circle at top center, rgba(72,126,116,.14), transparent 26%),
-    radial-gradient(circle at 20% 12%, rgba(91,160,145,.08), transparent 22%),
-    linear-gradient(180deg, #040607 0%, #070a0b 20%, #090d0e 46%, #060809 100%);
+    radial-gradient(circle at top center, rgba(111,191,170,.16), transparent 24%),
+    radial-gradient(circle at 18% 12%, rgba(197,230,224,.65), transparent 20%),
+    linear-gradient(180deg, #fbfdfd 0%, #f2f7f7 28%, #edf4f4 56%, #f7fbfb 100%);
   animation:siteReveal 2.8s ease-out both;
 }
 a{color:inherit;text-decoration:none}
@@ -54,11 +54,11 @@ img{display:block;max-width:100%}
   gap:18px;
   padding:14px 16px;
   margin-bottom:18px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.72);
   border-radius:999px;
-  background:rgba(12,18,19,.72);
+  background:rgba(255,255,255,.74);
   backdrop-filter:blur(18px);
-  box-shadow:0 18px 38px rgba(0,0,0,.2);
+  box-shadow:0 18px 38px rgba(101,139,139,.12);
 }
 
 .brand{
@@ -73,8 +73,8 @@ img{display:block;max-width:100%}
   border-radius:14px;
   display:grid;
   place-items:center;
-  background:linear-gradient(135deg, #10362f, #235d50);
-  color:#f4fffc;
+  background:linear-gradient(135deg, #def1eb, #a9d9cd);
+  color:#17463e;
   font-size:13px;
   font-weight:800;
   letter-spacing:.08em;
@@ -83,9 +83,9 @@ img{display:block;max-width:100%}
 
 .brand-pill{
   padding:9px 12px;
-  border:1px solid rgba(255,255,255,.07);
+  border:1px solid var(--line);
   border-radius:999px;
-  background:rgba(255,255,255,.02);
+  background:rgba(255,255,255,.78);
   color:var(--muted);
   font-size:12px;
   font-weight:700;
@@ -103,21 +103,21 @@ img{display:block;max-width:100%}
 .topnav a{
   padding:10px 14px;
   border-radius:999px;
-  color:#c8d0d1;
+  color:#4f6163;
   font-size:14px;
   font-weight:650;
 }
 
 .topnav .nav-cta{
-  border:1px solid rgba(255,255,255,.08);
+  border:1px solid var(--line);
   background:#fff;
   color:#0d1415;
 }
 
 .panel{
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.85);
   border-radius:var(--radius-xl);
-  background:linear-gradient(180deg, rgba(21,28,29,.9), rgba(13,18,19,.96));
+  background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(245,250,250,.96));
   box-shadow:var(--shadow);
 }
 
@@ -138,8 +138,8 @@ img{display:block;max-width:100%}
   gap:8px;
   padding:8px 12px;
   border-radius:999px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.06);
+  background:rgba(255,255,255,.78);
+  border:1px solid var(--line);
   color:var(--accent);
   font-size:12px;
   font-weight:800;
@@ -177,8 +177,8 @@ h1{
   min-height:48px;
   padding:0 18px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.08);
-  background:rgba(255,255,255,.02);
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.85);
   color:var(--text);
   font-size:14px;
   font-weight:750;
@@ -200,9 +200,9 @@ h1{
 .mini-note,
 .stat{
   padding:15px 16px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:20px;
-  background:rgba(255,255,255,.025);
+  background:rgba(255,255,255,.82);
 }
 
 .mini-note strong,
@@ -241,11 +241,11 @@ h1{
   min-height:560px;
   padding:28px;
   border-radius:28px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.92);
   background:
-    radial-gradient(circle at center, rgba(175,244,224,.12), transparent 34%),
-    radial-gradient(circle at 50% 24%, rgba(255,255,255,.11), transparent 22%),
-    linear-gradient(180deg, #0c1011, #080a0b 62%, #050607);
+    radial-gradient(circle at center, rgba(132,214,192,.26), transparent 33%),
+    radial-gradient(circle at 50% 24%, rgba(255,255,255,.95), transparent 22%),
+    linear-gradient(180deg, #ffffff, #f2f8f8 62%, #ecf4f4);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -268,24 +268,24 @@ h1{
   background:
     conic-gradient(from 0deg,
       rgba(123,223,197,0) 0deg,
-      rgba(123,223,197,.2) 58deg,
-      rgba(255,255,255,.05) 105deg,
+      rgba(123,223,197,.28) 58deg,
+      rgba(255,255,255,.22) 105deg,
       rgba(123,223,197,0) 140deg,
-      rgba(123,223,197,.18) 210deg,
-      rgba(255,255,255,.03) 260deg,
+      rgba(123,223,197,.24) 210deg,
+      rgba(255,255,255,.10) 260deg,
       rgba(123,223,197,0) 360deg);
-  filter:blur(18px);
-  opacity:.9;
+  filter:blur(16px);
+  opacity:.78;
   animation:spinAura 6.8s linear infinite;
 }
 
 .hero-media::after{
   width:92%;
   aspect-ratio:1/1;
-  border:1px solid rgba(184,239,225,.12);
+  border:1px solid rgba(128,209,185,.22);
   box-shadow:
-    0 0 0 18px rgba(184,239,225,.025),
-    0 0 60px rgba(79,196,165,.08) inset;
+    0 0 0 18px rgba(184,239,225,.055),
+    0 0 60px rgba(79,196,165,.10) inset;
   animation:pulseHalo 3.6s ease-in-out infinite;
 }
 
@@ -315,14 +315,14 @@ h1{
   inset:9%;
   border-radius:50%;
   background:
-    radial-gradient(circle, rgba(255,255,255,.12), transparent 58%),
+    radial-gradient(circle, rgba(255,255,255,.34), transparent 58%),
     conic-gradient(from 0deg,
-      rgba(255,255,255,.16) 0deg,
-      rgba(89,201,175,.02) 80deg,
-      rgba(255,255,255,.12) 140deg,
-      rgba(89,201,175,.01) 220deg,
-      rgba(255,255,255,.14) 310deg,
-      rgba(255,255,255,.16) 360deg);
+      rgba(255,255,255,.28) 0deg,
+      rgba(89,201,175,.08) 80deg,
+      rgba(255,255,255,.18) 140deg,
+      rgba(89,201,175,.04) 220deg,
+      rgba(255,255,255,.22) 310deg,
+      rgba(255,255,255,.28) 360deg);
   filter:blur(2px);
   opacity:.75;
 }
@@ -333,7 +333,7 @@ h1{
   inset:0;
   border-radius:50%;
   background:
-    radial-gradient(circle, transparent 45%, rgba(133,228,204,.12) 60%, transparent 73%);
+    radial-gradient(circle, transparent 45%, rgba(133,228,204,.16) 60%, transparent 73%);
   filter:blur(12px);
   opacity:.8;
 }
@@ -358,9 +358,9 @@ h1{
 .badge{
   padding:10px 12px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.07);
-  background:rgba(255,255,255,.025);
-  color:#d3dbdc;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.86);
+  color:#5b6d6f;
   font-size:13px;
   font-weight:700;
 }
@@ -413,9 +413,9 @@ h1{
 
 .signal-chip{
   padding:16px 18px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:22px;
-  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+  background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(247,251,251,.95));
 }
 
 .signal-chip strong{
@@ -437,9 +437,9 @@ h1{
 
 .band{
   padding:22px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.92);
   border-radius:28px;
-  background:rgba(255,255,255,.02);
+  background:rgba(255,255,255,.78);
 }
 
 .band-head{
@@ -466,9 +466,9 @@ h1{
 .pill-note{
   padding:10px 12px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.07);
-  background:rgba(255,255,255,.03);
-  color:#c9d5d6;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.88);
+  color:#698082;
   font-size:12px;
   font-weight:750;
   white-space:nowrap;
@@ -482,9 +482,9 @@ h1{
 
 .core-card{
   padding:18px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:22px;
-  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.018));
+  background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(244,248,248,.92));
 }
 
 .core-card strong{
@@ -510,9 +510,9 @@ h1{
 .extension-tag{
   padding:11px 14px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.06);
-  background:rgba(255,255,255,.025);
-  color:#d7dfdf;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.82);
+  color:#5c7173;
   font-size:13px;
   font-weight:700;
 }
@@ -525,9 +525,9 @@ h1{
 
 .value-card{
   padding:20px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:24px;
-  background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.018));
+  background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(245,249,249,.92));
 }
 
 .value-card strong{
@@ -546,10 +546,10 @@ h1{
 
 .patent-card{
   background:
-    radial-gradient(circle at top right, rgba(79,196,165,.16), transparent 34%),
-    linear-gradient(180deg, rgba(19,38,36,.94), rgba(14,23,24,.96));
-  border-color:rgba(98,211,182,.22);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+    radial-gradient(circle at top right, rgba(79,196,165,.18), transparent 34%),
+    linear-gradient(180deg, rgba(237,248,245,.98), rgba(229,244,240,.96));
+  border-color:rgba(98,211,182,.24);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55);
 }
 
 .stats-grid{
@@ -560,9 +560,9 @@ h1{
 
 .stats-block{
   padding:18px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:20px;
-  background:rgba(255,255,255,.025);
+  background:rgba(255,255,255,.84);
 }
 
 .stats-block strong{
@@ -609,10 +609,10 @@ h1{
 
 .next-step li{
   padding:14px 16px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:18px;
-  background:rgba(255,255,255,.02);
-  color:#d8e0e0;
+  background:rgba(255,255,255,.82);
+  color:#476062;
   font-size:14px;
   line-height:1.58;
 }
@@ -624,9 +624,9 @@ h1{
 
 .contact-card{
   padding:18px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:22px;
-  background:rgba(255,255,255,.024);
+  background:rgba(255,255,255,.86);
 }
 
 .contact-card strong{
@@ -655,19 +655,19 @@ h1{
 
 .highlight-card{
   padding:18px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:24px;
-  background:rgba(255,255,255,.02);
+  background:rgba(255,255,255,.84);
 }
 
 .highlight-media{
   aspect-ratio:1/1;
   margin-bottom:16px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.95);
   border-radius:20px;
   background:
-    radial-gradient(circle at top, rgba(115,185,166,.12), transparent 28%),
-    linear-gradient(180deg, #111719, #0a0d0e);
+    radial-gradient(circle at top, rgba(115,185,166,.18), transparent 28%),
+    linear-gradient(180deg, #ffffff, #eef5f5);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -711,16 +711,16 @@ h1{
 }
 
 .feature-list li{
-  color:#d6dede;
+  color:#4f6567;
   font-size:13px;
   font-weight:600;
 }
 
 .footer-wrap{
   margin-top:18px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.95);
   border-radius:var(--radius-xl);
-  background:linear-gradient(180deg, rgba(17,23,24,.96), rgba(11,15,16,.98));
+  background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(244,249,249,.98));
   box-shadow:var(--shadow);
   overflow:hidden;
 }
@@ -766,7 +766,7 @@ h1{
 }
 
 .footer-col a{
-  color:#cfd7d7;
+  color:#516668;
   font-weight:650;
 }
 
@@ -777,9 +777,9 @@ h1{
 
 .contact-line{
   padding:14px 16px;
-  border:1px solid rgba(255,255,255,.06);
+  border:1px solid var(--line);
   border-radius:18px;
-  background:rgba(255,255,255,.02);
+  background:rgba(255,255,255,.82);
 }
 
 .contact-line span{
@@ -791,7 +791,7 @@ h1{
 
 .contact-line strong,
 .contact-line a{
-  color:#f3f7f7;
+  color:#173032;
   font-size:15px;
   font-weight:750;
 }
@@ -809,9 +809,9 @@ h1{
   min-width:92px;
   padding:10px 12px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.06);
-  background:rgba(255,255,255,.02);
-  color:#d9e1e1;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.86);
+  color:#53686a;
   font-size:14px;
   font-weight:700;
 }
@@ -823,8 +823,8 @@ h1{
   gap:14px;
   flex-wrap:wrap;
   padding:14px 34px;
-  border-top:1px solid rgba(255,255,255,.06);
-  background:rgba(255,255,255,.015);
+  border-top:1px solid var(--line);
+  background:rgba(255,255,255,.62);
   color:var(--muted-2);
   font-size:13px;
 }
@@ -953,11 +953,11 @@ h1{
 
   <section class="hero">
     <div class="panel hero-copy">
-      <span class="eyebrow">Factory-direct airflow systems</span>
-      <h1>From a dark stage to a clearer fan story</h1>
-      <p class="lead">The first screen is now treated like a premium technology hero: one recognizable air circulator in a dark environment, a calmer sense of motion, and a cleaner path into the business overview that global buyers need next.</p>
+      <span class="eyebrow">Source-factory fan solutions</span>
+      <h1>Built Around Better Airflow</h1>
+      <p class="lead">RichLand develops practical fan solutions for global buyers, combining source-factory experience with a clearer category structure for export cooperation.</p>
       <div class="cta-row">
-        <a class="btn primary" href="#overview">Enter Product Overview</a>
+        <a class="btn primary" href="#overview">Explore Categories</a>
         <a class="btn" href="#inquiry">Send Inquiry</a>
       </div>
       <div class="hero-notes">
