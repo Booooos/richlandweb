@@ -3,223 +3,1297 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RichLand Ltd. | Eco-Friendly Quiet Fans</title>
+<title>RichLand Ltd. | Premium B2B Fan Solutions</title>
 <style>
-:root{--bg:#f4f7f6;--card:#fff;--text:#173036;--muted:#5f7176;--line:#dbe4e6;--accent:#0d7d67;--dark:#0f2227;}
-*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,#f9fbfa,#eef4f3);color:var(--text)}
+:root{
+  --bg:#eef4f4;
+  --bg-soft:#f7fbfb;
+  --bg-panel:#ffffff;
+  --bg-panel-2:#f4f8f8;
+  --bg-panel-3:#edf3f3;
+  --line:#d9e3e3;
+  --line-soft:#e7eeee;
+  --text:#182527;
+  --muted:#617173;
+  --muted-2:#768688;
+  --accent:#2a8f7b;
+  --accent-strong:#167f69;
+  --accent-glow:rgba(77,196,167,.12);
+  --shadow:0 24px 60px rgba(56,88,90,.10);
+  --radius-xl:34px;
+  --radius-lg:24px;
+  --radius-md:18px;
+  --wrap:1240px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Avenir Next","Segoe UI",Inter,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top center, rgba(111,191,170,.16), transparent 24%),
+    radial-gradient(circle at 18% 12%, rgba(197,230,224,.65), transparent 20%),
+    linear-gradient(180deg, #fbfdfd 0%, #f2f7f7 28%, #edf4f4 56%, #f7fbfb 100%);
+  animation:siteReveal 2.8s ease-out both;
+}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1240px;margin:0 auto;padding:28px 20px 80px}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;margin-bottom:30px}
-@media(max-width:900px){.hero{grid-template-columns:1fr} .category-head{grid-template-columns:1fr !important}}
-.panel{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:30px;box-shadow:0 18px 50px rgba(20,42,48,.08)}
-.hero-copy{padding:34px}
-.kicker{display:inline-block;padding:8px 12px;border-radius:999px;background:#e8f3ef;color:#0f705c;font-weight:700;font-size:13px;letter-spacing:.02em}
-h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
-.lead{font-size:18px;line-height:1.65;color:var(--muted);max-width:700px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-.btn{padding:14px 18px;border-radius:999px;font-weight:700;border:1px solid var(--line);background:#fff}
-.btn.primary{background:var(--dark);color:#fff;border-color:var(--dark)}
-.statbar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
-.stat{padding:16px 14px;border:1px solid var(--line);border-radius:20px;background:#fff}
-.stat strong{display:block;font-size:20px}
-.hero-image{min-height:100%;padding:16px;display:flex;align-items:center;justify-content:center}
-.hero-image img{width:100%;max-height:560px;object-fit:contain;border-radius:22px;background:#fff}
-.section-title{margin:34px 0 18px}
-.section-title h2{font-size:30px;margin:0 0 8px}
-.section-title p{margin:0;color:var(--muted);line-height:1.65;max-width:760px}
-.grid{display:grid;gap:22px}
-.card{padding:24px}
-.category-head{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center;margin-bottom:18px}
-.eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:#edf5f3;color:#40636a;font-size:12px;font-weight:700;margin-bottom:10px}
-.category h2{margin:0 0 8px;font-size:30px}
-.category p{margin:0;color:var(--muted);line-height:1.6}
-.cover{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:24px;padding:8px}
-.slider{position:relative}
-.viewport{position:relative;height:560px;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden}
-@media(max-width:900px){.viewport{height:440px}}
-.slide{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .28s ease}
-.slide.active{opacity:1;pointer-events:auto}
-.slide img{width:100%;height:100%;object-fit:contain;padding:10px}
-.arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:none;border-radius:999px;background:rgba(255,255,255,.96);box-shadow:0 12px 24px rgba(10,24,28,.12);font-size:22px;cursor:pointer;z-index:3}
-.prev{left:14px} .next{right:14px}
-.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.chip{padding:10px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-weight:600;cursor:pointer}
-.chip.active{background:var(--dark);color:#fff;border-color:var(--dark)}
-.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:10px;margin-top:14px}
-.thumb{padding:0;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;cursor:pointer;aspect-ratio:1/1}
-.thumb img{width:100%;height:100%;object-fit:contain;padding:6px}
-.thumb.active{border-color:var(--dark);box-shadow:0 0 0 2px rgba(15,34,39,.08) inset}
-.footer-wrap{margin-top:42px;border:1px solid var(--line);border-radius:30px;background:#f3f6f6;overflow:hidden}
-.footer-main{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;padding:42px 34px}
-.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:28px}
-.footer-col h3{margin:0 0 14px;font-size:18px;color:#10272d}
-.footer-col ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
-.footer-col a{color:#4a6168;font-weight:500}
-.footer-col a:hover{color:#0f2227}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.footer-connect h3{margin:0 0 14px;font-size:18px;color:#10272d}
-.socials{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
-.social{display:inline-flex;align-items:center;justify-content:center;min-width:92px;padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#364d53;font-weight:600;font-size:14px}
-.subscribe-copy{margin:0 0 14px;color:#5e747b;line-height:1.6}
-.subscribe-form{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
-.subscribe-form input{flex:1 1 280px;height:46px;border:1px solid var(--line);border-radius:12px;padding:0 14px;background:#fff;font-size:15px;color:#173036}
-.subscribe-form button{height:46px;padding:0 18px;border:1px solid var(--dark);background:var(--dark);color:#fff;border-radius:12px;font-weight:700;cursor:pointer}
-.consent{display:flex;align-items:flex-start;gap:10px;color:#60767d;font-size:13px;line-height:1.5}
-.consent input{margin-top:3px}
-.bottom-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:14px 34px;border-top:1px solid #d8e1e3;background:#eef3f2;color:#60737a;font-size:13px}
-.bottom-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-@media(max-width:1100px){.footer-main{grid-template-columns:1fr;gap:32px}.footer-nav{grid-template-columns:repeat(2,minmax(180px,1fr))}}
-@media(max-width:760px){.footer-main{padding:34px 22px}.footer-nav{grid-template-columns:1fr}.bottom-bar{padding:14px 22px}}
+img{display:block;max-width:100%}
+
+.page-shell{
+  max-width:var(--wrap);
+  margin:0 auto;
+  padding:18px 20px 80px;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:14px 16px;
+  margin-bottom:18px;
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:999px;
+  background:rgba(255,255,255,.74);
+  backdrop-filter:blur(18px);
+  box-shadow:0 18px 38px rgba(101,139,139,.12);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-mark{
+  width:40px;
+  height:40px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg, #def1eb, #a9d9cd);
+  color:#17463e;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.08em;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.brand-pill{
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.78);
+  color:var(--muted);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.topnav{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.topnav a{
+  padding:10px 14px;
+  border-radius:999px;
+  color:#4f6163;
+  font-size:14px;
+  font-weight:650;
+}
+
+.topnav .nav-cta{
+  border:1px solid var(--line);
+  background:#fff;
+  color:#0d1415;
+}
+
+.panel{
+  border:1px solid rgba(255,255,255,.85);
+  border-radius:var(--radius-xl);
+  background:linear-gradient(180deg, rgba(255,255,255,.94), rgba(245,250,250,.96));
+  box-shadow:var(--shadow);
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(360px,.92fr);
+  gap:22px;
+  margin-bottom:18px;
+}
+
+.hero-copy{
+  padding:42px 40px 36px;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.78);
+  border:1px solid var(--line);
+  color:var(--accent);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+h1{
+  margin:18px 0 14px;
+  max-width:11ch;
+  font-size:clamp(44px,5vw,72px);
+  line-height:.95;
+  letter-spacing:-.05em;
+}
+
+.hero-copy .lead{
+  max-width:640px;
+  margin:0 0 26px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.72;
+}
+
+.cta-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:22px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 18px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.85);
+  color:var(--text);
+  font-size:14px;
+  font-weight:750;
+}
+
+.btn.primary{
+  border-color:transparent;
+  background:linear-gradient(180deg, #f6f9f8, #dbe8e5);
+  color:#091011;
+}
+
+.hero-notes{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:18px;
+}
+
+.mini-note,
+.stat{
+  padding:15px 16px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:rgba(255,255,255,.82);
+}
+
+.mini-note strong,
+.stat strong{
+  display:block;
+  margin-bottom:4px;
+  font-size:15px;
+}
+
+.mini-note span,
+.stat span{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+}
+
+.statbar{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.stat strong{
+  font-size:20px;
+  letter-spacing:-.03em;
+}
+
+.hero-visual{
+  padding:18px;
+  display:grid;
+  gap:14px;
+}
+
+.hero-media{
+  position:relative;
+  min-height:560px;
+  padding:28px;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.92);
+  background:
+    radial-gradient(circle at center, rgba(132,214,192,.26), transparent 33%),
+    radial-gradient(circle at 50% 24%, rgba(255,255,255,.95), transparent 22%),
+    linear-gradient(180deg, #ffffff, #f2f8f8 62%, #ecf4f4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.hero-media::before,
+.hero-media::after{
+  content:"";
+  position:absolute;
+  inset:50%;
+  translate:-50% -50%;
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.hero-media::before{
+  width:78%;
+  aspect-ratio:1/1;
+  background:
+    conic-gradient(from 0deg,
+      rgba(123,223,197,0) 0deg,
+      rgba(123,223,197,.28) 58deg,
+      rgba(255,255,255,.22) 105deg,
+      rgba(123,223,197,0) 140deg,
+      rgba(123,223,197,.24) 210deg,
+      rgba(255,255,255,.10) 260deg,
+      rgba(123,223,197,0) 360deg);
+  filter:blur(16px);
+  opacity:.78;
+  animation:spinAura 6.8s linear infinite;
+}
+
+.hero-media::after{
+  width:92%;
+  aspect-ratio:1/1;
+  border:1px solid rgba(128,209,185,.22);
+  box-shadow:
+    0 0 0 18px rgba(184,239,225,.055),
+    0 0 60px rgba(79,196,165,.10) inset;
+  animation:pulseHalo 3.6s ease-in-out infinite;
+}
+
+.spin-stage{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.spin-disc{
+  position:relative;
+  width:min(78%, 440px);
+  aspect-ratio:1/1;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  animation:spinDisc 8.5s linear infinite;
+}
+
+.spin-disc::before{
+  content:"";
+  position:absolute;
+  inset:9%;
+  border-radius:50%;
+  background:
+    radial-gradient(circle, rgba(255,255,255,.34), transparent 58%),
+    conic-gradient(from 0deg,
+      rgba(255,255,255,.28) 0deg,
+      rgba(89,201,175,.08) 80deg,
+      rgba(255,255,255,.18) 140deg,
+      rgba(89,201,175,.04) 220deg,
+      rgba(255,255,255,.22) 310deg,
+      rgba(255,255,255,.28) 360deg);
+  filter:blur(2px);
+  opacity:.75;
+}
+
+.spin-disc::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:
+    radial-gradient(circle, transparent 45%, rgba(133,228,204,.16) 60%, transparent 73%);
+  filter:blur(12px);
+  opacity:.8;
+}
+
+.hero-media img{
+  position:relative;
+  z-index:2;
+  width:100%;
+  height:100%;
+  max-height:500px;
+  object-fit:contain;
+  filter:drop-shadow(0 28px 40px rgba(0,0,0,.48));
+  animation:fanFloat 4.2s ease-in-out infinite;
+}
+
+.badge-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.badge{
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.86);
+  color:#5b6d6f;
+  font-size:13px;
+  font-weight:700;
+}
+
+.section{
+  margin-top:18px;
+  padding:34px;
+}
+
+.section-kicker{
+  display:inline-block;
+  margin-bottom:12px;
+  color:var(--accent);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.section-head{
+  margin-bottom:24px;
+}
+
+.section-head h2{
+  margin:0 0 10px;
+  font-size:clamp(32px,3.5vw,48px);
+  letter-spacing:-.04em;
+}
+
+.section-head p{
+  max-width:760px;
+  margin:0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.75;
+}
+
+.overview-header{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
+  gap:20px;
+  align-items:end;
+  margin-bottom:26px;
+}
+
+.signal-stack{
+  display:grid;
+  gap:12px;
+}
+
+.signal-chip{
+  padding:16px 18px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(247,251,251,.95));
+}
+
+.signal-chip strong{
+  display:block;
+  margin-bottom:5px;
+  font-size:15px;
+}
+
+.signal-chip span{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+}
+
+.overview-band{
+  display:grid;
+  gap:18px;
+}
+
+.band{
+  padding:22px;
+  border:1px solid rgba(255,255,255,.92);
+  border-radius:28px;
+  background:rgba(255,255,255,.78);
+}
+
+.band-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:18px;
+  align-items:end;
+  margin-bottom:16px;
+}
+
+.band h3{
+  margin:0 0 6px;
+  font-size:24px;
+  letter-spacing:-.03em;
+}
+
+.band p{
+  margin:0;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.68;
+}
+
+.pill-note{
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.88);
+  color:#698082;
+  font-size:12px;
+  font-weight:750;
+  white-space:nowrap;
+}
+
+.core-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+}
+
+.core-card{
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(244,248,248,.92));
+}
+
+.core-card strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:17px;
+  letter-spacing:-.02em;
+}
+
+.core-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.58;
+}
+
+.extension-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.extension-tag{
+  padding:11px 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.82);
+  color:#5c7173;
+  font-size:13px;
+  font-weight:700;
+}
+
+.value-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:14px;
+}
+
+.value-card{
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(245,249,249,.92));
+}
+
+.value-card strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:18px;
+  letter-spacing:-.02em;
+}
+
+.value-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+.patent-card{
+  background:
+    radial-gradient(circle at top right, rgba(79,196,165,.18), transparent 34%),
+    linear-gradient(180deg, rgba(237,248,245,.98), rgba(229,244,240,.96));
+  border-color:rgba(98,211,182,.24);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+
+.stats-block{
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:rgba(255,255,255,.84);
+}
+
+.stats-block strong{
+  display:block;
+  margin-bottom:6px;
+  font-size:20px;
+  letter-spacing:-.03em;
+}
+
+.stats-block span{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.58;
+}
+
+.inquiry-rail{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(320px,.8fr);
+  gap:18px;
+  align-items:stretch;
+}
+
+.inquiry-copy h3{
+  margin:0 0 10px;
+  font-size:28px;
+  letter-spacing:-.03em;
+}
+
+.inquiry-copy p{
+  margin:0 0 18px;
+  max-width:620px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.72;
+}
+
+.next-step{
+  display:grid;
+  gap:10px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.next-step li{
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(255,255,255,.82);
+  color:#476062;
+  font-size:14px;
+  line-height:1.58;
+}
+
+.contact-stack{
+  display:grid;
+  gap:12px;
+}
+
+.contact-card{
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:rgba(255,255,255,.86);
+}
+
+.contact-card strong{
+  display:block;
+  margin-bottom:8px;
+  font-size:15px;
+}
+
+.contact-card span,
+.contact-card a{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
+
+.contact-card a{
+  color:var(--accent);
+  font-weight:750;
+}
+
+.highlights-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+
+.highlight-card{
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:rgba(255,255,255,.84);
+}
+
+.highlight-media{
+  aspect-ratio:1/1;
+  margin-bottom:16px;
+  border:1px solid rgba(255,255,255,.95);
+  border-radius:20px;
+  background:
+    radial-gradient(circle at top, rgba(115,185,166,.18), transparent 28%),
+    linear-gradient(180deg, #ffffff, #eef5f5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.highlight-media img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:14px;
+  filter:drop-shadow(0 20px 30px rgba(0,0,0,.4));
+}
+
+.highlight-meta{
+  color:var(--accent);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.highlight-card h3{
+  margin:8px 0 8px;
+  font-size:20px;
+  letter-spacing:-.03em;
+}
+
+.highlight-card p{
+  margin:0 0 14px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.65;
+}
+
+.feature-list{
+  display:grid;
+  gap:8px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.feature-list li{
+  color:#4f6567;
+  font-size:13px;
+  font-weight:600;
+}
+
+.footer-wrap{
+  margin-top:18px;
+  border:1px solid rgba(255,255,255,.95);
+  border-radius:var(--radius-xl);
+  background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(244,249,249,.98));
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.footer-main{
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  gap:40px;
+  padding:38px 34px;
+}
+
+.footer-brand h3{
+  margin:0 0 10px;
+  font-size:24px;
+  letter-spacing:-.03em;
+}
+
+.footer-brand p{
+  max-width:560px;
+  margin:0 0 22px;
+  color:var(--muted);
+  line-height:1.72;
+}
+
+.footer-nav{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(220px,1fr));
+  gap:28px;
+}
+
+.footer-col h4,
+.footer-contact h4{
+  margin:0 0 14px;
+  font-size:17px;
+}
+
+.footer-col ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:12px;
+}
+
+.footer-col a{
+  color:#516668;
+  font-weight:650;
+}
+
+.footer-contact{
+  display:grid;
+  gap:14px;
+}
+
+.contact-line{
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(255,255,255,.82);
+}
+
+.contact-line span{
+  display:block;
+  margin-bottom:4px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.contact-line strong,
+.contact-line a{
+  color:#173032;
+  font-size:15px;
+  font-weight:750;
+}
+
+.socials{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.social{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:92px;
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.86);
+  color:#53686a;
+  font-size:14px;
+  font-weight:700;
+}
+
+.bottom-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  padding:14px 34px;
+  border-top:1px solid var(--line);
+  background:rgba(255,255,255,.62);
+  color:var(--muted-2);
+  font-size:13px;
+}
+
+.bottom-links{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+@keyframes siteReveal{
+  0%{
+    filter:brightness(.45) contrast(1.05);
+  }
+  55%{
+    filter:brightness(.62) contrast(1.08);
+  }
+  100%{
+    filter:brightness(1) contrast(1);
+  }
+}
+
+@keyframes spinAura{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+@keyframes spinDisc{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(-360deg)}
+}
+
+@keyframes pulseHalo{
+  0%,100%{
+    opacity:.42;
+    transform:translate(-50%,-50%) scale(.94);
+  }
+  50%{
+    opacity:.88;
+    transform:translate(-50%,-50%) scale(1.03);
+  }
+}
+
+@keyframes fanFloat{
+  0%,100%{
+    transform:translateY(0) scale(1);
+    filter:drop-shadow(0 28px 40px rgba(0,0,0,.48));
+  }
+  50%{
+    transform:translateY(-8px) scale(1.018);
+    filter:drop-shadow(0 34px 54px rgba(0,0,0,.58));
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  body,
+  .hero-media::before,
+  .hero-media::after,
+  .spin-disc,
+  .hero-media img{
+    animation:none !important;
+  }
+}
+
+@media (max-width:1100px){
+  .hero,
+  .overview-header,
+  .inquiry-rail,
+  .footer-main{
+    grid-template-columns:1fr;
+  }
+
+  .core-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .stats-grid,
+  .highlights-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:820px){
+  .page-shell{padding:14px 14px 56px}
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+    border-radius:28px;
+  }
+  .hero-copy,
+  .section,
+  .footer-main,
+  .bottom-bar{padding-left:20px;padding-right:20px}
+  .hero-notes,
+  .statbar,
+  .core-grid,
+  .value-grid,
+  .stats-grid,
+  .highlights-grid,
+  .footer-nav{
+    grid-template-columns:1fr;
+  }
+  .band-head{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+  .hero-media{min-height:380px}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="page-shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">RL</div>
+      <span class="brand-pill">Shunde Source Factory</span>
+    </div>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#overview">Overview</a>
+      <a href="#highlights">Products</a>
+      <a href="#inquiry">Inquiry</a>
+      <a class="nav-cta" href="#inquiry">Contact</a>
+    </nav>
+  </header>
+
   <section class="hero">
     <div class="panel hero-copy">
-      <span class="kicker">RichLand Ltd. · Shunde Source Factory</span>
-      <h1>Factory-Direct Eco-Friendly, Quiet Fans from Shunde, China</h1>
-      <p class="lead">RichLand Ltd. is a source factory with 30 years of home appliance manufacturing experience, focused on practical electric fan solutions for global buyers. This updated product page keeps the B12-style positioning while adding cleaner product galleries built from your uploaded images.</p>
-      <div class="ctas">
-        <a class="btn primary" href="#products">View Products</a>
-        <a class="btn" href="#contact">Send Inquiry</a>
+      <span class="eyebrow">Source-factory fan solutions</span>
+      <h1>Built Around Better Airflow</h1>
+      <p class="lead">RichLand develops practical fan solutions for global buyers, combining source-factory experience with a clearer category structure for export cooperation.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#overview">Explore Categories</a>
+        <a class="btn" href="#inquiry">Send Inquiry</a>
+      </div>
+      <div class="hero-notes">
+        <div class="mini-note">
+          <strong>Source Factory</strong>
+          <span>Built for direct export communication instead of retail browsing.</span>
+        </div>
+        <div class="mini-note">
+          <strong>Focused Categories</strong>
+          <span>Fans remain the core, with broader practical appliance extensions.</span>
+        </div>
+        <div class="mini-note">
+          <strong>Clear Next Step</strong>
+          <span>MOQ, lead time, and inquiry routes stay visible without clutter.</span>
+        </div>
       </div>
       <div class="statbar">
-        <div class="stat"><strong>30 Years</strong><span>Factory experience</span></div>
-        <div class="stat"><strong>OEM / ODM</strong><span>Private label support</span></div>
-        <div class="stat"><strong>MOQ 500 pcs</strong><span>Flexible bulk orders</span></div>
-        <div class="stat"><strong>7 / 30 / 3 Days</strong><span>Sample / bulk / stock lead time</span></div>
+        <div class="stat">
+          <strong>30 Years</strong>
+          <span>Home appliance manufacturing experience.</span>
+        </div>
+        <div class="stat">
+          <strong>OEM / ODM</strong>
+          <span>Private-label and customization support.</span>
+        </div>
+        <div class="stat">
+          <strong>MOQ 500 pcs</strong>
+          <span>Structured bulk-order baseline.</span>
+        </div>
+        <div class="stat">
+          <strong>7 / 30 / 3 Days</strong>
+          <span>Sample, bulk, and stock timing references.</span>
+        </div>
       </div>
     </div>
-    <div class="panel hero-image"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A27_BlackPearl.jpg" alt="RichLand featured fan"></div>
+
+    <div class="panel hero-visual">
+      <div class="hero-media">
+        <div class="spin-stage">
+          <div class="spin-disc"></div>
+          <img src="assets/10_Test Fans/Wall Fans_18 inch_B106_Black_VoiceControl_transparent.png" alt="RichLand featured wall fan">
+        </div>
+      </div>
+      <div class="badge-row" aria-label="Hero capability tags">
+        <span class="badge">Air Circulator Focus</span>
+        <span class="badge">Factory Direct</span>
+        <span class="badge">Private Label Support</span>
+      </div>
+    </div>
   </section>
 
-  <section class="section-title" id="products">
-    <h2>Featured Product Categories</h2>
-    <p>The images below are now organized into cleaner website sections. I grouped the uploaded products by category and kept the white-background product look so the page feels closer to a real export website rather than a catalog screenshot.</p>
+  <section class="panel section" id="overview">
+    <div class="overview-header">
+      <div class="section-head">
+        <span class="section-kicker">Executive Overview</span>
+        <h2>A cleaner second screen for buyers, categories, and cooperation</h2>
+        <p>This page replaces the old left-text right-image layout with a text-led business overview. The goal is to make RichLand feel more structured and more credible: core fan categories first, extended product lines second, then OEM / ODM capability, patented specialty direction, order basics, and a clear inquiry close.</p>
+      </div>
+      <div class="signal-stack">
+        <div class="signal-chip">
+          <strong>B2B Positioning</strong>
+          <span>Source factory for direct export communication and category-based planning.</span>
+        </div>
+        <div class="signal-chip">
+          <strong>Specialty Direction</strong>
+          <span>Mosquito-control and sterilization-oriented fan development is part of the differentiation story.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="overview-band">
+      <div class="band">
+        <div class="band-head">
+          <div>
+            <h3>Core fan categories</h3>
+            <p>RichLand should first read as a fan and airflow partner. The homepage therefore leads with the core groups buyers are most likely to source, compare, and expand.</p>
+          </div>
+          <span class="pill-note">Primary product direction</span>
+        </div>
+        <div class="core-grid">
+          <article class="core-card">
+            <strong>Pedestal Fans</strong>
+            <p>Standing-fan programs for household, retail, and broad export assortment planning.</p>
+          </article>
+          <article class="core-card">
+            <strong>Table Fans</strong>
+            <p>Compact desktop and personal cooling formats for smaller spaces and lighter programs.</p>
+          </article>
+          <article class="core-card">
+            <strong>Wall Fans</strong>
+            <p>Wall-mounted airflow options for homes, shops, and utility-oriented use cases.</p>
+          </article>
+          <article class="core-card">
+            <strong>Air Circulators</strong>
+            <p>Circulation-driven products and floor formats for broader airflow positioning.</p>
+          </article>
+          <article class="core-card">
+            <strong>Handheld Fans</strong>
+            <p>Portable fan extensions that widen the lineup beyond conventional room-fan formats.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="band">
+        <div class="band-head">
+          <div>
+            <h3>Extended product lines</h3>
+            <p>The business range goes beyond the homepage's hero categories. This second layer signals that RichLand can support wider practical home-appliance cooperation without turning the page into a crowded catalog.</p>
+          </div>
+          <span class="pill-note">Extended cooperation range</span>
+        </div>
+        <div class="extension-row">
+          <span class="extension-tag">Electric Pressure Cookers</span>
+          <span class="extension-tag">Heating Fans / Electric Heaters</span>
+          <span class="extension-tag">Cooling Fans / Air Cooling Products</span>
+          <span class="extension-tag">Other Practical Home Appliance Lines</span>
+        </div>
+      </div>
+
+      <div class="band">
+        <div class="band-head">
+          <div>
+            <h3>OEM / ODM and patented differentiation</h3>
+            <p>The middle of the page should explain why RichLand is worth a closer inquiry: not only because the category range is broad, but because the cooperation model is clear and the product direction includes differentiated specialty development.</p>
+          </div>
+          <span class="pill-note">Value proof for buyers</span>
+        </div>
+        <div class="value-grid">
+          <article class="value-card">
+            <strong>OEM / ODM support</strong>
+            <p>Structured private-label cooperation, category-based product planning, and a cleaner path for buyers who need their own market-facing lineup.</p>
+          </article>
+          <article class="value-card">
+            <strong>Category-based planning</strong>
+            <p>The homepage is organized around product families so buyers can start from category logic before moving into detailed model discussion.</p>
+          </article>
+          <article class="value-card">
+            <strong>Private-label flexibility</strong>
+            <p>RichLand is positioned as a factory partner for export-oriented cooperation, not as a retail-first storefront with disconnected product cards.</p>
+          </article>
+          <article class="value-card patent-card">
+            <strong>Patented specialty fan direction</strong>
+            <p>Mosquito-control and sterilization-oriented fan development is presented as a core differentiator, showing that the company is not limited to standard fan formats alone.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="band">
+        <div class="band-head">
+          <div>
+            <h3>Order basics</h3>
+            <p>Buyers should not have to search for the operational basics. MOQ, lead-time rhythm, market notes, and communication readiness all stay visible in one place.</p>
+          </div>
+          <span class="pill-note">Business readiness</span>
+        </div>
+        <div class="stats-grid">
+          <div class="stats-block">
+            <strong>MOQ 500 pcs</strong>
+            <span>Clear baseline for bulk-order discussions and assortment planning.</span>
+          </div>
+          <div class="stats-block">
+            <strong>7 / 30 / 3 Days</strong>
+            <span>Sample, bulk, and stock lead-time references.</span>
+          </div>
+          <div class="stats-block">
+            <strong>Selected Markets</strong>
+            <span>CCC / NORDOM available for selected markets and models.</span>
+          </div>
+          <div class="stats-block">
+            <strong>Direct Communication</strong>
+            <span>Contact routes stay visible as part of the page structure.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="band" id="inquiry">
+        <div class="inquiry-rail">
+          <div class="inquiry-copy">
+            <span class="section-kicker">Inquiry Close</span>
+            <h3>Turn the overview into a focused buyer conversation</h3>
+            <p>The second screen ends with a calm inquiry close instead of a noisy callout. By this point, buyers should already understand the product range, the cooperation model, the specialty direction, and the order basics.</p>
+            <ul class="next-step">
+              <li>Share the target category or product family first.</li>
+              <li>Include estimated quantity, destination market, and branding request.</li>
+              <li>Use the direct contact route below to begin a more structured discussion.</li>
+            </ul>
+          </div>
+          <div class="contact-stack">
+            <div class="contact-card">
+              <strong>Contact Person</strong>
+              <span>Bosco Leung</span>
+            </div>
+            <div class="contact-card">
+              <strong>Email</strong>
+              <span><a href="mailto:ht-888@163.com">ht-888@163.com</a></span>
+            </div>
+            <div class="contact-card">
+              <strong>WhatsApp</strong>
+              <span><a href="https://wa.me/19146589879">+1 914 658 9879</a></span>
+            </div>
+            <div class="contact-card">
+              <strong>Business Notes</strong>
+              <span>OEM / ODM · MOQ 500 pcs · Lead Time Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <div class="grid">
-<section class="category card" id="sec-0">
-  <div class="category-head">
-    <div>
-      <span class="eyebrow">Featured Category</span>
-      <h2>Pedestal Fans</h2>
-      <p>Quiet, household-friendly pedestal fans with classic, remote, inverter, and decorative styles.</p>
-    </div>
-    <img class="cover" src="assets/01_Pedestal Fans/Pedestal_16 inch_A27_BlackPearl.jpg" alt="Pedestal Fans cover">
-  </div>
-  <div class="slider" data-slider="0">
-    <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A27_BlackPearl.jpg" alt="A27 Mechanical"></div><div class="slide" data-index="1"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A47_Red_Remote.jpg" alt="A47 Remote"></div><div class="slide" data-index="2"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A52_PearlWhite_Remote.jpg" alt="A52 Inverter Remote"></div><div class="slide" data-index="3"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A53_Grey.jpg" alt="A53 Mechanical"></div><div class="slide" data-index="4"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A55_Grey_Remote.jpg" alt="A55 Remote"></div><div class="slide" data-index="5"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_Grey.jpg" alt="A57 Mechanical"></div><div class="slide" data-index="6"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_BlackPearl_Remote.jpg" alt="A57 Remote"></div><div class="slide" data-index="7"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A58_BlackGold.jpg" alt="A58 Mechanical"></div><div class="slide" data-index="8"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A58_BlackGold_Remote.jpg" alt="A58 Remote"></div><div class="slide" data-index="9"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A59_BlackPearl.jpg" alt="A59 Standing Fan"></div><div class="slide" data-index="10"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze.jpg" alt="A60 Mechanical"></div><div class="slide" data-index="11"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze_Remote.jpg" alt="A60 Remote"></div><div class="slide" data-index="12"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A73_BlackPearl.jpg" alt="A73 Industrial Stand Fan"></div><div class="slide" data-index="13"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A83_BlackPearl.jpg" alt="A83 Industrial Stand Fan"></div><div class="slide" data-index="14"><img src="assets/01_Pedestal Fans/Pedestal_14 inch_H8_PearlWhite.jpg" alt="H8 Mechanical"></div></div>
-    <button class="arrow next" aria-label="Next">&#10095;</button>
-    <div class="chips"><button class="chip active" data-index="0">A27 Mechanical</button><button class="chip" data-index="1">A47 Remote</button><button class="chip" data-index="2">A52 Inverter Remote</button><button class="chip" data-index="3">A53 Mechanical</button><button class="chip" data-index="4">A55 Remote</button><button class="chip" data-index="5">A57 Mechanical</button><button class="chip" data-index="6">A57 Remote</button><button class="chip" data-index="7">A58 Mechanical</button><button class="chip" data-index="8">A58 Remote</button><button class="chip" data-index="9">A59 Standing Fan</button><button class="chip" data-index="10">A60 Mechanical</button><button class="chip" data-index="11">A60 Remote</button><button class="chip" data-index="12">A73 Industrial Stand Fan</button><button class="chip" data-index="13">A83 Industrial Stand Fan</button><button class="chip" data-index="14">H8 Mechanical</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A27_BlackPearl.jpg" alt="A27 Mechanical"></button><button class="thumb" data-index="1"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A47_Red_Remote.jpg" alt="A47 Remote"></button><button class="thumb" data-index="2"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A52_PearlWhite_Remote.jpg" alt="A52 Inverter Remote"></button><button class="thumb" data-index="3"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A53_Grey.jpg" alt="A53 Mechanical"></button><button class="thumb" data-index="4"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A55_Grey_Remote.jpg" alt="A55 Remote"></button><button class="thumb" data-index="5"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_Grey.jpg" alt="A57 Mechanical"></button><button class="thumb" data-index="6"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_BlackPearl_Remote.jpg" alt="A57 Remote"></button><button class="thumb" data-index="7"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A58_BlackGold.jpg" alt="A58 Mechanical"></button><button class="thumb" data-index="8"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A58_BlackGold_Remote.jpg" alt="A58 Remote"></button><button class="thumb" data-index="9"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A59_BlackPearl.jpg" alt="A59 Standing Fan"></button><button class="thumb" data-index="10"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze.jpg" alt="A60 Mechanical"></button><button class="thumb" data-index="11"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze_Remote.jpg" alt="A60 Remote"></button><button class="thumb" data-index="12"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A73_BlackPearl.jpg" alt="A73 Industrial Stand Fan"></button><button class="thumb" data-index="13"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A83_BlackPearl.jpg" alt="A83 Industrial Stand Fan"></button><button class="thumb" data-index="14"><img src="assets/01_Pedestal Fans/Pedestal_14 inch_H8_PearlWhite.jpg" alt="H8 Mechanical"></button></div>
-  </div>
-</section>
 
-<section class="category card" id="sec-1">
-  <div class="category-head">
-    <div>
-      <span class="eyebrow">Featured Category</span>
-      <h2>Table Fans</h2>
-      <p>Compact desktop and storage table fans for bedrooms, dormitories, counters, and personal cooling.</p>
+  <section class="panel section" id="highlights">
+    <div class="section-head">
+      <span class="section-kicker">Selected Products</span>
+      <h2>Representative models after the business overview</h2>
+      <p>The product section now sits after the business overview, so the visual order feels more deliberate: first understand the factory and cooperation logic, then scan a selected set of representative models.</p>
     </div>
-    <img class="cover" src="assets/02_Table Fans/Table_12 inch_K6_White.jpg" alt="Table Fans cover">
-  </div>
-  <div class="slider" data-slider="1">
-    <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/02_Table Fans/Table_12 inch_K6_White.jpg" alt="K6 Table Fan"></div><div class="slide" data-index="1"><img src="assets/02_Table Fans/Table_K11_BlackPearl.jpg" alt="K11 Table Fan"></div><div class="slide" data-index="2"><img src="assets/02_Table Fans/Table_16 inch_K12Green.jpg" alt="K12 Storage Table Fan"></div><div class="slide" data-index="3"><img src="assets/02_Table Fans/Table_12 inch_K13_Blue.jpg" alt="K13 Storage Table Fan Blue"></div><div class="slide" data-index="4"><img src="assets/02_Table Fans/Table_12 inch_K13_BlackPearl.jpg" alt="K13 Storage Table Fan Black"></div><div class="slide" data-index="5"><img src="assets/02_Table Fans/Table_12 inch_Pink.jpg" alt="Square Reversible Fan Pink"></div></div>
-    <button class="arrow next" aria-label="Next">&#10095;</button>
-    <div class="chips"><button class="chip active" data-index="0">K6 Table Fan</button><button class="chip" data-index="1">K11 Table Fan</button><button class="chip" data-index="2">K12 Storage Table Fan</button><button class="chip" data-index="3">K13 Storage Table Fan Blue</button><button class="chip" data-index="4">K13 Storage Table Fan Black</button><button class="chip" data-index="5">Square Reversible Fan Pink</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/02_Table Fans/Table_12 inch_K6_White.jpg" alt="K6 Table Fan"></button><button class="thumb" data-index="1"><img src="assets/02_Table Fans/Table_K11_BlackPearl.jpg" alt="K11 Table Fan"></button><button class="thumb" data-index="2"><img src="assets/02_Table Fans/Table_16 inch_K12Green.jpg" alt="K12 Storage Table Fan"></button><button class="thumb" data-index="3"><img src="assets/02_Table Fans/Table_12 inch_K13_Blue.jpg" alt="K13 Storage Table Fan Blue"></button><button class="thumb" data-index="4"><img src="assets/02_Table Fans/Table_12 inch_K13_BlackPearl.jpg" alt="K13 Storage Table Fan Black"></button><button class="thumb" data-index="5"><img src="assets/02_Table Fans/Table_12 inch_Pink.jpg" alt="Square Reversible Fan Pink"></button></div>
-  </div>
-</section>
 
-<section class="category card" id="sec-2">
-  <div class="category-head">
-    <div>
-      <span class="eyebrow">Featured Category</span>
-      <h2>Wall Fans</h2>
-      <p>Wall-mounted options for homes, shops, and utility spaces, including decorative and mosquito-repellent styles.</p>
+    <div class="highlights-grid">
+      <article class="highlight-card">
+        <div class="highlight-media">
+          <img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze_trimmed.webp" alt="A60 pedestal fan">
+        </div>
+        <span class="highlight-meta">Pedestal Fans</span>
+        <h3>A60 Mechanical</h3>
+        <p>A balanced standing-fan presentation suited to broad household and export-facing lineup discussions.</p>
+        <ul class="feature-list">
+          <li>General lineup anchor</li>
+          <li>Clear retail-ready silhouette</li>
+          <li>Useful for mainstream assortment planning</li>
+        </ul>
+      </article>
+
+      <article class="highlight-card">
+        <div class="highlight-media">
+          <img src="assets/02_Table Fans/Table_K11_BlackPearl_trimmed.webp" alt="K11 table fan">
+        </div>
+        <span class="highlight-meta">Table Fans</span>
+        <h3>K11 Table Fan</h3>
+        <p>A compact tabletop expression for personal cooling, smaller-space demand, and portable category extension.</p>
+        <ul class="feature-list">
+          <li>Compact desktop format</li>
+          <li>Clear category differentiation</li>
+          <li>Easy addition to lighter programs</li>
+        </ul>
+      </article>
+
+      <article class="highlight-card">
+        <div class="highlight-media">
+          <img src="assets/03_Wall Fans/Wall Fans_18 inch_B15_BlackPearl_trimmed.webp" alt="B15 wall fan">
+        </div>
+        <span class="highlight-meta">Wall Fans</span>
+        <h3>B15 Wall Fan</h3>
+        <p>A wall-mounted airflow option that supports space-saving and utility-oriented product planning.</p>
+        <ul class="feature-list">
+          <li>Wall-mount category marker</li>
+          <li>Useful for compact-space positioning</li>
+          <li>Fits structured export discussions</li>
+        </ul>
+      </article>
+
+      <article class="highlight-card">
+        <div class="highlight-media">
+          <img src="assets/04_Air Circulators/Air Circulators_S11_Grey_2_Remote_trimmed.webp" alt="S11 remote air circulator">
+        </div>
+        <span class="highlight-meta">Air Circulators</span>
+        <h3>S11 Remote</h3>
+        <p>A stronger circulation-led product identity that reinforces the premium, technology-oriented homepage direction.</p>
+        <ul class="feature-list">
+          <li>Recognizable circulation form</li>
+          <li>Higher perceived distinction</li>
+          <li>Supports the darker premium visual system</li>
+        </ul>
+      </article>
     </div>
-    <img class="cover" src="assets/03_Wall Fans/Wall Fans_16 inch_B4_Grey.jpg" alt="Wall Fans cover">
-  </div>
-  <div class="slider" data-slider="2">
-    <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/03_Wall Fans/Wall Fans_16 inch_B4_Grey.jpg" alt="B4 Wall Fan"></div><div class="slide" data-index="1"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B10_BlackPearl_2.jpg" alt="B10 Wall Fan"></div><div class="slide" data-index="2"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B15_BlackPearl.jpg" alt="B15 Wall Fan"></div><div class="slide" data-index="3"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B18_BlackPeal__Remote.jpg" alt="B18 Remote Wall Fan"></div><div class="slide" data-index="4"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B26_BlackPearl.jpg" alt="B19 Mechanical Wall Fan"></div><div class="slide" data-index="5"><img src="assets/03_Wall Fans/Wall Fans_16 inch_White_Exterminate mosquitoes.jpg" alt="Mosquito-Repellent Wall Fan"></div></div>
-    <button class="arrow next" aria-label="Next">&#10095;</button>
-    <div class="chips"><button class="chip active" data-index="0">B4 Wall Fan</button><button class="chip" data-index="1">B10 Wall Fan</button><button class="chip" data-index="2">B15 Wall Fan</button><button class="chip" data-index="3">B18 Remote Wall Fan</button><button class="chip" data-index="4">B19 Mechanical Wall Fan</button><button class="chip" data-index="5">Mosquito-Repellent Wall Fan</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/03_Wall Fans/Wall Fans_16 inch_B4_Grey.jpg" alt="B4 Wall Fan"></button><button class="thumb" data-index="1"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B10_BlackPearl_2.jpg" alt="B10 Wall Fan"></button><button class="thumb" data-index="2"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B15_BlackPearl.jpg" alt="B15 Wall Fan"></button><button class="thumb" data-index="3"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B18_BlackPeal__Remote.jpg" alt="B18 Remote Wall Fan"></button><button class="thumb" data-index="4"><img src="assets/03_Wall Fans/Wall Fans_18 inch_B26_BlackPearl.jpg" alt="B19 Mechanical Wall Fan"></button><button class="thumb" data-index="5"><img src="assets/03_Wall Fans/Wall Fans_16 inch_White_Exterminate mosquitoes.jpg" alt="Mosquito-Repellent Wall Fan"></button></div>
-  </div>
-</section>
-
-<section class="category card" id="sec-3">
-  <div class="category-head">
-    <div>
-      <span class="eyebrow">Featured Category</span>
-      <h2>Air Circulator & Floor Fans</h2>
-      <p>Floor, box, and heavy-duty air movement options for broader airflow and practical cooling.</p>
-    </div>
-    <img class="cover" src="assets/04_Air Circulators/Air Circulators_S1_Green.jpg" alt="Air Circulator & Floor Fans cover">
-  </div>
-  <div class="slider" data-slider="3">
-    <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/04_Air Circulators/Air Circulators_S1_Green.jpg" alt="Box Fan"></div><div class="slide" data-index="1"><img src="assets/04_Air Circulators/Air Circulators_S1_Green-Remote.jpg" alt="Box Fan Remote"></div><div class="slide" data-index="2"><img src="assets/04_Air Circulators/Air Circulators_S2_BlackPearl.jpg" alt="Floor Fan A8"></div><div class="slide" data-index="3"><img src="assets/04_Air Circulators/Air Circulators_S9_DarkGreen.jpg" alt="Floor Fan A9"></div><div class="slide" data-index="4"><img src="assets/04_Air Circulators/Air Circulators_S10_Grey_2.jpg" alt="Floor Fan A11"></div><div class="slide" data-index="5"><img src="assets/04_Air Circulators/Air Circulators_S11_Grey_2_Remote.jpg" alt="Industrial Floor Fan A43"></div></div>
-    <button class="arrow next" aria-label="Next">&#10095;</button>
-    <div class="chips"><button class="chip active" data-index="0">Box Fan</button><button class="chip" data-index="1">Box Fan Remote</button><button class="chip" data-index="2">Floor Fan A8</button><button class="chip" data-index="3">Floor Fan A9</button><button class="chip" data-index="4">Floor Fan A11</button><button class="chip" data-index="5">Industrial Floor Fan A43</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/04_Air Circulators/Air Circulators_S1_Green.jpg" alt="Box Fan"></button><button class="thumb" data-index="1"><img src="assets/04_Air Circulators/Air Circulators_S1_Green-Remote.jpg" alt="Box Fan Remote"></button><button class="thumb" data-index="2"><img src="assets/04_Air Circulators/Air Circulators_S2_BlackPearl.jpg" alt="Floor Fan A8"></button><button class="thumb" data-index="3"><img src="assets/04_Air Circulators/Air Circulators_S9_DarkGreen.jpg" alt="Floor Fan A9"></button><button class="thumb" data-index="4"><img src="assets/04_Air Circulators/Air Circulators_S10_Grey_2.jpg" alt="Floor Fan A11"></button><button class="thumb" data-index="5"><img src="assets/04_Air Circulators/Air Circulators_S11_Grey_2_Remote.jpg" alt="Industrial Floor Fan A43"></button></div>
-  </div>
-</section>
-</div>
-
-  <section class="section-title" id="contact">
-    <h2>Contact for Inquiry</h2>
-    <p>Contact Person: Bosco Leung · Email: ht-888@163.com · WhatsApp: +1 914 658 9879 · CCC / NORDOM available for selected markets and models.</p>
   </section>
+
   <footer class="footer-wrap">
     <div class="footer-main">
-      <div class="footer-nav">
-        <div class="footer-col">
-          <h3>Support</h3>
-          <ul>
-            <li><a href="#">Inquiry Support</a></li>
-            <li><a href="#">Product Catalog</a></li>
-            <li><a href="#">OEM / ODM Service</a></li>
-            <li><a href="#">Shipping &amp; Lead Time</a></li>
-            <li><a href="#">MOQ Information</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
+      <div>
+        <div class="footer-brand">
+          <h3>RichLand Ltd.</h3>
+          <p>A black, calmer, more technology-led homepage direction for a B2B export business: fan categories at the core, extended appliance lines as support, and a clearer bridge from brand impression to inquiry.</p>
         </div>
-        <div class="footer-col">
-          <h3>Explore</h3>
-          <ul>
-            <li><a href="#">About RichLand</a></li>
-            <li><a href="#">Factory Strength</a></li>
-            <li><a href="#products">Product Categories</a></li>
-            <li><a href="#">Certifications</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#inquiry">Inquiry Support</a></li>
+              <li><a href="#highlights">Product Catalog</a></li>
+              <li><a href="#overview">OEM / ODM Service</a></li>
+              <li><a href="#overview">Shipping &amp; Lead Time</a></li>
+              <li><a href="#overview">MOQ Information</a></li>
+              <li><a href="#inquiry">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#overview">Business Overview</a></li>
+              <li><a href="#overview">Core Categories</a></li>
+              <li><a href="#overview">Patent Differentiation</a></li>
+              <li><a href="#highlights">Selected Models</a></li>
+              <li><a href="#">About RichLand</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="footer-connect">
-        <h3>Connect with Us</h3>
+
+      <div class="footer-contact">
+        <h4>Contact / Connect</h4>
+        <div class="contact-line">
+          <span>Contact Person</span>
+          <strong>Bosco Leung</strong>
+        </div>
+        <div class="contact-line">
+          <span>Email</span>
+          <a href="mailto:ht-888@163.com">ht-888@163.com</a>
+        </div>
+        <div class="contact-line">
+          <span>WhatsApp</span>
+          <a href="https://wa.me/19146589879">+1 914 658 9879</a>
+        </div>
+        <div class="contact-line">
+          <span>Business Notes</span>
+          <strong>OEM / ODM · MOQ 500 pcs · Lead Time Available</strong>
+        </div>
         <div class="socials">
           <a class="social" href="#" aria-label="Instagram">Instagram</a>
           <a class="social" href="#" aria-label="X">X</a>
           <a class="social" href="#" aria-label="Facebook">Facebook</a>
           <a class="social" href="#" aria-label="YouTube">YouTube</a>
         </div>
-        <p class="subscribe-copy">Leave your email to receive product updates, new fan series releases, and the latest cooperation news from RichLand.</p>
-        <form class="subscribe-form" action="#" method="post">
-          <label class="sr-only" for="email-subscribe">Business Email</label>
-          <input id="email-subscribe" type="email" name="email" placeholder="Enter your business email">
-          <button type="submit">Subscribe</button>
-        </form>
-        <label class="consent">
-          <input type="checkbox" name="consent">
-          <span>I agree to receive product and cooperation updates and understand this form is for newsletter subscription only.</span>
-        </label>
       </div>
     </div>
+
     <div class="bottom-bar">
       <div>Copyright RichLand Ltd. All rights reserved.</div>
       <div class="bottom-links">
@@ -231,22 +1305,5 @@ h1{font-size:clamp(34px,5vw,58px);line-height:1.02;margin:16px 0 12px}
     </div>
   </footer>
 </div>
-<script>
-document.querySelectorAll('.slider').forEach(slider=>{
-  const slides=[...slider.querySelectorAll('.slide')];
-  const chips=[...slider.querySelectorAll('.chip')];
-  const thumbs=[...slider.querySelectorAll('.thumb')];
-  let i=0;
-  function show(n){
-    i=(n+slides.length)%slides.length;
-    slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));
-    chips.forEach((c,idx)=>c.classList.toggle('active',idx===i));
-    thumbs.forEach((t,idx)=>t.classList.toggle('active',idx===i));
-  }
-  slider.querySelector('.prev').onclick=()=>show(i-1);
-  slider.querySelector('.next').onclick=()=>show(i+1);
-  chips.forEach((c,idx)=>c.onclick=()=>show(idx));
-  thumbs.forEach((t,idx)=>t.onclick=()=>show(idx));
-});
-</script>
-</body></html>
+</body>
+</html>
