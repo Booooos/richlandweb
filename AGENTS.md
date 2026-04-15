@@ -257,3 +257,94 @@ Before finishing any task:
 - state which files changed
 - state what was intentionally not changed
 - note any remaining setup needed
+
+## Factory & Company Information
+
+### Company Name
+RichLand Electrical Appliance Technology Co., Ltd.  
+(also operating as Foshan HuaTian Electrical Appliance Co., Ltd.)
+
+### Company Overview
+Established in 1994, the company has over 30 years of experience specializing in the manufacturing of electric fans.  
+The company focuses on cost-efficiency, product quality, and reliable after-sales service, building a strong reputation across multiple regions in China.
+
+Key advantages:
+- High cost-performance ratio
+- Stable product quality (China CCC certified)
+- Strong distributor network across multiple provinces
+- 2-year warranty on fan motors
+
+---
+
+### Headquarters
+
+** Address:**  
+KunZhou Industrial Zone, Beijiao Town, Shunde District, Foshan, Guangdong, China  
+
+**Phone:**  
++86-0757-26630638  
+
+---
+
+### Production Base
+
+**Address:**  
+No. 98 XingMin Road, Hecheng Street, Gaoming District, Foshan, Guangdong, China  
+
+**Phone:**  
++86-0757-26657123  
+
+**Factory Size:**  
+Total construction area approx. 60,000+ square meters  
+
+**Facilities Include:**
+- Motor production workshop
+- Injection molding workshop
+- Complete fan assembly production lines
+
+---
+
+### Factories
+
+#### Xiongchuang Industrial Factory
+Primary facility supporting:
+- Motor production
+- Injection molding
+
+#### Huatian Electrical Appliance Factory
+Main factory for:
+- Fan assembly
+- Finished product manufacturing
+
+---
+
+### Product Scope
+- Electric fans
+- Household ventilation equipment
+- Related motor and plastic components
+
+---
+
+### Website(Chinese Lanaguage)
+http://www.huatiandq.com
+
+---
+
+### Contact Email
+
+Ht-888@163.com
+
+---
+
+### Contact Email
+
+ZHiHai（Client Manager）
+
+### Notes for Frontend / Map Integration
+
+- Use **Headquarters address** as primary map location
+- Alternatively, allow switching between:
+  - Headquarters
+  - Production Base
+- Phone numbers should be clickable (`tel:` format)
+- Address should be usable for map API (Google Maps / AMap / etc.)

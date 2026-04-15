@@ -152,6 +152,21 @@ img{display:block;max-width:100%}
   isolation:isolate;
 }
 
+.hero-flow-overlay{
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  opacity:.82;
+  mix-blend-mode:multiply;
+}
+
+.hero-flow-overlay canvas{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
 .hero-visual-stage::before,
 .hero-visual-stage::after{
   content:"";
@@ -1583,16 +1598,15 @@ h1{
 
 .footer-main{
   display:grid;
-  grid-template-columns:minmax(0,1fr);
-  gap:26px;
+  gap:30px;
   padding-bottom:30px;
   border-bottom:1px solid var(--line);
 }
 
-.footer-main > div{
+.footer-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);
-  gap:30px;
+  grid-template-columns:minmax(0,1.02fr) minmax(360px,.98fr);
+  gap:34px;
   align-items:start;
 }
 
@@ -1611,38 +1625,242 @@ h1{
   line-height:1.84;
 }
 
-.footer-links{
+.footer-meta{
   display:grid;
-  grid-template-columns:repeat(2,minmax(180px,1fr));
-  gap:18px;
-  align-content:start;
+  gap:16px;
+  margin-top:24px;
 }
 
-.footer-col{
-  padding:20px 20px 22px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:var(--surface-soft);
+.footer-meta-item{
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  column-gap:26px;
+  align-items:flex-start;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
 }
 
-.footer-col h4{
-  margin:0 0 14px;
-  font-size:15px;
-  letter-spacing:-.01em;
+.footer-meta-item strong{
+  color:var(--muted-strong);
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding-top:2px;
 }
 
-.footer-col ul{
+.footer-quicklinks{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px 30px;
+  margin-top:38px;
+  padding-top:28px;
+  border-top:1px solid var(--line);
+}
+
+.footer-quicklinks-group{
   display:grid;
   gap:10px;
+}
+
+.footer-quicklinks-group h4{
+  margin:0;
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted-strong);
+}
+
+.footer-quicklinks-group ul{
+  display:grid;
+  gap:8px;
   margin:0;
   padding:0;
   list-style:none;
 }
 
-.footer-col a{
-  color:var(--muted-strong);
+.footer-quicklinks-group a{
+  color:var(--muted);
   font-size:14px;
   font-weight:650;
+}
+
+.footer-directory{
+  display:grid;
+  gap:16px;
+  padding:22px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(244,247,243,.96) 100%);
+}
+
+.footer-directory-head{
+  display:grid;
+  gap:8px;
+}
+
+.footer-directory-head h4{
+  margin:0;
+  font-size:18px;
+  letter-spacing:-.02em;
+}
+
+.footer-directory-head p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.65;
+}
+
+.footer-contact-groups{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.footer-contact-card{
+  display:grid;
+  gap:10px;
+  padding:16px 16px 18px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(255,255,255,.7);
+}
+
+.footer-contact-card h5,
+.footer-location-panel h5{
+  margin:0;
+  font-size:13px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted-strong);
+}
+
+.footer-contact-list,
+.footer-location-list{
+  display:grid;
+  gap:8px;
+}
+
+.footer-contact-item,
+.footer-location-item{
+  display:grid;
+  gap:3px;
+}
+
+.footer-contact-item span:first-child,
+.footer-location-item span:first-child{
+  color:var(--muted);
+  font-size:12px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.footer-contact-item span:last-child,
+.footer-location-item span:last-child,
+.footer-contact-item a,
+.footer-location-item a{
+  color:var(--muted-strong);
+  font-size:14px;
+  line-height:1.55;
+}
+
+.footer-contact-item a,
+.footer-location-item a{
+  color:var(--accent);
+  font-weight:700;
+}
+
+.footer-location-switch{
+  display:inline-flex;
+  gap:8px;
+  padding:6px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(244,247,243,.95);
+}
+
+.footer-location-tab{
+  min-height:38px;
+  padding:0 14px;
+  border:none;
+  border-radius:999px;
+  background:transparent;
+  color:var(--muted);
+  font:inherit;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  transition:background-color .22s ease, color .22s ease, box-shadow .22s ease;
+}
+
+.footer-location-tab.is-active{
+  background:#ffffff;
+  color:var(--text);
+  box-shadow:0 10px 24px rgba(16,28,21,.08);
+}
+
+.footer-location-panel{
+  display:grid;
+  gap:12px;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(255,255,255,.74);
+}
+
+.footer-location-layout{
+  display:grid;
+  grid-template-columns:minmax(0,.82fr) minmax(240px,1.18fr);
+  gap:14px;
+  align-items:start;
+}
+
+.footer-map-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#ecf2ec;
+}
+
+.footer-map-embed{
+  display:block;
+  width:100%;
+  height:220px;
+  border:0;
+  background:#ecf2ec;
+}
+
+.footer-map-fallback{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  padding:14px 16px;
+  border-top:1px solid var(--line);
+  background:rgba(255,255,255,.9);
+}
+
+.footer-map-fallback p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+.footer-map-action{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:0 14px;
+  border:1px solid #b7cabd;
+  border-radius:999px;
+  color:var(--muted-strong);
+  font-size:13px;
+  font-weight:700;
+  background:#ffffff;
 }
 
 .bottom-bar{
@@ -1726,12 +1944,11 @@ h1{
   .hero-content-grid,
   .why-layout,
   .inquiry-panel,
-  .footer-main,
   .secondary-band{
     grid-template-columns:1fr;
   }
 
-  .footer-main > div{
+  .footer-grid{
     grid-template-columns:1fr;
   }
 
@@ -1821,7 +2038,7 @@ h1{
   .showcase-grid,
   .request-grid,
   .inquiry-form-grid,
-  .footer-links{
+  .footer-grid{
     grid-template-columns:1fr;
   }
 
@@ -1839,6 +2056,25 @@ h1{
   .hero-airflow-secondary{
     width:100%;
     height:220px;
+  }
+
+  .hero-flow-overlay{
+    opacity:.68;
+  }
+
+  .footer-quicklinks,
+  .footer-contact-groups,
+  .footer-location-layout{
+    grid-template-columns:1fr;
+  }
+
+  .footer-meta-item{
+    grid-template-columns:1fr;
+    row-gap:4px;
+  }
+
+  .footer-map-fallback{
+    align-items:flex-start;
   }
 
   .hero-layer--main{
@@ -1883,7 +2119,8 @@ h1{
   .hero-layer__image,
   .hero-glow,
   .hero-airflow,
-  .hero-airflow-secondary{
+  .hero-airflow-secondary,
+  .hero-flow-overlay{
     transition:none;
   }
 
@@ -1919,6 +2156,7 @@ h1{
       <div class="hero-glow"></div>
       <div class="hero-airflow"></div>
       <div class="hero-airflow-secondary"></div>
+      <div class="hero-flow-overlay" aria-hidden="true"></div>
       <div class="hero-layer hero-layer--far" data-layer="far">
         <img class="hero-layer__image" src="assets/HERO/Air Circulators_S1_Green_trimmed.webp" alt="Atmospheric supporting fan layer">
       </div>
@@ -2296,38 +2534,129 @@ h1{
 
   <footer class="footer-wrap">
     <div class="footer-main">
-      <div>
+      <div class="footer-grid">
         <div class="footer-brand">
           <h3>RichLand Ltd.</h3>
-          <p>RichLand is positioned around its electric-fan manufacturing base in Shunde, Foshan, with around 25 years of experience, broad fan categories, and practical OEM / ODM cooperation for long-term export business.</p>
-        </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <h4>Explore</h4>
-            <ul>
-              <li><a href="#categories">Fan Categories</a></li>
-              <li><a href="#why-richland">Why RichLand</a></li>
-              <li><a href="#showcase">Featured Models</a></li>
-              <li><a href="products.html">Products</a></li>
-            </ul>
+          <p>RichLand Electrical Appliance Technology Co., Ltd., also operating as Foshan HuaTian Electrical Appliance Co., Ltd., supports export-oriented fan programs from Foshan with established manufacturing capability, OEM / ODM cooperation, and practical coordination for long-term buyers.</p>
+          <div class="footer-meta">
+            <div class="footer-meta-item">
+              <strong>Base</strong>
+              <span>Foshan, Guangdong fan manufacturing support with headquarters in Shunde and production expansion in Gaoming.</span>
+            </div>
+            <div class="footer-meta-item">
+              <strong>Focus</strong>
+              <span>Electric fans first, supported by household ventilation equipment and related motor and plastic component capability.</span>
+            </div>
+            <div class="footer-meta-item">
+              <strong>Cooperation</strong>
+              <span>Established in 1994 with export-oriented OEM / ODM support and integrated factory coordination.</span>
+            </div>
           </div>
-          <div class="footer-col">
-            <h4>Business Info</h4>
-            <ul>
-              <li><a href="#inquiry">Inquiry Support</a></li>
-              <li><a href="#inquiry">OEM / ODM</a></li>
-              <li><a href="#inquiry">MOQ &amp; Lead Time</a></li>
-            </ul>
+
+          <div class="footer-quicklinks">
+            <div class="footer-quicklinks-group">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="#categories">Fan Categories</a></li>
+                <li><a href="#why-richland">Why RichLand</a></li>
+                <li><a href="#showcase">Featured Models</a></li>
+                <li><a href="products.html">Products</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-quicklinks-group">
+              <h4>Business Info</h4>
+              <ul>
+                <li><a href="#inquiry">Inquiry Support</a></li>
+                <li><a href="#inquiry">OEM / ODM</a></li>
+                <li><a href="#inquiry">MOQ &amp; Lead Time</a></li>
+                <li><a href="#why-richland">Factory Profile</a></li>
+                <li><a href="#inquiry">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-directory" data-footer-directory>
+          <div class="footer-directory-head">
+            <h4>Contact &amp; Location</h4>
+            <p>Sales and factory details are organized for buyers who need direct routing, verified locations, and quick map access.</p>
+          </div>
+
+          <div class="footer-contact-groups">
+            <div class="footer-contact-card" data-contact-sales>
+              <h5>Sales</h5>
+              <div class="footer-contact-list">
+                <div class="footer-contact-item" data-sales-name-item hidden>
+                  <span>Contact</span>
+                  <span data-sales-name></span>
+                </div>
+                <div class="footer-contact-item" data-sales-phone-item hidden>
+                  <span>Phone</span>
+                  <a data-sales-phone href="#"></a>
+                </div>
+                <div class="footer-contact-item" data-sales-email-item hidden>
+                  <span>Email</span>
+                  <a data-sales-email href="#"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-contact-card" data-contact-factory>
+              <h5>Factory</h5>
+              <div class="footer-contact-list">
+                <div class="footer-contact-item" data-factory-name-item hidden>
+                  <span>Contact</span>
+                  <span data-factory-name></span>
+                </div>
+                <div class="footer-contact-item" data-factory-phone-item hidden>
+                  <span>Phone</span>
+                  <a data-factory-phone href="#"></a>
+                </div>
+                <div class="footer-contact-item" data-factory-address-item hidden>
+                  <span>Address</span>
+                  <a data-factory-address href="#" target="_blank" rel="noreferrer"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-location-switch" role="tablist" aria-label="Location switch">
+            <button class="footer-location-tab is-active" type="button" data-location-tab="headquarters" aria-selected="true">Headquarters</button>
+            <button class="footer-location-tab" type="button" data-location-tab="factory" aria-selected="false">Factory</button>
+          </div>
+
+          <div class="footer-location-layout">
+            <div class="footer-location-panel">
+              <h5 data-location-label>Headquarters</h5>
+              <div class="footer-location-list">
+                <div class="footer-location-item" data-location-address-item hidden>
+                  <span>Address</span>
+                  <a data-location-address href="#" target="_blank" rel="noreferrer"></a>
+                </div>
+                <div class="footer-location-item" data-location-phone-item hidden>
+                  <span>Phone</span>
+                  <a data-location-phone href="#"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-map-card">
+              <iframe class="footer-map-embed" title="RichLand location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-location-map></iframe>
+              <div class="footer-map-fallback">
+                <p data-map-fallback-text>Map preview is based on the selected location. Use the direct Google Maps link if the embed is unavailable.</p>
+                <a class="footer-map-action" data-map-open href="#" target="_blank" rel="noreferrer">Open in Google Maps</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="bottom-bar">
       <div>Copyright RichLand Ltd. All rights reserved.</div>
       <div class="bottom-links">
-        <span>China MainLand</span>
+        <span>Foshan, Guangdong, China</span>
       </div>
     </div>
   </footer>
@@ -2348,5 +2677,8 @@ h1{
 <script src="scripts/gradient-text.js"></script>
 <script src="scripts/electric-border.js"></script>
 <script src="scripts/inquiry-form.js"></script>
+<script src="scripts/hero-motion.js"></script>
+<script src="scripts/hero-flow.js"></script>
+<script src="scripts/footer-contact.js"></script>
 </body>
 </html>
