@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internal Portal | RichLand Ops</title>
+<style>
+:root{
+  --bg:#f4f6f3;
+  --surface:#ffffff;
+  --surface-soft:#f7faf7;
+  --surface-accent:#edf4ef;
+  --line:#d8dfd8;
+  --line-strong:#c5d0c7;
+  --text:#13201a;
+  --muted:#607068;
+  --muted-strong:#3b4d44;
+  --accent:#1f6b52;
+  --accent-soft:#e3efe8;
+  --warning-bg:#fff7eb;
+  --warning-text:#8a5a16;
+  --good-bg:#edf8f1;
+  --good-text:#21553f;
+  --neutral-bg:#f1f4f1;
+  --neutral-text:#5a695f;
+  --shadow:0 18px 48px rgba(19,32,26,.08);
+  --radius-xl:30px;
+  --radius-lg:24px;
+  --radius-md:18px;
+  --wrap:1320px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{
+  margin:0;
+  font-family:"Avenir Next","Segoe UI",Arial,sans-serif;
+  color:var(--text);
+  line-height:1.55;
+  background:linear-gradient(180deg,#fafbf9 0%,#f4f6f3 24%,#eef3ee 100%);
+}
+a{color:inherit;text-decoration:none}
+.page-shell{max-width:var(--wrap);margin:0 auto;padding:20px 20px 72px}
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px;padding:18px 22px;
+  border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.95);box-shadow:0 10px 28px rgba(19,32,26,.05)
+}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-logo{width:56px;height:auto;flex:none;object-fit:contain}
+.brand-copy strong{display:block;font-size:15px;font-weight:800;letter-spacing:-.02em}
+.brand-copy span{display:block;margin-top:3px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.top-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.role-pill{
+  display:inline-flex;align-items:center;gap:8px;padding:0 10px 0 14px;min-height:42px;border:1px solid var(--line-strong);
+  border-radius:999px;background:var(--surface);color:var(--muted-strong)
+}
+.role-pill span{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.role-pill strong{font-size:13px;font-weight:800;color:var(--text)}
+.top-actions a,.top-actions button{
+  display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border:1px solid var(--line-strong);
+  border-radius:999px;background:var(--surface);color:var(--muted-strong);font:inherit;font-size:13px;font-weight:700;cursor:pointer
+}
+.sync-note{
+  display:inline-flex;align-items:center;min-height:42px;padding:0 14px;border:1px solid var(--line);
+  border-radius:999px;background:var(--surface-soft);color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.02em
+}
+.top-actions button.is-primary,.top-actions a.is-primary{
+  border-color:transparent;background:linear-gradient(180deg,#247154 0%,#1f6b52 100%);color:#f5f8f4;box-shadow:0 14px 28px rgba(31,107,82,.18)
+}
+.panel{border:1px solid var(--line);border-radius:var(--radius-xl);background:var(--surface);box-shadow:var(--shadow)}
+.hero-panel{padding:34px;margin-bottom:20px}
+.section-kicker{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:var(--accent-soft);
+  color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase
+}
+.hero-shell{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:28px;align-items:end}
+.hero-copy{display:grid;gap:14px}
+.hero-copy h1{margin:0;max-width:13ch;font-size:clamp(38px,4.2vw,58px);line-height:1.02;letter-spacing:-.05em}
+.hero-copy p{max-width:60ch;margin:0;color:var(--muted);font-size:15.5px;line-height:1.78}
+.hero-meta{
+  display:grid;gap:14px;padding:22px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,#fbfcfb 0%,#eff5f0 100%)
+}
+.hero-meta strong{font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted-strong)}
+.hero-meta p{margin:0;color:var(--muted);font-size:14px;line-height:1.68}
+.role-panel{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:18px;align-items:start;
+  margin-bottom:20px;padding:22px 24px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,#ffffff 0%,#f6faf6 100%);
+  box-shadow:0 10px 24px rgba(19,32,26,.04)
+}
+.role-intro{display:grid;gap:10px}
+.role-intro h2{margin:0;font-size:26px;line-height:1.08;letter-spacing:-.04em}
+.role-intro p{margin:0;max-width:62ch;color:var(--muted);font-size:14px;line-height:1.72}
+.role-badges{display:flex;gap:10px;flex-wrap:wrap}
+.role-badge{
+  display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);font-size:12px;font-weight:750;color:var(--muted-strong)
+}
+.role-badge.is-active{border-color:transparent;background:var(--accent-soft);color:var(--accent)}
+.role-access{
+  display:grid;gap:10px;padding:18px;border:1px solid var(--line);border-radius:22px;background:var(--surface-soft)
+}
+.role-access strong{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted-strong)}
+.role-access ul{margin:0;padding-left:18px;color:var(--muted-strong);font-size:13px;line-height:1.65}
+.role-access li{margin:0}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:20px}
+.summary-card{
+  display:grid;gap:10px;padding:22px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,#ffffff 0%,#f7faf7 100%);
+  box-shadow:0 10px 24px rgba(19,32,26,.04)
+}
+.summary-card__label{color:var(--muted);font-size:12px;font-weight:750;letter-spacing:.08em;text-transform:uppercase}
+.summary-card__value{font-size:34px;font-weight:800;line-height:1;letter-spacing:-.05em}
+.summary-card__note{color:var(--muted);font-size:13px;line-height:1.6}
+.orchestrator-panel{display:grid;gap:18px;margin-bottom:20px;padding:24px 26px}
+.orchestrator-shell{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:18px;align-items:start}
+.orchestrator-copy{display:grid;gap:10px}
+.orchestrator-copy h2{margin:0;font-size:28px;line-height:1.08;letter-spacing:-.04em}
+.orchestrator-copy p{margin:0;max-width:58ch;color:var(--muted);font-size:14px;line-height:1.72}
+.orchestrator-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.orchestrator-stat{
+  display:grid;gap:6px;padding:16px 18px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#ffffff 0%,#f6faf6 100%)
+}
+.orchestrator-stat span{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.orchestrator-stat strong{font-size:28px;line-height:1;letter-spacing:-.05em}
+.manager-dashboard{display:grid;gap:18px;margin-bottom:20px}
+.manager-head{display:flex;align-items:end;justify-content:space-between;gap:18px;padding:24px 26px}
+.manager-head-copy{display:grid;gap:10px}
+.manager-head h2{margin:0;font-size:28px;line-height:1.08;letter-spacing:-.04em}
+.manager-head p{margin:0;max-width:76ch;color:var(--muted);font-size:14px;line-height:1.72}
+.manager-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.manager-block{
+  display:grid;align-content:start;gap:14px;padding:20px;border:1px solid var(--line);border-radius:24px;
+  background:linear-gradient(180deg,#ffffff 0%,#f7faf7 100%);box-shadow:0 10px 24px rgba(19,32,26,.04)
+}
+.manager-block h3{margin:0;font-size:17px;line-height:1.22;letter-spacing:-.03em}
+.manager-block p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.6}
+.manager-list{display:grid;gap:10px}
+.manager-item{display:grid;gap:5px;padding:11px 0;border-top:1px solid #edf2ed}
+.manager-item:first-child{border-top:0;padding-top:0}
+.manager-item strong{font-size:13px;line-height:1.35;color:var(--text)}
+.manager-item span{font-size:12px;line-height:1.5;color:var(--muted)}
+.manager-metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.manager-metric{display:grid;gap:3px;padding:10px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.manager-metric span{font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.manager-metric strong{font-size:21px;line-height:1;letter-spacing:-.04em}
+.pipeline-list{display:grid;gap:8px}
+.pipeline-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;font-size:12px;color:var(--muted-strong)}
+.pipeline-track{grid-column:1 / -1;height:6px;border-radius:999px;background:#edf2ed;overflow:hidden}
+.pipeline-fill{display:block;height:100%;border-radius:999px;background:var(--accent);min-width:2px}
+.workspace-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.queue-section{display:grid;gap:16px;margin-top:20px}
+.queue-section-head{display:grid;gap:8px}
+.queue-section-head h2{margin:0;font-size:28px;line-height:1.08;letter-spacing:-.04em}
+.queue-section-head p{margin:0;max-width:72ch;color:var(--muted);font-size:14px;line-height:1.72}
+.queue-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.workspace-panel{padding:24px}
+.workspace-head{display:grid;gap:10px;margin-bottom:18px}
+.workspace-head h2{margin:0;font-size:26px;line-height:1.08;letter-spacing:-.04em}
+.workspace-head p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+.workspace-list{display:grid;gap:14px}
+.workspace-empty{
+  padding:18px;border:1px dashed #c8d5ca;border-radius:20px;background:linear-gradient(180deg,#fcfdfc 0%,#f5f8f5 100%);
+  color:var(--muted);font-size:14px;line-height:1.68
+}
+.ticket{
+  display:grid;gap:14px;padding:18px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,#ffffff 0%,#f8faf8 100%);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease
+}
+.ticket:hover{transform:translateY(-2px);border-color:#bfd0c3;box-shadow:0 16px 26px rgba(19,32,26,.08)}
+.ticket-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.ticket-title{display:grid;gap:6px}
+.ticket-title h3{margin:0;font-size:18px;line-height:1.28;letter-spacing:-.03em}
+.ticket-title p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+.status-badge{
+  display:inline-flex;align-items:center;justify-content:center;min-height:28px;padding:0 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase
+}
+.status-badge[data-tone="warning"]{background:var(--warning-bg);color:var(--warning-text)}
+.status-badge[data-tone="good"]{background:var(--good-bg);color:var(--good-text)}
+.status-badge[data-tone="neutral"]{background:var(--neutral-bg);color:var(--neutral-text)}
+.ticket-meta{display:grid;gap:10px}
+.ticket-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.ticket-row span:first-child{color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.ticket-row span:last-child{color:var(--muted-strong);font-size:13px;line-height:1.55;text-align:right}
+.ticket-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:2px}
+.ticket-link{color:var(--accent);font-size:13px;font-weight:750}
+.ticket-note{color:var(--muted);font-size:12px}
+.ticket-actionbox{
+  display:grid;gap:10px;padding-top:4px;border-top:1px solid #edf2ed
+}
+.ticket-actionbox textarea,
+.ticket-actionbox input,
+.ticket-actionbox select{
+  width:100%;min-height:40px;padding:10px 12px;border:1px solid var(--line-strong);border-radius:14px;background:#fff;
+  color:var(--text);font:inherit;font-size:13px
+}
+.ticket-actionbox textarea{min-height:84px;resize:vertical}
+.ticket-actiongrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ticket-actionrow{display:flex;gap:8px;flex-wrap:wrap}
+.ticket-actionbtn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line-strong);
+  background:#fff;color:var(--muted-strong);font:inherit;font-size:12px;font-weight:800;cursor:pointer
+}
+.ticket-actionbtn.is-primary{background:var(--accent);border-color:transparent;color:#f5f8f4}
+.ticket-actionbtn.is-warn{background:var(--warning-bg);border-color:#f0dcb7;color:var(--warning-text)}
+.ticket-actionbtn.is-danger{background:#faefed;border-color:#ebc3bd;color:#8c3b32}
+.ticket-actionbtn[disabled]{opacity:.45;cursor:not-allowed}
+.ticket-feedback{
+  display:none;padding:10px 12px;border-radius:12px;font-size:12px;line-height:1.55
+}
+.ticket-feedback.is-visible{display:block}
+.ticket-feedback.is-good{background:var(--good-bg);color:var(--good-text)}
+.ticket-feedback.is-danger{background:#faefed;color:#8c3b32}
+.ticket-feedback.is-warning{background:var(--warning-bg);color:var(--warning-text)}
+.loading-shell{display:grid;gap:12px}
+.loading-bar{
+  height:14px;border-radius:999px;background:linear-gradient(90deg,#eef3ef 0%,#f7faf7 50%,#eef3ef 100%);background-size:200% 100%;
+  animation:loading-shift 1.6s linear infinite
+}
+@keyframes loading-shift{from{background-position:0 0}to{background-position:200% 0}}
+@media (max-width:1120px){
+  .summary-grid,.workspace-grid,.queue-grid,.hero-shell,.role-panel,.orchestrator-shell,.orchestrator-stats,.manager-grid{grid-template-columns:1fr}
+  .hero-copy h1{max-width:none}
+}
+@media (max-width:760px){
+  .page-shell{padding:14px 14px 56px}
+  .topbar,.hero-panel,.workspace-panel{padding:22px}
+}
+</style>
+</head>
+<body data-page="internal-portal">
+<div class="page-shell">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="RichLand homepage">
+      <img class="brand-logo" src="assets/LOGO/Company-Logo.webp" alt="RichLand Ltd. logo">
+      <div class="brand-copy"><strong>RichLand Ops</strong><span>Internal Portal Prototype</span></div>
+    </a>
+    <div class="top-actions">
+      <button type="button" data-internal-lang-toggle>中文</button>
+      <a href="index.html">Website</a>
+      <div class="sync-note" data-portal-sync-status>Waiting for sync…</div>
+      <div class="role-pill" aria-label="Logged in internal role">
+        <span>Signed in</span>
+        <strong data-session-role>Loading…</strong>
+      </div>
+      <button type="button" data-portal-refresh>Refresh</button>
+      <button type="button" data-portal-logout>Logout</button>
+      <a class="is-primary" href="job.html">Recruitment Flow</a>
+    </div>
+  </header>
+
+  <section class="panel hero-panel">
+    <div class="hero-shell">
+      <div class="hero-copy">
+        <span class="section-kicker">Ops Overview</span>
+        <h1>Inquiry Inbox, quotation work, and PO review in one first screen</h1>
+        <p>This internal portal prototype is shaped for the practical export path first. The first screen focuses on the three places where commercial follow-up starts to become execution: new inquiries, quotation handling, and customer PO review.</p>
+      </div>
+      <aside class="hero-meta">
+        <strong>Phase 1 focus</strong>
+        <p>Inquiry → Quotation → PI / PO confirmation</p>
+        <strong>Customer-facing depth</strong>
+        <p>Only key status nodes should be exposed to customers. Internal users keep the fuller operating context here.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="role-panel" aria-label="Role access overview">
+    <div class="role-intro">
+      <span class="section-kicker">Role Boundary</span>
+      <h2 data-role-label>Sales / Foreign Trade</h2>
+      <p data-role-scope>This screen can now be previewed by internal role. Pricing, portal links, PO review actions, and later execution controls should not be shown to every department in the same way.</p>
+      <div class="role-badges" data-role-badges></div>
+    </div>
+    <aside class="role-access">
+      <strong>Current access on this screen</strong>
+      <ul data-role-access-list>
+        <li>Loading role permissions…</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="summary-grid" data-summary-grid>
+    <article class="panel summary-card">
+      <span class="summary-card__label">Inquiry Action</span>
+      <strong class="summary-card__value" data-summary="inquiryActionCount">-</strong>
+      <span class="summary-card__note">New or reviewing inquiries waiting for commercial follow-up.</span>
+    </article>
+    <article class="panel summary-card">
+      <span class="summary-card__label">Quotation Action</span>
+      <strong class="summary-card__value" data-summary="quotationActionCount">-</strong>
+      <span class="summary-card__note">Draft or customer-facing quotations still needing progression.</span>
+    </article>
+    <article class="panel summary-card">
+      <span class="summary-card__label">PO Review</span>
+      <strong class="summary-card__value" data-summary="poReviewCount">-</strong>
+      <span class="summary-card__note">Customer POs currently waiting for internal checking and confirmation.</span>
+    </article>
+    <article class="panel summary-card">
+      <span class="summary-card__label">Active Orders</span>
+      <strong class="summary-card__value" data-summary="activeOrderCount">-</strong>
+      <span class="summary-card__note">Confirmed or executing orders already moving beyond the PO stage.</span>
+    </article>
+    <article class="panel summary-card">
+      <span class="summary-card__label">Workflow Actions</span>
+      <strong class="summary-card__value" data-summary="workflowActionCount">-</strong>
+      <span class="summary-card__note">Pending agent tasks that still need the next department handoff.</span>
+    </article>
+    <article class="panel summary-card">
+      <span class="summary-card__label">Approval Gates</span>
+      <strong class="summary-card__value" data-summary="approvalActionCount">-</strong>
+      <span class="summary-card__note">Human approvals still blocking release, costing, sign-off, or BL control.</span>
+    </article>
+    <article class="panel summary-card">
+      <span class="summary-card__label">Blocked Cases</span>
+      <strong class="summary-card__value" data-summary="blockedCaseCount">-</strong>
+      <span class="summary-card__note">Cases currently waiting for clarification, revision, or missing approval.</span>
+    </article>
+  </section>
+
+  <section class="panel orchestrator-panel">
+    <div class="orchestrator-shell">
+      <div class="orchestrator-copy">
+        <span class="section-kicker">Workflow Orchestrator</span>
+        <h2>One master order line, with clear agent ownership at every gate</h2>
+        <p>The orchestrator view does not replace departments. It keeps the sequence visible, shows where a case is blocked, and makes sure the next queue only opens after the required business and approval gates are complete.</p>
+      </div>
+      <div class="orchestrator-stats" data-orchestrator-overview>
+        <article class="orchestrator-stat"><span>Active Cases</span><strong>-</strong></article>
+        <article class="orchestrator-stat"><span>Blocked Cases</span><strong>-</strong></article>
+        <article class="orchestrator-stat"><span>Agent Tasks</span><strong>-</strong></article>
+        <article class="orchestrator-stat"><span>Approvals</span><strong>-</strong></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="manager-dashboard" data-manager-dashboard-section>
+    <div class="panel manager-head">
+      <div class="manager-head-copy">
+        <span class="section-kicker">Manager Dashboard</span>
+        <h2>Approval decisions, blocked orders, and operating movement in one view</h2>
+        <p>This view is shaped for general manager review: what needs approval, where orders are sitting, which cases are blocked, and whether production, shipment, and payments are moving normally.</p>
+      </div>
+    </div>
+    <div class="manager-grid" data-manager-dashboard>
+      <article class="manager-block"><h3>Today Needs Approval</h3><p>Loading approval gates…</p></article>
+      <article class="manager-block"><h3>Order Pipeline</h3><p>Loading pipeline…</p></article>
+      <article class="manager-block"><h3>Blocked Orders</h3><p>Loading blocked cases…</p></article>
+      <article class="manager-block"><h3>Production & Shipment</h3><p>Loading execution snapshot…</p></article>
+      <article class="manager-block"><h3>Business Metrics</h3><p>Loading metrics…</p></article>
+    </div>
+  </section>
+
+  <section class="workspace-grid">
+    <article class="panel workspace-panel">
+      <div class="workspace-head">
+        <span class="section-kicker">Inquiry Inbox</span>
+        <h2>New buyer demand that needs categorization and commercial judgment</h2>
+        <p>Use this column to scan the latest inquiries, identify which ones are worth quoting, and decide where category, market, or cooperation mode still need clarification.</p>
+      </div>
+      <div class="workspace-list" data-workspace="inquiries">
+        <div class="loading-shell">
+          <div class="loading-bar"></div>
+          <div class="loading-bar"></div>
+          <div class="loading-bar"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="panel workspace-panel">
+      <div class="workspace-head">
+        <span class="section-kicker">Quotation Workspace</span>
+        <h2>Quotations, owner follow-up, and portal handoff readiness</h2>
+        <p>This view keeps quotations visible with customer, version, validity, and owner context, so the team can move faster from inquiry review into PI and customer confirmation.</p>
+      </div>
+      <div class="workspace-list" data-workspace="quotations">
+        <div class="loading-shell">
+          <div class="loading-bar"></div>
+          <div class="loading-bar"></div>
+          <div class="loading-bar"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="panel workspace-panel">
+      <div class="workspace-head">
+        <span class="section-kicker">PO Review Queue</span>
+        <h2>Customer PO files that need business confirmation before execution</h2>
+        <p>This queue is where uploaded PO files are checked against quotation, PI, quantity, packaging, and trade terms before the order is formally handed over to execution.</p>
+      </div>
+      <div class="workspace-list" data-workspace="pos">
+        <div class="loading-shell">
+          <div class="loading-bar"></div>
+          <div class="loading-bar"></div>
+          <div class="loading-bar"></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="queue-section" data-queue-section="workflow-gates">
+    <div class="queue-section-head">
+      <span class="section-kicker">Workflow Gates</span>
+      <h2>Credit, deposit, manager release, and material planning stay visible as separate queues</h2>
+      <p>These queues separate commercial approval from production release. A PO can be approved for document consistency without automatically pushing the order into production.</p>
+    </div>
+    <div class="queue-grid">
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Credit Review</span>
+          <h2>Customer risk and payment posture before quotation release</h2>
+          <p>Review customer context, decide payment posture, and keep high-risk customers from moving ahead without finance visibility.</p>
+        </div>
+        <div class="workspace-list" data-workspace="credit-review"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Deposit Confirmation</span>
+          <h2>Deposit proof and payment confirmation before production release</h2>
+          <p>Finance confirms deposit status here and records the commercial proof before the case can move to manager release.</p>
+        </div>
+        <div class="workspace-list" data-workspace="deposit-confirmation"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Manager Release</span>
+          <h2>Formal release to production planning after deposit confirmation</h2>
+          <p>This gate keeps document approval separate from the decision to actually release factory planning work.</p>
+        </div>
+        <div class="workspace-list" data-workspace="manager-release"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Inventory & Material</span>
+          <h2>Stock match, missing items, and material preparation list</h2>
+          <p>Production and merchandisers can keep inventory match and purchase-needs preparation visible before execution fully opens.</p>
+        </div>
+        <div class="workspace-list" data-workspace="inventory-material"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Cost Review</span>
+          <h2>Manager value review for missing materials and cost impact</h2>
+          <p>Material gaps and related value decisions stay in a dedicated queue before finance sign-off is requested.</p>
+        </div>
+        <div class="workspace-list" data-workspace="cost-review"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Finance Sign-off</span>
+          <h2>Finance sign-off before execution is formally opened</h2>
+          <p>Use this queue to keep PDF sign-off, final review notes, and the formal release into execution under control.</p>
+        </div>
+        <div class="workspace-list" data-workspace="finance-signoff"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="queue-section" data-queue-section="execution-control">
+    <div class="queue-section-head">
+      <span class="section-kicker">Execution Control</span>
+      <h2>Production, shipment, and balance collection stay connected but separately controlled</h2>
+      <p>After execution opens, the system still keeps production progress, shipment readiness, and BL release under distinct gates instead of merging them into one generic order status.</p>
+    </div>
+    <div class="queue-grid">
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Production Queue</span>
+          <h2>Orders that are already released and moving on the factory side</h2>
+          <p>Track which cases are in progress, completed, or already ready to hand over into shipping and document preparation.</p>
+        </div>
+        <div class="workspace-list" data-workspace="production"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Shipping & Customs</span>
+          <h2>Booking, trucking, customs, and on-board readiness</h2>
+          <p>Documentation teams can see which orders are ready for booking and which ones are already moving into on-board control.</p>
+        </div>
+        <div class="workspace-list" data-workspace="shipping-customs"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+      <article class="panel workspace-panel">
+        <div class="workspace-head">
+          <span class="section-kicker">Balance & BL Release</span>
+          <h2>Final payment follow-up and BL release remain a hard gate</h2>
+          <p>Keep balance collection, BL approval, and release control together so shipping completion does not automatically mean release of documents.</p>
+        </div>
+        <div class="workspace-list" data-workspace="balance-release"><div class="loading-shell"><div class="loading-bar"></div><div class="loading-bar"></div></div></div>
+      </article>
+    </div>
+  </section>
+</div>
+<script src="scripts/site-config.js"></script>
+<script src="scripts/internal-i18n.js"></script>
+<script src="scripts/internal-auth.js"></script>
+<script src="scripts/internal-portal.js"></script>
+</body>
+</html>

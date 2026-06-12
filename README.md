@@ -1,63 +1,161 @@
-# RichLand Ltd. Website (V2)
+# RichLand Ltd. Website and Ops Prototype
 
-A static B2B product showcase website for RichLand Ltd., focused on electric fans and small home appliances, designed for OEM/ODM export business.
+Static B2B product showcase website for RichLand Ltd., focused on electric fans and related home appliances for OEM / ODM export business.
 
----
+The repo also includes the first prototype of the supporting internal ops backend for inquiry intake, quotation / PI / PO handling, and order execution handoff.
 
-## 🌐 Overview
+## Overview
 
-This project is a lightweight, static website built to present product lines clearly to international buyers.  
+The public site is a lightweight static website built to present product lines clearly to international buyers.
 
 It emphasizes:
+
 - Clean product categorization
-- Fast loading (optimized WebP assets)
-- Simple inquiry flow
+- Fast loading with optimized WebP assets
+- Practical inquiry flow
 - Professional B2B visual style
+- Manufacturer-oriented export positioning
 
-Inspired by the structure and clarity of brands like Panasonic and Hunter.
+The homepage structure and product logic are inspired by the clarity of corporate and fan-category sites such as Panasonic and Hunter, without copying either site directly.
 
----
+## Key Website Features
 
-## 🧩 Key Features
+### Product Organization
 
-### 1. Product Organization
 - Categorized into:
   - Pedestal Fans
   - Table Fans
   - Wall Fans
   - Air Circulators
-- Models grouped by series instead of listing every variation
-- Variants (colors) handled inside one product card
+  - Ceiling Fans
+  - Related appliance lines
+- Models grouped by series instead of listing every variation.
+- Variants, such as colors, are handled inside one product card where appropriate.
 
-### 2. Smart Sorting Logic
+### Sorting and Product Logic
+
 Products are displayed based on:
-1. Feature completeness (priority)
+
+1. Feature completeness
 2. Model clarity
 3. Category grouping
 
-This ensures high-quality models appear first.
+This keeps higher-quality and clearer product records easier for buyers to scan.
 
-### 3. Optimized Assets
-- All product images converted to **trimmed WebP**
-- Transparent background
-- Reduced file size for faster loading
+### Optimized Assets
 
-### 4. Inquiry-Oriented Design
-The site is built around conversion:
+- Product images use trimmed WebP assets where available.
+- Transparent backgrounds are preferred for catalog presentation.
+- File sizes are kept practical for static hosting.
+
+### Inquiry-Oriented Design
+
+The site is built around B2B conversion:
+
 - Clear product display
-- Simple contact structure
-- Future-ready inquiry form system
+- Practical buyer inquiry fields
+- Contact and inquiry routes for importers, wholesalers, and private-label buyers
+- Backend-connected inquiry submission when `apiBaseUrl` is configured
 
----
+## Tech Stack
 
-## 🏗️ Tech Stack
+- HTML
+- CSS
+- Vanilla JavaScript
+- Node.js backend prototype
+- Prisma-backed local store bridge for ops data
 
-- HTML (static structure)
-- CSS (layout + visual design)
-- Vanilla JavaScript (logic + interaction)
-- No framework (fast, simple, deployable anywhere)
+No frontend framework is required.
 
----
+## Public Website
 
-## 📁 Project Structure
+Main files:
 
+- `index.html`
+- `products.html`
+- `service.html`
+- `culture.html`
+- `job.html`
+- `scripts/`
+- `assets/`
+
+Inquiry form behavior is configured in:
+
+- `scripts/site-config.js`
+- `scripts/inquiry-form.js`
+
+When `apiBaseUrl` points to the ops backend, public inquiry submission must receive a stored backend `inquiry.id` before showing success.
+
+## Backend Prototype
+
+Start the local backend:
+
+```bash
+cd backend
+npm start
+```
+
+Default address:
+
+```text
+http://localhost:8787
+```
+
+Core backend coverage:
+
+- Website inquiry intake
+- Customer / contact records
+- Quotation records
+- PI records
+- Customer PO review
+- Workflow case tracking
+- Agent and approval queues
+- Deposit, manager release, production, shipment, balance, and BL release gates
+- Customer portal token access
+
+## Internal Portal Prototype
+
+Open:
+
+- `internal-portal.html`
+
+Current internal areas include:
+
+- Inquiry Inbox
+- Quotation Workspace
+- PO Review Queue
+- Workflow Gates
+- Execution Control
+- Manager Dashboard
+
+The internal portal reads from:
+
+```text
+GET /api/internal/ops-overview
+```
+
+## Workflow Simulations
+
+Repeatable valid quote-to-settlement simulation:
+
+```bash
+cd backend
+npm run simulate:po-flow
+```
+
+Invalid gate simulation:
+
+```bash
+cd backend
+npm run simulate:invalid-gates
+```
+
+These scripts verify that the main order flow can complete and that invalid jumps, such as production before finance sign-off or shipment before ready-to-ship, are blocked.
+
+## Notes
+
+- Keep the public marketing site lightweight and static.
+- Keep ops workflow logic inside `backend/`.
+- Do not treat PO approval as production release.
+- Do not release BL before balance confirmation.
+- Product data work should follow `docs/product-feature-context.md`.

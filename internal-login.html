@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internal Login | RichLand Ops</title>
+<style>
+:root{
+  --bg:#f4f6f3;
+  --surface:#ffffff;
+  --surface-soft:#f7faf7;
+  --line:#d8dfd8;
+  --line-strong:#c5d0c7;
+  --text:#13201a;
+  --muted:#607068;
+  --muted-strong:#3b4d44;
+  --accent:#1f6b52;
+  --accent-soft:#e3efe8;
+  --danger:#8c3b32;
+  --danger-soft:#faefed;
+  --shadow:0 22px 54px rgba(19,32,26,.1);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;
+  font-family:"Avenir Next","Segoe UI",Arial,sans-serif;color:var(--text);
+  background:linear-gradient(180deg,#fafbf9 0%,#f4f6f3 24%,#eef3ee 100%);
+}
+.login-shell{
+  width:min(1040px,100%);display:grid;grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);gap:20px
+}
+.panel{
+  border:1px solid var(--line);border-radius:30px;background:var(--surface);box-shadow:var(--shadow)
+}
+.intro-panel{padding:34px;display:grid;gap:16px;align-content:start}
+.section-kicker{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:var(--accent-soft);
+  color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase
+}
+.intro-panel h1{margin:0;max-width:11ch;font-size:clamp(38px,4.4vw,58px);line-height:1.02;letter-spacing:-.05em}
+.intro-panel p{margin:0;max-width:62ch;color:var(--muted);font-size:15px;line-height:1.78}
+.cred-list{display:grid;gap:12px;margin-top:8px}
+.cred-card{
+  padding:18px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,#ffffff 0%,#f8faf8 100%)
+}
+.cred-card strong{display:block;margin-bottom:8px;font-size:14px}
+.cred-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.form-panel{padding:30px;display:grid;gap:18px}
+.form-panel h2{margin:0;font-size:28px;line-height:1.05;letter-spacing:-.04em}
+.form-panel p{margin:0;color:var(--muted);font-size:14px;line-height:1.72}
+.field{display:grid;gap:8px}
+.field label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.field input{
+  width:100%;min-height:50px;padding:0 16px;border:1px solid var(--line-strong);border-radius:18px;background:#fff;
+  color:var(--text);font:inherit;font-size:14px
+}
+.submit-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.submit-row button{
+  display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:0;border-radius:999px;
+  background:linear-gradient(180deg,#247154 0%,#1f6b52 100%);color:#f5f8f4;font:inherit;font-size:13px;font-weight:800;cursor:pointer
+}
+.submit-row a{
+  color:var(--muted-strong);font-size:13px;font-weight:700;text-decoration:none
+}
+.message{
+  display:none;padding:14px 16px;border-radius:18px;font-size:13px;line-height:1.68
+}
+.message.is-visible{display:block}
+.message.is-danger{background:var(--danger-soft);color:var(--danger)}
+.demo-table{display:grid;gap:10px}
+.demo-row{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;padding:12px 14px;border:1px solid var(--line);border-radius:18px;background:var(--surface-soft)
+}
+.demo-row span:first-child{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.demo-row span:last-child{font-size:13px;color:var(--muted-strong)}
+@media (max-width:980px){
+  .login-shell{grid-template-columns:1fr}
+  .intro-panel h1{max-width:none}
+}
+</style>
+</head>
+<body data-page="internal-login">
+<div class="login-shell">
+  <section class="panel intro-panel">
+    <span class="section-kicker">Internal Access</span>
+    <h1>Login for internal portal work</h1>
+    <p>This access layer is now intended for real internal roles. Inquiry follow-up, quotation review, PO approval, execution progress, and internal files should move through a signed user session instead of temporary role switching.</p>
+    <div class="cred-list">
+      <article class="cred-card">
+        <strong>What this login controls</strong>
+        <p>Internal screens now read role from the signed session. Sales can review commercial context, merchandisers can follow order execution, and non-matching roles lose access to protected actions.</p>
+      </article>
+      <article class="cred-card">
+        <strong>Demo accounts for local testing</strong>
+        <div class="demo-table">
+          <div class="demo-row"><span>Sales</span><span>`sales@richland.local` / `Richland#Sales2026`</span></div>
+          <div class="demo-row"><span>Merchandiser</span><span>`merch@richland.local` / `Richland#Merch2026`</span></div>
+          <div class="demo-row"><span>Admin</span><span>`admin@richland.local` / `Richland#Admin2026`</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel form-panel">
+    <div class="submit-row" style="justify-content:flex-end">
+      <button type="button" data-internal-lang-toggle>中文</button>
+    </div>
+    <h2>Sign in</h2>
+    <p>Use an internal account to enter the ops workspace. If the session expires, protected pages will send you back here automatically.</p>
+    <form data-login-form>
+      <div class="field">
+        <label for="login-email">Email</label>
+        <input id="login-email" name="email" type="email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="login-password">Password</label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+      </div>
+      <div class="submit-row">
+        <button type="submit">Login to Ops</button>
+        <a href="index.html">Back to website</a>
+      </div>
+      <div class="message" data-login-message></div>
+    </form>
+  </section>
+</div>
+<script src="scripts/site-config.js"></script>
+<script src="scripts/internal-i18n.js"></script>
+<script src="scripts/internal-auth.js"></script>
+<script src="scripts/internal-login.js"></script>
+</body>
+</html>

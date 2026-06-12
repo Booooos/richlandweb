@@ -1,0 +1,20 @@
+{
+  "name": "richland-ops-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Prototype ops backend for RichLand inquiry, quotation, PO, and order coordination.",
+  "dependencies": {
+    "@prisma/client": "^6.7.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.7.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "simulate:po-flow": "node scripts/simulate-po-order-flow.js",
+    "simulate:invalid-gates": "node scripts/simulate-invalid-workflow-gates.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate-store": "node scripts/migrate-json-store-to-prisma.js",
+    "prisma:export-store": "node scripts/export-prisma-store-to-json.js"
+  }
+}

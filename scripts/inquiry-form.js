@@ -2,6 +2,7 @@
   const form = document.querySelector("[data-inquiry-form]");
   if (!form) return;
 
+  const i18n = window.RICHLAND_I18N || null;
   const submitButton = form.querySelector("[data-submit-button]");
   const status = form.querySelector("[data-form-status]");
   const modal = document.querySelector("[data-success-modal]");
@@ -43,7 +44,9 @@
 
     if (submitButton) {
       submitButton.disabled = nextState;
-      submitButton.textContent = nextState ? "Sending..." : defaultButtonLabel;
+      submitButton.textContent = nextState
+        ? (i18n ? i18n.getUiText("sending") : "Sending...")
+        : defaultButtonLabel;
       submitButton.setAttribute("aria-busy", nextState ? "true" : "false");
     }
   }
@@ -83,14 +86,17 @@
     event.preventDefault();
     if (isSubmitting) return;
 
-    const endpoint = window.RICHLAND_CONFIG && window.RICHLAND_CONFIG.formspreeEndpoint;
-    if (!endpoint) {
+    const apiBaseUrl = window.RICHLAND_CONFIG && window.RICHLAND_CONFIG.apiBaseUrl;
+    if (!apiBaseUrl) {
       setStatus(
-        "Inquiry form is not configured yet. Please contact us by email.",
+        i18n
+          ? i18n.getUiText("inquiryConfigError")
+          : "Inquiry form is not connected to the RichLand backend yet. Please contact us by email.",
         "error"
       );
       return;
     }
+    const endpoint = String(apiBaseUrl).replace(/\/$/, "") + "/api/inquiries";
 
     if (!form.reportValidity()) return;
 
@@ -110,7 +116,8 @@
         body: JSON.stringify(payload)
       });
 
-      if (!response.ok) {
+      const result = await response.json().catch(() => null);
+      if (!response.ok || !result || !result.inquiry || !result.inquiry.id) {
         throw new Error("Submission failed");
       }
 
@@ -119,7 +126,9 @@
       openModal();
     } catch (error) {
       setStatus(
-        "Your inquiry could not be sent right now. Please try again or contact us by email.",
+        i18n
+          ? i18n.getUiText("inquirySubmitError")
+          : "Your inquiry could not be sent right now. Please try again or contact us by email.",
         "error"
       );
     } finally {

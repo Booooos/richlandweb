@@ -1,6 +1,7 @@
 (function () {
   var directory = document.querySelector("[data-footer-directory]");
   if (!directory) return;
+  var i18n = window.RICHLAND_I18N || null;
 
   var FOOTER_DIRECTORY = {
     contacts: {
@@ -87,8 +88,11 @@
     if (!location) return;
 
     var links = buildMapLinks(location.address);
+    var localizedLabel = i18n
+      ? i18n.translateLocationLabel(location.label)
+      : location.label;
 
-    setText("[data-location-label]", location.label);
+    setText("[data-location-label]", localizedLabel);
     setVisibility("[data-location-address-item]", !!location.address);
     setVisibility("[data-location-phone-item]", !!location.phone);
 
@@ -113,8 +117,10 @@
     var fallback = directory.querySelector("[data-map-fallback-text]");
     if (fallback) {
       fallback.textContent = location.address
-        ? location.label + ": " + location.address
-        : "Use the direct Google Maps link if the map preview is unavailable.";
+        ? localizedLabel + ": " + location.address
+        : (i18n
+            ? i18n.getUiText("locationFallback")
+            : "Use the direct Google Maps link if the map preview is unavailable.");
     }
 
     var tabs = directory.querySelectorAll("[data-location-tab]");

@@ -1,0 +1,415 @@
+{
+  "users": [
+    {
+      "id": "usr_sales_demo",
+      "name": "Zhihai Sales",
+      "email": "sales@richland.local",
+      "role": "sales",
+      "passwordHash": "scrypt:21bb40f54118a743ab2061df:8ce897a893e89b68e1b7c265c6f35123cdcd23ea5221e88e48738b3354bbf5f732b215140f0fbb452f3ef1169b86749a39ea7c78f4a21fc34210645831f1858c",
+      "isActive": true,
+      "createdAt": "2026-04-23T09:05:25.908Z",
+      "updatedAt": "2026-04-23T09:05:25.909Z"
+    },
+    {
+      "id": "usr_merch_demo",
+      "name": "Merchandiser Demo",
+      "email": "merch@richland.local",
+      "role": "merchandiser",
+      "passwordHash": "scrypt:2b6bf29f8cc0c0033d651507:db72a503340a62310e796799166032af544080acecf0bf3231e15ce5329267d508199368b539977931a5883dd461b86218fca803e245a70a565e31ebfb46401c",
+      "isActive": true,
+      "createdAt": "2026-04-23T09:05:25.940Z",
+      "updatedAt": "2026-04-23T09:05:25.940Z"
+    },
+    {
+      "id": "usr_prod_demo",
+      "name": "Production Demo",
+      "email": "production@richland.local",
+      "role": "production",
+      "passwordHash": "scrypt:16d2db4c10fcb73aeb3dadf5:7b28cf3032012f46e1bd45ff175e77f65211b114208bbd5c78ca8a68cf3dcda98f3cc79fe8964599c57954469eeb5c54e7930b95e3a5754f917b37690001823f",
+      "isActive": true,
+      "createdAt": "2026-04-23T09:05:25.971Z",
+      "updatedAt": "2026-04-23T09:05:25.971Z"
+    },
+    {
+      "id": "usr_doc_demo",
+      "name": "Documentation Demo",
+      "email": "docs@richland.local",
+      "role": "documentation",
+      "passwordHash": "scrypt:051c6dc96cac19584f0f10a0:fb7f23fe56c929ffbe780ba622ce6c267443bb17d797f9e9446f3fe400bba6e50571d157d1e8c2febe98fe357a5b1d35c64b821b9cfa7b8bf785136bfe5fe306",
+      "isActive": true,
+      "createdAt": "2026-04-23T09:05:26.002Z",
+      "updatedAt": "2026-04-23T09:05:26.002Z"
+    },
+    {
+      "id": "usr_admin_demo",
+      "name": "Ops Admin",
+      "email": "admin@richland.local",
+      "role": "admin",
+      "passwordHash": "scrypt:64003fa22372406688bf1e7a:4b2bf8df83c72e7833b2e54aaa91f52741f0feb84e73cdadebe3b2e54391f95c2369d2e53797223be0d56330f6c164af979ced143f1d284c9acb11e7adf5e2d8",
+      "isActive": true,
+      "createdAt": "2026-04-23T09:05:26.032Z",
+      "updatedAt": "2026-04-23T09:05:26.032Z"
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust_1776935126095_28e395b4",
+      "companyName": "North Gulf Appliances LLC",
+      "primaryEmail": "procurement@north-gulf.example.com",
+      "website": "https://north-gulf.example.com",
+      "destinationMarket": "UAE",
+      "createdAt": "2026-04-23T09:05:26.095Z",
+      "updatedAt": "2026-04-23T09:05:26.095Z"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "ctc_1776935126095_56e245e0",
+      "customerId": "cust_1776935126095_28e395b4",
+      "name": "Lina Hassan",
+      "email": "procurement@north-gulf.example.com",
+      "phone": "+971555000111",
+      "createdAt": "2026-04-23T09:05:26.095Z",
+      "updatedAt": "2026-04-23T09:05:26.095Z"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq_1776935126095_1194f86d",
+      "customerId": "cust_1776935126095_28e395b4",
+      "contactId": "ctc_1776935126095_56e245e0",
+      "source": "website",
+      "status": "quoted",
+      "targetCategory": "Pedestal Fans",
+      "estimatedQuantity": "1 x 40HQ trial order",
+      "destinationMarket": "UAE",
+      "cooperationMode": "OEM",
+      "message": "We need pedestal fan quotation with OEM packaging and export carton confirmation.",
+      "createdAt": "2026-04-23T09:05:26.095Z",
+      "updatedAt": "2026-04-23T09:05:26.096Z"
+    }
+  ],
+  "jobContacts": [],
+  "quotations": [
+    {
+      "id": "quo_1776935126096_dc55964a",
+      "inquiryId": "inq_1776935126095_1194f86d",
+      "customerId": "cust_1776935126095_28e395b4",
+      "version": 1,
+      "currency": "USD",
+      "validUntil": "2026-05-31",
+      "moq": "500 pcs",
+      "leadTime": "35 days after deposit and artwork confirmation",
+      "incoterm": "FOB Shunde",
+      "notes": "OEM color box, English carton marks, UAE market voltage label.",
+      "items": [
+        {
+          "model": "A52",
+          "quantity": "500 pcs",
+          "price": "12.80"
+        },
+        {
+          "model": "A55",
+          "quantity": "300 pcs",
+          "price": "13.40"
+        }
+      ],
+      "status": "approved",
+      "salesOwner": "Zhihai",
+      "portalToken": "7cb31001866c769ade85e9653d8e6c3fd838",
+      "createdAt": "2026-04-23T09:05:26.096Z",
+      "updatedAt": "2026-04-23T09:05:26.102Z"
+    }
+  ],
+  "sampleRequests": [],
+  "proformaInvoices": [
+    {
+      "id": "pi_1776935126098_300d1357",
+      "quotationId": "quo_1776935126096_dc55964a",
+      "customerId": "cust_1776935126095_28e395b4",
+      "quotationVersion": 1,
+      "paymentTerms": "30% deposit, 70% before shipment",
+      "tradeTerms": "FOB Shunde",
+      "notes": "Proceed after sample, carton artwork, and shipping marks confirmation.",
+      "status": "confirmed",
+      "portalToken": "7cb31001866c769ade85e9653d8e6c3fd838",
+      "createdAt": "2026-04-23T09:05:26.098Z",
+      "updatedAt": "2026-04-23T09:05:26.102Z"
+    }
+  ],
+  "customerPOs": [
+    {
+      "id": "po_1776935126101_4315889a",
+      "customerId": "cust_1776935126095_28e395b4",
+      "quotationId": "quo_1776935126096_dc55964a",
+      "piId": "pi_1776935126098_300d1357",
+      "orderId": "ord_1776935126101_f646aa13",
+      "poNumber": "NGA-PO-2026-041",
+      "version": 1,
+      "status": "approved",
+      "quantitySummary": "A52 x 500 pcs, A55 x 300 pcs",
+      "packagingNotes": "OEM color box, 5-ply export carton, English shipping marks",
+      "priceNotes": "As quoted in version 1",
+      "leadTimeNotes": "35 days after deposit and artwork confirmation",
+      "tradeTerms": "FOB Shunde",
+      "attachments": [
+        {
+          "name": "NGA-PO-2026-041.pdf",
+          "url": "https://files.example.com/NGA-PO-2026-041.pdf"
+        }
+      ],
+      "note": "Customer PO submitted after PI review.",
+      "source": "customer_portal",
+      "createdAt": "2026-04-23T09:05:26.101Z",
+      "updatedAt": "2026-04-23T09:05:26.102Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_1776935126101_f646aa13",
+      "customerId": "cust_1776935126095_28e395b4",
+      "quotationId": "quo_1776935126096_dc55964a",
+      "piId": "pi_1776935126098_300d1357",
+      "customerPoId": "po_1776935126101_4315889a",
+      "status": "ready_to_ship",
+      "customerVisibleStatus": "Ready for Shipment",
+      "productionStatus": "in_progress",
+      "docsStatus": "ready",
+      "portalToken": "7cb31001866c769ade85e9653d8e6c3fd838",
+      "createdAt": "2026-04-23T09:05:26.101Z",
+      "updatedAt": "2026-04-23T09:05:26.110Z"
+    }
+  ],
+  "productionTasks": [
+    {
+      "id": "prd_1776935126102_2a8fd1be",
+      "orderId": "ord_1776935126101_f646aa13",
+      "customerId": "cust_1776935126095_28e395b4",
+      "status": "in_progress",
+      "workshop": "Fan assembly line",
+      "quantitySummary": "A52 x 500 pcs, A55 x 300 pcs",
+      "packagingNotes": "OEM color box, 5-ply export carton, English shipping marks",
+      "plannedStartDate": "2026-05-08",
+      "plannedFinishDate": "2026-05-28",
+      "notes": "Injection, motor preparation, and assembly line work are in progress.",
+      "createdAt": "2026-04-23T09:05:26.102Z",
+      "updatedAt": "2026-04-23T09:05:26.105Z"
+    }
+  ],
+  "shippingPlans": [
+    {
+      "id": "ship_1776935126102_23ff8167",
+      "orderId": "ord_1776935126101_f646aa13",
+      "customerId": "cust_1776935126095_28e395b4",
+      "status": "booked",
+      "tradeTerms": "FOB Shunde",
+      "portOfLoading": "Shunde / Foshan",
+      "shipmentWindow": "2026-06-05 to 2026-06-08",
+      "bookingReference": "BK-HT-2026-118",
+      "packagingConfirmed": true,
+      "marksConfirmed": true,
+      "notes": "Space booking aligned with ready cargo window.",
+      "createdAt": "2026-04-23T09:05:26.102Z",
+      "updatedAt": "2026-04-23T09:05:26.107Z"
+    }
+  ],
+  "exportDocumentPacks": [
+    {
+      "id": "doc_1776935126102_619fdf33",
+      "orderId": "ord_1776935126101_f646aa13",
+      "customerId": "cust_1776935126095_28e395b4",
+      "status": "ready",
+      "requiredDocuments": [
+        "PI",
+        "CI",
+        "PL",
+        "BL draft"
+      ],
+      "preparedDocuments": [
+        "PI",
+        "CI",
+        "PL",
+        "BL draft"
+      ],
+      "packagingConfirmed": true,
+      "notes": "Export document pack ready for pre-shipment check.",
+      "createdAt": "2026-04-23T09:05:26.102Z",
+      "updatedAt": "2026-04-23T09:05:26.109Z"
+    }
+  ],
+  "uploads": [],
+  "files": [
+    {
+      "id": "file_1776935126108_5e1f7088",
+      "orderId": "ord_1776935126101_f646aa13",
+      "customerId": "cust_1776935126095_28e395b4",
+      "kind": "CI draft",
+      "name": "CI-draft-NGA-PO-2026-041.pdf",
+      "url": "https://files.example.com/CI-draft-NGA-PO-2026-041.pdf",
+      "visibility": "customer",
+      "uploadId": null,
+      "createdAt": "2026-04-23T09:05:26.108Z"
+    },
+    {
+      "id": "file_1776935126109_9812957a",
+      "orderId": "ord_1776935126101_f646aa13",
+      "customerId": "cust_1776935126095_28e395b4",
+      "kind": "PL draft",
+      "name": "PL-draft-NGA-PO-2026-041.pdf",
+      "url": "https://files.example.com/PL-draft-NGA-PO-2026-041.pdf",
+      "visibility": "customer",
+      "uploadId": null,
+      "createdAt": "2026-04-23T09:05:26.109Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_1776935126100_462b8ac8",
+      "customerId": "cust_1776935126095_28e395b4",
+      "quotationId": "quo_1776935126096_dc55964a",
+      "orderId": null,
+      "channel": "customer_portal",
+      "authorRole": "customer",
+      "message": "Please keep OEM color box and export carton marks aligned with our approved artwork.",
+      "attachments": [],
+      "createdAt": "2026-04-23T09:05:26.100Z"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "tl_1776935126095_cab63f28",
+      "createdAt": "2026-04-23T09:05:26.095Z",
+      "entityType": "inquiry",
+      "entityId": "inq_1776935126095_1194f86d",
+      "visibility": "internal",
+      "type": "inquiry_created",
+      "message": "Website inquiry received"
+    },
+    {
+      "id": "tl_1776935126096_e77014e8",
+      "createdAt": "2026-04-23T09:05:26.096Z",
+      "entityType": "quotation",
+      "entityId": "quo_1776935126096_dc55964a",
+      "visibility": "internal",
+      "type": "quotation_created",
+      "message": "Quotation created from inquiry"
+    },
+    {
+      "id": "tl_1776935126098_9cb6dea3",
+      "createdAt": "2026-04-23T09:05:26.098Z",
+      "entityType": "pi",
+      "entityId": "pi_1776935126098_300d1357",
+      "visibility": "internal",
+      "type": "pi_created",
+      "message": "Proforma invoice created"
+    },
+    {
+      "id": "tl_1776935126100_e560941e",
+      "createdAt": "2026-04-23T09:05:26.100Z",
+      "entityType": "quotation",
+      "entityId": "quo_1776935126096_dc55964a",
+      "visibility": "internal",
+      "type": "customer_message_received",
+      "message": "Customer left a portal message"
+    },
+    {
+      "id": "tl_1776935126101_51aff08c",
+      "createdAt": "2026-04-23T09:05:26.101Z",
+      "entityType": "customer_po",
+      "entityId": "po_1776935126101_4315889a",
+      "visibility": "internal",
+      "type": "customer_po_uploaded",
+      "message": "Customer PO uploaded from portal"
+    },
+    {
+      "id": "tl_1776935126102_54e8ca8b",
+      "createdAt": "2026-04-23T09:05:26.102Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "customer",
+      "type": "order_confirmed",
+      "message": "PO reviewed by sales. Pricing, model mix, packaging, and trade terms match approved PI."
+    },
+    {
+      "id": "tl_1776935126102_456dd9a7",
+      "createdAt": "2026-04-23T09:05:26.102Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "internal",
+      "type": "internal_handoff_created",
+      "message": "Production, shipping, and export document tasks opened"
+    },
+    {
+      "id": "tl_1776935126104_8d371372",
+      "createdAt": "2026-04-23T09:05:26.104Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "internal",
+      "type": "production_status_updated",
+      "message": "Production has been scheduled after order approval."
+    },
+    {
+      "id": "tl_1776935126105_47771a69",
+      "createdAt": "2026-04-23T09:05:26.105Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "customer",
+      "type": "production_status_updated",
+      "message": "Production has started."
+    },
+    {
+      "id": "tl_1776935126106_2b9ddcfd",
+      "createdAt": "2026-04-23T09:05:26.106Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "internal",
+      "type": "docs_status_updated",
+      "message": "Document status updated to preparing"
+    },
+    {
+      "id": "tl_1776935126107_432ab307",
+      "createdAt": "2026-04-23T09:05:26.107Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "internal",
+      "type": "shipping_status_updated",
+      "message": "Shipping status updated to booked"
+    },
+    {
+      "id": "tl_1776935126108_6f1d729e",
+      "createdAt": "2026-04-23T09:05:26.108Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "customer",
+      "type": "file_attached",
+      "message": "CI draft file attached"
+    },
+    {
+      "id": "tl_1776935126109_c83fa105",
+      "createdAt": "2026-04-23T09:05:26.109Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "customer",
+      "type": "file_attached",
+      "message": "PL draft file attached"
+    },
+    {
+      "id": "tl_1776935126109_c5b25b59",
+      "createdAt": "2026-04-23T09:05:26.109Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "internal",
+      "type": "docs_status_updated",
+      "message": "Document status updated to ready"
+    },
+    {
+      "id": "tl_1776935126110_13f48e3a",
+      "createdAt": "2026-04-23T09:05:26.110Z",
+      "entityType": "order",
+      "entityId": "ord_1776935126101_f646aa13",
+      "visibility": "customer",
+      "type": "order_status_updated",
+      "message": "Production, export documents, and booking are ready for shipment."
+    }
+  ]
+}

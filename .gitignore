@@ -3,3 +3,6 @@
 .DS_Store
 =======
 >>>>>>> origin/main
+
+# Local-only large source media; exceeds GitHub 100MB limit without Git LFS
+assets/INTRO/Intro_Core_stator coil assembly.mov

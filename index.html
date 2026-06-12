@@ -141,6 +141,66 @@ img{display:block;max-width:100%}
   z-index:2;
 }
 
+.lang-toggle{
+  position:absolute;
+  top:24px;
+  right:24px;
+  z-index:6;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:42px;
+  padding:0 14px 0 10px;
+  border:1px solid rgba(213,181,118,.56);
+  border-radius:999px;
+  background:linear-gradient(135deg, rgba(31,107,82,.94) 0%, rgba(24,87,66,.96) 100%);
+  color:#f6f0de;
+  box-shadow:0 16px 32px rgba(19,32,26,.12);
+  backdrop-filter:blur(10px);
+  cursor:pointer;
+  transition:transform .22s ease, box-shadow .22s ease, filter .22s ease, border-color .22s ease;
+}
+
+.lang-toggle:hover{
+  transform:translateY(-1px);
+  border-color:rgba(223,195,140,.72);
+  box-shadow:0 20px 34px rgba(19,32,26,.15);
+  filter:saturate(1.04) brightness(1.02);
+}
+
+.lang-toggle:active{
+  transform:translateY(0);
+  box-shadow:0 12px 22px rgba(19,32,26,.1);
+}
+
+.lang-toggle:focus-visible{
+  outline:2px solid rgba(213,181,118,.32);
+  outline-offset:3px;
+}
+
+.lang-toggle__code{
+  display:grid;
+  place-items:center;
+  min-width:28px;
+  height:28px;
+  padding:0 8px;
+  border-radius:999px;
+  border:1px solid rgba(236,214,169,.42);
+  background:rgba(255,255,255,.12);
+  color:#fff7e8;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+
+.lang-toggle__text{
+  font-size:12px;
+  font-weight:760;
+  letter-spacing:.01em;
+  white-space:nowrap;
+}
+
 .hero-visual-stage{
   --hero-pointer-x:0;
   --hero-pointer-y:0;
@@ -2001,6 +2061,13 @@ h1{
     padding-bottom:24px;
   }
 
+  .lang-toggle{
+    top:18px;
+    right:18px;
+    min-height:40px;
+    padding:0 12px 0 10px;
+  }
+
   .hero-copy,
   .hero-side{
     padding-top:28px;
@@ -2112,6 +2179,18 @@ h1{
   }
 }
 
+@media (max-width:620px){
+  .lang-toggle{
+    gap:0;
+    min-width:40px;
+    padding:0 10px;
+  }
+
+  .lang-toggle__text{
+    display:none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
 
@@ -2143,7 +2222,7 @@ h1{
 }
 </style>
 </head>
-<body>
+<body data-page="index">
 <div class="page-shell">
   <header class="topbar">
     <div class="brand">
@@ -2154,15 +2233,19 @@ h1{
       </div>
     </div>
     <nav class="topnav" aria-label="Primary">
-      <a href="#categories">Categories</a>
-      <a href="#why-richland">Why RichLand</a>
-      <a href="#showcase">Featured Models</a>
-      <a href="products.html">Products</a>
-      <a class="nav-cta" href="#inquiry">Send Inquiry</a>
+      <a data-nav-link="products" href="products.html">Products</a>
+      <a data-nav-link="service" href="service.html">Service Scope</a>
+      <a data-nav-link="job" href="job.html">Job</a>
+      <a data-nav-link="culture" href="culture.html">Culture</a>
+      <a class="nav-cta" data-nav-link="inquiry" href="#inquiry">Send Inquiry</a>
     </nav>
   </header>
 
   <section class="panel hero-visual-section" aria-label="Hero visual">
+    <button class="lang-toggle" type="button" data-lang-toggle aria-label="中文">
+      <span class="lang-toggle__code" data-lang-toggle-code>English</span>
+      <span class="lang-toggle__text" data-lang-toggle-text>中文</span>
+    </button>
     <span class="eyebrow hero-visual-badge">Fan Manufacturing from Shunde, Foshan</span>
     <div class="hero-visual-stage">
       <div class="hero-glow"></div>
@@ -2179,10 +2262,6 @@ h1{
         <img class="hero-layer__image" src="assets/HERO/main_1.webp" alt="Primary RichLand hero product visual">
       </div>
     </div>
-<<<<<<< HEAD
-=======
-    <div class="panel hero-image"><img src="assets/10_Test Fans/Wall Fans_18 inch_B106_Black_VoiceControl_transparent.png" alt="RichLand featured wall fan"></div>
->>>>>>> origin/main
   </section>
 
   <section class="panel hero-content-section">
@@ -2190,7 +2269,7 @@ h1{
       <div class="hero-copy">
         <span class="eyebrow reveal">Electric Fan Manufacturing</span>
         <h1 class="reveal reveal-delay-1">Electric fan production built for long-term export programs</h1>
-        <p class="lead reveal reveal-delay-2">RichLand, backed by Huatian's factory base in Shunde, Foshan, supports importers, distributors, and private-label buyers with around 25 years of manufacturing experience, broad fan categories, and practical OEM / ODM cooperation.</p>
+        <p class="lead reveal reveal-delay-2">RichLand, backed by Huatian's factory base in Shunde, Foshan, supports importers, distributors, and private-label buyers with 33 years of manufacturing experience, broad fan categories, and practical OEM / ODM cooperation.</p>
         <div class="hero-actions reveal reveal-delay-3">
           <a class="btn primary" href="#inquiry">Request Quotation</a>
           <a class="btn" href="#categories">Explore Fan Categories</a>
@@ -2209,7 +2288,7 @@ h1{
             <span>Reference timing for samples, bulk production, and available stock.</span>
           </div>
           <div class="metric">
-            <strong>Around 25 Years</strong>
+            <strong>33 Years</strong>
             <span>Manufacturing experience across electric fans and supporting appliance lines.</span>
           </div>
         </div>
@@ -2239,27 +2318,6 @@ h1{
       </div>
     </div>
   </section>
-<<<<<<< HEAD
-=======
-  <div class="grid">
-<section class="category card" id="sec-0">
-  <div class="category-head">
-    <div>
-      <span class="eyebrow">Featured Category</span>
-      <h2>Pedestal Fans</h2>
-      <p>Quiet, household-friendly pedestal fans with classic, remote, inverter, and decorative styles.</p>
-    </div>
-    <img class="cover" src="assets/10_Test Fans/Wall Fans_18 inch_B106_Black_VoiceControl_transparent.png" alt="Pedestal Fans cover">
-  </div>
-  <div class="slider" data-slider="0">
-    <button class="arrow prev" aria-label="Previous">&#10094;</button>
-    <div class="viewport"><div class="slide active" data-index="0"><img src="assets/10_Test Fans/Wall Fans_18 inch_B106_Black_VoiceControl_transparent.png" alt="A27 Mechanical"></div><div class="slide" data-index="1"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A47_Red_Remote.jpg" alt="A47 Remote"></div><div class="slide" data-index="2"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A52_PearlWhite_Remote.jpg" alt="A52 Inverter Remote"></div><div class="slide" data-index="3"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A53_Grey.jpg" alt="A53 Mechanical"></div><div class="slide" data-index="4"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A55_Grey_Remote.jpg" alt="A55 Remote"></div><div class="slide" data-index="5"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_Grey.jpg" alt="A57 Mechanical"></div><div class="slide" data-index="6"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_BlackPearl_Remote.jpg" alt="A57 Remote"></div><div class="slide" data-index="7"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A58_BlackGold.jpg" alt="A58 Mechanical"></div><div class="slide" data-index="8"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A58_BlackGold_Remote.jpg" alt="A58 Remote"></div><div class="slide" data-index="9"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A59_BlackPearl.jpg" alt="A59 Standing Fan"></div><div class="slide" data-index="10"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze.jpg" alt="A60 Mechanical"></div><div class="slide" data-index="11"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze_Remote.jpg" alt="A60 Remote"></div><div class="slide" data-index="12"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A73_BlackPearl.jpg" alt="A73 Industrial Stand Fan"></div><div class="slide" data-index="13"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A83_BlackPearl.jpg" alt="A83 Industrial Stand Fan"></div><div class="slide" data-index="14"><img src="assets/01_Pedestal Fans/Pedestal_14 inch_H8_PearlWhite.jpg" alt="H8 Mechanical"></div></div>
-    <button class="arrow next" aria-label="Next">&#10095;</button>
-    <div class="chips"><button class="chip active" data-index="0">A27 Mechanical</button><button class="chip" data-index="1">A47 Remote</button><button class="chip" data-index="2">A52 Inverter Remote</button><button class="chip" data-index="3">A53 Mechanical</button><button class="chip" data-index="4">A55 Remote</button><button class="chip" data-index="5">A57 Mechanical</button><button class="chip" data-index="6">A57 Remote</button><button class="chip" data-index="7">A58 Mechanical</button><button class="chip" data-index="8">A58 Remote</button><button class="chip" data-index="9">A59 Standing Fan</button><button class="chip" data-index="10">A60 Mechanical</button><button class="chip" data-index="11">A60 Remote</button><button class="chip" data-index="12">A73 Industrial Stand Fan</button><button class="chip" data-index="13">A83 Industrial Stand Fan</button><button class="chip" data-index="14">H8 Mechanical</button></div>
-    <div class="thumbs"><button class="thumb active" data-index="0"><img src="assets/10_Test Fans/Wall Fans_18 inch_B106_Black_VoiceControl_transparent.png" alt="A27 Mechanical"></button><button class="thumb" data-index="1"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A47_Red_Remote.jpg" alt="A47 Remote"></button><button class="thumb" data-index="2"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A52_PearlWhite_Remote.jpg" alt="A52 Inverter Remote"></button><button class="thumb" data-index="3"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A53_Grey.jpg" alt="A53 Mechanical"></button><button class="thumb" data-index="4"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A55_Grey_Remote.jpg" alt="A55 Remote"></button><button class="thumb" data-index="5"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_Grey.jpg" alt="A57 Mechanical"></button><button class="thumb" data-index="6"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A57_BlackPearl_Remote.jpg" alt="A57 Remote"></button><button class="thumb" data-index="7"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A58_BlackGold.jpg" alt="A58 Mechanical"></button><button class="thumb" data-index="8"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A58_BlackGold_Remote.jpg" alt="A58 Remote"></button><button class="thumb" data-index="9"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A59_BlackPearl.jpg" alt="A59 Standing Fan"></button><button class="thumb" data-index="10"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze.jpg" alt="A60 Mechanical"></button><button class="thumb" data-index="11"><img src="assets/01_Pedestal Fans/Pedestal_16 inch_A60_Bronze_Remote.jpg" alt="A60 Remote"></button><button class="thumb" data-index="12"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A73_BlackPearl.jpg" alt="A73 Industrial Stand Fan"></button><button class="thumb" data-index="13"><img src="assets/01_Pedestal Fans/Pedestal_18 inch_A83_BlackPearl.jpg" alt="A83 Industrial Stand Fan"></button><button class="thumb" data-index="14"><img src="assets/01_Pedestal Fans/Pedestal_14 inch_H8_PearlWhite.jpg" alt="H8 Mechanical"></button></div>
-  </div>
-</section>
->>>>>>> origin/main
 
   <section class="panel section" id="categories">
     <div class="section-head">
@@ -2363,7 +2421,7 @@ h1{
           </div>
           <div class="brief-row">
             <strong>Experience</strong>
-            <span>Around 25 years of manufacturing experience across fan production and export supply.</span>
+            <span>33 years of manufacturing experience across fan production and export supply.</span>
           </div>
           <div class="brief-row">
             <strong>Production</strong>
@@ -2505,15 +2563,15 @@ h1{
             <label for="target-category">Target Category</label>
             <select id="target-category" name="targetCategory" required>
               <option value="">Select a category</option>
-              <option>Pedestal Fans</option>
-              <option>Table Fans</option>
-              <option>Wall Fans</option>
-              <option>Air Circulators</option>
-              <option>Ceiling Fans</option>
-              <option>Electric Heaters</option>
-              <option>Air Conditioners</option>
-              <option>Induction Cookers</option>
-              <option>Electric Pressure Cookers</option>
+              <option value="Pedestal Fans">Pedestal Fans</option>
+              <option value="Table Fans">Table Fans</option>
+              <option value="Wall Fans">Wall Fans</option>
+              <option value="Air Circulators">Air Circulators</option>
+              <option value="Ceiling Fans">Ceiling Fans</option>
+              <option value="Electric Heaters">Electric Heaters</option>
+              <option value="Air Conditioners">Air Conditioners</option>
+              <option value="Induction Cookers">Induction Cookers</option>
+              <option value="Electric Pressure Cookers">Electric Pressure Cookers</option>
             </select>
           </div>
           <div class="field-group">
@@ -2528,10 +2586,10 @@ h1{
             <label for="cooperation-mode">Cooperation Mode</label>
             <select id="cooperation-mode" name="cooperationMode" required>
               <option value="">Select cooperation mode</option>
-              <option>OEM</option>
-              <option>ODM</option>
-              <option>Standard / Existing Models</option>
-              <option>Not Sure Yet</option>
+              <option value="OEM">OEM</option>
+              <option value="ODM">ODM</option>
+              <option value="Standard / Existing Models">Standard / Existing Models</option>
+              <option value="Not Sure Yet">Not Sure Yet</option>
             </select>
           </div>
           <div class="field-group">
@@ -2592,23 +2650,21 @@ h1{
 
           <div class="footer-quicklinks">
             <div class="footer-quicklinks-group">
-              <h4>Explore</h4>
+              <h4 data-footer-group="explore">Explore</h4>
               <ul>
-                <li><a href="#categories">Fan Categories</a></li>
-                <li><a href="#why-richland">Why RichLand</a></li>
-                <li><a href="#showcase">Featured Models</a></li>
-                <li><a href="products.html">Products</a></li>
+                <li><a data-footer-link="products" href="products.html">Products</a></li>
+                <li><a data-footer-link="service" href="service.html">Service Scope</a></li>
+                <li><a data-footer-link="job" href="job.html">Job</a></li>
+                <li><a data-footer-link="culture" href="culture.html">Culture</a></li>
               </ul>
             </div>
 
             <div class="footer-quicklinks-group">
-              <h4>Business Info</h4>
+              <h4 data-footer-group="contact">Contact</h4>
               <ul>
-                <li><a href="#inquiry">Inquiry Support</a></li>
-                <li><a href="#inquiry">OEM / ODM</a></li>
-                <li><a href="#inquiry">MOQ &amp; Lead Time</a></li>
-                <li><a href="#why-richland">Factory Profile</a></li>
-                <li><a href="#inquiry">Contact Us</a></li>
+                <li><a data-footer-link="send-inquiry" href="#inquiry">Send Inquiry</a></li>
+                <li><a data-footer-link="contact-us" href="#inquiry">Contact Us</a></li>
+                <li><a data-footer-link="factory-profile" href="#why-richland">Factory Profile</a></li>
               </ul>
             </div>
           </div>
@@ -2713,6 +2769,7 @@ h1{
 <script src="scripts/site-config.js"></script>
 <script src="scripts/gradient-text.js"></script>
 <script src="scripts/electric-border.js"></script>
+<script src="scripts/site-i18n.js"></script>
 <script src="scripts/inquiry-form.js"></script>
 <script src="scripts/hero-motion.js"></script>
 <script src="scripts/hero-flow.js"></script>

@@ -2,6 +2,7 @@
   const catalogRoot = document.querySelector("[data-products-root]");
   const navRoot = document.querySelector("[data-category-nav]");
   const products = window.RICHLAND_PRODUCTS || [];
+  const i18n = window.RICHLAND_I18N || null;
   const PEDESTAL_VISIBLE_COUNT = 12;
   if (!catalogRoot || !navRoot || !products.length) return;
 
@@ -50,6 +51,33 @@
 
   function buildInquiryLink(category) {
     return `index.html?category=${encodeURIComponent(category)}#inquiry`;
+  }
+
+  function getUiText(key, params = {}) {
+    if (i18n) return i18n.getUiText(key, params);
+
+    if (key === "askForQuote") return "Ask for Quote";
+    if (key === "backToTop") return "Back to top";
+    if (key === "prevColor") return "Show previous color";
+    if (key === "nextColor") return "Show next color";
+    if (key === "viewMore") return `View more (${params.count || 0})`;
+    return "";
+  }
+
+  function translateCategoryLabel(value) {
+    return i18n ? i18n.translateCategoryName(value) : value;
+  }
+
+  function translateColorLabel(value) {
+    return i18n ? i18n.translateColorLabel(value) : value;
+  }
+
+  function translateFeatureLabel(value) {
+    return i18n ? i18n.translateFeatureText(value) : value;
+  }
+
+  function translateSizeLabel(value) {
+    return i18n ? i18n.translateSizeText(value) : value;
   }
 
   function parseListField(entry, fieldName) {
@@ -336,9 +364,10 @@
   }
 
   function buildTopLine(model, size) {
-    if (model && size) return `${model} | ${size}`;
+    const displaySize = translateSizeLabel(size);
+    if (model && displaySize) return `${model} | ${displaySize}`;
     if (model) return model;
-    if (size) return size;
+    if (displaySize) return displaySize;
     return "";
   }
 
@@ -538,7 +567,7 @@
     navRoot.innerHTML = categories
       .map(([category]) => {
         const slug = slugify(category);
-        return `<a class="category-jump" href="#${slug}" data-category-link="${slug}">${category}</a>`;
+        return `<a class="category-jump" href="#${slug}" data-category-link="${slug}">${translateCategoryLabel(category)}</a>`;
       })
       .join("");
 
@@ -572,8 +601,8 @@
                   hasMultipleVariants
                     ? `
                       <div class="product-card__variant-nav">
-                        <button class="product-card__arrow" type="button" aria-label="Show previous color" data-variant-prev>&larr;</button>
-                        <button class="product-card__arrow" type="button" aria-label="Show next color" data-variant-next>&rarr;</button>
+                        <button class="product-card__arrow" type="button" aria-label="${getUiText("prevColor")}" data-variant-prev>&larr;</button>
+                        <button class="product-card__arrow" type="button" aria-label="${getUiText("nextColor")}" data-variant-next>&rarr;</button>
                       </div>
                     `
                     : ""
@@ -581,10 +610,10 @@
               </div>
               <div class="product-card__body">
                 <div class="product-card__meta" ${card.topLine ? "" : "hidden"} data-card-topline>${card.topLine}</div>
-                <h3 class="product-card__color" ${currentVariant.color ? "" : "hidden"} data-card-color>${currentVariant.color}</h3>
-                <div class="product-card__feature" ${currentVariant.feature ? "" : "hidden"} data-card-feature>${currentVariant.feature}</div>
+                <h3 class="product-card__color" ${currentVariant.color ? "" : "hidden"} data-card-color>${translateColorLabel(currentVariant.color)}</h3>
+                <div class="product-card__feature" ${currentVariant.feature ? "" : "hidden"} data-card-feature>${translateFeatureLabel(currentVariant.feature)}</div>
               </div>
-              <a class="btn primary product-card__cta" href="${card.inquiryHref}">Ask for Quote</a>
+              <a class="btn primary product-card__cta" href="${card.inquiryHref}">${getUiText("askForQuote")}</a>
             </article>
           `;
         })
@@ -593,8 +622,8 @@
       return `
         <section class="catalog-section" id="${slug}" tabindex="-1">
           <div class="catalog-section__head">
-            <h2>${category}</h2>
-            <a class="catalog-section__link" href="#top">Back to top</a>
+            <h2>${translateCategoryLabel(category)}</h2>
+            <a class="catalog-section__link" href="#top">${getUiText("backToTop")}</a>
           </div>
           <div class="product-grid">
             ${cards}
@@ -604,7 +633,7 @@
               ? `
                 <div class="catalog-section__foot">
                   <button class="btn catalog-section__more" type="button" data-view-more="${slug}">
-                    View more (${hiddenCards})
+                    ${getUiText("viewMore", { count: hiddenCards })}
                   </button>
                 </div>
               `
@@ -642,12 +671,12 @@
 
       if (color) {
         color.hidden = !variant.color;
-        color.textContent = variant.color || "";
+        color.textContent = translateColorLabel(variant.color || "");
       }
 
       if (feature) {
         feature.hidden = !variant.feature;
-        feature.textContent = variant.feature || "";
+        feature.textContent = translateFeatureLabel(variant.feature || "");
       }
       };
 
