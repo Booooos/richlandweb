@@ -258,7 +258,7 @@
   "inquiries": [
     {
       "id": "inq_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2024-12-24",
@@ -268,7 +268,7 @@
     },
     {
       "id": "inq_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-01-03",
@@ -278,7 +278,7 @@
     },
     {
       "id": "inq_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-01-13",
@@ -288,7 +288,7 @@
     },
     {
       "id": "inq_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-01-24",
@@ -298,7 +298,7 @@
     },
     {
       "id": "inq_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-02-03",
@@ -308,7 +308,7 @@
     },
     {
       "id": "inq_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-02-13",
@@ -318,7 +318,7 @@
     },
     {
       "id": "inq_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-02-21",
@@ -328,7 +328,7 @@
     },
     {
       "id": "inq_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-03-03",
@@ -338,7 +338,7 @@
     },
     {
       "id": "inq_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-03-13",
@@ -348,7 +348,7 @@
     },
     {
       "id": "inq_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-03-24",
@@ -358,7 +358,7 @@
     },
     {
       "id": "inq_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-04-03",
@@ -378,7 +378,7 @@
     },
     {
       "id": "inq_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-04-23",
@@ -388,7 +388,7 @@
     },
     {
       "id": "inq_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-05-03",
@@ -398,7 +398,7 @@
     },
     {
       "id": "inq_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-05-13",
@@ -408,7 +408,7 @@
     },
     {
       "id": "inq_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-05-24",
@@ -418,7 +418,7 @@
     },
     {
       "id": "inq_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-06-03",
@@ -428,7 +428,7 @@
     },
     {
       "id": "inq_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-06-13",
@@ -438,7 +438,7 @@
     },
     {
       "id": "inq_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-06-23",
@@ -448,7 +448,7 @@
     },
     {
       "id": "inq_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-07-03",
@@ -458,7 +458,7 @@
     },
     {
       "id": "inq_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-07-13",
@@ -468,7 +468,7 @@
     },
     {
       "id": "inq_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-07-24",
@@ -488,7 +488,7 @@
     },
     {
       "id": "inq_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-08-13",
@@ -498,7 +498,7 @@
     },
     {
       "id": "inq_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-08-24",
@@ -508,7 +508,7 @@
     },
     {
       "id": "inq_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-09-03",
@@ -518,7 +518,7 @@
     },
     {
       "id": "inq_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-09-13",
@@ -528,7 +528,7 @@
     },
     {
       "id": "inq_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-09-23",
@@ -538,7 +538,7 @@
     },
     {
       "id": "inq_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-10-03",
@@ -548,7 +548,7 @@
     },
     {
       "id": "inq_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-10-13",
@@ -558,7 +558,7 @@
     },
     {
       "id": "inq_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "source": "repeat_customer",
       "status": "converted",
       "inquiryDate": "2025-10-24",
@@ -568,7 +568,7 @@
     },
     {
       "id": "inq_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-11-03",
@@ -578,7 +578,7 @@
     },
     {
       "id": "inq_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-11-13",
@@ -598,7 +598,7 @@
     },
     {
       "id": "inq_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "source": "sales_referral",
       "status": "converted",
       "inquiryDate": "2025-12-03",
@@ -608,7 +608,7 @@
     },
     {
       "id": "inq_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "source": "website",
       "status": "converted",
       "inquiryDate": "2025-12-13",
@@ -700,7 +700,7 @@
   "followUps": [
     {
       "id": "fup_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "inquiryId": "inq_sim_2025_001",
       "orderId": "ord_sim_2025_001",
       "type": "commercial_follow_up",
@@ -711,7 +711,7 @@
     },
     {
       "id": "fup_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "inquiryId": "inq_sim_2025_002",
       "orderId": "ord_sim_2025_002",
       "type": "commercial_follow_up",
@@ -722,7 +722,7 @@
     },
     {
       "id": "fup_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "inquiryId": "inq_sim_2025_003",
       "orderId": "ord_sim_2025_003",
       "type": "commercial_follow_up",
@@ -733,7 +733,7 @@
     },
     {
       "id": "fup_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "inquiryId": "inq_sim_2025_004",
       "orderId": "ord_sim_2025_004",
       "type": "commercial_follow_up",
@@ -744,7 +744,7 @@
     },
     {
       "id": "fup_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "inquiryId": "inq_sim_2025_005",
       "orderId": "ord_sim_2025_005",
       "type": "commercial_follow_up",
@@ -755,7 +755,7 @@
     },
     {
       "id": "fup_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "inquiryId": "inq_sim_2025_006",
       "orderId": "ord_sim_2025_006",
       "type": "commercial_follow_up",
@@ -766,7 +766,7 @@
     },
     {
       "id": "fup_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "inquiryId": "inq_sim_2025_007",
       "orderId": "ord_sim_2025_007",
       "type": "commercial_follow_up",
@@ -777,7 +777,7 @@
     },
     {
       "id": "fup_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "inquiryId": "inq_sim_2025_008",
       "orderId": "ord_sim_2025_008",
       "type": "commercial_follow_up",
@@ -788,7 +788,7 @@
     },
     {
       "id": "fup_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "inquiryId": "inq_sim_2025_009",
       "orderId": "ord_sim_2025_009",
       "type": "commercial_follow_up",
@@ -799,7 +799,7 @@
     },
     {
       "id": "fup_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "inquiryId": "inq_sim_2025_010",
       "orderId": "ord_sim_2025_010",
       "type": "commercial_follow_up",
@@ -810,7 +810,7 @@
     },
     {
       "id": "fup_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "inquiryId": "inq_sim_2025_011",
       "orderId": "ord_sim_2025_011",
       "type": "commercial_follow_up",
@@ -832,7 +832,7 @@
     },
     {
       "id": "fup_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "inquiryId": "inq_sim_2025_013",
       "orderId": "ord_sim_2025_013",
       "type": "commercial_follow_up",
@@ -843,7 +843,7 @@
     },
     {
       "id": "fup_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "inquiryId": "inq_sim_2025_014",
       "orderId": "ord_sim_2025_014",
       "type": "commercial_follow_up",
@@ -854,7 +854,7 @@
     },
     {
       "id": "fup_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "inquiryId": "inq_sim_2025_015",
       "orderId": "ord_sim_2025_015",
       "type": "commercial_follow_up",
@@ -865,7 +865,7 @@
     },
     {
       "id": "fup_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "inquiryId": "inq_sim_2025_016",
       "orderId": "ord_sim_2025_016",
       "type": "commercial_follow_up",
@@ -876,7 +876,7 @@
     },
     {
       "id": "fup_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "inquiryId": "inq_sim_2025_017",
       "orderId": "ord_sim_2025_017",
       "type": "commercial_follow_up",
@@ -887,7 +887,7 @@
     },
     {
       "id": "fup_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "inquiryId": "inq_sim_2025_018",
       "orderId": "ord_sim_2025_018",
       "type": "commercial_follow_up",
@@ -898,7 +898,7 @@
     },
     {
       "id": "fup_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "inquiryId": "inq_sim_2025_019",
       "orderId": "ord_sim_2025_019",
       "type": "commercial_follow_up",
@@ -909,7 +909,7 @@
     },
     {
       "id": "fup_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "inquiryId": "inq_sim_2025_020",
       "orderId": "ord_sim_2025_020",
       "type": "commercial_follow_up",
@@ -920,7 +920,7 @@
     },
     {
       "id": "fup_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "inquiryId": "inq_sim_2025_021",
       "orderId": "ord_sim_2025_021",
       "type": "commercial_follow_up",
@@ -931,7 +931,7 @@
     },
     {
       "id": "fup_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "inquiryId": "inq_sim_2025_022",
       "orderId": "ord_sim_2025_022",
       "type": "commercial_follow_up",
@@ -953,7 +953,7 @@
     },
     {
       "id": "fup_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "inquiryId": "inq_sim_2025_024",
       "orderId": "ord_sim_2025_024",
       "type": "commercial_follow_up",
@@ -964,7 +964,7 @@
     },
     {
       "id": "fup_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "inquiryId": "inq_sim_2025_025",
       "orderId": "ord_sim_2025_025",
       "type": "commercial_follow_up",
@@ -975,7 +975,7 @@
     },
     {
       "id": "fup_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "inquiryId": "inq_sim_2025_026",
       "orderId": "ord_sim_2025_026",
       "type": "commercial_follow_up",
@@ -986,7 +986,7 @@
     },
     {
       "id": "fup_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "inquiryId": "inq_sim_2025_027",
       "orderId": "ord_sim_2025_027",
       "type": "commercial_follow_up",
@@ -997,7 +997,7 @@
     },
     {
       "id": "fup_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "inquiryId": "inq_sim_2025_028",
       "orderId": "ord_sim_2025_028",
       "type": "commercial_follow_up",
@@ -1008,7 +1008,7 @@
     },
     {
       "id": "fup_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "inquiryId": "inq_sim_2025_029",
       "orderId": "ord_sim_2025_029",
       "type": "commercial_follow_up",
@@ -1019,7 +1019,7 @@
     },
     {
       "id": "fup_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "inquiryId": "inq_sim_2025_030",
       "orderId": "ord_sim_2025_030",
       "type": "commercial_follow_up",
@@ -1030,7 +1030,7 @@
     },
     {
       "id": "fup_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "inquiryId": "inq_sim_2025_031",
       "orderId": "ord_sim_2025_031",
       "type": "commercial_follow_up",
@@ -1041,7 +1041,7 @@
     },
     {
       "id": "fup_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "inquiryId": "inq_sim_2025_032",
       "orderId": "ord_sim_2025_032",
       "type": "commercial_follow_up",
@@ -1052,7 +1052,7 @@
     },
     {
       "id": "fup_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "inquiryId": "inq_sim_2025_033",
       "orderId": "ord_sim_2025_033",
       "type": "commercial_follow_up",
@@ -1074,7 +1074,7 @@
     },
     {
       "id": "fup_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "inquiryId": "inq_sim_2025_035",
       "orderId": "ord_sim_2025_035",
       "type": "commercial_follow_up",
@@ -1085,7 +1085,7 @@
     },
     {
       "id": "fup_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "inquiryId": "inq_sim_2025_036",
       "orderId": "ord_sim_2025_036",
       "type": "commercial_follow_up",
@@ -1187,7 +1187,7 @@
     {
       "id": "quo_sim_2025_001",
       "inquiryId": "inq_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "quotationNumber": "QT-2025-001",
       "version": 1,
       "currency": "CNY",
@@ -1214,7 +1214,7 @@
     {
       "id": "quo_sim_2025_002",
       "inquiryId": "inq_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "quotationNumber": "QT-2025-002",
       "version": 2,
       "currency": "CNY",
@@ -1247,7 +1247,7 @@
     {
       "id": "quo_sim_2025_003",
       "inquiryId": "inq_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "quotationNumber": "QT-2025-003",
       "version": 3,
       "currency": "CNY",
@@ -1286,7 +1286,7 @@
     {
       "id": "quo_sim_2025_004",
       "inquiryId": "inq_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "quotationNumber": "QT-2025-004",
       "version": 1,
       "currency": "CNY",
@@ -1331,7 +1331,7 @@
     {
       "id": "quo_sim_2025_005",
       "inquiryId": "inq_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "quotationNumber": "QT-2025-005",
       "version": 2,
       "currency": "CNY",
@@ -1358,7 +1358,7 @@
     {
       "id": "quo_sim_2025_006",
       "inquiryId": "inq_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "quotationNumber": "QT-2025-006",
       "version": 3,
       "currency": "CNY",
@@ -1391,7 +1391,7 @@
     {
       "id": "quo_sim_2025_007",
       "inquiryId": "inq_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "quotationNumber": "QT-2025-007",
       "version": 1,
       "currency": "CNY",
@@ -1430,7 +1430,7 @@
     {
       "id": "quo_sim_2025_008",
       "inquiryId": "inq_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "quotationNumber": "QT-2025-008",
       "version": 2,
       "currency": "CNY",
@@ -1475,7 +1475,7 @@
     {
       "id": "quo_sim_2025_009",
       "inquiryId": "inq_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "quotationNumber": "QT-2025-009",
       "version": 3,
       "currency": "CNY",
@@ -1502,7 +1502,7 @@
     {
       "id": "quo_sim_2025_010",
       "inquiryId": "inq_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "quotationNumber": "QT-2025-010",
       "version": 1,
       "currency": "CNY",
@@ -1535,7 +1535,7 @@
     {
       "id": "quo_sim_2025_011",
       "inquiryId": "inq_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "quotationNumber": "QT-2025-011",
       "version": 2,
       "currency": "CNY",
@@ -1619,7 +1619,7 @@
     {
       "id": "quo_sim_2025_013",
       "inquiryId": "inq_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "quotationNumber": "QT-2025-013",
       "version": 1,
       "currency": "CNY",
@@ -1646,7 +1646,7 @@
     {
       "id": "quo_sim_2025_014",
       "inquiryId": "inq_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "quotationNumber": "QT-2025-014",
       "version": 2,
       "currency": "CNY",
@@ -1679,7 +1679,7 @@
     {
       "id": "quo_sim_2025_015",
       "inquiryId": "inq_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "quotationNumber": "QT-2025-015",
       "version": 3,
       "currency": "CNY",
@@ -1718,7 +1718,7 @@
     {
       "id": "quo_sim_2025_016",
       "inquiryId": "inq_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "quotationNumber": "QT-2025-016",
       "version": 1,
       "currency": "CNY",
@@ -1763,7 +1763,7 @@
     {
       "id": "quo_sim_2025_017",
       "inquiryId": "inq_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "quotationNumber": "QT-2025-017",
       "version": 2,
       "currency": "CNY",
@@ -1790,7 +1790,7 @@
     {
       "id": "quo_sim_2025_018",
       "inquiryId": "inq_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "quotationNumber": "QT-2025-018",
       "version": 3,
       "currency": "CNY",
@@ -1823,7 +1823,7 @@
     {
       "id": "quo_sim_2025_019",
       "inquiryId": "inq_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "quotationNumber": "QT-2025-019",
       "version": 1,
       "currency": "CNY",
@@ -1862,7 +1862,7 @@
     {
       "id": "quo_sim_2025_020",
       "inquiryId": "inq_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "quotationNumber": "QT-2025-020",
       "version": 2,
       "currency": "CNY",
@@ -1907,7 +1907,7 @@
     {
       "id": "quo_sim_2025_021",
       "inquiryId": "inq_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "quotationNumber": "QT-2025-021",
       "version": 3,
       "currency": "CNY",
@@ -1934,7 +1934,7 @@
     {
       "id": "quo_sim_2025_022",
       "inquiryId": "inq_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "quotationNumber": "QT-2025-022",
       "version": 1,
       "currency": "CNY",
@@ -2006,7 +2006,7 @@
     {
       "id": "quo_sim_2025_024",
       "inquiryId": "inq_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "quotationNumber": "QT-2025-024",
       "version": 3,
       "currency": "CNY",
@@ -2051,7 +2051,7 @@
     {
       "id": "quo_sim_2025_025",
       "inquiryId": "inq_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "quotationNumber": "QT-2025-025",
       "version": 1,
       "currency": "CNY",
@@ -2078,7 +2078,7 @@
     {
       "id": "quo_sim_2025_026",
       "inquiryId": "inq_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "quotationNumber": "QT-2025-026",
       "version": 2,
       "currency": "CNY",
@@ -2111,7 +2111,7 @@
     {
       "id": "quo_sim_2025_027",
       "inquiryId": "inq_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "quotationNumber": "QT-2025-027",
       "version": 3,
       "currency": "CNY",
@@ -2150,7 +2150,7 @@
     {
       "id": "quo_sim_2025_028",
       "inquiryId": "inq_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "quotationNumber": "QT-2025-028",
       "version": 1,
       "currency": "CNY",
@@ -2195,7 +2195,7 @@
     {
       "id": "quo_sim_2025_029",
       "inquiryId": "inq_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "quotationNumber": "QT-2025-029",
       "version": 2,
       "currency": "CNY",
@@ -2222,7 +2222,7 @@
     {
       "id": "quo_sim_2025_030",
       "inquiryId": "inq_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "quotationNumber": "QT-2025-030",
       "version": 3,
       "currency": "CNY",
@@ -2255,7 +2255,7 @@
     {
       "id": "quo_sim_2025_031",
       "inquiryId": "inq_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "quotationNumber": "QT-2025-031",
       "version": 1,
       "currency": "CNY",
@@ -2294,7 +2294,7 @@
     {
       "id": "quo_sim_2025_032",
       "inquiryId": "inq_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "quotationNumber": "QT-2025-032",
       "version": 2,
       "currency": "CNY",
@@ -2339,7 +2339,7 @@
     {
       "id": "quo_sim_2025_033",
       "inquiryId": "inq_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "quotationNumber": "QT-2025-033",
       "version": 3,
       "currency": "CNY",
@@ -2399,7 +2399,7 @@
     {
       "id": "quo_sim_2025_035",
       "inquiryId": "inq_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "quotationNumber": "QT-2025-035",
       "version": 2,
       "currency": "CNY",
@@ -2438,7 +2438,7 @@
     {
       "id": "quo_sim_2025_036",
       "inquiryId": "inq_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "quotationNumber": "QT-2025-036",
       "version": 3,
       "currency": "CNY",
@@ -2645,7 +2645,7 @@
     {
       "id": "pi_sim_2025_001",
       "quotationId": "quo_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "piNumber": "PI-2025-001",
       "issuedDate": "2024-12-31",
       "confirmedDate": "2025-01-05",
@@ -2672,7 +2672,7 @@
     {
       "id": "pi_sim_2025_002",
       "quotationId": "quo_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "piNumber": "PI-2025-002",
       "issuedDate": "2025-01-10",
       "confirmedDate": "2025-01-15",
@@ -2705,7 +2705,7 @@
     {
       "id": "pi_sim_2025_003",
       "quotationId": "quo_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "piNumber": "PI-2025-003",
       "issuedDate": "2025-01-20",
       "confirmedDate": "2025-01-25",
@@ -2744,7 +2744,7 @@
     {
       "id": "pi_sim_2025_004",
       "quotationId": "quo_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "piNumber": "PI-2025-004",
       "issuedDate": "2025-01-31",
       "confirmedDate": "2025-02-05",
@@ -2789,7 +2789,7 @@
     {
       "id": "pi_sim_2025_005",
       "quotationId": "quo_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "piNumber": "PI-2025-005",
       "issuedDate": "2025-02-10",
       "confirmedDate": "2025-02-15",
@@ -2816,7 +2816,7 @@
     {
       "id": "pi_sim_2025_006",
       "quotationId": "quo_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "piNumber": "PI-2025-006",
       "issuedDate": "2025-02-20",
       "confirmedDate": "2025-02-25",
@@ -2849,7 +2849,7 @@
     {
       "id": "pi_sim_2025_007",
       "quotationId": "quo_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "piNumber": "PI-2025-007",
       "issuedDate": "2025-02-28",
       "confirmedDate": "2025-03-05",
@@ -2888,7 +2888,7 @@
     {
       "id": "pi_sim_2025_008",
       "quotationId": "quo_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "piNumber": "PI-2025-008",
       "issuedDate": "2025-03-10",
       "confirmedDate": "2025-03-15",
@@ -2933,7 +2933,7 @@
     {
       "id": "pi_sim_2025_009",
       "quotationId": "quo_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "piNumber": "PI-2025-009",
       "issuedDate": "2025-03-20",
       "confirmedDate": "2025-03-25",
@@ -2960,7 +2960,7 @@
     {
       "id": "pi_sim_2025_010",
       "quotationId": "quo_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "piNumber": "PI-2025-010",
       "issuedDate": "2025-03-31",
       "confirmedDate": "2025-04-05",
@@ -2993,7 +2993,7 @@
     {
       "id": "pi_sim_2025_011",
       "quotationId": "quo_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "piNumber": "PI-2025-011",
       "issuedDate": "2025-04-10",
       "confirmedDate": "2025-04-15",
@@ -3077,7 +3077,7 @@
     {
       "id": "pi_sim_2025_013",
       "quotationId": "quo_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "piNumber": "PI-2025-013",
       "issuedDate": "2025-04-30",
       "confirmedDate": "2025-05-05",
@@ -3104,7 +3104,7 @@
     {
       "id": "pi_sim_2025_014",
       "quotationId": "quo_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "piNumber": "PI-2025-014",
       "issuedDate": "2025-05-10",
       "confirmedDate": "2025-05-15",
@@ -3137,7 +3137,7 @@
     {
       "id": "pi_sim_2025_015",
       "quotationId": "quo_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "piNumber": "PI-2025-015",
       "issuedDate": "2025-05-20",
       "confirmedDate": "2025-05-25",
@@ -3176,7 +3176,7 @@
     {
       "id": "pi_sim_2025_016",
       "quotationId": "quo_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "piNumber": "PI-2025-016",
       "issuedDate": "2025-05-31",
       "confirmedDate": "2025-06-05",
@@ -3221,7 +3221,7 @@
     {
       "id": "pi_sim_2025_017",
       "quotationId": "quo_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "piNumber": "PI-2025-017",
       "issuedDate": "2025-06-10",
       "confirmedDate": "2025-06-15",
@@ -3248,7 +3248,7 @@
     {
       "id": "pi_sim_2025_018",
       "quotationId": "quo_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "piNumber": "PI-2025-018",
       "issuedDate": "2025-06-20",
       "confirmedDate": "2025-06-25",
@@ -3281,7 +3281,7 @@
     {
       "id": "pi_sim_2025_019",
       "quotationId": "quo_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "piNumber": "PI-2025-019",
       "issuedDate": "2025-06-30",
       "confirmedDate": "2025-07-05",
@@ -3320,7 +3320,7 @@
     {
       "id": "pi_sim_2025_020",
       "quotationId": "quo_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "piNumber": "PI-2025-020",
       "issuedDate": "2025-07-10",
       "confirmedDate": "2025-07-15",
@@ -3365,7 +3365,7 @@
     {
       "id": "pi_sim_2025_021",
       "quotationId": "quo_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "piNumber": "PI-2025-021",
       "issuedDate": "2025-07-20",
       "confirmedDate": "2025-07-25",
@@ -3392,7 +3392,7 @@
     {
       "id": "pi_sim_2025_022",
       "quotationId": "quo_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "piNumber": "PI-2025-022",
       "issuedDate": "2025-07-31",
       "confirmedDate": "2025-08-05",
@@ -3464,7 +3464,7 @@
     {
       "id": "pi_sim_2025_024",
       "quotationId": "quo_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "piNumber": "PI-2025-024",
       "issuedDate": "2025-08-20",
       "confirmedDate": "2025-08-25",
@@ -3509,7 +3509,7 @@
     {
       "id": "pi_sim_2025_025",
       "quotationId": "quo_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "piNumber": "PI-2025-025",
       "issuedDate": "2025-08-31",
       "confirmedDate": "2025-09-05",
@@ -3536,7 +3536,7 @@
     {
       "id": "pi_sim_2025_026",
       "quotationId": "quo_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "piNumber": "PI-2025-026",
       "issuedDate": "2025-09-10",
       "confirmedDate": "2025-09-15",
@@ -3569,7 +3569,7 @@
     {
       "id": "pi_sim_2025_027",
       "quotationId": "quo_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "piNumber": "PI-2025-027",
       "issuedDate": "2025-09-20",
       "confirmedDate": "2025-09-25",
@@ -3608,7 +3608,7 @@
     {
       "id": "pi_sim_2025_028",
       "quotationId": "quo_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "piNumber": "PI-2025-028",
       "issuedDate": "2025-09-30",
       "confirmedDate": "2025-10-05",
@@ -3653,7 +3653,7 @@
     {
       "id": "pi_sim_2025_029",
       "quotationId": "quo_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "piNumber": "PI-2025-029",
       "issuedDate": "2025-10-10",
       "confirmedDate": "2025-10-15",
@@ -3680,7 +3680,7 @@
     {
       "id": "pi_sim_2025_030",
       "quotationId": "quo_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "piNumber": "PI-2025-030",
       "issuedDate": "2025-10-20",
       "confirmedDate": "2025-10-25",
@@ -3713,7 +3713,7 @@
     {
       "id": "pi_sim_2025_031",
       "quotationId": "quo_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "piNumber": "PI-2025-031",
       "issuedDate": "2025-10-31",
       "confirmedDate": "2025-11-05",
@@ -3752,7 +3752,7 @@
     {
       "id": "pi_sim_2025_032",
       "quotationId": "quo_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "piNumber": "PI-2025-032",
       "issuedDate": "2025-11-10",
       "confirmedDate": "2025-11-15",
@@ -3797,7 +3797,7 @@
     {
       "id": "pi_sim_2025_033",
       "quotationId": "quo_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "piNumber": "PI-2025-033",
       "issuedDate": "2025-11-20",
       "confirmedDate": "2025-11-25",
@@ -3857,7 +3857,7 @@
     {
       "id": "pi_sim_2025_035",
       "quotationId": "quo_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "piNumber": "PI-2025-035",
       "issuedDate": "2025-12-10",
       "confirmedDate": "2025-12-15",
@@ -3896,7 +3896,7 @@
     {
       "id": "pi_sim_2025_036",
       "quotationId": "quo_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "piNumber": "PI-2025-036",
       "issuedDate": "2025-12-20",
       "confirmedDate": "2025-12-25",
@@ -3942,7 +3942,7 @@
   "customerPOs": [
     {
       "id": "po_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "quotationId": "quo_sim_2025_001",
       "piId": "pi_sim_2025_001",
       "orderId": "ord_sim_2025_001",
@@ -3954,7 +3954,7 @@
     },
     {
       "id": "po_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "quotationId": "quo_sim_2025_002",
       "piId": "pi_sim_2025_002",
       "orderId": "ord_sim_2025_002",
@@ -3966,7 +3966,7 @@
     },
     {
       "id": "po_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "quotationId": "quo_sim_2025_003",
       "piId": "pi_sim_2025_003",
       "orderId": "ord_sim_2025_003",
@@ -3978,7 +3978,7 @@
     },
     {
       "id": "po_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "quotationId": "quo_sim_2025_004",
       "piId": "pi_sim_2025_004",
       "orderId": "ord_sim_2025_004",
@@ -3990,7 +3990,7 @@
     },
     {
       "id": "po_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "quotationId": "quo_sim_2025_005",
       "piId": "pi_sim_2025_005",
       "orderId": "ord_sim_2025_005",
@@ -4002,7 +4002,7 @@
     },
     {
       "id": "po_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "quotationId": "quo_sim_2025_006",
       "piId": "pi_sim_2025_006",
       "orderId": "ord_sim_2025_006",
@@ -4014,7 +4014,7 @@
     },
     {
       "id": "po_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "quotationId": "quo_sim_2025_007",
       "piId": "pi_sim_2025_007",
       "orderId": "ord_sim_2025_007",
@@ -4026,7 +4026,7 @@
     },
     {
       "id": "po_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "quotationId": "quo_sim_2025_008",
       "piId": "pi_sim_2025_008",
       "orderId": "ord_sim_2025_008",
@@ -4038,7 +4038,7 @@
     },
     {
       "id": "po_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "quotationId": "quo_sim_2025_009",
       "piId": "pi_sim_2025_009",
       "orderId": "ord_sim_2025_009",
@@ -4050,7 +4050,7 @@
     },
     {
       "id": "po_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "quotationId": "quo_sim_2025_010",
       "piId": "pi_sim_2025_010",
       "orderId": "ord_sim_2025_010",
@@ -4062,7 +4062,7 @@
     },
     {
       "id": "po_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "quotationId": "quo_sim_2025_011",
       "piId": "pi_sim_2025_011",
       "orderId": "ord_sim_2025_011",
@@ -4086,7 +4086,7 @@
     },
     {
       "id": "po_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "quotationId": "quo_sim_2025_013",
       "piId": "pi_sim_2025_013",
       "orderId": "ord_sim_2025_013",
@@ -4098,7 +4098,7 @@
     },
     {
       "id": "po_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "quotationId": "quo_sim_2025_014",
       "piId": "pi_sim_2025_014",
       "orderId": "ord_sim_2025_014",
@@ -4110,7 +4110,7 @@
     },
     {
       "id": "po_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "quotationId": "quo_sim_2025_015",
       "piId": "pi_sim_2025_015",
       "orderId": "ord_sim_2025_015",
@@ -4122,7 +4122,7 @@
     },
     {
       "id": "po_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "quotationId": "quo_sim_2025_016",
       "piId": "pi_sim_2025_016",
       "orderId": "ord_sim_2025_016",
@@ -4134,7 +4134,7 @@
     },
     {
       "id": "po_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "quotationId": "quo_sim_2025_017",
       "piId": "pi_sim_2025_017",
       "orderId": "ord_sim_2025_017",
@@ -4146,7 +4146,7 @@
     },
     {
       "id": "po_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "quotationId": "quo_sim_2025_018",
       "piId": "pi_sim_2025_018",
       "orderId": "ord_sim_2025_018",
@@ -4158,7 +4158,7 @@
     },
     {
       "id": "po_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "quotationId": "quo_sim_2025_019",
       "piId": "pi_sim_2025_019",
       "orderId": "ord_sim_2025_019",
@@ -4170,7 +4170,7 @@
     },
     {
       "id": "po_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "quotationId": "quo_sim_2025_020",
       "piId": "pi_sim_2025_020",
       "orderId": "ord_sim_2025_020",
@@ -4182,7 +4182,7 @@
     },
     {
       "id": "po_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "quotationId": "quo_sim_2025_021",
       "piId": "pi_sim_2025_021",
       "orderId": "ord_sim_2025_021",
@@ -4194,7 +4194,7 @@
     },
     {
       "id": "po_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "quotationId": "quo_sim_2025_022",
       "piId": "pi_sim_2025_022",
       "orderId": "ord_sim_2025_022",
@@ -4218,7 +4218,7 @@
     },
     {
       "id": "po_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "quotationId": "quo_sim_2025_024",
       "piId": "pi_sim_2025_024",
       "orderId": "ord_sim_2025_024",
@@ -4230,7 +4230,7 @@
     },
     {
       "id": "po_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "quotationId": "quo_sim_2025_025",
       "piId": "pi_sim_2025_025",
       "orderId": "ord_sim_2025_025",
@@ -4242,7 +4242,7 @@
     },
     {
       "id": "po_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "quotationId": "quo_sim_2025_026",
       "piId": "pi_sim_2025_026",
       "orderId": "ord_sim_2025_026",
@@ -4254,7 +4254,7 @@
     },
     {
       "id": "po_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "quotationId": "quo_sim_2025_027",
       "piId": "pi_sim_2025_027",
       "orderId": "ord_sim_2025_027",
@@ -4266,7 +4266,7 @@
     },
     {
       "id": "po_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "quotationId": "quo_sim_2025_028",
       "piId": "pi_sim_2025_028",
       "orderId": "ord_sim_2025_028",
@@ -4278,7 +4278,7 @@
     },
     {
       "id": "po_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "quotationId": "quo_sim_2025_029",
       "piId": "pi_sim_2025_029",
       "orderId": "ord_sim_2025_029",
@@ -4290,7 +4290,7 @@
     },
     {
       "id": "po_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "quotationId": "quo_sim_2025_030",
       "piId": "pi_sim_2025_030",
       "orderId": "ord_sim_2025_030",
@@ -4302,7 +4302,7 @@
     },
     {
       "id": "po_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "quotationId": "quo_sim_2025_031",
       "piId": "pi_sim_2025_031",
       "orderId": "ord_sim_2025_031",
@@ -4314,7 +4314,7 @@
     },
     {
       "id": "po_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "quotationId": "quo_sim_2025_032",
       "piId": "pi_sim_2025_032",
       "orderId": "ord_sim_2025_032",
@@ -4326,7 +4326,7 @@
     },
     {
       "id": "po_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "quotationId": "quo_sim_2025_033",
       "piId": "pi_sim_2025_033",
       "orderId": "ord_sim_2025_033",
@@ -4350,7 +4350,7 @@
     },
     {
       "id": "po_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "quotationId": "quo_sim_2025_035",
       "piId": "pi_sim_2025_035",
       "orderId": "ord_sim_2025_035",
@@ -4362,7 +4362,7 @@
     },
     {
       "id": "po_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "quotationId": "quo_sim_2025_036",
       "piId": "pi_sim_2025_036",
       "orderId": "ord_sim_2025_036",
@@ -4376,7 +4376,7 @@
   "orders": [
     {
       "id": "ord_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "inquiryId": "inq_sim_2025_001",
       "quotationId": "quo_sim_2025_001",
       "piId": "pi_sim_2025_001",
@@ -4394,7 +4394,7 @@
     },
     {
       "id": "ord_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "inquiryId": "inq_sim_2025_002",
       "quotationId": "quo_sim_2025_002",
       "piId": "pi_sim_2025_002",
@@ -4412,7 +4412,7 @@
     },
     {
       "id": "ord_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "inquiryId": "inq_sim_2025_003",
       "quotationId": "quo_sim_2025_003",
       "piId": "pi_sim_2025_003",
@@ -4430,7 +4430,7 @@
     },
     {
       "id": "ord_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "inquiryId": "inq_sim_2025_004",
       "quotationId": "quo_sim_2025_004",
       "piId": "pi_sim_2025_004",
@@ -4448,7 +4448,7 @@
     },
     {
       "id": "ord_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "inquiryId": "inq_sim_2025_005",
       "quotationId": "quo_sim_2025_005",
       "piId": "pi_sim_2025_005",
@@ -4466,7 +4466,7 @@
     },
     {
       "id": "ord_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "inquiryId": "inq_sim_2025_006",
       "quotationId": "quo_sim_2025_006",
       "piId": "pi_sim_2025_006",
@@ -4484,7 +4484,7 @@
     },
     {
       "id": "ord_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "inquiryId": "inq_sim_2025_007",
       "quotationId": "quo_sim_2025_007",
       "piId": "pi_sim_2025_007",
@@ -4502,7 +4502,7 @@
     },
     {
       "id": "ord_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "inquiryId": "inq_sim_2025_008",
       "quotationId": "quo_sim_2025_008",
       "piId": "pi_sim_2025_008",
@@ -4520,7 +4520,7 @@
     },
     {
       "id": "ord_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "inquiryId": "inq_sim_2025_009",
       "quotationId": "quo_sim_2025_009",
       "piId": "pi_sim_2025_009",
@@ -4538,7 +4538,7 @@
     },
     {
       "id": "ord_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "inquiryId": "inq_sim_2025_010",
       "quotationId": "quo_sim_2025_010",
       "piId": "pi_sim_2025_010",
@@ -4556,7 +4556,7 @@
     },
     {
       "id": "ord_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "inquiryId": "inq_sim_2025_011",
       "quotationId": "quo_sim_2025_011",
       "piId": "pi_sim_2025_011",
@@ -4592,7 +4592,7 @@
     },
     {
       "id": "ord_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "inquiryId": "inq_sim_2025_013",
       "quotationId": "quo_sim_2025_013",
       "piId": "pi_sim_2025_013",
@@ -4610,7 +4610,7 @@
     },
     {
       "id": "ord_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "inquiryId": "inq_sim_2025_014",
       "quotationId": "quo_sim_2025_014",
       "piId": "pi_sim_2025_014",
@@ -4628,7 +4628,7 @@
     },
     {
       "id": "ord_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "inquiryId": "inq_sim_2025_015",
       "quotationId": "quo_sim_2025_015",
       "piId": "pi_sim_2025_015",
@@ -4646,7 +4646,7 @@
     },
     {
       "id": "ord_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "inquiryId": "inq_sim_2025_016",
       "quotationId": "quo_sim_2025_016",
       "piId": "pi_sim_2025_016",
@@ -4664,7 +4664,7 @@
     },
     {
       "id": "ord_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "inquiryId": "inq_sim_2025_017",
       "quotationId": "quo_sim_2025_017",
       "piId": "pi_sim_2025_017",
@@ -4682,7 +4682,7 @@
     },
     {
       "id": "ord_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "inquiryId": "inq_sim_2025_018",
       "quotationId": "quo_sim_2025_018",
       "piId": "pi_sim_2025_018",
@@ -4700,7 +4700,7 @@
     },
     {
       "id": "ord_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "inquiryId": "inq_sim_2025_019",
       "quotationId": "quo_sim_2025_019",
       "piId": "pi_sim_2025_019",
@@ -4718,7 +4718,7 @@
     },
     {
       "id": "ord_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "inquiryId": "inq_sim_2025_020",
       "quotationId": "quo_sim_2025_020",
       "piId": "pi_sim_2025_020",
@@ -4736,7 +4736,7 @@
     },
     {
       "id": "ord_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "inquiryId": "inq_sim_2025_021",
       "quotationId": "quo_sim_2025_021",
       "piId": "pi_sim_2025_021",
@@ -4754,7 +4754,7 @@
     },
     {
       "id": "ord_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "inquiryId": "inq_sim_2025_022",
       "quotationId": "quo_sim_2025_022",
       "piId": "pi_sim_2025_022",
@@ -4790,7 +4790,7 @@
     },
     {
       "id": "ord_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "inquiryId": "inq_sim_2025_024",
       "quotationId": "quo_sim_2025_024",
       "piId": "pi_sim_2025_024",
@@ -4808,7 +4808,7 @@
     },
     {
       "id": "ord_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "inquiryId": "inq_sim_2025_025",
       "quotationId": "quo_sim_2025_025",
       "piId": "pi_sim_2025_025",
@@ -4826,7 +4826,7 @@
     },
     {
       "id": "ord_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "inquiryId": "inq_sim_2025_026",
       "quotationId": "quo_sim_2025_026",
       "piId": "pi_sim_2025_026",
@@ -4844,7 +4844,7 @@
     },
     {
       "id": "ord_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "inquiryId": "inq_sim_2025_027",
       "quotationId": "quo_sim_2025_027",
       "piId": "pi_sim_2025_027",
@@ -4862,7 +4862,7 @@
     },
     {
       "id": "ord_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "inquiryId": "inq_sim_2025_028",
       "quotationId": "quo_sim_2025_028",
       "piId": "pi_sim_2025_028",
@@ -4880,7 +4880,7 @@
     },
     {
       "id": "ord_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "inquiryId": "inq_sim_2025_029",
       "quotationId": "quo_sim_2025_029",
       "piId": "pi_sim_2025_029",
@@ -4898,7 +4898,7 @@
     },
     {
       "id": "ord_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "inquiryId": "inq_sim_2025_030",
       "quotationId": "quo_sim_2025_030",
       "piId": "pi_sim_2025_030",
@@ -4916,7 +4916,7 @@
     },
     {
       "id": "ord_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "inquiryId": "inq_sim_2025_031",
       "quotationId": "quo_sim_2025_031",
       "piId": "pi_sim_2025_031",
@@ -4934,7 +4934,7 @@
     },
     {
       "id": "ord_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "inquiryId": "inq_sim_2025_032",
       "quotationId": "quo_sim_2025_032",
       "piId": "pi_sim_2025_032",
@@ -4952,7 +4952,7 @@
     },
     {
       "id": "ord_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "inquiryId": "inq_sim_2025_033",
       "quotationId": "quo_sim_2025_033",
       "piId": "pi_sim_2025_033",
@@ -4988,7 +4988,7 @@
     },
     {
       "id": "ord_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "inquiryId": "inq_sim_2025_035",
       "quotationId": "quo_sim_2025_035",
       "piId": "pi_sim_2025_035",
@@ -5006,7 +5006,7 @@
     },
     {
       "id": "ord_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "inquiryId": "inq_sim_2025_036",
       "quotationId": "quo_sim_2025_036",
       "piId": "pi_sim_2025_036",
@@ -6667,7 +6667,7 @@
     {
       "id": "pay_sim_2025_001_deposit",
       "orderId": "ord_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "type": "deposit",
       "amount": 53514,
       "currency": "CNY",
@@ -6678,7 +6678,7 @@
     {
       "id": "pay_sim_2025_001_balance",
       "orderId": "ord_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "type": "balance",
       "amount": 124866,
       "currency": "CNY",
@@ -6690,7 +6690,7 @@
     {
       "id": "pay_sim_2025_002_deposit",
       "orderId": "ord_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "type": "deposit",
       "amount": 1386798,
       "currency": "CNY",
@@ -6701,7 +6701,7 @@
     {
       "id": "pay_sim_2025_002_balance",
       "orderId": "ord_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "type": "balance",
       "amount": 3235862,
       "currency": "CNY",
@@ -6713,7 +6713,7 @@
     {
       "id": "pay_sim_2025_003_deposit",
       "orderId": "ord_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "type": "deposit",
       "amount": 2700807,
       "currency": "CNY",
@@ -6724,7 +6724,7 @@
     {
       "id": "pay_sim_2025_003_balance",
       "orderId": "ord_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "type": "balance",
       "amount": 6301883,
       "currency": "CNY",
@@ -6736,7 +6736,7 @@
     {
       "id": "pay_sim_2025_004_deposit",
       "orderId": "ord_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "type": "deposit",
       "amount": 127440,
       "currency": "CNY",
@@ -6747,7 +6747,7 @@
     {
       "id": "pay_sim_2025_004_balance",
       "orderId": "ord_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "type": "balance",
       "amount": 297360,
       "currency": "CNY",
@@ -6759,7 +6759,7 @@
     {
       "id": "pay_sim_2025_005_deposit",
       "orderId": "ord_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "type": "deposit",
       "amount": 1523508,
       "currency": "CNY",
@@ -6770,7 +6770,7 @@
     {
       "id": "pay_sim_2025_005_balance",
       "orderId": "ord_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "type": "balance",
       "amount": 3554852,
       "currency": "CNY",
@@ -6782,7 +6782,7 @@
     {
       "id": "pay_sim_2025_006_deposit",
       "orderId": "ord_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "type": "deposit",
       "amount": 2699556,
       "currency": "CNY",
@@ -6793,7 +6793,7 @@
     {
       "id": "pay_sim_2025_006_balance",
       "orderId": "ord_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "type": "balance",
       "amount": 6298964,
       "currency": "CNY",
@@ -6805,7 +6805,7 @@
     {
       "id": "pay_sim_2025_007_deposit",
       "orderId": "ord_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "type": "deposit",
       "amount": 225813,
       "currency": "CNY",
@@ -6816,7 +6816,7 @@
     {
       "id": "pay_sim_2025_007_balance",
       "orderId": "ord_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "type": "balance",
       "amount": 526897,
       "currency": "CNY",
@@ -6828,7 +6828,7 @@
     {
       "id": "pay_sim_2025_008_deposit",
       "orderId": "ord_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "type": "deposit",
       "amount": 1636800,
       "currency": "CNY",
@@ -6839,7 +6839,7 @@
     {
       "id": "pay_sim_2025_008_balance",
       "orderId": "ord_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "type": "balance",
       "amount": 3819200,
       "currency": "CNY",
@@ -6851,7 +6851,7 @@
     {
       "id": "pay_sim_2025_009_deposit",
       "orderId": "ord_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "type": "deposit",
       "amount": 2699580,
       "currency": "CNY",
@@ -6862,7 +6862,7 @@
     {
       "id": "pay_sim_2025_009_balance",
       "orderId": "ord_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "type": "balance",
       "amount": 6299020,
       "currency": "CNY",
@@ -6874,7 +6874,7 @@
     {
       "id": "pay_sim_2025_010_deposit",
       "orderId": "ord_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "type": "deposit",
       "amount": 330882,
       "currency": "CNY",
@@ -6885,7 +6885,7 @@
     {
       "id": "pay_sim_2025_010_balance",
       "orderId": "ord_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "type": "balance",
       "amount": 772058,
       "currency": "CNY",
@@ -6897,7 +6897,7 @@
     {
       "id": "pay_sim_2025_011_deposit",
       "orderId": "ord_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "type": "deposit",
       "amount": 1709445,
       "currency": "CNY",
@@ -6908,7 +6908,7 @@
     {
       "id": "pay_sim_2025_011_balance",
       "orderId": "ord_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "type": "balance",
       "amount": 3988705,
       "currency": "CNY",
@@ -6943,7 +6943,7 @@
     {
       "id": "pay_sim_2025_013_deposit",
       "orderId": "ord_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "type": "deposit",
       "amount": 450540,
       "currency": "CNY",
@@ -6954,7 +6954,7 @@
     {
       "id": "pay_sim_2025_013_balance",
       "orderId": "ord_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "type": "balance",
       "amount": 1051260,
       "currency": "CNY",
@@ -6966,7 +6966,7 @@
     {
       "id": "pay_sim_2025_014_deposit",
       "orderId": "ord_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "type": "deposit",
       "amount": 1710276,
       "currency": "CNY",
@@ -6977,7 +6977,7 @@
     {
       "id": "pay_sim_2025_014_balance",
       "orderId": "ord_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "type": "balance",
       "amount": 3990644,
       "currency": "CNY",
@@ -6989,7 +6989,7 @@
     {
       "id": "pay_sim_2025_015_deposit",
       "orderId": "ord_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "type": "deposit",
       "amount": 2700300,
       "currency": "CNY",
@@ -7000,7 +7000,7 @@
     {
       "id": "pay_sim_2025_015_balance",
       "orderId": "ord_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "type": "balance",
       "amount": 6300700,
       "currency": "CNY",
@@ -7012,7 +7012,7 @@
     {
       "id": "pay_sim_2025_016_deposit",
       "orderId": "ord_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "type": "deposit",
       "amount": 568500,
       "currency": "CNY",
@@ -7023,7 +7023,7 @@
     {
       "id": "pay_sim_2025_016_balance",
       "orderId": "ord_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "type": "balance",
       "amount": 1326500,
       "currency": "CNY",
@@ -7035,7 +7035,7 @@
     {
       "id": "pay_sim_2025_017_deposit",
       "orderId": "ord_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "type": "deposit",
       "amount": 1680285,
       "currency": "CNY",
@@ -7046,7 +7046,7 @@
     {
       "id": "pay_sim_2025_017_balance",
       "orderId": "ord_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "type": "balance",
       "amount": 3920665,
       "currency": "CNY",
@@ -7058,7 +7058,7 @@
     {
       "id": "pay_sim_2025_018_deposit",
       "orderId": "ord_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "type": "deposit",
       "amount": 2700156,
       "currency": "CNY",
@@ -7069,7 +7069,7 @@
     {
       "id": "pay_sim_2025_018_balance",
       "orderId": "ord_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "type": "balance",
       "amount": 6300364,
       "currency": "CNY",
@@ -7081,7 +7081,7 @@
     {
       "id": "pay_sim_2025_019_deposit",
       "orderId": "ord_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "type": "deposit",
       "amount": 719022,
       "currency": "CNY",
@@ -7092,7 +7092,7 @@
     {
       "id": "pay_sim_2025_019_balance",
       "orderId": "ord_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "type": "balance",
       "amount": 1677718,
       "currency": "CNY",
@@ -7104,7 +7104,7 @@
     {
       "id": "pay_sim_2025_020_deposit",
       "orderId": "ord_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "type": "deposit",
       "amount": 1619343,
       "currency": "CNY",
@@ -7115,7 +7115,7 @@
     {
       "id": "pay_sim_2025_020_balance",
       "orderId": "ord_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "type": "balance",
       "amount": 3778467,
       "currency": "CNY",
@@ -7127,7 +7127,7 @@
     {
       "id": "pay_sim_2025_021_deposit",
       "orderId": "ord_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "type": "deposit",
       "amount": 2699865,
       "currency": "CNY",
@@ -7138,7 +7138,7 @@
     {
       "id": "pay_sim_2025_021_balance",
       "orderId": "ord_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "type": "balance",
       "amount": 6299685,
       "currency": "CNY",
@@ -7150,7 +7150,7 @@
     {
       "id": "pay_sim_2025_022_deposit",
       "orderId": "ord_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "type": "deposit",
       "amount": 839520,
       "currency": "CNY",
@@ -7161,7 +7161,7 @@
     {
       "id": "pay_sim_2025_022_balance",
       "orderId": "ord_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "type": "balance",
       "amount": 1958880,
       "currency": "CNY",
@@ -7196,7 +7196,7 @@
     {
       "id": "pay_sim_2025_024_deposit",
       "orderId": "ord_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "type": "deposit",
       "amount": 2701062,
       "currency": "CNY",
@@ -7207,7 +7207,7 @@
     {
       "id": "pay_sim_2025_024_balance",
       "orderId": "ord_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "type": "balance",
       "amount": 6302478,
       "currency": "CNY",
@@ -7219,7 +7219,7 @@
     {
       "id": "pay_sim_2025_025_deposit",
       "orderId": "ord_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "type": "deposit",
       "amount": 961272,
       "currency": "CNY",
@@ -7230,7 +7230,7 @@
     {
       "id": "pay_sim_2025_025_balance",
       "orderId": "ord_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "type": "balance",
       "amount": 2242968,
       "currency": "CNY",
@@ -7242,7 +7242,7 @@
     {
       "id": "pay_sim_2025_026_deposit",
       "orderId": "ord_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "type": "deposit",
       "amount": 1498929,
       "currency": "CNY",
@@ -7253,7 +7253,7 @@
     {
       "id": "pay_sim_2025_026_balance",
       "orderId": "ord_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "type": "balance",
       "amount": 3497501,
       "currency": "CNY",
@@ -7265,7 +7265,7 @@
     {
       "id": "pay_sim_2025_027_deposit",
       "orderId": "ord_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "type": "deposit",
       "amount": 2700633,
       "currency": "CNY",
@@ -7276,7 +7276,7 @@
     {
       "id": "pay_sim_2025_027_balance",
       "orderId": "ord_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "type": "balance",
       "amount": 6301477,
       "currency": "CNY",
@@ -7288,7 +7288,7 @@
     {
       "id": "pay_sim_2025_028_deposit",
       "orderId": "ord_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "type": "deposit",
       "amount": 1079118,
       "currency": "CNY",
@@ -7299,7 +7299,7 @@
     {
       "id": "pay_sim_2025_028_balance",
       "orderId": "ord_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "type": "balance",
       "amount": 2517942,
       "currency": "CNY",
@@ -7311,7 +7311,7 @@
     {
       "id": "pay_sim_2025_029_deposit",
       "orderId": "ord_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "type": "deposit",
       "amount": 1439985,
       "currency": "CNY",
@@ -7322,7 +7322,7 @@
     {
       "id": "pay_sim_2025_029_balance",
       "orderId": "ord_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "type": "balance",
       "amount": 3359965,
       "currency": "CNY",
@@ -7334,7 +7334,7 @@
     {
       "id": "pay_sim_2025_030_deposit",
       "orderId": "ord_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "type": "deposit",
       "amount": 2700069,
       "currency": "CNY",
@@ -7345,7 +7345,7 @@
     {
       "id": "pay_sim_2025_030_balance",
       "orderId": "ord_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "type": "balance",
       "amount": 6300161,
       "currency": "CNY",
@@ -7357,7 +7357,7 @@
     {
       "id": "pay_sim_2025_031_deposit",
       "orderId": "ord_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "type": "deposit",
       "amount": 1199343,
       "currency": "CNY",
@@ -7368,7 +7368,7 @@
     {
       "id": "pay_sim_2025_031_balance",
       "orderId": "ord_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "type": "balance",
       "amount": 2798467,
       "currency": "CNY",
@@ -7380,7 +7380,7 @@
     {
       "id": "pay_sim_2025_032_deposit",
       "orderId": "ord_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "type": "deposit",
       "amount": 1379982,
       "currency": "CNY",
@@ -7391,7 +7391,7 @@
     {
       "id": "pay_sim_2025_032_balance",
       "orderId": "ord_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "type": "balance",
       "amount": 3219958,
       "currency": "CNY",
@@ -7403,7 +7403,7 @@
     {
       "id": "pay_sim_2025_033_deposit",
       "orderId": "ord_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "type": "deposit",
       "amount": 2698908,
       "currency": "CNY",
@@ -7414,7 +7414,7 @@
     {
       "id": "pay_sim_2025_033_balance",
       "orderId": "ord_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "type": "balance",
       "amount": 6297452,
       "currency": "CNY",
@@ -7449,7 +7449,7 @@
     {
       "id": "pay_sim_2025_035_deposit",
       "orderId": "ord_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "type": "deposit",
       "amount": 2309016,
       "currency": "CNY",
@@ -7460,7 +7460,7 @@
     {
       "id": "pay_sim_2025_035_balance",
       "orderId": "ord_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "type": "balance",
       "amount": 5387704,
       "currency": "CNY",
@@ -7472,7 +7472,7 @@
     {
       "id": "pay_sim_2025_036_deposit",
       "orderId": "ord_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "type": "deposit",
       "amount": 2971752,
       "currency": "CNY",
@@ -7483,7 +7483,7 @@
     {
       "id": "pay_sim_2025_036_balance",
       "orderId": "ord_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "type": "balance",
       "amount": 6934088,
       "currency": "CNY",
@@ -7497,7 +7497,7 @@
     {
       "id": "prd_sim_2025_001",
       "orderId": "ord_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "plannedStartDate": "2025-01-10",
       "plannedFinishDate": "2025-02-17",
       "status": "completed",
@@ -7506,7 +7506,7 @@
     {
       "id": "prd_sim_2025_002",
       "orderId": "ord_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "plannedStartDate": "2025-01-20",
       "plannedFinishDate": "2025-03-05",
       "status": "completed",
@@ -7515,7 +7515,7 @@
     {
       "id": "prd_sim_2025_003",
       "orderId": "ord_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "plannedStartDate": "2025-01-30",
       "plannedFinishDate": "2025-03-21",
       "status": "completed",
@@ -7524,7 +7524,7 @@
     {
       "id": "prd_sim_2025_004",
       "orderId": "ord_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "plannedStartDate": "2025-02-10",
       "plannedFinishDate": "2025-03-20",
       "status": "completed",
@@ -7533,7 +7533,7 @@
     {
       "id": "prd_sim_2025_005",
       "orderId": "ord_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "plannedStartDate": "2025-02-20",
       "plannedFinishDate": "2025-04-05",
       "status": "completed",
@@ -7542,7 +7542,7 @@
     {
       "id": "prd_sim_2025_006",
       "orderId": "ord_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "plannedStartDate": "2025-03-02",
       "plannedFinishDate": "2025-04-21",
       "status": "completed",
@@ -7551,7 +7551,7 @@
     {
       "id": "prd_sim_2025_007",
       "orderId": "ord_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "plannedStartDate": "2025-03-10",
       "plannedFinishDate": "2025-04-17",
       "status": "completed",
@@ -7560,7 +7560,7 @@
     {
       "id": "prd_sim_2025_008",
       "orderId": "ord_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "plannedStartDate": "2025-03-20",
       "plannedFinishDate": "2025-05-03",
       "status": "completed",
@@ -7569,7 +7569,7 @@
     {
       "id": "prd_sim_2025_009",
       "orderId": "ord_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "plannedStartDate": "2025-03-30",
       "plannedFinishDate": "2025-05-19",
       "status": "completed",
@@ -7578,7 +7578,7 @@
     {
       "id": "prd_sim_2025_010",
       "orderId": "ord_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "plannedStartDate": "2025-04-10",
       "plannedFinishDate": "2025-05-18",
       "status": "completed",
@@ -7587,7 +7587,7 @@
     {
       "id": "prd_sim_2025_011",
       "orderId": "ord_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "plannedStartDate": "2025-04-20",
       "plannedFinishDate": "2025-06-03",
       "status": "completed",
@@ -7605,7 +7605,7 @@
     {
       "id": "prd_sim_2025_013",
       "orderId": "ord_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "plannedStartDate": "2025-05-10",
       "plannedFinishDate": "2025-06-17",
       "status": "completed",
@@ -7614,7 +7614,7 @@
     {
       "id": "prd_sim_2025_014",
       "orderId": "ord_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "plannedStartDate": "2025-05-20",
       "plannedFinishDate": "2025-07-03",
       "status": "completed",
@@ -7623,7 +7623,7 @@
     {
       "id": "prd_sim_2025_015",
       "orderId": "ord_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "plannedStartDate": "2025-05-30",
       "plannedFinishDate": "2025-07-19",
       "status": "completed",
@@ -7632,7 +7632,7 @@
     {
       "id": "prd_sim_2025_016",
       "orderId": "ord_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "plannedStartDate": "2025-06-10",
       "plannedFinishDate": "2025-07-18",
       "status": "completed",
@@ -7641,7 +7641,7 @@
     {
       "id": "prd_sim_2025_017",
       "orderId": "ord_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "plannedStartDate": "2025-06-20",
       "plannedFinishDate": "2025-08-03",
       "status": "completed",
@@ -7650,7 +7650,7 @@
     {
       "id": "prd_sim_2025_018",
       "orderId": "ord_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "plannedStartDate": "2025-06-30",
       "plannedFinishDate": "2025-08-19",
       "status": "completed",
@@ -7659,7 +7659,7 @@
     {
       "id": "prd_sim_2025_019",
       "orderId": "ord_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "plannedStartDate": "2025-07-10",
       "plannedFinishDate": "2025-08-17",
       "status": "completed",
@@ -7668,7 +7668,7 @@
     {
       "id": "prd_sim_2025_020",
       "orderId": "ord_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "plannedStartDate": "2025-07-20",
       "plannedFinishDate": "2025-09-02",
       "status": "completed",
@@ -7677,7 +7677,7 @@
     {
       "id": "prd_sim_2025_021",
       "orderId": "ord_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "plannedStartDate": "2025-07-30",
       "plannedFinishDate": "2025-09-18",
       "status": "completed",
@@ -7686,7 +7686,7 @@
     {
       "id": "prd_sim_2025_022",
       "orderId": "ord_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "plannedStartDate": "2025-08-10",
       "plannedFinishDate": "2025-09-17",
       "status": "completed",
@@ -7704,7 +7704,7 @@
     {
       "id": "prd_sim_2025_024",
       "orderId": "ord_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "plannedStartDate": "2025-08-30",
       "plannedFinishDate": "2025-10-19",
       "status": "completed",
@@ -7713,7 +7713,7 @@
     {
       "id": "prd_sim_2025_025",
       "orderId": "ord_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "plannedStartDate": "2025-09-10",
       "plannedFinishDate": "2025-10-18",
       "status": "completed",
@@ -7722,7 +7722,7 @@
     {
       "id": "prd_sim_2025_026",
       "orderId": "ord_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "plannedStartDate": "2025-09-20",
       "plannedFinishDate": "2025-11-03",
       "status": "completed",
@@ -7731,7 +7731,7 @@
     {
       "id": "prd_sim_2025_027",
       "orderId": "ord_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "plannedStartDate": "2025-09-30",
       "plannedFinishDate": "2025-11-19",
       "status": "completed",
@@ -7740,7 +7740,7 @@
     {
       "id": "prd_sim_2025_028",
       "orderId": "ord_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "plannedStartDate": "2025-10-10",
       "plannedFinishDate": "2025-11-17",
       "status": "completed",
@@ -7749,7 +7749,7 @@
     {
       "id": "prd_sim_2025_029",
       "orderId": "ord_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "plannedStartDate": "2025-10-20",
       "plannedFinishDate": "2025-12-03",
       "status": "completed",
@@ -7758,7 +7758,7 @@
     {
       "id": "prd_sim_2025_030",
       "orderId": "ord_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "plannedStartDate": "2025-10-30",
       "plannedFinishDate": "2025-12-19",
       "status": "completed",
@@ -7767,7 +7767,7 @@
     {
       "id": "prd_sim_2025_031",
       "orderId": "ord_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "plannedStartDate": "2025-11-10",
       "plannedFinishDate": "2025-12-18",
       "status": "completed",
@@ -7776,7 +7776,7 @@
     {
       "id": "prd_sim_2025_032",
       "orderId": "ord_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "plannedStartDate": "2025-11-20",
       "plannedFinishDate": "2026-01-03",
       "status": "completed",
@@ -7785,7 +7785,7 @@
     {
       "id": "prd_sim_2025_033",
       "orderId": "ord_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "plannedStartDate": "2025-11-30",
       "plannedFinishDate": "2026-01-19",
       "status": "completed",
@@ -7803,7 +7803,7 @@
     {
       "id": "prd_sim_2025_035",
       "orderId": "ord_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "plannedStartDate": "2025-12-20",
       "plannedFinishDate": "2026-02-02",
       "status": "scheduled",
@@ -7812,7 +7812,7 @@
     {
       "id": "prd_sim_2025_036",
       "orderId": "ord_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "plannedStartDate": "2025-12-30",
       "plannedFinishDate": "2026-02-18",
       "status": "scheduled",
@@ -7823,10 +7823,10 @@
     {
       "id": "ship_sim_2025_001",
       "orderId": "ord_sim_2025_001",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_verified_legacy_001",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Ningbo, Zhejiang",
-      "deliveryHub": "Ningbo-Zhoushan Port",
+      "destinationLocation": "Guangzhou, Guangdong",
+      "deliveryHub": "Guangzhou Nansha Port",
       "plannedShipmentDate": "2025-03-01",
       "actualShipmentDate": "2025-03-01",
       "containerEquivalent": 0.8,
@@ -7836,10 +7836,10 @@
     {
       "id": "ship_sim_2025_002",
       "orderId": "ord_sim_2025_002",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_002",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Tianjin, Tianjin",
-      "deliveryHub": "Tianjin Port",
+      "destinationLocation": "Ningbo, Zhejiang",
+      "deliveryHub": "Ningbo-Zhoushan Port",
       "plannedShipmentDate": "2025-03-18",
       "actualShipmentDate": "2025-03-18",
       "containerEquivalent": 11.87,
@@ -7849,10 +7849,10 @@
     {
       "id": "ship_sim_2025_003",
       "orderId": "ord_sim_2025_003",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_003",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Nanning, Guangxi",
-      "deliveryHub": "Qinzhou Port",
+      "destinationLocation": "Suzhou, Jiangsu",
+      "deliveryHub": "Taicang Port",
       "plannedShipmentDate": "2025-04-04",
       "actualShipmentDate": "2025-04-04",
       "containerEquivalent": 31.79,
@@ -7862,10 +7862,10 @@
     {
       "id": "ship_sim_2025_004",
       "orderId": "ord_sim_2025_004",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_004",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Qingdao, Shandong",
-      "deliveryHub": "Qingdao Port",
+      "destinationLocation": "Shanghai, Shanghai",
+      "deliveryHub": "Shanghai Waigaoqiao Port",
       "plannedShipmentDate": "2025-04-22",
       "actualShipmentDate": "2025-04-22",
       "containerEquivalent": 1.41,
@@ -7875,10 +7875,10 @@
     {
       "id": "ship_sim_2025_005",
       "orderId": "ord_sim_2025_005",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_005",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Chongqing, Chongqing",
-      "deliveryHub": "Chongqing Guoyuan Port",
+      "destinationLocation": "Xiamen, Fujian",
+      "deliveryHub": "Xiamen Port",
       "plannedShipmentDate": "2025-04-11",
       "actualShipmentDate": "2025-04-11",
       "containerEquivalent": 14.53,
@@ -7888,10 +7888,10 @@
     {
       "id": "ship_sim_2025_006",
       "orderId": "ord_sim_2025_006",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_006",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Shanghai, Shanghai",
-      "deliveryHub": "Shanghai Waigaoqiao Port",
+      "destinationLocation": "Qingdao, Shandong",
+      "deliveryHub": "Qingdao Port",
       "plannedShipmentDate": "2025-04-28",
       "actualShipmentDate": "2025-04-28",
       "containerEquivalent": 34.05,
@@ -7901,10 +7901,10 @@
     {
       "id": "ship_sim_2025_007",
       "orderId": "ord_sim_2025_007",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_007",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Chengdu, Sichuan",
-      "deliveryHub": "Chengdu International Railway Port",
+      "destinationLocation": "Tianjin, Tianjin",
+      "deliveryHub": "Tianjin Port",
       "plannedShipmentDate": "2025-05-13",
       "actualShipmentDate": "2025-05-13",
       "containerEquivalent": 2.16,
@@ -7914,10 +7914,10 @@
     {
       "id": "ship_sim_2025_008",
       "orderId": "ord_sim_2025_008",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_008",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Suzhou, Jiangsu",
-      "deliveryHub": "Taicang Port",
+      "destinationLocation": "Dalian, Liaoning",
+      "deliveryHub": "Dalian Port",
       "plannedShipmentDate": "2025-05-30",
       "actualShipmentDate": "2025-05-30",
       "containerEquivalent": 18.28,
@@ -7927,10 +7927,10 @@
     {
       "id": "ship_sim_2025_009",
       "orderId": "ord_sim_2025_009",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_009",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Dalian, Liaoning",
-      "deliveryHub": "Dalian Port",
+      "destinationLocation": "Wuhan, Hubei",
+      "deliveryHub": "Wuhan Yangluo Port",
       "plannedShipmentDate": "2025-05-19",
       "actualShipmentDate": "2025-05-19",
       "containerEquivalent": 21.7,
@@ -7940,10 +7940,10 @@
     {
       "id": "ship_sim_2025_010",
       "orderId": "ord_sim_2025_010",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_010",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Ningbo, Zhejiang",
-      "deliveryHub": "Ningbo-Zhoushan Port",
+      "destinationLocation": "Chengdu, Sichuan",
+      "deliveryHub": "Chengdu International Railway Port",
       "plannedShipmentDate": "2025-06-06",
       "actualShipmentDate": "2025-06-06",
       "containerEquivalent": 3.29,
@@ -7953,10 +7953,10 @@
     {
       "id": "ship_sim_2025_011",
       "orderId": "ord_sim_2025_011",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_011",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Tianjin, Tianjin",
-      "deliveryHub": "Tianjin Port",
+      "destinationLocation": "Chongqing, Chongqing",
+      "deliveryHub": "Chongqing Guoyuan Port",
       "plannedShipmentDate": "2025-06-23",
       "actualShipmentDate": "2025-06-23",
       "containerEquivalent": 20.25,
@@ -7979,10 +7979,10 @@
     {
       "id": "ship_sim_2025_013",
       "orderId": "ord_sim_2025_013",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_verified_legacy_001",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Qingdao, Shandong",
-      "deliveryHub": "Qingdao Port",
+      "destinationLocation": "Guangzhou, Guangdong",
+      "deliveryHub": "Guangzhou Nansha Port",
       "plannedShipmentDate": "2025-06-29",
       "actualShipmentDate": "2025-06-29",
       "containerEquivalent": 5.87,
@@ -7992,10 +7992,10 @@
     {
       "id": "ship_sim_2025_014",
       "orderId": "ord_sim_2025_014",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_002",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Chongqing, Chongqing",
-      "deliveryHub": "Chongqing Guoyuan Port",
+      "destinationLocation": "Ningbo, Zhejiang",
+      "deliveryHub": "Ningbo-Zhoushan Port",
       "plannedShipmentDate": "2025-07-16",
       "actualShipmentDate": "2025-07-16",
       "containerEquivalent": 18.52,
@@ -8005,10 +8005,10 @@
     {
       "id": "ship_sim_2025_015",
       "orderId": "ord_sim_2025_015",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_003",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Shanghai, Shanghai",
-      "deliveryHub": "Shanghai Waigaoqiao Port",
+      "destinationLocation": "Suzhou, Jiangsu",
+      "deliveryHub": "Taicang Port",
       "plannedShipmentDate": "2025-08-02",
       "actualShipmentDate": "2025-08-02",
       "containerEquivalent": 26.53,
@@ -8018,10 +8018,10 @@
     {
       "id": "ship_sim_2025_016",
       "orderId": "ord_sim_2025_016",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_sim_2025_004",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Chengdu, Sichuan",
-      "deliveryHub": "Chengdu International Railway Port",
+      "destinationLocation": "Shanghai, Shanghai",
+      "deliveryHub": "Shanghai Waigaoqiao Port",
       "plannedShipmentDate": "2025-08-20",
       "actualShipmentDate": "2025-08-20",
       "containerEquivalent": 6.09,
@@ -8031,10 +8031,10 @@
     {
       "id": "ship_sim_2025_017",
       "orderId": "ord_sim_2025_017",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_005",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Suzhou, Jiangsu",
-      "deliveryHub": "Taicang Port",
+      "destinationLocation": "Xiamen, Fujian",
+      "deliveryHub": "Xiamen Port",
       "plannedShipmentDate": "2025-08-09",
       "actualShipmentDate": "2025-08-09",
       "containerEquivalent": 12.92,
@@ -8044,10 +8044,10 @@
     {
       "id": "ship_sim_2025_018",
       "orderId": "ord_sim_2025_018",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_006",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Dalian, Liaoning",
-      "deliveryHub": "Dalian Port",
+      "destinationLocation": "Qingdao, Shandong",
+      "deliveryHub": "Qingdao Port",
       "plannedShipmentDate": "2025-08-26",
       "actualShipmentDate": "2025-08-26",
       "containerEquivalent": 31.28,
@@ -8057,10 +8057,10 @@
     {
       "id": "ship_sim_2025_019",
       "orderId": "ord_sim_2025_019",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_007",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Ningbo, Zhejiang",
-      "deliveryHub": "Ningbo-Zhoushan Port",
+      "destinationLocation": "Tianjin, Tianjin",
+      "deliveryHub": "Tianjin Port",
       "plannedShipmentDate": "2025-09-12",
       "actualShipmentDate": "2025-09-12",
       "containerEquivalent": 7.7,
@@ -8070,10 +8070,10 @@
     {
       "id": "ship_sim_2025_020",
       "orderId": "ord_sim_2025_020",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_008",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Tianjin, Tianjin",
-      "deliveryHub": "Tianjin Port",
+      "destinationLocation": "Dalian, Liaoning",
+      "deliveryHub": "Dalian Port",
       "plannedShipmentDate": "2025-09-29",
       "actualShipmentDate": "2025-09-29",
       "containerEquivalent": 16.58,
@@ -8083,10 +8083,10 @@
     {
       "id": "ship_sim_2025_021",
       "orderId": "ord_sim_2025_021",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_009",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Nanning, Guangxi",
-      "deliveryHub": "Qinzhou Port",
+      "destinationLocation": "Wuhan, Hubei",
+      "deliveryHub": "Wuhan Yangluo Port",
       "plannedShipmentDate": "2025-09-18",
       "actualShipmentDate": "2025-09-18",
       "containerEquivalent": 34.2,
@@ -8096,10 +8096,10 @@
     {
       "id": "ship_sim_2025_022",
       "orderId": "ord_sim_2025_022",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_010",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Qingdao, Shandong",
-      "deliveryHub": "Qingdao Port",
+      "destinationLocation": "Chengdu, Sichuan",
+      "deliveryHub": "Chengdu International Railway Port",
       "plannedShipmentDate": "2025-10-06",
       "actualShipmentDate": "2025-10-06",
       "containerEquivalent": 7.49,
@@ -8122,10 +8122,10 @@
     {
       "id": "ship_sim_2025_024",
       "orderId": "ord_sim_2025_024",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_012",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Shanghai, Shanghai",
-      "deliveryHub": "Shanghai Waigaoqiao Port",
+      "destinationLocation": "Nanning, Guangxi",
+      "deliveryHub": "Qinzhou Port",
       "plannedShipmentDate": "2025-11-09",
       "actualShipmentDate": "2025-11-09",
       "containerEquivalent": 27.97,
@@ -8135,10 +8135,10 @@
     {
       "id": "ship_sim_2025_025",
       "orderId": "ord_sim_2025_025",
-      "customerId": "cust_sim_2025_010",
+      "customerId": "cust_verified_legacy_001",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Chengdu, Sichuan",
-      "deliveryHub": "Chengdu International Railway Port",
+      "destinationLocation": "Guangzhou, Guangdong",
+      "deliveryHub": "Guangzhou Nansha Port",
       "plannedShipmentDate": "2025-10-30",
       "actualShipmentDate": "2025-10-30",
       "containerEquivalent": 9,
@@ -8148,10 +8148,10 @@
     {
       "id": "ship_sim_2025_026",
       "orderId": "ord_sim_2025_026",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_002",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Suzhou, Jiangsu",
-      "deliveryHub": "Taicang Port",
+      "destinationLocation": "Ningbo, Zhejiang",
+      "deliveryHub": "Ningbo-Zhoushan Port",
       "plannedShipmentDate": "2025-11-16",
       "actualShipmentDate": "2025-11-16",
       "containerEquivalent": 21.67,
@@ -8161,10 +8161,10 @@
     {
       "id": "ship_sim_2025_027",
       "orderId": "ord_sim_2025_027",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_003",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Dalian, Liaoning",
-      "deliveryHub": "Dalian Port",
+      "destinationLocation": "Suzhou, Jiangsu",
+      "deliveryHub": "Taicang Port",
       "plannedShipmentDate": "2025-12-03",
       "actualShipmentDate": "2025-12-03",
       "containerEquivalent": 24.45,
@@ -8174,10 +8174,10 @@
     {
       "id": "ship_sim_2025_028",
       "orderId": "ord_sim_2025_028",
-      "customerId": "cust_sim_2025_002",
+      "customerId": "cust_sim_2025_004",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Ningbo, Zhejiang",
-      "deliveryHub": "Ningbo-Zhoushan Port",
+      "destinationLocation": "Shanghai, Shanghai",
+      "deliveryHub": "Shanghai Waigaoqiao Port",
       "plannedShipmentDate": "2025-12-20",
       "actualShipmentDate": "2025-12-20",
       "containerEquivalent": 11.87,
@@ -8187,10 +8187,10 @@
     {
       "id": "ship_sim_2025_029",
       "orderId": "ord_sim_2025_029",
-      "customerId": "cust_sim_2025_007",
+      "customerId": "cust_sim_2025_005",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Tianjin, Tianjin",
-      "deliveryHub": "Tianjin Port",
+      "destinationLocation": "Xiamen, Fujian",
+      "deliveryHub": "Xiamen Port",
       "plannedShipmentDate": "2025-12-09",
       "actualShipmentDate": "2025-12-09",
       "containerEquivalent": 11.72,
@@ -8200,10 +8200,10 @@
     {
       "id": "ship_sim_2025_030",
       "orderId": "ord_sim_2025_030",
-      "customerId": "cust_sim_2025_012",
+      "customerId": "cust_sim_2025_006",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Nanning, Guangxi",
-      "deliveryHub": "Qinzhou Port",
+      "destinationLocation": "Qingdao, Shandong",
+      "deliveryHub": "Qingdao Port",
       "plannedShipmentDate": "2025-12-26",
       "actualShipmentDate": "2025-12-26",
       "containerEquivalent": 24.12,
@@ -8213,10 +8213,10 @@
     {
       "id": "ship_sim_2025_031",
       "orderId": "ord_sim_2025_031",
-      "customerId": "cust_sim_2025_006",
+      "customerId": "cust_sim_2025_007",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Qingdao, Shandong",
-      "deliveryHub": "Qingdao Port",
+      "destinationLocation": "Tianjin, Tianjin",
+      "deliveryHub": "Tianjin Port",
       "plannedShipmentDate": "2026-01-13",
       "actualShipmentDate": "2026-01-13",
       "containerEquivalent": 14.52,
@@ -8226,10 +8226,10 @@
     {
       "id": "ship_sim_2025_032",
       "orderId": "ord_sim_2025_032",
-      "customerId": "cust_sim_2025_011",
+      "customerId": "cust_sim_2025_008",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Chongqing, Chongqing",
-      "deliveryHub": "Chongqing Guoyuan Port",
+      "destinationLocation": "Dalian, Liaoning",
+      "deliveryHub": "Dalian Port",
       "plannedShipmentDate": "2026-01-30",
       "actualShipmentDate": "2026-01-30",
       "containerEquivalent": 13.33,
@@ -8239,10 +8239,10 @@
     {
       "id": "ship_sim_2025_033",
       "orderId": "ord_sim_2025_033",
-      "customerId": "cust_sim_2025_004",
+      "customerId": "cust_sim_2025_009",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Shanghai, Shanghai",
-      "deliveryHub": "Shanghai Waigaoqiao Port",
+      "destinationLocation": "Wuhan, Hubei",
+      "deliveryHub": "Wuhan Yangluo Port",
       "plannedShipmentDate": "2026-01-19",
       "actualShipmentDate": "2026-01-19",
       "containerEquivalent": 39.92,
@@ -8265,10 +8265,10 @@
     {
       "id": "ship_sim_2025_035",
       "orderId": "ord_sim_2025_035",
-      "customerId": "cust_sim_2025_003",
+      "customerId": "cust_sim_2025_011",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Suzhou, Jiangsu",
-      "deliveryHub": "Taicang Port",
+      "destinationLocation": "Chongqing, Chongqing",
+      "deliveryHub": "Chongqing Guoyuan Port",
       "plannedShipmentDate": "2026-02-22",
       "actualShipmentDate": null,
       "containerEquivalent": 22.17,
@@ -8278,10 +8278,10 @@
     {
       "id": "ship_sim_2025_036",
       "orderId": "ord_sim_2025_036",
-      "customerId": "cust_sim_2025_008",
+      "customerId": "cust_sim_2025_012",
       "destinationMarket": "Mainland China",
-      "destinationLocation": "Dalian, Liaoning",
-      "deliveryHub": "Dalian Port",
+      "destinationLocation": "Nanning, Guangxi",
+      "deliveryHub": "Qinzhou Port",
       "plannedShipmentDate": "2026-03-11",
       "actualShipmentDate": null,
       "containerEquivalent": 32.15,
