@@ -19,6 +19,56 @@
       "rawIdentifiersStored": false
     }
   ],
+  "recordLinkage": {
+    "sameCustomer": true,
+    "sameOrder": true,
+    "confirmationSource": "confirmed by the user",
+    "dataClassification": "user-confirmed relationship"
+  },
+  "syntheticCommercialScenario": {
+    "dataClassification": "synthetically generated for CRM demonstration",
+    "customer": {
+      "anonymousCode": "CN-GD-001",
+      "country": "China",
+      "destinationMarket": "Mainland China",
+      "destinationLocation": "Guangzhou Nansha bonded logistics zone",
+      "port": "Guangzhou Nansha Port"
+    },
+    "quotation": {
+      "quotationNumber": "QT-CN-2024-0822-A",
+      "version": 2,
+      "currency": "CNY",
+      "issuedDate": "2024-08-22",
+      "validUntil": "2024-09-05",
+      "totalValue": 6897240,
+      "pricingBasis": "Domestic delivery to Nansha port warehouse"
+    },
+    "proformaInvoice": {
+      "piNumber": "PI-CN-2024-0823-A",
+      "issuedDate": "2024-08-23",
+      "confirmedDate": "2024-08-26",
+      "currency": "CNY",
+      "totalValue": 6897240,
+      "paymentTerms": "30% deposit; 70% of each shipped lot payable five days before dispatch"
+    },
+    "timeline": {
+      "inquiryDate": "2024-08-12",
+      "quotationDate": "2024-08-22",
+      "orderConfirmationDate": "2024-08-26",
+      "depositDueDate": "2024-08-30",
+      "depositReceivedDate": "2024-08-29",
+      "productionPlannedStartDate": "2024-09-05",
+      "productionActualStartDate": "2024-09-09",
+      "documentedShipmentReadyDate": "2024-12-27",
+      "documentedShipmentBalanceReceivedDate": "2024-12-30",
+      "documentedShipmentDate": "2025-01-03"
+    },
+    "payments": [
+      { "type": "order_deposit", "amount": 2069172, "currency": "CNY", "status": "received", "receivedDate": "2024-08-29" },
+      { "type": "documented_shipment_balance", "amount": 1396679.2, "currency": "CNY", "status": "received", "receivedDate": "2024-12-30" }
+    ],
+    "documentedShipmentCommercialValue": 1995256
+  },
   "orderPlan": {
     "plannedContainerCount": 20,
     "plannedFinishedProductUnits": 56480,
@@ -29,11 +79,11 @@
       { "sequence": 3, "plannedCutoff": "2025-02-20", "containerAllocation": 6.5, "finishedProductUnits": 19040 }
     ],
     "orderLineItems": [
-      { "model": "RP-60", "product": "18-inch wall fan", "containerAllocation": 9, "quantity": 24300, "colorBreakdown": { "blue": 13500, "green": 6750, "grey": 4050 } },
-      { "model": "HW-16", "product": "16-inch wall fan", "containerAllocation": 5, "quantity": 16000, "colorBreakdown": { "blue": 9600, "green": 4192, "grey": 2208 } },
-      { "model": "RT-50", "product": "16-inch ceiling fan", "containerAllocation": 1, "quantity": 2480, "colorBreakdown": { "blue": 1240, "green": 1240 } },
-      { "model": "UN-1820", "product": "18-inch wall fan", "containerAllocation": 2, "quantity": 6600, "colorBreakdown": { "blue": 2442, "green": 2772, "grey": 1386 } },
-      { "model": "UN-1810", "product": "18-inch pedestal fan", "containerAllocation": 3, "quantity": 7100, "colorBreakdown": { "black": 2300, "blue": 2400, "green": 1608, "grey": 792 } }
+      { "model": "RP-60", "product": "18-inch wall fan", "containerAllocation": 9, "quantity": 24300, "syntheticUnitPriceCny": 128, "syntheticLineValueCny": 3110400, "colorBreakdown": { "blue": 13500, "green": 6750, "grey": 4050 } },
+      { "model": "HW-16", "product": "16-inch wall fan", "containerAllocation": 5, "quantity": 16000, "syntheticUnitPriceCny": 96, "syntheticLineValueCny": 1536000, "colorBreakdown": { "blue": 9600, "green": 4192, "grey": 2208 } },
+      { "model": "RT-50", "product": "16-inch ceiling fan", "containerAllocation": 1, "quantity": 2480, "syntheticUnitPriceCny": 88, "syntheticLineValueCny": 218240, "colorBreakdown": { "blue": 1240, "green": 1240 } },
+      { "model": "UN-1820", "product": "18-inch wall fan", "containerAllocation": 2, "quantity": 6600, "syntheticUnitPriceCny": 138, "syntheticLineValueCny": 910800, "colorBreakdown": { "blue": 2442, "green": 2772, "grey": 1386 } },
+      { "model": "UN-1810", "product": "18-inch pedestal fan", "containerAllocation": 3, "quantity": 7100, "syntheticUnitPriceCny": 158, "syntheticLineValueCny": 1121800, "colorBreakdown": { "black": 2300, "blue": 2400, "green": 1608, "grey": 792 } }
     ]
   },
   "verifiedShipment": {
@@ -63,12 +113,9 @@
     "interpretation": "The schedule is order-level planning evidence. The five-page document is shipment-execution evidence. Its model/color mix is preserved separately and is not forced to equal one planned batch."
   },
   "missingFields": [
-    "customer identity or approved anonymous customer code",
-    "destination market and port of loading",
-    "currency, unit prices and order value",
-    "inquiry, quotation and order confirmation dates",
-    "payment terms and payment milestone dates",
-    "production and bill-of-lading milestone dates",
+    "real customer identity remains intentionally anonymized",
+    "source documents for synthetic quotation, PI, payments and production dates do not exist",
+    "bill-of-lading release date is not applicable to the synthetic domestic scenario",
     "machine-readable spreadsheet for exact digitization of all 171 component rows"
   ]
 }
