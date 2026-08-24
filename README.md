@@ -52,6 +52,27 @@ Dataset: [`backend/data/verified-shipment-2025-01-03.json`](backend/data/verifie
 
 > Demonstration data has been anonymized or synthetically generated. Quantities and logistics totals are source-backed; commercial values and dates are labeled synthetic.
 
+## Synthetic annual CRM portfolio
+
+To support realistic BA, CRM, and BI analysis at the company's stated scale, the branch includes a fully synthetic 2025 domestic portfolio:
+
+- 36 orders across 12 anonymous Mainland China customers
+- CNY 200,023,190 total order value (approximately CNY 200 million)
+- Order values from CNY 178,380 to CNY 9,905,840
+- Unit prices between CNY 50 and CNY 300
+- 1,754,070 finished units and 636.97 estimated container equivalents
+- Linked inquiries, follow-ups, quotations, PIs, customer POs, payments, production tasks, and shipping plans
+- 30 completed, 3 shipped, 2 confirmed, and 1 in-production order
+
+Every record in this portfolio is marked `dataClassification: "synthetically_generated"`. It is separate from the anonymized source-backed order and shipment evidence.
+
+```bash
+cd backend
+npm run import:synthetic-orders
+```
+
+Dataset: [`backend/data/synthetic-orders-2025.json`](backend/data/synthetic-orders-2025.json)
+
 ## Overview
 
 The public site is a lightweight static website built to present product lines clearly to international buyers.
