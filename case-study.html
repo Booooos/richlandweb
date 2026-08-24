@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="RichLand export sales CRM and workflow automation case study: business analysis, data model, dashboard, workflow controls, and UAT evidence.">
+  <meta name="description" content="Source-backed RichLand business analysis and CRM automation case: discovery, data model, controlled workflow, decision dashboard, testing, deployment, and reflection.">
   <title>RichLand CRM &amp; Workflow Case Study</title>
   <style>
     :root{
@@ -183,11 +183,33 @@
     .outcome-item i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#d8ebdd;color:var(--forest-dark);font-size:12px;font-style:normal;font-weight:900}
     .outcome-item strong{font-size:13px}
     .outcome-item span{display:block;margin-top:2px;color:#c9dacc;font-size:11px}
+    .case-meta{display:grid;grid-template-columns:1.05fr .9fr 1fr 1.45fr;overflow:hidden;margin-top:14px}
+    .case-meta>div{min-height:104px;padding:21px;border-right:1px solid var(--line)}
+    .case-meta>div:last-child{border-right:0}.case-meta span,.case-meta strong{display:block}
+    .case-meta span{margin-bottom:10px;color:var(--forest);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .case-meta strong{font-size:13px;line-height:1.45}
+    .discovery-grid,.trigger-grid,.reflection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .discovery-card,.trigger-card,.reflection-card{padding:25px;border:1px solid var(--line);border-radius:20px;background:#fff}
+    .discovery-card span,.trigger-card span,.reflection-card span{color:var(--forest);font-size:10px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+    .discovery-card h3,.trigger-card h3,.reflection-card h3{margin:25px 0 9px;font-size:18px}
+    .discovery-card p,.trigger-card p,.reflection-card p{margin:0;color:var(--muted);font-size:13px}
+    .evidence-rule{display:grid;grid-template-columns:auto auto 1fr;gap:12px;align-items:center;margin-top:14px;padding:17px 20px;border-radius:17px;background:var(--forest-dark);color:#fff}
+    .evidence-rule strong{font-size:10px;text-transform:uppercase}.evidence-rule span{font-size:13px;font-weight:850}.evidence-rule p{margin:0;text-align:right;color:#c9dacc;font-size:11px}
+    .trigger-grid{margin-top:14px}.trigger-card{background:var(--wash)}
+    .action-board{margin-bottom:16px;padding:24px;border:1px solid #dac6a4;border-radius:20px;background:var(--gold-wash)}
+    .action-board h3{margin:10px 0 18px;font-size:22px}.action-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .action-grid article{padding:15px;border:1px solid rgba(179,122,43,.24);border-radius:14px;background:rgba(255,255,255,.6)}
+    .action-grid strong{display:block;font-size:12px}.action-grid p{margin:4px 0 0;color:#6f614d;font-size:11px}
+    .evidence-card img{display:block;width:100%;height:210px;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+    .next-panel{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;margin-top:16px;padding:32px}.next-panel h3{margin:10px 0;font-size:28px}.next-list{display:grid;gap:9px}.next-list div{padding:13px;border:1px solid var(--line);border-radius:13px}.next-list strong,.next-list span{display:block}.next-list strong{font-size:12px}.next-list span{margin-top:3px;color:var(--muted);font-size:11px}
     footer{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:42px;color:var(--muted);font-size:12px}
     footer nav{display:flex;gap:16px;flex-wrap:wrap}
     footer a{font-weight:750;color:#425248}
     @media (max-width:1050px){
-      .hero,.model-layout,.outcome-panel{grid-template-columns:1fr}
+      .hero,.model-layout,.outcome-panel,.next-panel{grid-template-columns:1fr}
+      .case-meta{grid-template-columns:repeat(2,1fr)}
+      .case-meta>div:nth-child(2){border-right:0}
+      .discovery-grid,.trigger-grid,.reflection-grid{grid-template-columns:1fr 1fr}
       .role-grid{grid-template-columns:repeat(3,1fr)}
       .workflow{grid-template-columns:repeat(3,1fr)}
       .stage:nth-child(3)::after{display:none}
@@ -198,7 +220,9 @@
       .topnav{display:none}
       .hero-copy,.hero-aside{padding:28px}
       h1{font-size:42px}
-      .proof-strip,.problem-grid,.role-grid,.kpi-grid,.testing-summary,.docs-grid,.evidence-grid{grid-template-columns:1fr 1fr}
+      .proof-strip,.problem-grid,.role-grid,.kpi-grid,.testing-summary,.docs-grid,.evidence-grid,.action-grid{grid-template-columns:1fr 1fr}
+      .discovery-grid,.trigger-grid,.reflection-grid{grid-template-columns:1fr}
+      .evidence-rule{grid-template-columns:1fr}.evidence-rule p{text-align:left}
       .section{padding-top:68px}
       .section-head{grid-template-columns:1fr;gap:12px}
       .workflow{grid-template-columns:1fr 1fr}
@@ -226,16 +250,16 @@
       <span class="brand-copy"><strong>RichLand CRM Case</strong><span>Business analysis &amp; workflow automation</span></span>
     </a>
     <nav class="topnav" aria-label="Case study navigation">
-      <a href="#problem">Problem</a><a href="#workflow">Workflow</a><a href="#data-model">Data Model</a><a href="#dashboard">Dashboard</a><a href="#testing">Testing</a><a class="primary" href="#documentation">Evidence</a>
+      <a href="#problem">Problem</a><a href="#discovery">Discovery</a><a href="#workflow">Automation</a><a href="#data-model">Source of Truth</a><a href="#dashboard">Decision View</a><a class="primary" href="#reflection">Reflection</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="case-title">
       <div class="panel hero-copy">
-        <span class="eyebrow">Business Analysis Case Study</span>
-        <h1 id="case-title">From scattered export records to a controlled CRM workflow</h1>
-        <p class="lead">I translated RichLand's inquiry-to-shipment process into a structured operating model: defined records and ownership, mapped decision gates, connected the public inquiry form to internal handling, and documented how the solution was tested.</p>
+        <span class="eyebrow">Source-backed Business Analysis Case</span>
+        <h1 id="case-title">From six enterprise pages to a controlled CRM workflow</h1>
+        <p class="lead">I reconciled one 56,480-unit order plan and one 17,132-unit shipment record, separated evidence-backed facts from synthetic commercial context, and built the linked CRM, workflow controls, decision view, and tests around that operating reality.</p>
         <div class="actions">
           <a class="button primary" href="#dashboard">Review the outcome</a>
           <a class="button" href="https://github.com/Booooos/richlandweb" target="_blank" rel="noreferrer">Inspect GitHub</a>
@@ -254,11 +278,18 @@
       </aside>
     </section>
 
+    <section class="panel case-meta" aria-label="Case summary">
+      <div><span>Role</span><strong>Business Analyst · CRM and workflow designer</strong></div>
+      <div><span>Team</span><strong>Solo portfolio build · RichLand sales / operations context</strong></div>
+      <div><span>Impact</span><strong>1 source order + 36-order annual CRM simulation</strong></div>
+      <div><span>Tools</span><strong>JavaScript · Node.js · Prisma · GitHub · AI-assisted development</strong></div>
+    </section>
+
     <section class="proof-strip" aria-label="Project scope">
-      <div class="proof-item"><strong>6-stage workflow</strong><span>Inquiry through shipment</span></div>
-      <div class="proof-item"><strong>5 core entities</strong><span>Traceable CRM relationships</span></div>
-      <div class="proof-item"><strong>6 KPI definitions</strong><span>Action and conversion visibility</span></div>
-      <div class="proof-item"><strong>15 UAT cases</strong><span>Validation and workflow coverage</span></div>
+      <div class="proof-item"><strong>¥200.02M</strong><span>36 explicitly synthetic 2025 orders</span></div>
+      <div class="proof-item"><strong>56,480 units</strong><span>Source-backed order plan · 20 containers</span></div>
+      <div class="proof-item"><strong>17,132 units</strong><span>Verified shipment · 6 containers</span></div>
+      <div class="proof-item"><strong>15 UAT cases</strong><span>14 passed · 1 disclosed gap</span></div>
     </section>
 
     <section class="section" id="problem">
@@ -271,6 +302,19 @@
         <article class="problem-card"><span class="card-index">02</span><h3>Status and ownership were unclear</h3><p>Teams could not quickly confirm the latest quotation version, next action owner, due date, or whether an order had passed the required approval gate.</p></article>
         <article class="problem-card"><span class="card-index">03</span><h3>Exceptions were hard to control</h3><p>Blank fields, duplicate inquiries, invalid dates, and premature workflow jumps could create rework or move incomplete records downstream.</p></article>
       </div>
+    </section>
+
+    <section class="section" id="discovery">
+      <div class="section-head">
+        <div><span class="section-label">02 · Discovery</span><h2>The supplied documents changed the model before development</h2></div>
+        <p>The work started by identifying the grain and truth status of each record—not by selecting charts or generating interface copy.</p>
+      </div>
+      <div class="discovery-grid">
+        <article class="discovery-card"><span>Finding 01</span><h3>Plan and execution are different grains</h3><p>The 56,480-unit schedule is the full order plan; the 17,132-unit shipment list is one execution record. They remain related but separate.</p></article>
+        <article class="discovery-card"><span>Finding 02</span><h3>BOM is not sellable quantity</h3><p>216,052 component and packaging units cannot be counted as finished-product sales volume.</p></article>
+        <article class="discovery-card"><span>Finding 03</span><h3>Truth status belongs in the data</h3><p>Operational quantities are anonymized source evidence; customer, destination, price, quotation, PI, payment and production fields are synthetic.</p></article>
+      </div>
+      <div class="evidence-rule"><strong>Evidence rule</strong><span>Demonstration data has been anonymized or synthetically generated.</span><p>No customer-identifying PO, SO, booking or container reference is published.</p></div>
     </section>
 
     <section class="section" id="role">
@@ -289,7 +333,7 @@
 
     <section class="section" id="workflow">
       <div class="section-head">
-        <div><span class="section-label">03 · Workflow</span><h2>One visible commercial path, with controls at every handoff</h2></div>
+        <div><span class="section-label">04 · Automation</span><h2>One visible commercial path, with controls at every handoff</h2></div>
         <p>The simplified recruiter view below shows the commercial spine. The implementation also preserves detailed internal gates for payment, production release, shipping, and document control.</p>
       </div>
       <div class="panel workflow-panel">
@@ -303,11 +347,16 @@
         </div>
         <div class="workflow-note"><strong>Automation rule example</strong><span>If a follow-up is still open after its due date, mark it overdue and place it in the sales owner's action queue. An order cannot enter production merely because its PO was approved.</span></div>
       </div>
+      <div class="trigger-grid">
+        <article class="trigger-card"><span>Trigger</span><h3>Inquiry write succeeds</h3><p>Create or match Customer, store Inquiry, return the backend ID, then open the WorkflowCase. A failed write never shows false success.</p></article>
+        <article class="trigger-card"><span>Scheduled check</span><h3>Follow-up becomes due</h3><p>Place pending and overdue items in the sales owner's queue with the next action visible.</p></article>
+        <article class="trigger-card"><span>Controlled transition</span><h3>Commercial gates pass</h3><p>PO, deposit, manager release and finance sign-off must pass before production; five negative-path tests enforce the rule.</p></article>
+      </div>
     </section>
 
     <section class="section" id="data-model">
       <div class="section-head">
-        <div><span class="section-label">04 · Data Model</span><h2>Relationships make the customer journey traceable</h2></div>
+        <div><span class="section-label">05 · Source of Truth</span><h2>Relationships and provenance make the customer journey traceable</h2></div>
         <p>This is the logical CRM model used for analysis and production planning. The current prototype persists operational collections through a Prisma-backed store bridge; normalization is documented as the next database migration.</p>
       </div>
       <div class="model-layout">
@@ -331,13 +380,19 @@
 
     <section class="section" id="dashboard">
       <div class="section-head">
-        <div><span class="section-label">05 · Dashboard</span><h2>Management visibility starts with action-oriented definitions</h2></div>
-        <p>The dashboard below is calculated from a small synthetic dataset. Its purpose is to demonstrate metric logic and information hierarchy, not to claim real company performance.</p>
+        <div><span class="section-label">06 · Decision View</span><h2>Management visibility starts with exceptions and the next action</h2></div>
+        <p>The dashboard is synchronized with the 36-order, CNY 200.02M annual simulation. It demonstrates decision logic and information hierarchy, not real company performance.</p>
       </div>
       <div class="panel dashboard">
+        <div class="action-board"><span class="section-label">Action now</span><h3>Four decisions from the current snapshot</h3><div class="action-grid">
+          <article><strong>Recover overdue opportunities</strong><p>Assign the 3 overdue and 3 pending follow-ups before lower-risk accounts.</p></article>
+          <article><strong>Protect the open pipeline</strong><p>Review 3 open quotations against validity dates and owners.</p></article>
+          <article><strong>Capacity-review the peak</strong><p>December reaches ¥22.01M, the highest simulated month.</p></article>
+          <article><strong>Check model concentration</strong><p>RT-50 contributes the largest simulated product value at ¥50.14M.</p></article>
+        </div></div>
         <div class="kpi-grid" data-kpi-grid aria-live="polite"></div>
         <div class="chart-grid">
-          <article class="chart-card"><header><div><h3>Monthly order value</h3><span>Synthetic accepted orders · USD</span></div><span>Jan–Jun demo period</span></header><div class="bar-chart" data-order-value-chart></div><p class="metric-definition">Definition: sum of accepted order value grouped by order-created month. Cancelled orders are excluded.</p></article>
+          <article class="chart-card"><header><div><h3>Monthly order value</h3><span>Synthetic accepted orders · CNY millions</span></div><span>Jan–Dec 2025</span></header><div class="bar-chart" data-order-value-chart></div><p class="metric-definition">Definition: sum of the 36 synthetic order values grouped by month; cancelled orders are excluded.</p></article>
           <article class="chart-card"><header><div><h3>Orders by status</h3><span>Synthetic workflow snapshot</span></div><span data-order-total></span></header><div class="status-list" data-status-chart></div><p class="metric-definition">Definition: current internal workflow status for every non-cancelled order in the selected period.</p></article>
         </div>
       </div>
@@ -345,7 +400,7 @@
 
     <section class="section" id="testing">
       <div class="section-head">
-        <div><span class="section-label">06 · Testing Evidence</span><h2>UAT covers data quality, expected behavior, and blocked paths</h2></div>
+        <div><span class="section-label">07 · Testing Evidence</span><h2>UAT covers data quality, expected behavior, and blocked paths</h2></div>
         <p>Every test connects a business rule to evidence and an outcome. The full report includes 15 cases plus the defects and fixes recorded during validation.</p>
       </div>
       <div class="panel testing-shell">
@@ -370,19 +425,19 @@
 
     <section class="section" id="evidence">
       <div class="section-head">
-        <div><span class="section-label">07 · Solution Evidence</span><h2>Working screens connect the analysis to the implementation</h2></div>
+        <div><span class="section-label">08 · Development & Deployment</span><h2>Working screens connect the analysis to the implementation</h2></div>
         <p>These links expose the public inquiry experience and representative internal screens. Internal functionality requires the local backend and role-based login described in the README.</p>
       </div>
       <div class="evidence-grid">
-        <article class="evidence-card"><div class="mock-screen"><div class="mock-window"><div class="mock-head"><i></i><i></i><i></i></div><div class="mock-grid"><span class="mock-box dark"></span><span class="mock-box"></span><span class="mock-box"></span></div><div class="mock-row"></div><div class="mock-row short"></div><div class="mock-row"></div></div></div><div class="evidence-copy"><h3>Public inquiry intake</h3><p>Structured buyer and demand information enters the workflow from the website.</p><a href="index.html#inquiry">Open inquiry form →</a></div></article>
-        <article class="evidence-card"><div class="mock-screen"><div class="mock-window"><div class="mock-head"><i></i><i></i><i></i></div><div class="mock-grid"><span class="mock-box"></span><span class="mock-box dark"></span><span class="mock-box"></span></div><div class="mock-row"></div><div class="mock-row"></div><div class="mock-row short"></div></div></div><div class="evidence-copy"><h3>Internal operations portal</h3><p>Action queues keep inquiries, quotations, approval gates, and execution visible.</p><a href="internal-portal.html">Open portal prototype →</a></div></article>
-        <article class="evidence-card"><div class="mock-screen"><div class="mock-window"><div class="mock-head"><i></i><i></i><i></i></div><div class="mock-grid"><span class="mock-box"></span><span class="mock-box"></span><span class="mock-box dark"></span></div><div class="mock-row short"></div><div class="mock-row"></div><div class="mock-row"></div></div></div><div class="evidence-copy"><h3>Quotation workspace</h3><p>Version, validity, owner, status, and customer context support controlled handoff.</p><a href="internal-quotation.html">Open quotation screen →</a></div></article>
+        <article class="evidence-card"><img src="docs/screenshots/case-study-desktop.webp" alt="Full desktop capture of the implemented RichLand case-study page"><div class="evidence-copy"><h3>Implemented desktop case</h3><p>A real Chrome capture replaces the former decorative mock screen.</p><a href="docs/screenshots/case-study-desktop.webp">Open full capture →</a></div></article>
+        <article class="evidence-card"><img src="docs/screenshots/case-study-mobile.webp" alt="Full mobile capture of the implemented RichLand case-study page"><div class="evidence-copy"><h3>Implemented mobile case</h3><p>Responsive evidence includes the recorded viewport and overflow checks.</p><a href="docs/screenshots/case-study-mobile.webp">Open full capture →</a></div></article>
+        <article class="evidence-card"><div class="evidence-copy"><span class="section-label">Working system</span><h3>Internal CRM screens</h3><p>Open the actual inquiry intake, operations portal and quotation workspace rather than reading a fabricated screenshot.</p><div class="actions"><a class="button" href="index.html#inquiry">Inquiry</a><a class="button" href="internal-portal.html">Ops portal</a><a class="button" href="internal-quotation.html">Quotation</a></div></div></article>
       </div>
     </section>
 
     <section class="section" id="documentation">
       <div class="section-head">
-        <div><span class="section-label">08 · Documentation</span><h2>Artifacts make the decisions reviewable and repeatable</h2></div>
+        <div><span class="section-label">09 · Documentation</span><h2>Artifacts make the decisions reviewable and repeatable</h2></div>
         <p>The documentation package is written for a hiring manager, analyst, or developer who needs to understand scope, definitions, and evidence without reverse-engineering the code.</p>
       </div>
       <div class="docs-grid">
@@ -398,9 +453,22 @@
       </div>
     </section>
 
+    <section class="section" id="reflection">
+      <div class="section-head">
+        <div><span class="section-label">10 · Reflection</span><h2>The case is credible because its limitations are visible</h2></div>
+        <p>Implemented behavior, source-backed evidence, synthetic demonstration data, and future architecture are deliberately separated.</p>
+      </div>
+      <div class="reflection-grid">
+        <article class="reflection-card"><span>What worked</span><h3>One traceable operating spine</h3><p>Plan, shipment, CRM records, imports and workflow tests can be followed from source to implementation.</p></article>
+        <article class="reflection-card"><span>Current limitation</span><h3>Persistence is transitional</h3><p>Operational collections still use a Prisma-backed StoreCollection JSON bridge; normalized PostgreSQL tables remain the migration target.</p></article>
+        <article class="reflection-card"><span>Open UAT gap</span><h3>Duplicate inquiry review</h3><p>The production business key and audited override path are not implemented, so this remains disclosed rather than marked passed.</p></article>
+      </div>
+      <div class="panel next-panel"><div><span class="section-label">Next steps</span><h3>Extend only when the evidence supports the next decision</h3><p>Forecasting is a planning roadmap, not a finished claim.</p></div><div class="next-list"><div><strong>Digitize all 171 BOM rows</strong><span>Use an approved spreadsheet or redacted PDF with page and row references.</span></div><div><strong>Normalize PostgreSQL / Prisma persistence</strong><span>Add foreign keys and row-level duplicate controls.</span></div><div><strong>Add explainable demand planning</strong><span>Naïve baseline → moving average → MAE / MAPE / bias → reorder and capacity action.</span></div></div></div>
+    </section>
+
     <section class="section" id="outcome">
       <div class="panel outcome-panel">
-        <div><span class="section-label" style="color:#b9d8c2">09 · Final Outcome</span><h2>A website became a business system that can be explained, tested, and improved</h2><p>The result is a portfolio-ready BA + CRM automation case grounded in real implementation assets. It demonstrates process analysis, data modeling, metric definition, workflow controls, and UAT without inventing performance gains or exposing customer information.</p><div class="actions"><a class="button primary" href="https://github.com/Booooos/richlandweb" target="_blank" rel="noreferrer">Review source repository</a></div></div>
+        <div><span class="section-label" style="color:#b9d8c2">11 · Final Outcome</span><h2>A website became a business system that can be explained, tested, and improved</h2><p>The result is a portfolio-ready BA + CRM automation case grounded in real implementation assets. It demonstrates process analysis, data modeling, metric definition, workflow controls, and UAT without inventing performance gains or exposing customer information.</p><div class="actions"><a class="button primary" href="https://github.com/Booooos/richlandweb" target="_blank" rel="noreferrer">Review source repository</a></div></div>
         <div class="outcome-list"><div class="outcome-item"><i>✓</i><div><strong>Single process narrative</strong><span>Problem → structure → solution → test → result</span></div></div><div class="outcome-item"><i>✓</i><div><strong>Traceable data and decisions</strong><span>Keys, statuses, ownership, gates, and timestamps</span></div></div><div class="outcome-item"><i>✓</i><div><strong>Credible evidence</strong><span>Working screens, simulations, UAT, and one clearly disclosed CRM gap</span></div></div></div>
       </div>
     </section>
