@@ -11,7 +11,7 @@
 | Disclosed open design gaps | 1 |
 | Critical blockers | 0 |
 
-Test data was synthetic. Dates and identifiers were created for repeatable demonstration only.
+CRM behavior tests use synthetic dates and identifiers. The source-backed order and shipment quantities are anonymized enterprise evidence and are tested separately for reconciliation and provenance.
 
 ## Test environment
 
@@ -31,9 +31,9 @@ Test data was synthetic. Dates and identifiers were created for repeatable demon
 | UAT-03 | FR-01, NFR-03 | Submit malformed email and non-positive quantity | Invalid values are rejected; no record is stored | Pass | Validation response; store count unchanged |
 | UAT-04 | FR-02 | Submit same normalized email, company, market, and category twice within review window | Second inquiry is flagged as a potential duplicate rather than silently creating a second customer | Fail | **Open gap:** duplicate-review flag is not implemented in the current prototype |
 | UAT-05 | FR-02 | Create inquiry for an existing customer with a new contact | Inquiry links to existing `customer_id`; new contact remains under same account | Pass | Customer/contact relation check |
-| UAT-06 | FR-05, FR-06 | Create quotation whose `valid_until` precedes creation date | API rejects invalid date range with clear reason | Pass | Validation error response |
-| UAT-07 | FR-05 | Save a new revision of an existing quotation | Version increments; prior version remains available and unchanged | Pass | Quotation version comparison |
-| UAT-08 | FR-05 | Attempt duplicate quotation number and version | Unique business key rule blocks duplicate revision | Pass | Conflict/validation response |
+| UAT-06 | FR-05, FR-06 | Create quotation whose `valid_until` precedes creation date | API rejects invalid date range with clear reason | Pass | `createQuotation` date validation returns an error before store mutation |
+| UAT-07 | FR-05 | Save a new revision of an existing quotation | Version must equal the highest existing version + 1; prior version remains unchanged | Pass | Server calculates the next version and rejects skipped or repeated revisions |
+| UAT-08 | FR-05 | Attempt duplicate quotation number and version | Case-insensitive number + version business key blocks duplicate revision | Pass | Duplicate check runs before `store.quotations.push` |
 | UAT-09 | FR-03, FR-04 | Open overdue queue with two open past-due actions, three future actions, and two completed actions | Queue shows only two open past-due actions | Fail | Boundary-date item was incorrectly treated as overdue |
 | UAT-10 | FR-12, FR-13 | Load dashboard from deterministic synthetic dataset | Six KPI values and two chart views match documented formulas; conversion excludes non-issued drafts/reviews | Fail | Fixed formula and reconciled rendered values |
 | UAT-11 | FR-07 | Review PO with price and packaging differences | PO remains in review and records discrepancy notes | Pass | PO review status and notes |
@@ -41,6 +41,17 @@ Test data was synthetic. Dates and identifiers were created for repeatable demon
 | UAT-13 | FR-09 | Complete deposit, manager release, material/cost review, and finance sign-off in sequence | Execution opens only after the final required gate | Pass | Valid quote-to-settlement simulation |
 | UAT-14 | FR-11 | Attempt BL release before balance confirmation | Hard gate blocks release | Pass | Invalid-gate simulation |
 | UAT-15 | FR-10, FR-15 | Complete valid production, shipment, balance, and document-release path | Order reaches completed milestone and retains event/task evidence | Pass | Valid quote-to-settlement simulation |
+
+## Implemented quotation controls
+
+Following code review, quotation creation now:
+
+- rejects invalid or past `validUntil` dates;
+- generates or accepts a stable `quotationNumber`;
+- requires each revision to equal the highest existing version plus one; and
+- rejects a case-insensitive duplicate `quotationNumber + version` pair before persisting the record.
+
+These controls make UAT-06 through UAT-08 supported by the current implementation rather than documentation-only claims.
 
 ## Defect and fix log
 
