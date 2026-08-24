@@ -10,12 +10,13 @@
     "prisma": "^6.7.0"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node scripts/import-verified-shipment.js && node src/server.js",
     "simulate:po-flow": "node scripts/simulate-po-order-flow.js",
     "simulate:invalid-gates": "node scripts/simulate-invalid-workflow-gates.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate-store": "node scripts/migrate-json-store-to-prisma.js",
     "prisma:export-store": "node scripts/export-prisma-store-to-json.js",
-    "import:verified-shipment": "node scripts/import-verified-shipment.js"
+    "import:verified-shipment": "node scripts/import-verified-shipment.js",
+    "start:without-source-import": "node src/server.js"
   }
 }
