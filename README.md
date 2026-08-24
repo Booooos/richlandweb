@@ -30,6 +30,28 @@ Supporting analyst artifacts:
 - [`docs/demo-script.md`](docs/demo-script.md)
 - [`docs/screenshots/README.md`](docs/screenshots/README.md)
 
+## Source-backed enterprise evidence
+
+The branch now includes an anonymized dataset transcribed and reconciled from six user-supplied business pages:
+
+- Order plan: 20 containers, 56,480 finished units, five fan models, and three planned dispatch batches
+- Verified 03 Jan 2025 shipment: 6 containers, 17,132 finished units, 5,642 cartons, and 420.6100871 CBM
+- Shipment packing/BOM source: 171 component rows summarized to 216,052 component and packaging units
+- All raw customer, PO, SO, booking, and container identifiers are excluded from the public dataset
+
+The order plan and shipment execution are stored separately because their model/color mixes do not support claiming that the shipment equals one original planned batch.
+
+The default backend start command idempotently imports the source-backed records before starting the server. To run only the import:
+
+```bash
+cd backend
+npm run import:verified-shipment
+```
+
+Dataset: [`backend/data/verified-shipment-2025-01-03.json`](backend/data/verified-shipment-2025-01-03.json)
+
+> Demonstration data has been anonymized or synthetically generated.
+
 ## Overview
 
 The public site is a lightweight static website built to present product lines clearly to international buyers.
