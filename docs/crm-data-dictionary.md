@@ -86,13 +86,13 @@ Derived rule: `is_overdue = status = OPEN AND due_at < snapshot_time`.
 | Field | Type | Key / required | Definition | Validation |
 |---|---|---|---|---|
 | `quotation_id` | UUID | PK, required | Stable quotation record ID | System-generated; immutable |
-| `quotation_number` | Text | Unique, required | Human-readable business number | Unique; controlled pattern |
+| `quotation_number` | Text | Required | Stable human-readable business number shared by its revisions | Controlled pattern; uniqueness enforced with `version` |
 | `customer_id` | UUID | FK, required | Recipient customer | Must exist in Customers |
 | `inquiry_id` | UUID | FK, required | Source inquiry | Must belong to same customer |
-| `version` | Integer | Required | Document revision | Positive; unique within quotation number |
+| `version` | Integer | Composite unique, required | Document revision | Must equal the highest existing version + 1 for the same inquiry |
 | `currency` | Enum | Required | Commercial currency | ISO 4217 code |
 | `total_value` | Decimal | Required | Quotation total | Non-negative; fixed decimal type |
-| `valid_until` | Date | Required | Commercial expiry date | On or after `created_at` date |
+| `valid_until` | Date | Optional in prototype | Commercial expiry date | When present, must be valid and on or after `created_at` date |
 | `moq` | Integer | Optional | Minimum order quantity | Positive whole number |
 | `lead_time` | Text | Required | Quoted production lead time | Controlled text or duration |
 | `incoterm` | Enum | Required | Trade term | Supported Incoterm code only |
@@ -134,6 +134,24 @@ Derived rule: `is_overdue = status = OPEN AND due_at < snapshot_time`.
 | `marks_confirmed` | Boolean | Required | Shipping mark readiness flag | Default false |
 | `created_at` | DateTime | Required | Creation timestamp | System-generated UTC |
 | `updated_at` | DateTime | Required | Latest update timestamp | System-maintained UTC |
+
+## Source-backed operational extensions
+
+| Entity | Primary key | Important foreign keys / fields | Truth-status rule |
+|---|---|---|---|
+| SourceDocument | `source_document_id` | document type, document date, reviewed pages, verification status | Identifies anonymized source evidence and its review boundary |
+| OrderLineItem | `order_line_item_id` | `order_id`, model, color, quantity, containers, unit price, line value | Source quantity may coexist with explicitly synthetic price and value |
+| DispatchBatch | `dispatch_batch_id` | `order_id`, batch number, cutoff date, containers, planned units | Source-backed planning grain |
+| ShipmentLineItem | `shipment_line_item_id` | `shipping_plan_id`, model, color, shipped quantity | Source-backed execution grain; never forced to equal a planned batch |
+| PaymentRecord | `payment_record_id` | `order_id`, payment type, amount, received date | Synthetic in the public commercial scenario |
+| ProductionTask | `production_task_id` | `order_id`, planned / actual dates, status | Synthetic in the public commercial scenario |
+
+### Provenance controls
+
+- `source_backed_anonymized` is used only for facts transcribed and reconciled from supplied documents.
+- `synthetically_generated` is used for customer, destination, price, quotation, PI, payment, production, and annual-portfolio records created for demonstration.
+- Finished-product quantity, cartons, CBM, net weight, gross weight, and BOM component quantity are distinct measures.
+- The 56,480-unit plan and 17,132-unit shipment share an order relationship but remain separate planning and execution records.
 
 ## KPI definitions
 
