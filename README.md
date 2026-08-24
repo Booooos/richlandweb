@@ -8,18 +8,22 @@ The repo also includes the first prototype of the supporting internal ops backen
 
 Open [`case-study.html`](case-study.html) for the recruiter-facing project narrative:
 
-> Business problem → data structure → solution → testing method → final outcome
+> Overview → Business Problem → Discovery → Automation → Source of Truth → Decision View → Testing → Development → Reflection → Next Steps
 
 The case study presents this repository as a **Business Analysis + Data Workflow + CRM Automation** project, including:
 
-- Business problem and project role
+- Top-level Role, Team, Impact, and Tools summary
+- Discovery decisions derived from six anonymized enterprise pages
 - Inquiry → Customer → Follow-Up → Quotation → Order → Shipment workflow
-- Logical CRM ER model with primary and foreign keys
-- Synthetic dashboard for open quotations, follow-ups, order status, monthly value, conversion, and overdue work
-- 15 UAT cases with a defect/fix log
-- Working-screen evidence and implementation limitations
+- Trigger, owner, system-write, and failure-handling automation logic
+- Logical CRM ER model with source-provenance classification
+- CNY 200.02M annual synthetic dashboard led by exceptions and recommended actions
+- 15 UAT cases with quotation date/version/duplicate controls and one disclosed inquiry-deduplication gap
+- Real browser captures, working screens, implementation evidence, limitations, reflection, and next steps
 
 All public case-study records are anonymous or synthetic. The current backend uses Prisma `StoreCollection` payloads as a prototype storage bridge; the normalized entity model is a documented production target, not a false claim about the current physical schema.
+
+The public companion case is available at https://richland-crm-case.bosco0127.chatgpt.site.
 
 Supporting analyst artifacts:
 
