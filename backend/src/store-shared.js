@@ -12,6 +12,8 @@ const EMPTY_STORE = {
   customerPOs: [],
   orders: [],
   orderLineItems: [],
+  dispatchBatches: [],
+  shipmentLineItems: [],
   sourceDocuments: [],
   customerCreditChecks: [],
   workflowCases: [],
