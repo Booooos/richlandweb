@@ -982,9 +982,9 @@
       "inquiryId": "inq_sim_2025_034",
       "orderId": "ord_sim_2025_034",
       "type": "commercial_follow_up",
-      "dueDate": "2025-11-26",
-      "completedDate": "2025-11-27",
-      "status": "completed",
+      "dueDate": "2025-12-12",
+      "completedDate": null,
+      "status": "pending",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -993,9 +993,9 @@
       "inquiryId": "inq_sim_2025_035",
       "orderId": "ord_sim_2025_035",
       "type": "commercial_follow_up",
-      "dueDate": "2025-12-06",
-      "completedDate": "2025-12-07",
-      "status": "completed",
+      "dueDate": "2025-12-22",
+      "completedDate": null,
+      "status": "overdue",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -1004,9 +1004,9 @@
       "inquiryId": "inq_sim_2025_036",
       "orderId": "ord_sim_2025_036",
       "type": "commercial_follow_up",
-      "dueDate": "2025-12-16",
-      "completedDate": "2025-12-17",
-      "status": "completed",
+      "dueDate": "2026-01-01",
+      "completedDate": null,
+      "status": "pending",
       "dataClassification": "synthetically_generated"
     }
   ],
@@ -1021,6 +1021,20 @@
       "issuedDate": "2024-12-28",
       "validUntil": "2025-01-11",
       "totalValue": 178380,
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 300,
+          "unitPrice": 113,
+          "lineValue": 33900
+        },
+        {
+          "model": "RT-50",
+          "quantity": 1720,
+          "unitPrice": 84,
+          "lineValue": 144480
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1034,6 +1048,26 @@
       "issuedDate": "2025-01-07",
       "validUntil": "2025-01-21",
       "totalValue": 4622660,
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 10520,
+          "unitPrice": 88,
+          "lineValue": 925760
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 16400,
+          "unitPrice": 141,
+          "lineValue": 2312400
+        },
+        {
+          "model": "RP-60",
+          "quantity": 9750,
+          "unitPrice": 142,
+          "lineValue": 1384500
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1047,6 +1081,32 @@
       "issuedDate": "2025-01-17",
       "validUntil": "2025-01-31",
       "totalValue": 9002690,
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 31040,
+          "unitPrice": 87,
+          "lineValue": 2700480
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 5360,
+          "unitPrice": 168,
+          "lineValue": 900480
+        },
+        {
+          "model": "HW-16",
+          "quantity": 41880,
+          "unitPrice": 86,
+          "lineValue": 3601680
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 12950,
+          "unitPrice": 139,
+          "lineValue": 1800050
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1060,6 +1120,38 @@
       "issuedDate": "2025-01-28",
       "validUntil": "2025-02-11",
       "totalValue": 424800,
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 800,
+          "unitPrice": 144,
+          "lineValue": 115200
+        },
+        {
+          "model": "RP-60",
+          "quantity": 500,
+          "unitPrice": 114,
+          "lineValue": 57000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 1640,
+          "unitPrice": 85,
+          "lineValue": 139400
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 520,
+          "unitPrice": 166,
+          "lineValue": 86320
+        },
+        {
+          "model": "HW-16",
+          "quantity": 320,
+          "unitPrice": 84,
+          "lineValue": 26880
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1073,6 +1165,20 @@
       "issuedDate": "2025-02-07",
       "validUntil": "2025-02-21",
       "totalValue": 5078360,
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 18560,
+          "unitPrice": 171,
+          "lineValue": 3173760
+        },
+        {
+          "model": "HW-16",
+          "quantity": 21400,
+          "unitPrice": 89,
+          "lineValue": 1904600
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1086,6 +1192,26 @@
       "issuedDate": "2025-02-17",
       "validUntil": "2025-03-03",
       "totalValue": 8998520,
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 11000,
+          "unitPrice": 117,
+          "lineValue": 1287000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 58440,
+          "unitPrice": 88,
+          "lineValue": 5142720
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 15200,
+          "unitPrice": 169,
+          "lineValue": 2568800
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1099,6 +1225,32 @@
       "issuedDate": "2025-02-25",
       "validUntil": "2025-03-11",
       "totalValue": 752710,
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 1480,
+          "unitPrice": 92,
+          "lineValue": 136160
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 2350,
+          "unitPrice": 145,
+          "lineValue": 340750
+        },
+        {
+          "model": "RP-60",
+          "quantity": 1800,
+          "unitPrice": 115,
+          "lineValue": 207000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 800,
+          "unitPrice": 86,
+          "lineValue": 68800
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1112,6 +1264,38 @@
       "issuedDate": "2025-03-07",
       "validUntil": "2025-03-21",
       "totalValue": 5456000,
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 11960,
+          "unitPrice": 91,
+          "lineValue": 1088360
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 2120,
+          "unitPrice": 172,
+          "lineValue": 364640
+        },
+        {
+          "model": "HW-16",
+          "quantity": 16160,
+          "unitPrice": 90,
+          "lineValue": 1454400
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 5100,
+          "unitPrice": 143,
+          "lineValue": 729300
+        },
+        {
+          "model": "RP-60",
+          "quantity": 16100,
+          "unitPrice": 113,
+          "lineValue": 1819300
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1125,6 +1309,20 @@
       "issuedDate": "2025-03-17",
       "validUntil": "2025-03-31",
       "totalValue": 8998600,
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 40550,
+          "unitPrice": 148,
+          "lineValue": 6001400
+        },
+        {
+          "model": "RP-60",
+          "quantity": 25400,
+          "unitPrice": 118,
+          "lineValue": 2997200
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1138,6 +1336,26 @@
       "issuedDate": "2025-03-28",
       "validUntil": "2025-04-11",
       "totalValue": 1102940,
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 4240,
+          "unitPrice": 144,
+          "lineValue": 610560
+        },
+        {
+          "model": "HW-16",
+          "quantity": 3960,
+          "unitPrice": 93,
+          "lineValue": 368280
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 850,
+          "unitPrice": 146,
+          "lineValue": 124100
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1151,6 +1369,32 @@
       "issuedDate": "2025-04-07",
       "validUntil": "2025-04-21",
       "totalValue": 5698150,
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 3950,
+          "unitPrice": 121,
+          "lineValue": 477950
+        },
+        {
+          "model": "RT-50",
+          "quantity": 20640,
+          "unitPrice": 92,
+          "lineValue": 1898880
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 5480,
+          "unitPrice": 173,
+          "lineValue": 948040
+        },
+        {
+          "model": "HW-16",
+          "quantity": 26080,
+          "unitPrice": 91,
+          "lineValue": 2373280
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1164,6 +1408,38 @@
       "issuedDate": "2025-04-17",
       "validUntil": "2025-05-01",
       "totalValue": 9009160,
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 12520,
+          "unitPrice": 96,
+          "lineValue": 1201920
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 20150,
+          "unitPrice": 149,
+          "lineValue": 3002350
+        },
+        {
+          "model": "RP-60",
+          "quantity": 15150,
+          "unitPrice": 119,
+          "lineValue": 1802850
+        },
+        {
+          "model": "RT-50",
+          "quantity": 6680,
+          "unitPrice": 90,
+          "lineValue": 601200
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 14040,
+          "unitPrice": 171,
+          "lineValue": 2400840
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1177,6 +1453,20 @@
       "issuedDate": "2025-04-27",
       "validUntil": "2025-05-11",
       "totalValue": 1501800,
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 11840,
+          "unitPrice": 95,
+          "lineValue": 1124800
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 2600,
+          "unitPrice": 145,
+          "lineValue": 377000
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1190,6 +1480,26 @@
       "issuedDate": "2025-05-07",
       "validUntil": "2025-05-21",
       "totalValue": 5700920,
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 13650,
+          "unitPrice": 152,
+          "lineValue": 2074800
+        },
+        {
+          "model": "RP-60",
+          "quantity": 8500,
+          "unitPrice": 122,
+          "lineValue": 1037000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 27840,
+          "unitPrice": 93,
+          "lineValue": 2589120
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1203,6 +1513,32 @@
       "issuedDate": "2025-05-17",
       "validUntil": "2025-05-31",
       "totalValue": 9001000,
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 23400,
+          "unitPrice": 148,
+          "lineValue": 3463200
+        },
+        {
+          "model": "HW-16",
+          "quantity": 21400,
+          "unitPrice": 97,
+          "lineValue": 2075800
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 4600,
+          "unitPrice": 150,
+          "lineValue": 690000
+        },
+        {
+          "model": "RP-60",
+          "quantity": 23100,
+          "unitPrice": 120,
+          "lineValue": 2772000
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1216,6 +1552,38 @@
       "issuedDate": "2025-05-28",
       "validUntil": "2025-06-11",
       "totalValue": 1895000,
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 1000,
+          "unitPrice": 125,
+          "lineValue": 125000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 5280,
+          "unitPrice": 96,
+          "lineValue": 506880
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 1720,
+          "unitPrice": 146,
+          "lineValue": 251120
+        },
+        {
+          "model": "HW-16",
+          "quantity": 6680,
+          "unitPrice": 95,
+          "lineValue": 634600
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 2550,
+          "unitPrice": 148,
+          "lineValue": 377400
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1229,6 +1597,20 @@
       "issuedDate": "2025-06-07",
       "validUntil": "2025-06-21",
       "totalValue": 5600950,
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 16000,
+          "unitPrice": 100,
+          "lineValue": 1600000
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 26150,
+          "unitPrice": 153,
+          "lineValue": 4000950
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1242,6 +1624,26 @@
       "issuedDate": "2025-06-17",
       "validUntil": "2025-07-01",
       "totalValue": 9000520,
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 34080,
+          "unitPrice": 99,
+          "lineValue": 3373920
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 7560,
+          "unitPrice": 149,
+          "lineValue": 1126440
+        },
+        {
+          "model": "HW-16",
+          "quantity": 45920,
+          "unitPrice": 98,
+          "lineValue": 4500160
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1255,6 +1657,32 @@
       "issuedDate": "2025-06-27",
       "validUntil": "2025-07-11",
       "totalValue": 2396740,
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 5500,
+          "unitPrice": 125,
+          "lineValue": 687500
+        },
+        {
+          "model": "RP-60",
+          "quantity": 2700,
+          "unitPrice": 126,
+          "lineValue": 340200
+        },
+        {
+          "model": "RT-50",
+          "quantity": 8840,
+          "unitPrice": 97,
+          "lineValue": 857480
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 3480,
+          "unitPrice": 147,
+          "lineValue": 511560
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1268,6 +1696,38 @@
       "issuedDate": "2025-07-07",
       "validUntil": "2025-07-21",
       "totalValue": 5397810,
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 11840,
+          "unitPrice": 152,
+          "lineValue": 1799680
+        },
+        {
+          "model": "HW-16",
+          "quantity": 10680,
+          "unitPrice": 101,
+          "lineValue": 1078680
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 2950,
+          "unitPrice": 123,
+          "lineValue": 362850
+        },
+        {
+          "model": "RP-60",
+          "quantity": 11600,
+          "unitPrice": 124,
+          "lineValue": 1438400
+        },
+        {
+          "model": "RT-50",
+          "quantity": 7560,
+          "unitPrice": 95,
+          "lineValue": 718200
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1281,6 +1741,20 @@
       "issuedDate": "2025-07-17",
       "validUntil": "2025-07-31",
       "totalValue": 8999550,
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 13950,
+          "unitPrice": 129,
+          "lineValue": 1799550
+        },
+        {
+          "model": "RT-50",
+          "quantity": 72000,
+          "unitPrice": 100,
+          "lineValue": 7200000
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1294,6 +1768,26 @@
       "issuedDate": "2025-07-28",
       "validUntil": "2025-08-11",
       "totalValue": 2798400,
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 5400,
+          "unitPrice": 104,
+          "lineValue": 561600
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 11100,
+          "unitPrice": 126,
+          "lineValue": 1398600
+        },
+        {
+          "model": "RP-60",
+          "quantity": 6600,
+          "unitPrice": 127,
+          "lineValue": 838200
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1307,6 +1801,32 @@
       "issuedDate": "2025-08-07",
       "validUntil": "2025-08-21",
       "totalValue": 5204080,
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 15160,
+          "unitPrice": 103,
+          "lineValue": 1561480
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 3400,
+          "unitPrice": 153,
+          "lineValue": 520200
+        },
+        {
+          "model": "HW-16",
+          "quantity": 20400,
+          "unitPrice": 102,
+          "lineValue": 2080800
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 8400,
+          "unitPrice": 124,
+          "lineValue": 1041600
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1320,6 +1840,38 @@
       "issuedDate": "2025-08-17",
       "validUntil": "2025-08-31",
       "totalValue": 9003540,
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 18600,
+          "unitPrice": 129,
+          "lineValue": 2399400
+        },
+        {
+          "model": "RP-60",
+          "quantity": 9250,
+          "unitPrice": 130,
+          "lineValue": 1202500
+        },
+        {
+          "model": "RT-50",
+          "quantity": 29720,
+          "unitPrice": 101,
+          "lineValue": 3001720
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 11920,
+          "unitPrice": 151,
+          "lineValue": 1799920
+        },
+        {
+          "model": "HW-16",
+          "quantity": 6000,
+          "unitPrice": 100,
+          "lineValue": 600000
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1333,6 +1885,20 @@
       "issuedDate": "2025-08-28",
       "validUntil": "2025-09-11",
       "totalValue": 3204240,
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 12840,
+          "unitPrice": 156,
+          "lineValue": 2003040
+        },
+        {
+          "model": "HW-16",
+          "quantity": 11440,
+          "unitPrice": 105,
+          "lineValue": 1201200
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1346,6 +1912,26 @@
       "issuedDate": "2025-09-07",
       "validUntil": "2025-09-21",
       "totalValue": 4996430,
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 5350,
+          "unitPrice": 133,
+          "lineValue": 711550
+        },
+        {
+          "model": "RT-50",
+          "quantity": 39120,
+          "unitPrice": 73,
+          "lineValue": 2855760
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 9280,
+          "unitPrice": 154,
+          "lineValue": 1429120
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1359,6 +1945,32 @@
       "issuedDate": "2025-09-17",
       "validUntil": "2025-10-01",
       "totalValue": 9002110,
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 15160,
+          "unitPrice": 108,
+          "lineValue": 1637280
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 31450,
+          "unitPrice": 130,
+          "lineValue": 4088500
+        },
+        {
+          "model": "RP-60",
+          "quantity": 18750,
+          "unitPrice": 131,
+          "lineValue": 2456250
+        },
+        {
+          "model": "RT-50",
+          "quantity": 8040,
+          "unitPrice": 102,
+          "lineValue": 820080
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1372,6 +1984,38 @@
       "issuedDate": "2025-09-27",
       "validUntil": "2025-10-11",
       "totalValue": 3597060,
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 9480,
+          "unitPrice": 76,
+          "lineValue": 720480
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 1520,
+          "unitPrice": 157,
+          "lineValue": 238640
+        },
+        {
+          "model": "HW-16",
+          "quantity": 9040,
+          "unitPrice": 106,
+          "lineValue": 958240
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 3750,
+          "unitPrice": 128,
+          "lineValue": 480000
+        },
+        {
+          "model": "RP-60",
+          "quantity": 9300,
+          "unitPrice": 129,
+          "lineValue": 1199700
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1385,6 +2029,20 @@
       "issuedDate": "2025-10-07",
       "validUntil": "2025-10-21",
       "totalValue": 4799950,
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 24050,
+          "unitPrice": 133,
+          "lineValue": 3198650
+        },
+        {
+          "model": "RP-60",
+          "quantity": 11950,
+          "unitPrice": 134,
+          "lineValue": 1601300
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1398,6 +2056,26 @@
       "issuedDate": "2025-10-17",
       "validUntil": "2025-10-31",
       "totalValue": 9000230,
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 31240,
+          "unitPrice": 160,
+          "lineValue": 4998400
+        },
+        {
+          "model": "HW-16",
+          "quantity": 27520,
+          "unitPrice": 109,
+          "lineValue": 2999680
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 7650,
+          "unitPrice": 131,
+          "lineValue": 1002150
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1411,6 +2089,32 @@
       "issuedDate": "2025-10-28",
       "validUntil": "2025-11-11",
       "totalValue": 3997810,
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 2450,
+          "unitPrice": 137,
+          "lineValue": 335650
+        },
+        {
+          "model": "RT-50",
+          "quantity": 17320,
+          "unitPrice": 77,
+          "lineValue": 1333640
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 4200,
+          "unitPrice": 158,
+          "lineValue": 663600
+        },
+        {
+          "model": "HW-16",
+          "quantity": 15560,
+          "unitPrice": 107,
+          "lineValue": 1664920
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1424,6 +2128,38 @@
       "issuedDate": "2025-11-07",
       "validUntil": "2025-11-21",
       "totalValue": 4599940,
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 7560,
+          "unitPrice": 81,
+          "lineValue": 612360
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 11450,
+          "unitPrice": 134,
+          "lineValue": 1534300
+        },
+        {
+          "model": "RP-60",
+          "quantity": 6800,
+          "unitPrice": 135,
+          "lineValue": 918000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 4080,
+          "unitPrice": 75,
+          "lineValue": 306000
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 7880,
+          "unitPrice": 156,
+          "lineValue": 1229280
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1437,6 +2173,20 @@
       "issuedDate": "2025-11-17",
       "validUntil": "2025-12-01",
       "totalValue": 8996360,
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 84360,
+          "unitPrice": 80,
+          "lineValue": 6748800
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 13960,
+          "unitPrice": 161,
+          "lineValue": 2247560
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1450,6 +2200,26 @@
       "issuedDate": "2025-11-27",
       "validUntil": "2025-12-11",
       "totalValue": 4403220,
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 11700,
+          "unitPrice": 137,
+          "lineValue": 1602900
+        },
+        {
+          "model": "RP-60",
+          "quantity": 5800,
+          "unitPrice": 138,
+          "lineValue": 800400
+        },
+        {
+          "model": "RT-50",
+          "quantity": 25640,
+          "unitPrice": 78,
+          "lineValue": 1999920
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1463,6 +2233,32 @@
       "issuedDate": "2025-12-07",
       "validUntil": "2025-12-21",
       "totalValue": 7696720,
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 18040,
+          "unitPrice": 164,
+          "lineValue": 2958560
+        },
+        {
+          "model": "HW-16",
+          "quantity": 21680,
+          "unitPrice": 82,
+          "lineValue": 1777760
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 4400,
+          "unitPrice": 135,
+          "lineValue": 594000
+        },
+        {
+          "model": "RP-60",
+          "quantity": 17400,
+          "unitPrice": 136,
+          "lineValue": 2366400
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     },
@@ -1476,6 +2272,38 @@
       "issuedDate": "2025-12-17",
       "validUntil": "2025-12-31",
       "totalValue": 9905840,
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 4700,
+          "unitPrice": 141,
+          "lineValue": 662700
+        },
+        {
+          "model": "RT-50",
+          "quantity": 32600,
+          "unitPrice": 81,
+          "lineValue": 2640600
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 8160,
+          "unitPrice": 162,
+          "lineValue": 1321920
+        },
+        {
+          "model": "HW-16",
+          "quantity": 29720,
+          "unitPrice": 111,
+          "lineValue": 3298920
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 14900,
+          "unitPrice": 133,
+          "lineValue": 1981700
+        }
+      ],
       "status": "approved",
       "dataClassification": "synthetically_generated"
     }
@@ -1491,6 +2319,20 @@
       "currency": "CNY",
       "totalValue": 178380,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 300,
+          "unitPrice": 113,
+          "lineValue": 33900
+        },
+        {
+          "model": "RT-50",
+          "quantity": 1720,
+          "unitPrice": 84,
+          "lineValue": 144480
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1504,6 +2346,26 @@
       "currency": "CNY",
       "totalValue": 4622660,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 10520,
+          "unitPrice": 88,
+          "lineValue": 925760
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 16400,
+          "unitPrice": 141,
+          "lineValue": 2312400
+        },
+        {
+          "model": "RP-60",
+          "quantity": 9750,
+          "unitPrice": 142,
+          "lineValue": 1384500
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1517,6 +2379,32 @@
       "currency": "CNY",
       "totalValue": 9002690,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 31040,
+          "unitPrice": 87,
+          "lineValue": 2700480
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 5360,
+          "unitPrice": 168,
+          "lineValue": 900480
+        },
+        {
+          "model": "HW-16",
+          "quantity": 41880,
+          "unitPrice": 86,
+          "lineValue": 3601680
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 12950,
+          "unitPrice": 139,
+          "lineValue": 1800050
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1530,6 +2418,38 @@
       "currency": "CNY",
       "totalValue": 424800,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 800,
+          "unitPrice": 144,
+          "lineValue": 115200
+        },
+        {
+          "model": "RP-60",
+          "quantity": 500,
+          "unitPrice": 114,
+          "lineValue": 57000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 1640,
+          "unitPrice": 85,
+          "lineValue": 139400
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 520,
+          "unitPrice": 166,
+          "lineValue": 86320
+        },
+        {
+          "model": "HW-16",
+          "quantity": 320,
+          "unitPrice": 84,
+          "lineValue": 26880
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1543,6 +2463,20 @@
       "currency": "CNY",
       "totalValue": 5078360,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 18560,
+          "unitPrice": 171,
+          "lineValue": 3173760
+        },
+        {
+          "model": "HW-16",
+          "quantity": 21400,
+          "unitPrice": 89,
+          "lineValue": 1904600
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1556,6 +2490,26 @@
       "currency": "CNY",
       "totalValue": 8998520,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 11000,
+          "unitPrice": 117,
+          "lineValue": 1287000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 58440,
+          "unitPrice": 88,
+          "lineValue": 5142720
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 15200,
+          "unitPrice": 169,
+          "lineValue": 2568800
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1569,6 +2523,32 @@
       "currency": "CNY",
       "totalValue": 752710,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 1480,
+          "unitPrice": 92,
+          "lineValue": 136160
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 2350,
+          "unitPrice": 145,
+          "lineValue": 340750
+        },
+        {
+          "model": "RP-60",
+          "quantity": 1800,
+          "unitPrice": 115,
+          "lineValue": 207000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 800,
+          "unitPrice": 86,
+          "lineValue": 68800
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1582,6 +2562,38 @@
       "currency": "CNY",
       "totalValue": 5456000,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 11960,
+          "unitPrice": 91,
+          "lineValue": 1088360
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 2120,
+          "unitPrice": 172,
+          "lineValue": 364640
+        },
+        {
+          "model": "HW-16",
+          "quantity": 16160,
+          "unitPrice": 90,
+          "lineValue": 1454400
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 5100,
+          "unitPrice": 143,
+          "lineValue": 729300
+        },
+        {
+          "model": "RP-60",
+          "quantity": 16100,
+          "unitPrice": 113,
+          "lineValue": 1819300
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1595,6 +2607,20 @@
       "currency": "CNY",
       "totalValue": 8998600,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 40550,
+          "unitPrice": 148,
+          "lineValue": 6001400
+        },
+        {
+          "model": "RP-60",
+          "quantity": 25400,
+          "unitPrice": 118,
+          "lineValue": 2997200
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1608,6 +2634,26 @@
       "currency": "CNY",
       "totalValue": 1102940,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 4240,
+          "unitPrice": 144,
+          "lineValue": 610560
+        },
+        {
+          "model": "HW-16",
+          "quantity": 3960,
+          "unitPrice": 93,
+          "lineValue": 368280
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 850,
+          "unitPrice": 146,
+          "lineValue": 124100
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1621,6 +2667,32 @@
       "currency": "CNY",
       "totalValue": 5698150,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 3950,
+          "unitPrice": 121,
+          "lineValue": 477950
+        },
+        {
+          "model": "RT-50",
+          "quantity": 20640,
+          "unitPrice": 92,
+          "lineValue": 1898880
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 5480,
+          "unitPrice": 173,
+          "lineValue": 948040
+        },
+        {
+          "model": "HW-16",
+          "quantity": 26080,
+          "unitPrice": 91,
+          "lineValue": 2373280
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1634,6 +2706,38 @@
       "currency": "CNY",
       "totalValue": 9009160,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 12520,
+          "unitPrice": 96,
+          "lineValue": 1201920
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 20150,
+          "unitPrice": 149,
+          "lineValue": 3002350
+        },
+        {
+          "model": "RP-60",
+          "quantity": 15150,
+          "unitPrice": 119,
+          "lineValue": 1802850
+        },
+        {
+          "model": "RT-50",
+          "quantity": 6680,
+          "unitPrice": 90,
+          "lineValue": 601200
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 14040,
+          "unitPrice": 171,
+          "lineValue": 2400840
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1647,6 +2751,20 @@
       "currency": "CNY",
       "totalValue": 1501800,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 11840,
+          "unitPrice": 95,
+          "lineValue": 1124800
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 2600,
+          "unitPrice": 145,
+          "lineValue": 377000
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1660,6 +2778,26 @@
       "currency": "CNY",
       "totalValue": 5700920,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 13650,
+          "unitPrice": 152,
+          "lineValue": 2074800
+        },
+        {
+          "model": "RP-60",
+          "quantity": 8500,
+          "unitPrice": 122,
+          "lineValue": 1037000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 27840,
+          "unitPrice": 93,
+          "lineValue": 2589120
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1673,6 +2811,32 @@
       "currency": "CNY",
       "totalValue": 9001000,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 23400,
+          "unitPrice": 148,
+          "lineValue": 3463200
+        },
+        {
+          "model": "HW-16",
+          "quantity": 21400,
+          "unitPrice": 97,
+          "lineValue": 2075800
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 4600,
+          "unitPrice": 150,
+          "lineValue": 690000
+        },
+        {
+          "model": "RP-60",
+          "quantity": 23100,
+          "unitPrice": 120,
+          "lineValue": 2772000
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1686,6 +2850,38 @@
       "currency": "CNY",
       "totalValue": 1895000,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 1000,
+          "unitPrice": 125,
+          "lineValue": 125000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 5280,
+          "unitPrice": 96,
+          "lineValue": 506880
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 1720,
+          "unitPrice": 146,
+          "lineValue": 251120
+        },
+        {
+          "model": "HW-16",
+          "quantity": 6680,
+          "unitPrice": 95,
+          "lineValue": 634600
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 2550,
+          "unitPrice": 148,
+          "lineValue": 377400
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1699,6 +2895,20 @@
       "currency": "CNY",
       "totalValue": 5600950,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 16000,
+          "unitPrice": 100,
+          "lineValue": 1600000
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 26150,
+          "unitPrice": 153,
+          "lineValue": 4000950
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1712,6 +2922,26 @@
       "currency": "CNY",
       "totalValue": 9000520,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 34080,
+          "unitPrice": 99,
+          "lineValue": 3373920
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 7560,
+          "unitPrice": 149,
+          "lineValue": 1126440
+        },
+        {
+          "model": "HW-16",
+          "quantity": 45920,
+          "unitPrice": 98,
+          "lineValue": 4500160
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1725,6 +2955,32 @@
       "currency": "CNY",
       "totalValue": 2396740,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 5500,
+          "unitPrice": 125,
+          "lineValue": 687500
+        },
+        {
+          "model": "RP-60",
+          "quantity": 2700,
+          "unitPrice": 126,
+          "lineValue": 340200
+        },
+        {
+          "model": "RT-50",
+          "quantity": 8840,
+          "unitPrice": 97,
+          "lineValue": 857480
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 3480,
+          "unitPrice": 147,
+          "lineValue": 511560
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1738,6 +2994,38 @@
       "currency": "CNY",
       "totalValue": 5397810,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 11840,
+          "unitPrice": 152,
+          "lineValue": 1799680
+        },
+        {
+          "model": "HW-16",
+          "quantity": 10680,
+          "unitPrice": 101,
+          "lineValue": 1078680
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 2950,
+          "unitPrice": 123,
+          "lineValue": 362850
+        },
+        {
+          "model": "RP-60",
+          "quantity": 11600,
+          "unitPrice": 124,
+          "lineValue": 1438400
+        },
+        {
+          "model": "RT-50",
+          "quantity": 7560,
+          "unitPrice": 95,
+          "lineValue": 718200
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1751,6 +3039,20 @@
       "currency": "CNY",
       "totalValue": 8999550,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 13950,
+          "unitPrice": 129,
+          "lineValue": 1799550
+        },
+        {
+          "model": "RT-50",
+          "quantity": 72000,
+          "unitPrice": 100,
+          "lineValue": 7200000
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1764,6 +3066,26 @@
       "currency": "CNY",
       "totalValue": 2798400,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 5400,
+          "unitPrice": 104,
+          "lineValue": 561600
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 11100,
+          "unitPrice": 126,
+          "lineValue": 1398600
+        },
+        {
+          "model": "RP-60",
+          "quantity": 6600,
+          "unitPrice": 127,
+          "lineValue": 838200
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1777,6 +3099,32 @@
       "currency": "CNY",
       "totalValue": 5204080,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 15160,
+          "unitPrice": 103,
+          "lineValue": 1561480
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 3400,
+          "unitPrice": 153,
+          "lineValue": 520200
+        },
+        {
+          "model": "HW-16",
+          "quantity": 20400,
+          "unitPrice": 102,
+          "lineValue": 2080800
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 8400,
+          "unitPrice": 124,
+          "lineValue": 1041600
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1790,6 +3138,38 @@
       "currency": "CNY",
       "totalValue": 9003540,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 18600,
+          "unitPrice": 129,
+          "lineValue": 2399400
+        },
+        {
+          "model": "RP-60",
+          "quantity": 9250,
+          "unitPrice": 130,
+          "lineValue": 1202500
+        },
+        {
+          "model": "RT-50",
+          "quantity": 29720,
+          "unitPrice": 101,
+          "lineValue": 3001720
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 11920,
+          "unitPrice": 151,
+          "lineValue": 1799920
+        },
+        {
+          "model": "HW-16",
+          "quantity": 6000,
+          "unitPrice": 100,
+          "lineValue": 600000
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1803,6 +3183,20 @@
       "currency": "CNY",
       "totalValue": 3204240,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 12840,
+          "unitPrice": 156,
+          "lineValue": 2003040
+        },
+        {
+          "model": "HW-16",
+          "quantity": 11440,
+          "unitPrice": 105,
+          "lineValue": 1201200
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1816,6 +3210,26 @@
       "currency": "CNY",
       "totalValue": 4996430,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 5350,
+          "unitPrice": 133,
+          "lineValue": 711550
+        },
+        {
+          "model": "RT-50",
+          "quantity": 39120,
+          "unitPrice": 73,
+          "lineValue": 2855760
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 9280,
+          "unitPrice": 154,
+          "lineValue": 1429120
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1829,6 +3243,32 @@
       "currency": "CNY",
       "totalValue": 9002110,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 15160,
+          "unitPrice": 108,
+          "lineValue": 1637280
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 31450,
+          "unitPrice": 130,
+          "lineValue": 4088500
+        },
+        {
+          "model": "RP-60",
+          "quantity": 18750,
+          "unitPrice": 131,
+          "lineValue": 2456250
+        },
+        {
+          "model": "RT-50",
+          "quantity": 8040,
+          "unitPrice": 102,
+          "lineValue": 820080
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1842,6 +3282,38 @@
       "currency": "CNY",
       "totalValue": 3597060,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 9480,
+          "unitPrice": 76,
+          "lineValue": 720480
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 1520,
+          "unitPrice": 157,
+          "lineValue": 238640
+        },
+        {
+          "model": "HW-16",
+          "quantity": 9040,
+          "unitPrice": 106,
+          "lineValue": 958240
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 3750,
+          "unitPrice": 128,
+          "lineValue": 480000
+        },
+        {
+          "model": "RP-60",
+          "quantity": 9300,
+          "unitPrice": 129,
+          "lineValue": 1199700
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1855,6 +3327,20 @@
       "currency": "CNY",
       "totalValue": 4799950,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 24050,
+          "unitPrice": 133,
+          "lineValue": 3198650
+        },
+        {
+          "model": "RP-60",
+          "quantity": 11950,
+          "unitPrice": 134,
+          "lineValue": 1601300
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1868,6 +3354,26 @@
       "currency": "CNY",
       "totalValue": 9000230,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 31240,
+          "unitPrice": 160,
+          "lineValue": 4998400
+        },
+        {
+          "model": "HW-16",
+          "quantity": 27520,
+          "unitPrice": 109,
+          "lineValue": 2999680
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 7650,
+          "unitPrice": 131,
+          "lineValue": 1002150
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1881,6 +3387,32 @@
       "currency": "CNY",
       "totalValue": 3997810,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 2450,
+          "unitPrice": 137,
+          "lineValue": 335650
+        },
+        {
+          "model": "RT-50",
+          "quantity": 17320,
+          "unitPrice": 77,
+          "lineValue": 1333640
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 4200,
+          "unitPrice": 158,
+          "lineValue": 663600
+        },
+        {
+          "model": "HW-16",
+          "quantity": 15560,
+          "unitPrice": 107,
+          "lineValue": 1664920
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1894,6 +3426,38 @@
       "currency": "CNY",
       "totalValue": 4599940,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 7560,
+          "unitPrice": 81,
+          "lineValue": 612360
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 11450,
+          "unitPrice": 134,
+          "lineValue": 1534300
+        },
+        {
+          "model": "RP-60",
+          "quantity": 6800,
+          "unitPrice": 135,
+          "lineValue": 918000
+        },
+        {
+          "model": "RT-50",
+          "quantity": 4080,
+          "unitPrice": 75,
+          "lineValue": 306000
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 7880,
+          "unitPrice": 156,
+          "lineValue": 1229280
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1907,6 +3471,20 @@
       "currency": "CNY",
       "totalValue": 8996360,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 84360,
+          "unitPrice": 80,
+          "lineValue": 6748800
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 13960,
+          "unitPrice": 161,
+          "lineValue": 2247560
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1920,6 +3498,26 @@
       "currency": "CNY",
       "totalValue": 4403220,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 11700,
+          "unitPrice": 137,
+          "lineValue": 1602900
+        },
+        {
+          "model": "RP-60",
+          "quantity": 5800,
+          "unitPrice": 138,
+          "lineValue": 800400
+        },
+        {
+          "model": "RT-50",
+          "quantity": 25640,
+          "unitPrice": 78,
+          "lineValue": 1999920
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1933,6 +3531,32 @@
       "currency": "CNY",
       "totalValue": 7696720,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 18040,
+          "unitPrice": 164,
+          "lineValue": 2958560
+        },
+        {
+          "model": "HW-16",
+          "quantity": 21680,
+          "unitPrice": 82,
+          "lineValue": 1777760
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 4400,
+          "unitPrice": 135,
+          "lineValue": 594000
+        },
+        {
+          "model": "RP-60",
+          "quantity": 17400,
+          "unitPrice": 136,
+          "lineValue": 2366400
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     },
@@ -1946,6 +3570,38 @@
       "currency": "CNY",
       "totalValue": 9905840,
       "paymentTerms": "30% deposit; 70% before dispatch",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 4700,
+          "unitPrice": 141,
+          "lineValue": 662700
+        },
+        {
+          "model": "RT-50",
+          "quantity": 32600,
+          "unitPrice": 81,
+          "lineValue": 2640600
+        },
+        {
+          "model": "UN-1810",
+          "quantity": 8160,
+          "unitPrice": 162,
+          "lineValue": 1321920
+        },
+        {
+          "model": "HW-16",
+          "quantity": 29720,
+          "unitPrice": 111,
+          "lineValue": 3298920
+        },
+        {
+          "model": "UN-1820",
+          "quantity": 14900,
+          "unitPrice": 133,
+          "lineValue": 1981700
+        }
+      ],
       "status": "confirmed",
       "dataClassification": "synthetically_generated"
     }
@@ -1960,6 +3616,7 @@
       "poNumber": "ANON-PO-2025-001",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RP-60 x 300, RT-50 x 1720",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -1971,6 +3628,7 @@
       "poNumber": "ANON-PO-2025-002",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "HW-16 x 10520, UN-1820 x 16400, RP-60 x 9750",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -1982,6 +3640,7 @@
       "poNumber": "ANON-PO-2025-003",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RT-50 x 31040, UN-1810 x 5360, HW-16 x 41880, UN-1820 x 12950",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -1993,6 +3652,7 @@
       "poNumber": "ANON-PO-2025-004",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1820 x 800, RP-60 x 500, RT-50 x 1640, UN-1810 x 520, HW-16 x 320",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2004,6 +3664,7 @@
       "poNumber": "ANON-PO-2025-005",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1810 x 18560, HW-16 x 21400",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2015,6 +3676,7 @@
       "poNumber": "ANON-PO-2025-006",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RP-60 x 11000, RT-50 x 58440, UN-1810 x 15200",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2026,6 +3688,7 @@
       "poNumber": "ANON-PO-2025-007",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "HW-16 x 1480, UN-1820 x 2350, RP-60 x 1800, RT-50 x 800",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2037,6 +3700,7 @@
       "poNumber": "ANON-PO-2025-008",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RT-50 x 11960, UN-1810 x 2120, HW-16 x 16160, UN-1820 x 5100, RP-60 x 16100",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2048,6 +3712,7 @@
       "poNumber": "ANON-PO-2025-009",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1820 x 40550, RP-60 x 25400",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2059,6 +3724,7 @@
       "poNumber": "ANON-PO-2025-010",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1810 x 4240, HW-16 x 3960, UN-1820 x 850",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2070,6 +3736,7 @@
       "poNumber": "ANON-PO-2025-011",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RP-60 x 3950, RT-50 x 20640, UN-1810 x 5480, HW-16 x 26080",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2081,6 +3748,7 @@
       "poNumber": "ANON-PO-2025-012",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "HW-16 x 12520, UN-1820 x 20150, RP-60 x 15150, RT-50 x 6680, UN-1810 x 14040",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2092,6 +3760,7 @@
       "poNumber": "ANON-PO-2025-013",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RT-50 x 11840, UN-1810 x 2600",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2103,6 +3772,7 @@
       "poNumber": "ANON-PO-2025-014",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1820 x 13650, RP-60 x 8500, RT-50 x 27840",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2114,6 +3784,7 @@
       "poNumber": "ANON-PO-2025-015",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1810 x 23400, HW-16 x 21400, UN-1820 x 4600, RP-60 x 23100",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2125,6 +3796,7 @@
       "poNumber": "ANON-PO-2025-016",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RP-60 x 1000, RT-50 x 5280, UN-1810 x 1720, HW-16 x 6680, UN-1820 x 2550",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2136,6 +3808,7 @@
       "poNumber": "ANON-PO-2025-017",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "HW-16 x 16000, UN-1820 x 26150",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2147,6 +3820,7 @@
       "poNumber": "ANON-PO-2025-018",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RT-50 x 34080, UN-1810 x 7560, HW-16 x 45920",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2158,6 +3832,7 @@
       "poNumber": "ANON-PO-2025-019",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1820 x 5500, RP-60 x 2700, RT-50 x 8840, UN-1810 x 3480",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2169,6 +3844,7 @@
       "poNumber": "ANON-PO-2025-020",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1810 x 11840, HW-16 x 10680, UN-1820 x 2950, RP-60 x 11600, RT-50 x 7560",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2180,6 +3856,7 @@
       "poNumber": "ANON-PO-2025-021",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RP-60 x 13950, RT-50 x 72000",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2191,6 +3868,7 @@
       "poNumber": "ANON-PO-2025-022",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "HW-16 x 5400, UN-1820 x 11100, RP-60 x 6600",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2202,6 +3880,7 @@
       "poNumber": "ANON-PO-2025-023",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RT-50 x 15160, UN-1810 x 3400, HW-16 x 20400, UN-1820 x 8400",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2213,6 +3892,7 @@
       "poNumber": "ANON-PO-2025-024",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1820 x 18600, RP-60 x 9250, RT-50 x 29720, UN-1810 x 11920, HW-16 x 6000",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2224,6 +3904,7 @@
       "poNumber": "ANON-PO-2025-025",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1810 x 12840, HW-16 x 11440",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2235,6 +3916,7 @@
       "poNumber": "ANON-PO-2025-026",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RP-60 x 5350, RT-50 x 39120, UN-1810 x 9280",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2246,6 +3928,7 @@
       "poNumber": "ANON-PO-2025-027",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "HW-16 x 15160, UN-1820 x 31450, RP-60 x 18750, RT-50 x 8040",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2257,6 +3940,7 @@
       "poNumber": "ANON-PO-2025-028",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RT-50 x 9480, UN-1810 x 1520, HW-16 x 9040, UN-1820 x 3750, RP-60 x 9300",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2268,6 +3952,7 @@
       "poNumber": "ANON-PO-2025-029",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1820 x 24050, RP-60 x 11950",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2279,6 +3964,7 @@
       "poNumber": "ANON-PO-2025-030",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1810 x 31240, HW-16 x 27520, UN-1820 x 7650",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2290,6 +3976,7 @@
       "poNumber": "ANON-PO-2025-031",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RP-60 x 2450, RT-50 x 17320, UN-1810 x 4200, HW-16 x 15560",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2301,6 +3988,7 @@
       "poNumber": "ANON-PO-2025-032",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "HW-16 x 7560, UN-1820 x 11450, RP-60 x 6800, RT-50 x 4080, UN-1810 x 7880",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2312,6 +4000,7 @@
       "poNumber": "ANON-PO-2025-033",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RT-50 x 84360, UN-1810 x 13960",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2323,6 +4012,7 @@
       "poNumber": "ANON-PO-2025-034",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1820 x 11700, RP-60 x 5800, RT-50 x 25640",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2334,6 +4024,7 @@
       "poNumber": "ANON-PO-2025-035",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "UN-1810 x 18040, HW-16 x 21680, UN-1820 x 4400, RP-60 x 17400",
       "dataClassification": "synthetically_generated"
     },
     {
@@ -2345,6 +4036,7 @@
       "poNumber": "ANON-PO-2025-036",
       "version": 1,
       "status": "approved",
+      "quantitySummary": "RP-60 x 4700, RT-50 x 32600, UN-1810 x 8160, HW-16 x 29720, UN-1820 x 14900",
       "dataClassification": "synthetically_generated"
     }
   ],
