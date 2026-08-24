@@ -5,6 +5,7 @@ const EMPTY_STORE = {
   customers: [],
   contacts: [],
   inquiries: [],
+  followUps: [],
   jobContacts: [],
   quotations: [],
   sampleRequests: [],
