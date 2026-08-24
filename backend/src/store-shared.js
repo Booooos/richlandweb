@@ -11,6 +11,8 @@ const EMPTY_STORE = {
   proformaInvoices: [],
   customerPOs: [],
   orders: [],
+  orderLineItems: [],
+  sourceDocuments: [],
   customerCreditChecks: [],
   workflowCases: [],
   workflowStages: [],
