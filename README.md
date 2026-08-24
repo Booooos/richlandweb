@@ -50,7 +50,7 @@ npm run import:verified-shipment
 
 Dataset: [`backend/data/verified-shipment-2025-01-03.json`](backend/data/verified-shipment-2025-01-03.json)
 
-> Demonstration data has been anonymized or synthetically generated.
+> Demonstration data has been anonymized or synthetically generated. Quantities and logistics totals are source-backed; commercial values and dates are labeled synthetic.
 
 ## Overview
 
