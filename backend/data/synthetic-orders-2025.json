@@ -28,6 +28,11 @@
     "averageOrderValueCny": 5556200,
     "totalFinishedProductUnits": 1754070,
     "totalContainerEquivalent": 636.97,
+    "openQuotationCount": 3,
+    "lostQuotationCount": 5,
+    "closedQuoteConversionPercent": 87.8,
+    "pendingFollowUpCount": 3,
+    "overdueFollowUpCount": 3,
     "statusCounts": {
       "completed": 30,
       "shipped": 3,
@@ -610,6 +615,86 @@
       "targetCategory": "Electric fans",
       "estimatedValueCny": 9900000,
       "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "inq_sim_2025_opportunity_001",
+      "customerId": "cust_sim_2025_003",
+      "source": "website",
+      "status": "quoted",
+      "inquiryDate": "2025-09-06",
+      "targetCategory": "Electric fans",
+      "estimatedValueCny": 420000,
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "inq_sim_2025_opportunity_002",
+      "customerId": "cust_sim_2025_006",
+      "source": "sales_referral",
+      "status": "quoted",
+      "inquiryDate": "2025-09-14",
+      "targetCategory": "Electric fans",
+      "estimatedValueCny": 780000,
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "inq_sim_2025_opportunity_003",
+      "customerId": "cust_sim_2025_009",
+      "source": "website",
+      "status": "quoted",
+      "inquiryDate": "2025-09-22",
+      "targetCategory": "Electric fans",
+      "estimatedValueCny": 1350000,
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "inq_sim_2025_opportunity_004",
+      "customerId": "cust_sim_2025_012",
+      "source": "sales_referral",
+      "status": "closed_lost",
+      "inquiryDate": "2025-10-06",
+      "targetCategory": "Electric fans",
+      "estimatedValueCny": 2100000,
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "inq_sim_2025_opportunity_005",
+      "customerId": "cust_sim_2025_003",
+      "source": "website",
+      "status": "closed_lost",
+      "inquiryDate": "2025-10-14",
+      "targetCategory": "Electric fans",
+      "estimatedValueCny": 2950000,
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "inq_sim_2025_opportunity_006",
+      "customerId": "cust_sim_2025_006",
+      "source": "sales_referral",
+      "status": "closed_lost",
+      "inquiryDate": "2025-10-22",
+      "targetCategory": "Electric fans",
+      "estimatedValueCny": 3800000,
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "inq_sim_2025_opportunity_007",
+      "customerId": "cust_sim_2025_009",
+      "source": "website",
+      "status": "closed_lost",
+      "inquiryDate": "2025-11-06",
+      "targetCategory": "Electric fans",
+      "estimatedValueCny": 4600000,
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "inq_sim_2025_opportunity_008",
+      "customerId": "cust_sim_2025_012",
+      "source": "sales_referral",
+      "status": "closed_lost",
+      "inquiryDate": "2025-11-14",
+      "targetCategory": "Electric fans",
+      "estimatedValueCny": 5400000,
+      "dataClassification": "synthetically_generated"
     }
   ],
   "followUps": [
@@ -1007,6 +1092,94 @@
       "dueDate": "2026-01-01",
       "completedDate": null,
       "status": "pending",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "fup_sim_2025_opportunity_001",
+      "customerId": "cust_sim_2025_003",
+      "inquiryId": "inq_sim_2025_opportunity_001",
+      "orderId": null,
+      "type": "quotation_follow_up",
+      "dueDate": "2025-09-27",
+      "completedDate": null,
+      "status": "overdue",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "fup_sim_2025_opportunity_002",
+      "customerId": "cust_sim_2025_006",
+      "inquiryId": "inq_sim_2025_opportunity_002",
+      "orderId": null,
+      "type": "quotation_follow_up",
+      "dueDate": "2025-10-05",
+      "completedDate": null,
+      "status": "pending",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "fup_sim_2025_opportunity_003",
+      "customerId": "cust_sim_2025_009",
+      "inquiryId": "inq_sim_2025_opportunity_003",
+      "orderId": null,
+      "type": "quotation_follow_up",
+      "dueDate": "2025-10-13",
+      "completedDate": null,
+      "status": "overdue",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "fup_sim_2025_opportunity_004",
+      "customerId": "cust_sim_2025_012",
+      "inquiryId": "inq_sim_2025_opportunity_004",
+      "orderId": null,
+      "type": "loss_reason_review",
+      "dueDate": "2025-10-18",
+      "completedDate": "2025-10-19",
+      "status": "completed",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "fup_sim_2025_opportunity_005",
+      "customerId": "cust_sim_2025_003",
+      "inquiryId": "inq_sim_2025_opportunity_005",
+      "orderId": null,
+      "type": "loss_reason_review",
+      "dueDate": "2025-10-26",
+      "completedDate": "2025-10-27",
+      "status": "completed",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "fup_sim_2025_opportunity_006",
+      "customerId": "cust_sim_2025_006",
+      "inquiryId": "inq_sim_2025_opportunity_006",
+      "orderId": null,
+      "type": "loss_reason_review",
+      "dueDate": "2025-11-03",
+      "completedDate": "2025-11-04",
+      "status": "completed",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "fup_sim_2025_opportunity_007",
+      "customerId": "cust_sim_2025_009",
+      "inquiryId": "inq_sim_2025_opportunity_007",
+      "orderId": null,
+      "type": "loss_reason_review",
+      "dueDate": "2025-11-18",
+      "completedDate": "2025-11-19",
+      "status": "completed",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "fup_sim_2025_opportunity_008",
+      "customerId": "cust_sim_2025_012",
+      "inquiryId": "inq_sim_2025_opportunity_008",
+      "orderId": null,
+      "type": "loss_reason_review",
+      "dueDate": "2025-11-26",
+      "completedDate": "2025-11-27",
+      "status": "completed",
       "dataClassification": "synthetically_generated"
     }
   ],
@@ -2305,6 +2478,166 @@
         }
       ],
       "status": "approved",
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "quo_sim_2025_opportunity_001",
+      "inquiryId": "inq_sim_2025_opportunity_001",
+      "customerId": "cust_sim_2025_003",
+      "quotationNumber": "QT-2025-OPP-001",
+      "version": 1,
+      "currency": "CNY",
+      "issuedDate": "2025-09-10",
+      "validUntil": "2025-09-24",
+      "totalValue": 420000,
+      "status": "open",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 3281,
+          "unitPrice": 128
+        }
+      ],
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "quo_sim_2025_opportunity_002",
+      "inquiryId": "inq_sim_2025_opportunity_002",
+      "customerId": "cust_sim_2025_006",
+      "quotationNumber": "QT-2025-OPP-002",
+      "version": 1,
+      "currency": "CNY",
+      "issuedDate": "2025-09-18",
+      "validUntil": "2025-10-02",
+      "totalValue": 780000,
+      "status": "open",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 8125,
+          "unitPrice": 96
+        }
+      ],
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "quo_sim_2025_opportunity_003",
+      "inquiryId": "inq_sim_2025_opportunity_003",
+      "customerId": "cust_sim_2025_009",
+      "quotationNumber": "QT-2025-OPP-003",
+      "version": 1,
+      "currency": "CNY",
+      "issuedDate": "2025-09-26",
+      "validUntil": "2025-10-10",
+      "totalValue": 1350000,
+      "status": "open",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 15341,
+          "unitPrice": 88
+        }
+      ],
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "quo_sim_2025_opportunity_004",
+      "inquiryId": "inq_sim_2025_opportunity_004",
+      "customerId": "cust_sim_2025_012",
+      "quotationNumber": "QT-2025-OPP-004",
+      "version": 1,
+      "currency": "CNY",
+      "issuedDate": "2025-10-10",
+      "validUntil": "2025-10-24",
+      "totalValue": 2100000,
+      "status": "lost",
+      "items": [
+        {
+          "model": "UN-1820",
+          "quantity": 15217,
+          "unitPrice": 138
+        }
+      ],
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "quo_sim_2025_opportunity_005",
+      "inquiryId": "inq_sim_2025_opportunity_005",
+      "customerId": "cust_sim_2025_003",
+      "quotationNumber": "QT-2025-OPP-005",
+      "version": 1,
+      "currency": "CNY",
+      "issuedDate": "2025-10-18",
+      "validUntil": "2025-11-01",
+      "totalValue": 2950000,
+      "status": "lost",
+      "items": [
+        {
+          "model": "UN-1810",
+          "quantity": 18671,
+          "unitPrice": 158
+        }
+      ],
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "quo_sim_2025_opportunity_006",
+      "inquiryId": "inq_sim_2025_opportunity_006",
+      "customerId": "cust_sim_2025_006",
+      "quotationNumber": "QT-2025-OPP-006",
+      "version": 1,
+      "currency": "CNY",
+      "issuedDate": "2025-10-26",
+      "validUntil": "2025-11-09",
+      "totalValue": 3800000,
+      "status": "lost",
+      "items": [
+        {
+          "model": "RP-60",
+          "quantity": 29688,
+          "unitPrice": 128
+        }
+      ],
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "quo_sim_2025_opportunity_007",
+      "inquiryId": "inq_sim_2025_opportunity_007",
+      "customerId": "cust_sim_2025_009",
+      "quotationNumber": "QT-2025-OPP-007",
+      "version": 1,
+      "currency": "CNY",
+      "issuedDate": "2025-11-10",
+      "validUntil": "2025-11-24",
+      "totalValue": 4600000,
+      "status": "lost",
+      "items": [
+        {
+          "model": "HW-16",
+          "quantity": 47917,
+          "unitPrice": 96
+        }
+      ],
+      "dataClassification": "synthetically_generated"
+    },
+    {
+      "id": "quo_sim_2025_opportunity_008",
+      "inquiryId": "inq_sim_2025_opportunity_008",
+      "customerId": "cust_sim_2025_012",
+      "quotationNumber": "QT-2025-OPP-008",
+      "version": 1,
+      "currency": "CNY",
+      "issuedDate": "2025-11-18",
+      "validUntil": "2025-12-02",
+      "totalValue": 5400000,
+      "status": "lost",
+      "items": [
+        {
+          "model": "RT-50",
+          "quantity": 61364,
+          "unitPrice": 88
+        }
+      ],
       "dataClassification": "synthetically_generated"
     }
   ],
