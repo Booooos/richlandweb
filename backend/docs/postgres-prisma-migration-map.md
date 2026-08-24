@@ -17,6 +17,8 @@ The goal is to preserve the current business flow:
 - `proformaInvoices`
 - `customerPOs`
 - `orders`
+- `orderLineItems`
+- `sourceDocuments`
 - `productionTasks`
 - `shippingPlans`
 - `exportDocumentPacks`
@@ -144,6 +146,30 @@ Relations:
 - `productionStatus`
 - `docsStatus`
 - `portalToken`
+- `createdAt`
+- `updatedAt`
+
+### OrderLineItem
+- `id`
+- `orderId`
+- `model`
+- `productName`
+- `productNameZh`
+- `voltage`
+- `powerW`
+- `containerAllocation`
+- `quantity`
+- `colorBreakdown`
+- `sourceDocumentId`
+
+### SourceDocument
+- `id`
+- `documentType`
+- `documentDate`
+- `sourceClassification`
+- `publicDataTreatment`
+- `identifiersAnonymized`
+- `verificationStatus`
 - `createdAt`
 - `updatedAt`
 
