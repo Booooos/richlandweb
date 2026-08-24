@@ -28,6 +28,7 @@ Supporting analyst artifacts:
 - [`docs/workflow-specification.md`](docs/workflow-specification.md)
 - [`docs/uat-test-report.md`](docs/uat-test-report.md)
 - [`docs/demo-script.md`](docs/demo-script.md)
+- [`docs/screenshots/README.md`](docs/screenshots/README.md)
 
 ## Overview
 
