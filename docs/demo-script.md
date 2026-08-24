@@ -3,72 +3,51 @@
 ## Recording target
 
 - Length: 75 seconds
-- Format: 1080p screen recording
-- Audience: Business Analyst, Business Intelligence, Operations Analyst, and CRM hiring managers
-- Data: synthetic demonstration records only
+- Audience: Business Analyst, BI, Operations, CRM, and supply-chain hiring managers
+- Data boundary: anonymized enterprise quantities plus clearly labeled synthetic commercial records
 
 ## Shot list and narration
 
-### 0:00–0:10 — Business problem
+### 0:00–0:09 — Overview
 
-**Screen:** Case-study hero, then scroll to Business Problem.
+**Screen:** Hero and Role / Team / Impact / Tools strip.
 
-**Narration:**
+> I turned six enterprise order and shipment pages into a source-backed Business Analysis and CRM automation case, then added a clearly labeled 36-order simulation at roughly 200 million yuan annual scale.
 
-> RichLand's customer details, quotations, follow-ups, and order files were handled across separate records. I analyzed the process and designed one traceable CRM workflow from inquiry through shipment.
+### 0:09–0:20 — Problem and discovery
 
-### 0:10–0:22 — Role and workflow
+**Screen:** Business Problem, then Discovery.
 
-**Screen:** My Role cards, then the six workflow stages.
+> Customer, quotation, follow-up and order context was fragmented. During discovery I separated the 56,480-unit order plan from the 17,132-unit shipment record and kept 216,052 BOM items out of finished-goods volume.
 
-**Narration:**
+### 0:20–0:33 — Automation and source of truth
 
-> I defined the requirements, designed the data structure, built the public and internal screens, connected form submissions to storage, and documented the approval and reminder logic.
+**Screen:** Workflow, trigger cards, then data model.
 
-### 0:22–0:35 — Data model
+> The workflow links inquiry, customer, follow-up, quotation, PI, PO, order and shipment. PO approval, deposit, manager release and finance sign-off are separate gates, and every source-backed or synthetic field retains its truth status.
 
-**Screen:** ER model and integrity notes.
+### 0:33–0:47 — Decision view
 
-**Narration:**
+**Screen:** Action Now panel, KPIs and charts.
 
-> The logical model links each customer to follow-ups, quotations, and orders with primary and foreign keys. Statuses, timestamps, unique business keys, and date rules make the activity history auditable.
+> The dashboard leads with action: recover three overdue follow-ups, review three open quotes, capacity-check the December peak, and monitor product concentration. The annual values reconcile to the synthetic CNY dataset.
 
-### 0:35–0:49 — Dashboard
+### 0:47–1:02 — Development and testing
 
-**Screen:** Six KPI cards and both charts.
+**Screen:** Implementation evidence and UAT.
 
-**Narration:**
+> GitHub contains the datasets, idempotent importers, database bridge, workflow simulations and 15 UAT cases. Quotation dates, sequential versions and duplicate revisions are now enforced; duplicate inquiry review remains openly disclosed.
 
-> The dashboard focuses on action: open quotations, pending and overdue follow-ups, order status, monthly order value, and quotation conversion. All values shown here come from synthetic demonstration data with documented formulas.
+### 1:02–1:15 — Reflection and next steps
 
-### 0:49–1:03 — Working solution
+**Screen:** Reflection and Next Steps.
 
-**Screen:** Public inquiry form, internal portal, quotation workspace.
-
-**Narration:**
-
-> A public inquiry creates a stored record before success is shown. Internal users then work from role-based queues for quotation, PO review, payment, production, shipment, and release controls.
-
-### 1:03–1:15 — Testing and result
-
-**Screen:** UAT summary and Final Outcome section.
-
-**Narration:**
-
-> I documented 15 UAT cases covering required fields, duplicates, invalid dates, overdue logic, and blocked workflow jumps. The result is not just a website—it is a reviewable Business Analysis, CRM, and workflow automation case.
+> The current limitation is transitional JSON collection persistence. Next I would normalize PostgreSQL tables, digitize all BOM rows, and add a simple forecast baseline with MAE, MAPE and bias before converting exceptions into inventory actions.
 
 ## Recording checklist
 
-- Use a clean browser profile and hide bookmarks/personal accounts.
-- Start at `case-study.html` with the page at 100% zoom.
-- Use synthetic records only.
-- Keep the pointer movement slow and deliberate.
-- Avoid showing backend `.env`, local databases, tokens, or internal passwords.
-- Export with readable text at 1080p.
-- Add captions using the narration text above.
-- Name the final file `richland-crm-case-demo.mp4`.
-
-## Publish location
-
-Place the final compressed recording under `assets/case-study/` or host it on a portfolio video service, then replace this repository documentation link with the public video URL.
-
+- Use a clean browser profile and hide bookmarks and accounts.
+- Start at `case-study.html` at 100% zoom.
+- Do not show raw source pages or customer-identifying references.
+- Keep movement slow; add captions from the narration.
+- Export at 1080p and name the file `richland-crm-case-demo.mp4`.
