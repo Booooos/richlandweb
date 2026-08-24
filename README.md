@@ -4,6 +4,31 @@ Static B2B product showcase website for RichLand Ltd., focused on electric fans 
 
 The repo also includes the first prototype of the supporting internal ops backend for inquiry intake, quotation / PI / PO handling, and order execution handoff.
 
+## Featured BA + CRM Case Study
+
+Open [`case-study.html`](case-study.html) for the recruiter-facing project narrative:
+
+> Business problem → data structure → solution → testing method → final outcome
+
+The case study presents this repository as a **Business Analysis + Data Workflow + CRM Automation** project, including:
+
+- Business problem and project role
+- Inquiry → Customer → Follow-Up → Quotation → Order → Shipment workflow
+- Logical CRM ER model with primary and foreign keys
+- Synthetic dashboard for open quotations, follow-ups, order status, monthly value, conversion, and overdue work
+- 15 UAT cases with a defect/fix log
+- Working-screen evidence and implementation limitations
+
+All public case-study records are anonymous or synthetic. The current backend uses Prisma `StoreCollection` payloads as a prototype storage bridge; the normalized entity model is a documented production target, not a false claim about the current physical schema.
+
+Supporting analyst artifacts:
+
+- [`docs/business-requirements.md`](docs/business-requirements.md)
+- [`docs/crm-data-dictionary.md`](docs/crm-data-dictionary.md)
+- [`docs/workflow-specification.md`](docs/workflow-specification.md)
+- [`docs/uat-test-report.md`](docs/uat-test-report.md)
+- [`docs/demo-script.md`](docs/demo-script.md)
+
 ## Overview
 
 The public site is a lightweight static website built to present product lines clearly to international buyers.
@@ -159,3 +184,4 @@ These scripts verify that the main order flow can complete and that invalid jump
 - Do not treat PO approval as production release.
 - Do not release BL before balance confirmation.
 - Product data work should follow `docs/product-feature-context.md`.
+- Public demonstration data must remain anonymized or synthetically generated.
