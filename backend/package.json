@@ -10,13 +10,14 @@
     "prisma": "^6.7.0"
   },
   "scripts": {
-    "start": "node scripts/import-verified-shipment.js && node scripts/import-synthetic-orders-2025.js && node src/server.js",
+    "start": "node scripts/import-verified-shipment.js && node scripts/import-anonymized-bom.js && node scripts/import-synthetic-orders-2025.js && node src/server.js",
     "simulate:po-flow": "node scripts/simulate-po-order-flow.js",
     "simulate:invalid-gates": "node scripts/simulate-invalid-workflow-gates.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate-store": "node scripts/migrate-json-store-to-prisma.js",
     "prisma:export-store": "node scripts/export-prisma-store-to-json.js",
     "import:verified-shipment": "node scripts/import-verified-shipment.js",
+    "import:anonymized-bom": "node scripts/import-anonymized-bom.js",
     "start:without-source-import": "node src/server.js",
     "import:synthetic-orders": "node scripts/import-synthetic-orders-2025.js"
   }
