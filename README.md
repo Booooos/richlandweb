@@ -225,6 +225,13 @@ npm run simulate:invalid-gates
 
 These scripts verify that the main order flow can complete and that invalid jumps, such as production before finance sign-off or shipment before ready-to-ship, are blocked.
 
+## Anonymized BOM evidence
+
+- `backend/data/anonymized-bom-audit.json` contains 171 fully digitized operational rows.
+- `backend/scripts/import-anonymized-bom.js` performs an idempotent import and blocks any dataset marked as containing commercial fields.
+- `internal-bom-audit.html` shows row lineage, totals, search, and reconciliation exceptions without customer, price, transaction, route, date, container, or original product-model identifiers.
+- Reconciled totals: 5,642 cartons and 216,052 component / packaging units; small CBM and weight differences remain documented rather than forced.
+
 ## Notes
 
 - Keep the public marketing site lightweight and static.
