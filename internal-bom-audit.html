@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RichLand · BOM Reconciliation</title>
+  <style>
+    :root{--ink:#18352a;--muted:#66766f;--line:#dce5df;--paper:#f4f7f4;--green:#1f6b48;--good:#dff2e6;--warn:#fff3cf}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.5 Inter,system-ui,sans-serif}
+    header{padding:28px clamp(18px,5vw,64px);background:#143a2b;color:white}header p{max-width:780px;color:#c9d9d1}.tag{display:inline-block;padding:5px 9px;border:1px solid #6d9481;border-radius:999px;font-size:12px}
+    main{max-width:1360px;margin:auto;padding:24px}.notice{padding:14px 16px;border:1px solid #e9d89d;background:var(--warn);border-radius:12px}.grid{display:grid;grid-template-columns:repeat(5,minmax(140px,1fr));gap:12px;margin:18px 0}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:16px}.card strong{display:block;font-size:24px}.card span{color:var(--muted);font-size:12px}
+    .audit{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-bottom:18px}.audit h2{margin-top:0}.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.check{padding:11px;border-radius:10px;background:var(--good)}
+    .toolbar{display:flex;gap:10px;align-items:center;margin:12px 0}.toolbar input{width:320px;max-width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:9px}.toolbar span{margin-left:auto;color:var(--muted)}
+    .table-wrap{overflow:auto;background:white;border:1px solid var(--line);border-radius:14px;max-height:620px}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #edf1ee}th{position:sticky;top:0;background:#edf4ef;font-size:12px}td.num{text-align:right;font-variant-numeric:tabular-nums}
+    footer{padding:24px;color:var(--muted)}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.audit{grid-template-columns:1fr}.checks{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header><span class="tag">Portfolio-safe internal evidence</span><h1>171-row BOM import &amp; reconciliation</h1><p>This view demonstrates source transcription, row-level lineage, formula checks, and exception handling. Customer, price, transaction, route, date, and original model identifiers are excluded.</p></header>
+  <main>
+    <div class="notice"><strong>Non-commercial dataset.</strong> Operational quantities are anonymized evidence; this page makes no revenue, customer, pricing, or commercial-performance claim.</div>
+    <section class="grid" data-kpis></section>
+    <section class="audit">
+      <article class="card"><h2>Reconciliation outcome</h2><div class="checks" data-checks></div></article>
+      <article class="card"><h2>Release decision</h2><p><strong style="font-size:18px">Accepted with documented precision exceptions</strong></p><p>Cartons and units match exactly. Small volume and weight variances remain visible because rounded unit weights and grouped source cells must not be forced to equal the printed totals.</p></article>
+    </section>
+    <section class="card"><h2>Source lineage</h2><p>Each row retains a portfolio-safe line ID and source page so a reviewer can trace a value back to the anonymized document without seeing transaction identifiers.</p><div class="toolbar"><input type="search" placeholder="Filter component, family, or line ID" data-filter><span data-count></span></div><div class="table-wrap"><table><thead><tr><th>Line</th><th>Page</th><th>Component</th><th>Family / variant</th><th>Cartons</th><th>Units/carton</th><th>Quantity</th><th>Dimensions (cm)</th><th>CBM</th><th>Net kg</th><th>Gross kg</th><th>Evidence note</th></tr></thead><tbody data-rows></tbody></table></div></section>
+  </main>
+  <footer>RichLand CRM case evidence · anonymized operational data only</footer>
+  <script>
+    const fmt=(v,d=2)=>v==null?"—":Number(v).toLocaleString(undefined,{maximumFractionDigits:d});
+    const esc=(v)=>String(v??"—").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    fetch("backend/data/anonymized-bom-audit.json").then(r=>{if(!r.ok)throw new Error("Dataset unavailable");return r.json()}).then(data=>{
+      const t=data.printedDocumentTotals, r=data.reconciliation, rows=data.bomLineItems;
+      document.querySelector("[data-kpis]").innerHTML=[["Rows",rows.length],["Source pages",data.source.sourcePagesReviewed],["Cartons",fmt(t.cartons,0)],["Component / pack units",fmt(t.quantity,0)],["Commercial fields","0"]].map(([l,v])=>`<article class="card"><strong>${v}</strong><span>${l}</span></article>`).join("");
+      document.querySelector("[data-checks]").innerHTML=[["Line coverage",r.lineCoverage],["Carton variance",fmt(r.cartonsVariance,0)],["Quantity variance",fmt(r.quantityVariance,0)],["CBM variance",fmt(r.cbmVariance,5)],["Net-weight variance",fmt(r.netWeightVarianceKg,5)+" kg"],["Gross-weight variance",fmt(r.grossWeightVarianceKg,5)+" kg"]].map(([l,v])=>`<div class="check"><b>${esc(l)}</b><br>${esc(v)}</div>`).join("");
+      const body=document.querySelector("[data-rows]"), count=document.querySelector("[data-count]");
+      function render(items){body.innerHTML=items.map(x=>{const d=x.dimensionsCm||{};return `<tr><td>${esc(x.lineId)}</td><td>${esc(x.sourcePage)}</td><td>${esc(x.productName)}</td><td>${esc(x.modelOrVariant)}</td><td class="num">${fmt(x.cartons,0)}</td><td class="num">${fmt(x.unitsPerCarton,0)}</td><td class="num">${fmt(x.quantity,0)}</td><td>${[d.length,d.width,d.height].map(v=>v??"—").join(" × ")}</td><td class="num">${fmt(x.sourceCbm,6)}</td><td class="num">${fmt(x.sourceTotalNetWeightKg,5)}</td><td class="num">${fmt(x.sourceTotalGrossWeightKg,5)}</td><td>${esc(x.evidenceNote)}</td></tr>`}).join("");count.textContent=`${items.length} of ${rows.length} rows`}
+      render(rows);document.querySelector("[data-filter]").addEventListener("input",e=>{const q=e.target.value.trim().toLowerCase();render(rows.filter(x=>[x.lineId,x.productName,x.modelOrVariant].some(v=>String(v??"").toLowerCase().includes(q))))});
+    }).catch(err=>{document.querySelector("main").innerHTML=`<div class="notice">${esc(err.message)}. Serve the repository root over HTTP to load the dataset.</div>`});
+  </script>
+</body>
+</html>

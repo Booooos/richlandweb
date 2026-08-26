@@ -927,14 +927,42 @@ function createQuotation(store, payload) {
     return { error: "Customer credit review must be completed before creating a quotation" };
   }
 
+  const relatedQuotations = store.quotations.filter((entry) => entry.inquiryId === inquiry.id);
+  const highestVersion = relatedQuotations.reduce((highest, entry) => Math.max(highest, Number(entry.version) || 0), 0);
+  const requestedVersion = payload.version == null ? highestVersion + 1 : Number(payload.version);
+  if (!Number.isInteger(requestedVersion) || requestedVersion < 1) {
+    return { error: "Quotation version must be a positive integer" };
+  }
+  if (requestedVersion !== highestVersion + 1) {
+    return { error: `Quotation version must increment from ${highestVersion} to ${highestVersion + 1}` };
+  }
+
+  const quotationNumber = String(payload.quotationNumber || `Q-${inquiry.id}`).trim();
+  if (!quotationNumber) return { error: "Quotation number is required" };
+  const duplicateRevision = store.quotations.some((entry) =>
+    String(entry.quotationNumber || `Q-${entry.inquiryId}`).toLowerCase() === quotationNumber.toLowerCase()
+    && Number(entry.version) === requestedVersion
+  );
+  if (duplicateRevision) return { error: "Quotation number and version already exist" };
+
+  let validUntil = null;
+  if (payload.validUntil) {
+    const validUntilDate = new Date(`${payload.validUntil}T23:59:59.999Z`);
+    if (Number.isNaN(validUntilDate.getTime())) return { error: "Quotation valid-until date is invalid" };
+    const createdDate = new Date(nowIso());
+    if (validUntilDate < createdDate) return { error: "Quotation valid-until date cannot precede creation date" };
+    validUntil = payload.validUntil;
+  }
+
   const portalToken = createPortalToken();
   const quotation = {
     id: createId("quo"),
     inquiryId: inquiry.id,
     customerId: inquiry.customerId,
-    version: payload.version || 1,
+    quotationNumber,
+    version: requestedVersion,
     currency: payload.currency || "USD",
-    validUntil: payload.validUntil || null,
+    validUntil,
     moq: payload.moq || null,
     leadTime: payload.leadTime || null,
     incoterm: payload.incoterm || null,

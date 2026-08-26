@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Source-backed RichLand business analysis and CRM automation case: discovery, data model, controlled workflow, decision dashboard, testing, deployment, and reflection.">
+  <title>RichLand CRM &amp; Workflow Case Study</title>
+  <style>
+    :root{
+      --ink:#16221b;
+      --muted:#607066;
+      --line:#dfe7e1;
+      --line-strong:#cbd8cf;
+      --paper:#fff;
+      --wash:#f4f7f4;
+      --forest:#235c3b;
+      --forest-dark:#17462d;
+      --mint:#dfeee4;
+      --gold:#b37a2b;
+      --gold-wash:#f8efe0;
+      --danger:#a84538;
+      --danger-wash:#f9e9e6;
+      --shadow:0 18px 48px rgba(25,55,37,.08);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:linear-gradient(180deg,#f7faf7 0,#fff 520px);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .page-shell{width:min(1200px,calc(100% - 40px));margin:0 auto;padding:20px 0 72px}
+    .topbar{
+      position:sticky;top:12px;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;
+      min-height:72px;padding:12px 18px;border:1px solid rgba(203,216,207,.86);border-radius:20px;
+      background:rgba(255,255,255,.9);box-shadow:0 10px 34px rgba(22,34,27,.07);backdrop-filter:blur(14px)
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .brand img{width:43px;height:43px;object-fit:contain}
+    .brand-copy{display:grid;line-height:1.25}
+    .brand-copy strong{font-size:15px;letter-spacing:-.01em}
+    .brand-copy span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+    .topnav{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap}
+    .topnav a{padding:9px 12px;border-radius:999px;color:#46554b;font-size:13px;font-weight:700}
+    .topnav a:hover,.topnav a:focus-visible{background:var(--wash);color:var(--forest)}
+    .topnav .primary{background:var(--forest);color:#fff}
+    .hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(290px,.75fr);gap:18px;margin-top:18px}
+    .panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);box-shadow:var(--shadow)}
+    .hero-copy{padding:clamp(34px,6vw,72px);overflow:hidden;position:relative}
+    .hero-copy::after{
+      content:"";position:absolute;right:-140px;bottom:-180px;width:440px;height:440px;border-radius:50%;
+      background:radial-gradient(circle,rgba(65,133,88,.18),rgba(65,133,88,0) 66%);pointer-events:none
+    }
+    .eyebrow,.section-label{display:inline-flex;align-items:center;gap:8px;color:var(--forest);font-size:12px;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
+    .eyebrow::before,.section-label::before{content:"";width:22px;height:2px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1{max-width:780px;margin:18px 0 20px;font-size:clamp(40px,6vw,72px);line-height:1.02;letter-spacing:-.055em}
+    .hero-copy .lead{max-width:760px;margin-bottom:28px;color:#526158;font-size:clamp(17px,2vw,20px);line-height:1.72}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--line-strong);border-radius:999px;background:#fff;color:var(--ink);font-size:13px;font-weight:800}
+    .button.primary{border-color:var(--forest);background:var(--forest);color:#fff}
+    .button:hover{transform:translateY(-1px)}
+    .hero-aside{display:grid;align-content:space-between;gap:30px;padding:34px;background:var(--forest-dark);color:#f6faf7}
+    .hero-aside .mini-label{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#b9d8c2}
+    .hero-aside h2{margin:12px 0 14px;font-size:28px;line-height:1.14;letter-spacing:-.035em}
+    .hero-aside p{margin:0;color:#d5e4d9;font-size:14px}
+    .disclaimer{padding:16px;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:rgba(255,255,255,.07)}
+    .disclaimer strong{display:block;margin-bottom:5px;font-size:13px}
+    .disclaimer span{display:block;color:#d7e7db;font-size:12px;line-height:1.55}
+    .proof-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+    .proof-item{padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.78)}
+    .proof-item strong{display:block;font-size:15px}
+    .proof-item span{display:block;margin-top:4px;color:var(--muted);font-size:12px}
+    .section{padding-top:88px;scroll-margin-top:100px}
+    .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.45fr);gap:30px;align-items:end;margin-bottom:28px}
+    .section-head h2{max-width:760px;margin:12px 0 0;font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.045em}
+    .section-head p{margin:0;color:var(--muted);font-size:15px}
+    .problem-grid,.role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .problem-card,.role-card{padding:26px;border:1px solid var(--line);border-radius:20px;background:#fff}
+    .card-index{display:flex;align-items:center;justify-content:center;width:34px;height:34px;margin-bottom:34px;border-radius:50%;background:var(--mint);color:var(--forest);font-size:12px;font-weight:850}
+    .problem-card h3,.role-card h3{margin-bottom:8px;font-size:19px;line-height:1.3;letter-spacing:-.025em}
+    .problem-card p,.role-card p{margin:0;color:var(--muted);font-size:14px}
+    .role-grid{grid-template-columns:repeat(5,1fr)}
+    .role-card{padding:22px}
+    .role-card .card-index{margin-bottom:24px}
+    .workflow-panel{padding:28px}
+    .workflow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:stage}
+    .stage{position:relative;min-height:182px;padding:22px 18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#fff,#f7faf7)}
+    .stage:not(:last-child)::after{content:"→";position:absolute;right:-13px;top:50%;z-index:2;transform:translateY(-50%);display:grid;place-items:center;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--forest);font-weight:850}
+    .stage-num{display:block;margin-bottom:24px;color:var(--forest);font-size:11px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+    .stage h3{margin-bottom:8px;font-size:16px}
+    .stage p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+    .workflow-note{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-top:18px;padding:18px 20px;border-radius:16px;background:var(--wash)}
+    .workflow-note strong{font-size:14px}
+    .workflow-note span{max-width:720px;color:var(--muted);font-size:13px}
+    .model-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,.65fr);gap:16px}
+    .er-panel{padding:26px}
+    .er-canvas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:46px 72px;position:relative}
+    .entity{position:relative;border:1px solid var(--line-strong);border-radius:16px;background:#fff;overflow:hidden}
+    .entity header{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;background:var(--forest);color:#fff}
+    .entity header strong{font-size:14px}
+    .entity header span{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#cce0d2}
+    .entity ul{list-style:none;margin:0;padding:8px 15px 12px}
+    .entity li{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #edf2ee;font-size:12px}
+    .entity li:last-child{border-bottom:0}
+    .field-key{color:var(--forest);font-size:9px;font-weight:900;letter-spacing:.06em}
+    .field-type{color:#89968d;font-size:10px}
+    .relationship{margin-top:18px;padding:17px 18px;border-radius:15px;background:var(--wash);font-size:12px;color:var(--muted)}
+    .relationship strong{color:var(--ink)}
+    .model-notes{display:grid;gap:12px}
+    .note-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .note-card .note-kicker{color:var(--forest);font-size:10px;font-weight:850;letter-spacing:.09em;text-transform:uppercase}
+    .note-card h3{margin:10px 0 8px;font-size:17px}
+    .note-card p{margin:0;color:var(--muted);font-size:13px}
+    .dashboard{padding:26px}
+    .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .kpi{padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .kpi-label{display:block;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+    .kpi-value{display:block;margin:10px 0 4px;font-size:32px;line-height:1;font-weight:820;letter-spacing:-.04em}
+    .kpi-note{display:block;color:#7a887e;font-size:11px}
+    .chart-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:14px}
+    .chart-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .chart-card header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px}
+    .chart-card h3{margin:0;font-size:17px}
+    .chart-card header span{color:var(--muted);font-size:11px}
+    .bar-chart{display:grid;grid-template-columns:repeat(6,1fr);align-items:end;gap:12px;height:210px;padding-top:22px;border-bottom:1px solid var(--line)}
+    .bar-col{display:grid;grid-template-rows:1fr auto;align-items:end;gap:9px;height:100%;text-align:center}
+    .bar{position:relative;width:100%;height:var(--h);min-height:8px;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#4b9062,var(--forest))}
+    .bar::before{content:attr(data-value);position:absolute;left:50%;top:-22px;transform:translateX(-50%);color:#526158;font-size:10px;font-weight:750}
+    .bar-col span{padding-bottom:8px;color:var(--muted);font-size:10px;text-transform:uppercase}
+    .status-list{display:grid;gap:14px}
+    .status-row{display:grid;grid-template-columns:110px 1fr 24px;gap:10px;align-items:center;font-size:12px}
+    .status-row span:first-child{color:#526158}
+    .status-track{height:10px;border-radius:999px;background:#edf2ee;overflow:hidden}
+    .status-fill{height:100%;width:var(--w);border-radius:inherit;background:var(--forest)}
+    .status-row strong{text-align:right}
+    .metric-definition{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+    .testing-shell{overflow:hidden}
+    .testing-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
+    .test-stat{padding:22px 24px;border-right:1px solid var(--line)}
+    .test-stat:last-child{border-right:0}
+    .test-stat strong{display:block;font-size:24px}
+    .test-stat span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+    .table-wrap{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;min-width:800px}
+    th,td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:12px}
+    th{background:var(--wash);color:#536158;font-size:10px;text-transform:uppercase;letter-spacing:.07em}
+    tbody tr:last-child td{border-bottom:0}
+    .status{display:inline-flex;align-items:center;justify-content:center;min-width:58px;padding:4px 8px;border-radius:999px;background:var(--mint);color:var(--forest-dark);font-size:9px;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+    .status.fixed{background:var(--gold-wash);color:#835719}
+    .status.gap{background:var(--danger-wash);color:var(--danger)}
+    .docs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .doc-card{display:grid;min-height:190px;padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff;transition:.2s ease}
+    .doc-card:hover{transform:translateY(-2px);border-color:#b9cdbf;box-shadow:var(--shadow)}
+    .doc-card span{color:var(--forest);font-size:10px;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+    .doc-card h3{align-self:end;margin:34px 0 8px;font-size:18px}
+    .doc-card p{margin:0;color:var(--muted);font-size:12px}
+    .evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .evidence-card{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff}
+    .mock-screen{min-height:190px;padding:14px;background:#edf2ee}
+    .mock-window{height:100%;min-height:162px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 12px 26px rgba(22,34,27,.1)}
+    .mock-head{display:flex;gap:4px;margin-bottom:12px}
+    .mock-head i{width:6px;height:6px;border-radius:50%;background:#cad6ce}
+    .mock-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+    .mock-box{height:36px;border-radius:7px;background:#eef4ef}
+    .mock-box.dark{background:#2c6644}
+    .mock-row{height:8px;margin-top:8px;border-radius:999px;background:#edf1ee}
+    .mock-row.short{width:62%}
+    .evidence-copy{padding:20px}
+    .evidence-copy h3{margin-bottom:6px;font-size:17px}
+    .evidence-copy p{margin-bottom:14px;color:var(--muted);font-size:12px}
+    .evidence-copy a{color:var(--forest);font-size:12px;font-weight:800}
+    .outcome-panel{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;padding:clamp(28px,5vw,54px);background:var(--forest-dark);color:#fff}
+    .outcome-panel h2{margin:12px 0 16px;font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.045em}
+    .outcome-panel p{max-width:680px;color:#d1e1d6}
+    .outcome-list{display:grid;gap:10px;align-content:center}
+    .outcome-item{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;padding:15px;border:1px solid rgba(255,255,255,.13);border-radius:15px;background:rgba(255,255,255,.05)}
+    .outcome-item i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#d8ebdd;color:var(--forest-dark);font-size:12px;font-style:normal;font-weight:900}
+    .outcome-item strong{font-size:13px}
+    .outcome-item span{display:block;margin-top:2px;color:#c9dacc;font-size:11px}
+    .case-meta{display:grid;grid-template-columns:1.05fr .9fr 1fr 1.45fr;overflow:hidden;margin-top:14px}
+    .case-meta>div{min-height:104px;padding:21px;border-right:1px solid var(--line)}
+    .case-meta>div:last-child{border-right:0}.case-meta span,.case-meta strong{display:block}
+    .case-meta span{margin-bottom:10px;color:var(--forest);font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .case-meta strong{font-size:13px;line-height:1.45}
+    .discovery-grid,.trigger-grid,.reflection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .discovery-card,.trigger-card,.reflection-card{padding:25px;border:1px solid var(--line);border-radius:20px;background:#fff}
+    .discovery-card span,.trigger-card span,.reflection-card span{color:var(--forest);font-size:10px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+    .discovery-card h3,.trigger-card h3,.reflection-card h3{margin:25px 0 9px;font-size:18px}
+    .discovery-card p,.trigger-card p,.reflection-card p{margin:0;color:var(--muted);font-size:13px}
+    .evidence-rule{display:grid;grid-template-columns:auto auto 1fr;gap:12px;align-items:center;margin-top:14px;padding:17px 20px;border-radius:17px;background:var(--forest-dark);color:#fff}
+    .evidence-rule strong{font-size:10px;text-transform:uppercase}.evidence-rule span{font-size:13px;font-weight:850}.evidence-rule p{margin:0;text-align:right;color:#c9dacc;font-size:11px}
+    .trigger-grid{margin-top:14px}.trigger-card{background:var(--wash)}
+    .action-board{margin-bottom:16px;padding:24px;border:1px solid #dac6a4;border-radius:20px;background:var(--gold-wash)}
+    .action-board h3{margin:10px 0 18px;font-size:22px}.action-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .action-grid article{padding:15px;border:1px solid rgba(179,122,43,.24);border-radius:14px;background:rgba(255,255,255,.6)}
+    .action-grid strong{display:block;font-size:12px}.action-grid p{margin:4px 0 0;color:#6f614d;font-size:11px}
+    .evidence-card img{display:block;width:100%;height:210px;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+    .next-panel{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;margin-top:16px;padding:32px}.next-panel h3{margin:10px 0;font-size:28px}.next-list{display:grid;gap:9px}.next-list div{padding:13px;border:1px solid var(--line);border-radius:13px}.next-list strong,.next-list span{display:block}.next-list strong{font-size:12px}.next-list span{margin-top:3px;color:var(--muted);font-size:11px}
+    footer{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:42px;color:var(--muted);font-size:12px}
+    footer nav{display:flex;gap:16px;flex-wrap:wrap}
+    footer a{font-weight:750;color:#425248}
+    @media (max-width:1050px){
+      .hero,.model-layout,.outcome-panel,.next-panel{grid-template-columns:1fr}
+      .case-meta{grid-template-columns:repeat(2,1fr)}
+      .case-meta>div:nth-child(2){border-right:0}
+      .discovery-grid,.trigger-grid,.reflection-grid{grid-template-columns:1fr 1fr}
+      .role-grid{grid-template-columns:repeat(3,1fr)}
+      .workflow{grid-template-columns:repeat(3,1fr)}
+      .stage:nth-child(3)::after{display:none}
+    }
+    @media (max-width:780px){
+      .page-shell{width:min(100% - 24px,1200px);padding-top:12px}
+      .topbar{position:static;align-items:flex-start}
+      .topnav{display:none}
+      .hero-copy,.hero-aside{padding:28px}
+      h1{font-size:42px}
+      .proof-strip,.problem-grid,.role-grid,.kpi-grid,.testing-summary,.docs-grid,.evidence-grid,.action-grid{grid-template-columns:1fr 1fr}
+      .discovery-grid,.trigger-grid,.reflection-grid{grid-template-columns:1fr}
+      .evidence-rule{grid-template-columns:1fr}.evidence-rule p{text-align:left}
+      .section{padding-top:68px}
+      .section-head{grid-template-columns:1fr;gap:12px}
+      .workflow{grid-template-columns:1fr 1fr}
+      .stage:nth-child(3)::after{display:grid}
+      .stage:nth-child(even)::after{display:none}
+      .er-canvas,.chart-grid{grid-template-columns:1fr}
+      .testing-summary .test-stat{border-bottom:1px solid var(--line)}
+    }
+    @media (max-width:520px){
+      .brand-copy span{display:none}
+      .proof-strip,.problem-grid,.role-grid,.kpi-grid,.docs-grid,.evidence-grid{grid-template-columns:1fr}
+      .workflow{grid-template-columns:1fr}
+      .stage::after{display:none!important}
+      .workflow-note,footer{display:grid}
+      .testing-summary{grid-template-columns:1fr 1fr}
+      .er-panel,.dashboard{padding:18px}
+    }
+  </style>
+</head>
+<body>
+<div class="page-shell">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="RichLand homepage">
+      <img src="assets/LOGO/Company-Logo.webp" alt="RichLand Ltd. logo">
+      <span class="brand-copy"><strong>RichLand CRM Case</strong><span>Business analysis &amp; workflow automation</span></span>
+    </a>
+    <nav class="topnav" aria-label="Case study navigation">
+      <a href="#problem">Problem</a><a href="#discovery">Discovery</a><a href="#workflow">Automation</a><a href="#data-model">Source of Truth</a><a href="#dashboard">Decision View</a><a class="primary" href="#reflection">Reflection</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="case-title">
+      <div class="panel hero-copy">
+        <span class="eyebrow">Source-backed Business Analysis Case</span>
+        <h1 id="case-title">From six enterprise pages to a controlled CRM workflow</h1>
+        <p class="lead">I reconciled one 56,480-unit order plan and one 17,132-unit shipment record, separated evidence-backed facts from synthetic commercial context, and built the linked CRM, workflow controls, decision view, and tests around that operating reality.</p>
+        <div class="actions">
+          <a class="button primary" href="#dashboard">Review the outcome</a>
+          <a class="button" href="https://github.com/Booooos/richlandweb" target="_blank" rel="noreferrer">Inspect GitHub</a>
+        </div>
+      </div>
+      <aside class="panel hero-aside">
+        <div>
+          <span class="mini-label">Case at a glance</span>
+          <h2>Export sales CRM &amp; workflow prototype</h2>
+          <p>Business requirements · logical data model · workflow controls · dashboard definitions · UAT evidence</p>
+        </div>
+        <div class="disclaimer">
+          <strong>Data privacy note</strong>
+          <span>Demonstration data has been anonymized or synthetically generated. No customer-identifying records are displayed on this page.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel case-meta" aria-label="Case summary">
+      <div><span>Role</span><strong>Business Analyst · CRM and workflow designer</strong></div>
+      <div><span>Team</span><strong>Solo portfolio build · RichLand sales / operations context</strong></div>
+      <div><span>Impact</span><strong>1 source order + 36-order annual CRM simulation</strong></div>
+      <div><span>Tools</span><strong>JavaScript · Node.js · Prisma · GitHub · AI-assisted development</strong></div>
+    </section>
+
+    <section class="proof-strip" aria-label="Project scope">
+      <div class="proof-item"><strong>¥200.02M</strong><span>36 explicitly synthetic 2025 orders</span></div>
+      <div class="proof-item"><strong>56,480 units</strong><span>Source-backed order plan · 20 containers</span></div>
+      <div class="proof-item"><strong>17,132 units</strong><span>Verified shipment · 6 containers</span></div>
+      <div class="proof-item"><strong>15 UAT cases</strong><span>14 passed · 1 disclosed gap</span></div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="section-head">
+        <div><span class="section-label">01 · Business Problem</span><h2>Commercial activity existed, but the operating trail was fragmented</h2></div>
+        <p>The analysis focused on visibility, ownership, and data integrity—three practical issues that affect follow-up quality in an export sales process.</p>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card"><span class="card-index">01</span><h3>Records lived in separate places</h3><p>Customer details, quotations, follow-up notes, and order files were handled across messages and documents, without one consistent customer history.</p></article>
+        <article class="problem-card"><span class="card-index">02</span><h3>Status and ownership were unclear</h3><p>Teams could not quickly confirm the latest quotation version, next action owner, due date, or whether an order had passed the required approval gate.</p></article>
+        <article class="problem-card"><span class="card-index">03</span><h3>Exceptions were hard to control</h3><p>Blank fields, duplicate inquiries, invalid dates, and premature workflow jumps could create rework or move incomplete records downstream.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="discovery">
+      <div class="section-head">
+        <div><span class="section-label">02 · Discovery</span><h2>The supplied documents changed the model before development</h2></div>
+        <p>The work started by identifying the grain and truth status of each record—not by selecting charts or generating interface copy.</p>
+      </div>
+      <div class="discovery-grid">
+        <article class="discovery-card"><span>Finding 01</span><h3>Plan and execution are different grains</h3><p>The 56,480-unit schedule is the full order plan; the 17,132-unit shipment list is one execution record. They remain related but separate.</p></article>
+        <article class="discovery-card"><span>Finding 02</span><h3>BOM is not sellable quantity</h3><p>216,052 component and packaging units cannot be counted as finished-product sales volume.</p></article>
+        <article class="discovery-card"><span>Finding 03</span><h3>Truth status belongs in the data</h3><p>Operational quantities are anonymized source evidence; customer, destination, price, quotation, PI, payment and production fields are synthetic.</p></article>
+      </div>
+      <div class="evidence-rule"><strong>Evidence rule</strong><span>Demonstration data has been anonymized or synthetically generated.</span><p>No customer-identifying PO, SO, booking or container reference is published.</p></div>
+    </section>
+
+    <section class="section" id="role">
+      <div class="section-head">
+        <div><span class="section-label">03 · My Role</span><h2>Owned the translation from business process to testable solution</h2></div>
+        <p>The work combined BA artifacts with hands-on implementation so each requirement could be traced to a screen, data field, rule, or test.</p>
+      </div>
+      <div class="role-grid">
+        <article class="role-card"><span class="card-index">1</span><h3>Requirements analysis</h3><p>Defined users, pain points, records, decision gates, and acceptance criteria.</p></article>
+        <article class="role-card"><span class="card-index">2</span><h3>CRM data design</h3><p>Mapped primary keys, foreign keys, statuses, timestamps, and validation rules.</p></article>
+        <article class="role-card"><span class="card-index">3</span><h3>Solution delivery</h3><p>Built the public website, inquiry flow, and internal operations prototype.</p></article>
+        <article class="role-card"><span class="card-index">4</span><h3>Integration testing</h3><p>Checked form-to-API-to-store behavior and verified returned record IDs.</p></article>
+        <article class="role-card"><span class="card-index">5</span><h3>Workflow automation</h3><p>Designed task ownership, reminders, approvals, and blocked-state handling.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="section-head">
+        <div><span class="section-label">04 · Automation</span><h2>One visible commercial path, with controls at every handoff</h2></div>
+        <p>The simplified recruiter view below shows the commercial spine. The implementation also preserves detailed internal gates for payment, production release, shipping, and document control.</p>
+      </div>
+      <div class="panel workflow-panel">
+        <div class="workflow" aria-label="Inquiry to shipment workflow">
+          <article class="stage"><span class="stage-num">Stage 01</span><h3>Inquiry</h3><p>Capture buyer, market, category, quantity, and cooperation intent.</p></article>
+          <article class="stage"><span class="stage-num">Stage 02</span><h3>Customer</h3><p>Match or create the account and retain contact history.</p></article>
+          <article class="stage"><span class="stage-num">Stage 03</span><h3>Follow-Up</h3><p>Assign an owner, due date, action type, and outcome.</p></article>
+          <article class="stage"><span class="stage-num">Stage 04</span><h3>Quotation</h3><p>Control version, validity, currency, terms, and status.</p></article>
+          <article class="stage"><span class="stage-num">Stage 05</span><h3>Order</h3><p>Confirm PO alignment and enforce approval gates before execution.</p></article>
+          <article class="stage"><span class="stage-num">Stage 06</span><h3>Shipment</h3><p>Track readiness, booking, documents, balance, and release status.</p></article>
+        </div>
+        <div class="workflow-note"><strong>Automation rule example</strong><span>If a follow-up is still open after its due date, mark it overdue and place it in the sales owner's action queue. An order cannot enter production merely because its PO was approved.</span></div>
+      </div>
+      <div class="trigger-grid">
+        <article class="trigger-card"><span>Trigger</span><h3>Inquiry write succeeds</h3><p>Create or match Customer, store Inquiry, return the backend ID, then open the WorkflowCase. A failed write never shows false success.</p></article>
+        <article class="trigger-card"><span>Scheduled check</span><h3>Follow-up becomes due</h3><p>Place pending and overdue items in the sales owner's queue with the next action visible.</p></article>
+        <article class="trigger-card"><span>Controlled transition</span><h3>Commercial gates pass</h3><p>PO, deposit, manager release and finance sign-off must pass before production; five negative-path tests enforce the rule.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="data-model">
+      <div class="section-head">
+        <div><span class="section-label">05 · Source of Truth</span><h2>Relationships and provenance make the customer journey traceable</h2></div>
+        <p>This is the logical CRM model used for analysis and production planning. The current prototype persists operational collections through a Prisma-backed store bridge; normalization is documented as the next database migration.</p>
+      </div>
+      <div class="model-layout">
+        <div class="panel er-panel">
+          <div class="er-canvas" aria-label="Entity relationship model">
+            <article class="entity"><header><strong>Customers</strong><span>Parent</span></header><ul><li><b class="field-key">PK</b><span>customer_id</span><i class="field-type">UUID</i></li><li><b class="field-key"></b><span>company_name</span><i class="field-type">TEXT</i></li><li><b class="field-key"></b><span>destination_market</span><i class="field-type">TEXT</i></li><li><b class="field-key"></b><span>created_at</span><i class="field-type">DATETIME</i></li></ul></article>
+            <article class="entity"><header><strong>Follow-Ups</strong><span>1 : many</span></header><ul><li><b class="field-key">PK</b><span>follow_up_id</span><i class="field-type">UUID</i></li><li><b class="field-key">FK</b><span>customer_id</span><i class="field-type">UUID</i></li><li><b class="field-key"></b><span>due_at</span><i class="field-type">DATETIME</i></li><li><b class="field-key"></b><span>status / owner</span><i class="field-type">ENUM</i></li></ul></article>
+            <article class="entity"><header><strong>Quotations</strong><span>1 : many</span></header><ul><li><b class="field-key">PK</b><span>quotation_id</span><i class="field-type">UUID</i></li><li><b class="field-key">FK</b><span>customer_id</span><i class="field-type">UUID</i></li><li><b class="field-key">FK</b><span>inquiry_id</span><i class="field-type">UUID</i></li><li><b class="field-key"></b><span>version / valid_until</span><i class="field-type">MIXED</i></li></ul></article>
+            <article class="entity"><header><strong>Orders</strong><span>1 : many</span></header><ul><li><b class="field-key">PK</b><span>order_id</span><i class="field-type">UUID</i></li><li><b class="field-key">FK</b><span>customer_id</span><i class="field-type">UUID</i></li><li><b class="field-key">FK</b><span>quotation_id</span><i class="field-type">UUID</i></li><li><b class="field-key"></b><span>status / order_value</span><i class="field-type">MIXED</i></li></ul></article>
+          </div>
+          <div class="relationship"><strong>Cardinality:</strong> one Customer can have many Follow-Ups, Quotations, and Orders; each Order references the accepted Quotation. Shipment records extend Orders through <strong>order_id</strong>.</div>
+        </div>
+        <aside class="model-notes">
+          <article class="note-card"><span class="note-kicker">Integrity</span><h3>Required relationships</h3><p>Foreign keys prevent quotations or orders from becoming orphaned records and keep the full account history available.</p></article>
+          <article class="note-card"><span class="note-kicker">Auditability</span><h3>Status plus timestamps</h3><p>Each operational entity includes created and updated timestamps; critical workflow actions create a timeline or audit event.</p></article>
+          <article class="note-card"><span class="note-kicker">Validation</span><h3>Controlled values</h3><p>Required fields, status sets, valid date ranges, unique business keys, and currency-safe values reduce downstream rework.</p></article>
+          <a class="button" href="docs/crm-data-dictionary.md">Open full data dictionary</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="dashboard">
+      <div class="section-head">
+        <div><span class="section-label">06 · Decision View</span><h2>Management visibility starts with exceptions and the next action</h2></div>
+        <p>The dashboard is synchronized with the 36-order, CNY 200.02M annual simulation. It demonstrates decision logic and information hierarchy, not real company performance.</p>
+      </div>
+      <div class="panel dashboard">
+        <div class="action-board"><span class="section-label">Action now</span><h3>Four decisions from the current snapshot</h3><div class="action-grid">
+          <article><strong>Recover overdue opportunities</strong><p>Assign the 3 overdue and 3 pending follow-ups before lower-risk accounts.</p></article>
+          <article><strong>Protect the open pipeline</strong><p>Review 3 open quotations against validity dates and owners.</p></article>
+          <article><strong>Capacity-review the peak</strong><p>December reaches ¥22.01M, the highest simulated month.</p></article>
+          <article><strong>Check model concentration</strong><p>RT-50 contributes the largest simulated product value at ¥50.14M.</p></article>
+        </div></div>
+        <div class="kpi-grid" data-kpi-grid aria-live="polite"></div>
+        <div class="chart-grid">
+          <article class="chart-card"><header><div><h3>Monthly order value</h3><span>Synthetic accepted orders · CNY millions</span></div><span>Jan–Dec 2025</span></header><div class="bar-chart" data-order-value-chart></div><p class="metric-definition">Definition: sum of the 36 synthetic order values grouped by month; cancelled orders are excluded.</p></article>
+          <article class="chart-card"><header><div><h3>Orders by status</h3><span>Synthetic workflow snapshot</span></div><span data-order-total></span></header><div class="status-list" data-status-chart></div><p class="metric-definition">Definition: current internal workflow status for every non-cancelled order in the selected period.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testing">
+      <div class="section-head">
+        <div><span class="section-label">07 · Testing Evidence</span><h2>UAT covers data quality, expected behavior, and blocked paths</h2></div>
+        <p>Every test connects a business rule to evidence and an outcome. The full report includes 15 cases plus the defects and fixes recorded during validation.</p>
+      </div>
+      <div class="panel testing-shell">
+        <div class="testing-summary"><div class="test-stat"><strong>15</strong><span>Total cases</span></div><div class="test-stat"><strong>14</strong><span>Final pass</span></div><div class="test-stat"><strong>2</strong><span>Fixed &amp; retested</span></div><div class="test-stat"><strong>1</strong><span>Disclosed gap</span></div></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Scenario</th><th>Expected result</th><th>Final</th></tr></thead>
+            <tbody>
+              <tr><td>UAT-01</td><td>Submit a valid public inquiry</td><td>Stored inquiry ID is returned before success is shown</td><td><span class="status">Pass</span></td></tr>
+              <tr><td>UAT-02</td><td>Submit without required email</td><td>Inline validation blocks submission</td><td><span class="status">Pass</span></td></tr>
+              <tr><td>UAT-04</td><td>Submit a duplicate inquiry</td><td>Potential duplicate is flagged for review</td><td><span class="status gap">Gap</span></td></tr>
+              <tr><td>UAT-06</td><td>Quotation valid-until precedes created date</td><td>Invalid date range is rejected</td><td><span class="status">Pass</span></td></tr>
+              <tr><td>UAT-09</td><td>Open overdue follow-up queue</td><td>Only open items past due are shown</td><td><span class="status fixed">Fixed</span></td></tr>
+              <tr><td>UAT-12</td><td>Release production before finance sign-off</td><td>Workflow transition is blocked with a clear reason</td><td><span class="status">Pass</span></td></tr>
+              <tr><td>UAT-14</td><td>Release BL before balance confirmation</td><td>Hard gate prevents release</td><td><span class="status">Pass</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="actions" style="margin-top:16px"><a class="button" href="docs/uat-test-report.md">View all 15 UAT cases &amp; fix log</a></div>
+    </section>
+
+    <section class="section" id="evidence">
+      <div class="section-head">
+        <div><span class="section-label">08 · Development & Deployment</span><h2>Working screens connect the analysis to the implementation</h2></div>
+        <p>These links expose the public inquiry experience and representative internal screens. Internal functionality requires the local backend and role-based login described in the README.</p>
+      </div>
+      <div class="evidence-grid">
+        <article class="evidence-card"><img src="docs/screenshots/case-study-desktop.webp" alt="Full desktop capture of the implemented RichLand case-study page"><div class="evidence-copy"><h3>Implemented desktop case</h3><p>A real Chrome capture replaces the former decorative mock screen.</p><a href="docs/screenshots/case-study-desktop.webp">Open full capture →</a></div></article>
+        <article class="evidence-card"><img src="docs/screenshots/case-study-mobile.webp" alt="Full mobile capture of the implemented RichLand case-study page"><div class="evidence-copy"><h3>Implemented mobile case</h3><p>Responsive evidence includes the recorded viewport and overflow checks.</p><a href="docs/screenshots/case-study-mobile.webp">Open full capture →</a></div></article>
+        <article class="evidence-card"><div class="evidence-copy"><span class="section-label">Working system</span><h3>Internal CRM screens</h3><p>Open the actual inquiry intake, operations portal, quotation workspace, and the 171-row non-commercial BOM audit rather than reading a fabricated screenshot.</p><div class="actions"><a class="button" href="index.html#inquiry">Inquiry</a><a class="button" href="internal-portal.html">Ops portal</a><a class="button" href="internal-quotation.html">Quotation</a><a class="button" href="internal-bom-audit.html">BOM audit</a></div></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="documentation">
+      <div class="section-head">
+        <div><span class="section-label">09 · Documentation</span><h2>Artifacts make the decisions reviewable and repeatable</h2></div>
+        <p>The documentation package is written for a hiring manager, analyst, or developer who needs to understand scope, definitions, and evidence without reverse-engineering the code.</p>
+      </div>
+      <div class="docs-grid">
+        <a class="doc-card" href="docs/business-requirements.md"><span>BA Artifact</span><h3>Business requirements</h3><p>Actors, functional requirements, acceptance criteria, scope, and traceability.</p></a>
+        <a class="doc-card" href="docs/crm-data-dictionary.md"><span>Data Artifact</span><h3>CRM data dictionary</h3><p>Primary keys, foreign keys, required fields, statuses, and validation rules.</p></a>
+        <a class="doc-card" href="docs/uat-test-report.md"><span>QA Artifact</span><h3>UAT test report</h3><p>15 test cases, expected results, final outcomes, defect notes, and retesting.</p></a>
+        <a class="doc-card" href="docs/workflow-specification.md"><span>Process Artifact</span><h3>Workflow specification</h3><p>Stage owners, inputs, outputs, blockers, and customer-visible effects.</p></a>
+        <a class="doc-card" href="docs/demo-script.md"><span>Presentation Artifact</span><h3>60–90 second demo script</h3><p>A concise recording plan that moves from problem to evidence and outcome.</p></a>
+        <a class="doc-card" href="docs/screenshots/README.md"><span>Visual QA Artifact</span><h3>Desktop &amp; mobile captures</h3><p>Full-page Chrome screenshots with viewport, rendering, and overflow checks.</p></a>
+        <a class="doc-card" href="backend/docs/postgres-prisma-migration-map.md"><span>Architecture Artifact</span><h3>Database migration map</h3><p>Current operational collections mapped to the planned normalized Prisma entities.</p></a>
+        <a class="doc-card" href="backend/docs/ops-role-permission-boundary.md"><span>Control Artifact</span><h3>Role permission boundary</h3><p>Internal responsibilities, protected actions, and customer-visible limits.</p></a>
+        <a class="doc-card" href="README.md"><span>Technical Artifact</span><h3>GitHub README</h3><p>Architecture, local setup, workflow simulations, and case-study navigation.</p></a>
+      </div>
+    </section>
+
+    <section class="section" id="reflection">
+      <div class="section-head">
+        <div><span class="section-label">10 · Reflection</span><h2>The case is credible because its limitations are visible</h2></div>
+        <p>Implemented behavior, source-backed evidence, synthetic demonstration data, and future architecture are deliberately separated.</p>
+      </div>
+      <div class="reflection-grid">
+        <article class="reflection-card"><span>What worked</span><h3>One traceable operating spine</h3><p>Plan, shipment, CRM records, imports and workflow tests can be followed from source to implementation.</p></article>
+        <article class="reflection-card"><span>Current limitation</span><h3>Persistence is transitional</h3><p>Operational collections still use a Prisma-backed StoreCollection JSON bridge; normalized PostgreSQL tables remain the migration target.</p></article>
+        <article class="reflection-card"><span>Open UAT gap</span><h3>Duplicate inquiry review</h3><p>The production business key and audited override path are not implemented, so this remains disclosed rather than marked passed.</p></article>
+      </div>
+      <div class="panel next-panel"><div><span class="section-label">Next steps</span><h3>Extend only when the evidence supports the next decision</h3><p>Forecasting is a planning roadmap, not a finished claim.</p></div><div class="next-list"><div><strong>Maintain BOM source governance</strong><span>171 anonymized rows are imported with page/line lineage, total checks, and documented precision exceptions.</span></div><div><strong>Normalize PostgreSQL / Prisma persistence</strong><span>Add foreign keys and row-level duplicate controls.</span></div><div><strong>Add explainable demand planning</strong><span>Naïve baseline → moving average → MAE / MAPE / bias → reorder and capacity action.</span></div></div></div>
+    </section>
+
+    <section class="section" id="outcome">
+      <div class="panel outcome-panel">
+        <div><span class="section-label" style="color:#b9d8c2">11 · Final Outcome</span><h2>A website became a business system that can be explained, tested, and improved</h2><p>The result is a portfolio-ready BA + CRM automation case grounded in real implementation assets. It demonstrates process analysis, data modeling, metric definition, workflow controls, and UAT without inventing performance gains or exposing customer information.</p><div class="actions"><a class="button primary" href="https://github.com/Booooos/richlandweb" target="_blank" rel="noreferrer">Review source repository</a></div></div>
+        <div class="outcome-list"><div class="outcome-item"><i>✓</i><div><strong>Single process narrative</strong><span>Problem → structure → solution → test → result</span></div></div><div class="outcome-item"><i>✓</i><div><strong>Traceable data and decisions</strong><span>Keys, statuses, ownership, gates, and timestamps</span></div></div><div class="outcome-item"><i>✓</i><div><strong>Credible evidence</strong><span>Working screens, 171-row BOM reconciliation, simulations, UAT, and one clearly disclosed CRM gap</span></div></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>RichLand Export Sales CRM &amp; Workflow Automation · Case study by Minle Liang</span><nav><a href="index.html">Company website</a><a href="README.md">README</a><a href="https://github.com/Booooos/richlandweb">GitHub</a></nav></footer>
+</div>
+<script src="scripts/case-study.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+{
+  "dataNotice": "Demonstration data has been anonymized or synthetically generated.",
+  "sourceDocuments": [
+    {
+      "documentType": "Order allocation schedule",
+      "sourcePagesReviewed": 1,
+      "sourceClassification": "user-provided enterprise record",
+      "verificationStatus": "manually transcribed and reconciled",
+      "identifiersAnonymized": true,
+      "rawIdentifiersStored": false
+    },
+    {
+      "documentType": "Shipment detail list",
+      "documentDate": "2025-01-03",
+      "sourcePagesReviewed": 5,
+      "sourceClassification": "user-provided enterprise record",
+      "verificationStatus": "shipment totals and product summary manually transcribed",
+      "identifiersAnonymized": true,
+      "rawIdentifiersStored": false
+    }
+  ],
+  "recordLinkage": {
+    "sameCustomer": true,
+    "sameOrder": true,
+    "confirmationSource": "confirmed by the user",
+    "dataClassification": "user-confirmed relationship"
+  },
+  "syntheticCommercialScenario": {
+    "dataClassification": "synthetically generated for CRM demonstration",
+    "customer": {
+      "anonymousCode": "CN-GD-001",
+      "country": "China",
+      "destinationMarket": "Mainland China",
+      "destinationLocation": "Guangzhou Nansha bonded logistics zone",
+      "port": "Guangzhou Nansha Port"
+    },
+    "quotation": {
+      "quotationNumber": "QT-CN-2024-0822-A",
+      "version": 2,
+      "currency": "CNY",
+      "issuedDate": "2024-08-22",
+      "validUntil": "2024-09-05",
+      "totalValue": 6897240,
+      "pricingBasis": "Domestic delivery to Nansha port warehouse"
+    },
+    "proformaInvoice": {
+      "piNumber": "PI-CN-2024-0823-A",
+      "issuedDate": "2024-08-23",
+      "confirmedDate": "2024-08-26",
+      "currency": "CNY",
+      "totalValue": 6897240,
+      "paymentTerms": "30% deposit; 70% of each shipped lot payable five days before dispatch"
+    },
+    "timeline": {
+      "inquiryDate": "2024-08-12",
+      "quotationDate": "2024-08-22",
+      "orderConfirmationDate": "2024-08-26",
+      "depositDueDate": "2024-08-30",
+      "depositReceivedDate": "2024-08-29",
+      "productionPlannedStartDate": "2024-09-05",
+      "productionActualStartDate": "2024-09-09",
+      "documentedShipmentReadyDate": "2024-12-27",
+      "documentedShipmentBalanceReceivedDate": "2024-12-30",
+      "documentedShipmentDate": "2025-01-03"
+    },
+    "payments": [
+      { "type": "order_deposit", "amount": 2069172, "currency": "CNY", "status": "received", "receivedDate": "2024-08-29" },
+      { "type": "documented_shipment_balance", "amount": 1396679.2, "currency": "CNY", "status": "received", "receivedDate": "2024-12-30" }
+    ],
+    "documentedShipmentCommercialValue": 1995256
+  },
+  "orderPlan": {
+    "plannedContainerCount": 20,
+    "plannedFinishedProductUnits": 56480,
+    "modelCount": 5,
+    "dispatchBatches": [
+      { "sequence": 1, "plannedCutoff": "2024-12-01", "containerAllocation": 8, "finishedProductUnits": 21100 },
+      { "sequence": 2, "plannedCutoff": "2025-01-01", "containerAllocation": 5.5, "finishedProductUnits": 16340 },
+      { "sequence": 3, "plannedCutoff": "2025-02-20", "containerAllocation": 6.5, "finishedProductUnits": 19040 }
+    ],
+    "orderLineItems": [
+      { "model": "RP-60", "product": "18-inch wall fan", "containerAllocation": 9, "quantity": 24300, "syntheticUnitPriceCny": 128, "syntheticLineValueCny": 3110400, "colorBreakdown": { "blue": 13500, "green": 6750, "grey": 4050 } },
+      { "model": "HW-16", "product": "16-inch wall fan", "containerAllocation": 5, "quantity": 16000, "syntheticUnitPriceCny": 96, "syntheticLineValueCny": 1536000, "colorBreakdown": { "blue": 9600, "green": 4192, "grey": 2208 } },
+      { "model": "RT-50", "product": "16-inch ceiling fan", "containerAllocation": 1, "quantity": 2480, "syntheticUnitPriceCny": 88, "syntheticLineValueCny": 218240, "colorBreakdown": { "blue": 1240, "green": 1240 } },
+      { "model": "UN-1820", "product": "18-inch wall fan", "containerAllocation": 2, "quantity": 6600, "syntheticUnitPriceCny": 138, "syntheticLineValueCny": 910800, "colorBreakdown": { "blue": 2442, "green": 2772, "grey": 1386 } },
+      { "model": "UN-1810", "product": "18-inch pedestal fan", "containerAllocation": 3, "quantity": 7100, "syntheticUnitPriceCny": 158, "syntheticLineValueCny": 1121800, "colorBreakdown": { "black": 2300, "blue": 2400, "green": 1608, "grey": 792 } }
+    ]
+  },
+  "verifiedShipment": {
+    "documentDate": "2025-01-03",
+    "containerCount": 6,
+    "cartonCount": 5642,
+    "finishedProductUnits": 17132,
+    "componentAndPackagingQuantity": 216052,
+    "componentDetailSourceRows": 171,
+    "totalCbm": 420.6100871,
+    "totalNetWeightKg": 74708.81047,
+    "totalGrossWeightKg": 77447.27487,
+    "shipmentLineItems": [
+      { "model": "RP-60", "product": "18-inch wall fan", "voltage": "110V", "powerW": 70, "containerAllocation": 2, "quantity": 5400, "colorBreakdown": { "blue": 4050, "grey": 1350 } },
+      { "model": "HW-16", "product": "16-inch wall fan", "voltage": "110V", "powerW": 70, "containerAllocation": 2, "quantity": 6400, "colorBreakdown": { "blue": 3200, "grey": 2208, "green": 992 } },
+      { "model": "RT-50", "product": "16-inch ceiling fan", "voltage": "110V", "powerW": 60, "containerAllocation": 0.5, "quantity": 1240, "colorBreakdown": { "blue": 1240 } },
+      { "model": "UN-1820", "product": "18-inch wall fan", "voltage": "110V", "powerW": 90, "containerAllocation": 1, "quantity": 3300, "colorBreakdown": { "green": 1386, "blue": 1221, "grey": 693 } },
+      { "model": "UN-1810", "product": "18-inch pedestal fan", "voltage": "110V", "powerW": 75, "containerAllocation": 0.5, "quantity": 792, "colorBreakdown": { "grey": 792 } }
+    ]
+  },
+  "reconciliation": {
+    "plannedOrderUnitsCheck": "24300 + 16000 + 2480 + 6600 + 7100 = 56480",
+    "dispatchBatchUnitsCheck": "21100 + 16340 + 19040 = 56480",
+    "plannedContainersCheck": "8 + 5.5 + 6.5 = 20",
+    "shipmentUnitsCheck": "5400 + 6400 + 1240 + 3300 + 792 = 17132",
+    "sourceCoveragePercent": 30.33,
+    "interpretation": "The schedule is order-level planning evidence. The five-page document is shipment-execution evidence. Its model/color mix is preserved separately and is not forced to equal one planned batch."
+  },
+  "missingFields": [
+    "real customer identity remains intentionally anonymized",
+    "source documents for synthetic quotation, PI, payments and production dates do not exist",
+    "bill-of-lading release date is not applicable to the synthetic domestic scenario",
+    "machine-readable spreadsheet for exact digitization of all 171 component rows"
+  ]
+}
